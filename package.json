@@ -1,9 +1,9 @@
 {
-  "name": "components",
+  "name": "patients",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -11,9 +11,13 @@
   "dependencies": {
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
-    "next": "15.0.3"
+    "next": "15.0.3",
+    "@hexify/components": "*",
+    "@hexify/atoms": "*"
   },
   "devDependencies": {
+    "@hexify/eslint-config": "*",
+    "@hexify/typescript-config": "*",
     "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
