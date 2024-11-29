@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.lead {
+  font-family: var(--primary-font);
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  background-color: var(--mui-palette-design_light-inverseOnSurface);
+  border: 1px solid var(--mui-palette-design_light-borderLight);
+  display: flex;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
