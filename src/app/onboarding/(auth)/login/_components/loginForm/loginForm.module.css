@@ -1,0 +1,65 @@
+.form {
+    background-color: var(--mui-palette-common-white);
+    border-radius: var(--mui-shape-largeBorderRadius);
+    width: 100%;
+    max-width: 28.875rem;
+    padding: 2rem;
+  }
+  
+  .formHeader {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  
+  .heading {
+    font-family: var(--primary-font);
+    color: var(--mui-palette-primary-main);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.95rem;
+    margin: 0 0 .75rem;
+  }
+  
+  .subHeading {
+    font-family: var(--primary-font);
+    color: var(--mui-palette-secondary-dark);
+    font-size: .875rem;
+    line-height: 20px;
+    font-weight: 400;
+  }
+
+  .inputWrapper + .inputWrapper {
+    margin-top: 2rem;
+  }
+
+  .signInPrompt {
+    font-family: var(--primary-font);
+    color: var(--mui-palette-secondary-dark);
+    font-weight: 500;
+    line-height: 1.25rem;
+    margin: 1rem 0rem 1.5rem;
+    text-align: right;
+  
+  }
+  
+  .buttonWrapper {
+    margin-top: 24px;
+  }
+
+  .emp {
+    color: var(--mui-palette-design_primary-green_500);
+    text-decoration: none;
+  }
+
+  .forgetPassword {
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+
+  .btn {
+    margin-top: 2.5rem;
+  }

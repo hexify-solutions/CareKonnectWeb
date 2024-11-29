@@ -1,10 +1,11 @@
-import styles from "./page.module.css";
-import {Button} from "@hexify/atoms";
+import { Button, InputField, CustomTheme} from "@hexify/atoms";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <Button />
-    </div>
+    <>
+    <CustomTheme>
+      <InputField variant="filled" label="Checking label" />
+    </CustomTheme>
+    </>
   );
 }
