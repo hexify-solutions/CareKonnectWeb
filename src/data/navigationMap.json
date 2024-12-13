@@ -1,0 +1,50 @@
+{
+  "logo": "/",
+  "links": [
+    {
+      "label": "Home",
+      "path": "/",
+      "type": "internal",
+      "position": "center",
+      "style": "link"
+    },
+
+    {
+      "label": "Appointments",
+      "path": "/appointments",
+      "type": "internal",
+      "position": "center",
+      "style": "link"
+    },
+    {
+      "label": "Orders",
+      "path": "/orders",
+      "type": "internal",
+      "position": "center",
+      "style": "link"
+    },
+    {
+      "label": "Contact",
+      "path": "/contact",
+      "type": "internal",
+      "position": "center",
+      "style": "link"
+    },
+    {
+      "label": "Sign in",
+      "path": "/onboarding/signin",
+      "type": "internal",
+      "position": "left",
+      "style": "button",
+      "variant": "secondary"
+    },
+    {
+      "label": "Register",
+      "path": "/onboarding/signup",
+      "type": "internal",
+      "position": "left",
+      "style": "button"
+      
+    }
+  ]
+}

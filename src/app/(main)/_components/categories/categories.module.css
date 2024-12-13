@@ -1,0 +1,31 @@
+.heading {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-weight: 600;
+    font-size: 1.875rem;
+    line-height: 2.4375rem;
+    padding: 1.5rem 4.375rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    color: var(--mui-palette-primary-main);
+    font-family: var(--primary-font);
+    background-color: var(--mui-palette-design_light-secondaryContainer);
+    
+}
+
+.categoryList { 
+    display: flex;
+    align-items: center;
+    gap: .875rem;
+    margin: 0;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.categoryListItem {
+    list-style: none;
+    flex-grow: 1;
+    flex-shrink: 0;
+    height: 15rem;
+}

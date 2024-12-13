@@ -1,0 +1,111 @@
+[
+  {
+    "id": 1,
+    "type": "hospital",
+    "label": "Salem Hospital",
+    "tags": ["Orthopedics", "Neurology", "Cardiology"],
+    "rating": 4.5,
+    "distance": "1.5km",
+    "time": "24/7",
+    "image": "https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "address": "Plot 12, Adeola Odeku Street, Victoria Island, Lagos."
+  },
+  {
+    "id": 2,
+
+    "type": "doctor",
+    "label": "Dr. Johnson Awe",
+    "tags": ["Orthopedics"],
+    "rating": 4.5,
+    "distance": "1.5km from you",
+    "image": "https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  },
+  {
+    "id": 3,
+
+    "type": "hospital",
+    "label": "Salem Hospital",
+    "tags": ["Orthopedics", "Neurology", "Cardiology"],
+    "rating": 4.5,
+    "distance": "1.5km",
+    "time": "24/7",
+    "image": "https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "address": "Plot 12, Adeola Odeku Street, Victoria Island, Lagos."
+  },
+  {
+    "id": 4,
+
+    "type": "doctor",
+    "label": "Dr. Johnson Awe",
+    "tags": ["Orthopedics"],
+    "rating": 4.5,
+    "distance": "1.5km from you",
+    "image": "https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  },
+  {
+    "id": 5,
+
+    "type": "hospital",
+    "label": "Salem Hospital",
+    "tags": ["Orthopedics", "Neurology", "Cardiology"],
+    "rating": 4.5,
+    "distance": "1.5km",
+    "time": "24/7",
+    "image": "https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "address": "Plot 12, Adeola Odeku Street, Victoria Island, Lagos."
+  },
+  {
+    "id": 6,
+
+    "type": "doctor",
+    "label": "Dr. Johnson Awe",
+    "tags": ["Orthopedics"],
+    "rating": 4.5,
+    "distance": "1.5km from you",
+    "image": "https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  },
+  {
+    "id": 7,
+
+    "type": "hospital",
+    "label": "Salem Hospital",
+    "tags": ["Orthopedics", "Neurology", "Cardiology"],
+    "rating": 4.5,
+    "distance": "1.5km",
+    "time": "24/7",
+    "image": "https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "address": "Plot 12, Adeola Odeku Street, Victoria Island, Lagos."
+  },
+  {
+    "id": 8,
+
+    "type": "doctor",
+    "label": "Dr. Johnson Awe",
+    "tags": ["Orthopedics"],
+    "rating": 4.5,
+    "distance": "1.5km from you",
+    "image": "https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  },
+  {
+    "id": 9,
+
+    "type": "hospital",
+    "label": "Salem Hospital",
+    "tags": ["Orthopedics", "Neurology", "Cardiology"],
+    "rating": 4.5,
+    "distance": "1.5km",
+    "time": "24/7",
+    "image": "https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "address": "Plot 12, Adeola Odeku Street, Victoria Island, Lagos."
+  },
+  {
+    "id": 10,
+
+    "type": "doctor",
+    "label": "Dr. Johnson Awe",
+    "tags": ["Orthopedics"],
+    "rating": 4.5,
+    "distance": "1.5km from you",
+    "image": "https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  }
+]
