@@ -1,0 +1,40 @@
+.wrapper {
+  background-color: var(--mui-palette-design_light-primaryContainer);
+}
+
+.innerWrapper {
+  padding: 1.75rem 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 4.25rem;
+}
+
+.lead {
+font-family: var(--primary-font);
+font-size: 1.5rem;
+font-weight: 600;
+line-height: 1.95rem;
+color: var(--mui-palette-design_light-onPrimaryContainer);
+width: 26.6875rem
+
+
+}
+
+.btnWrapper {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+
+}
+
+.appButtons {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.signupButton {
+   width: 12.375rem;
+}

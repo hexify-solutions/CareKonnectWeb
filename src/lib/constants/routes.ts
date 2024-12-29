@@ -1,7 +1,7 @@
 const routes = {
     home: '/',
     signup: "/onboarding/signup",
-    login: "/onboarding/login",
+    login: "/onboarding/signin",
     passwordChange: "/onboarding/password-change",
 }
 
