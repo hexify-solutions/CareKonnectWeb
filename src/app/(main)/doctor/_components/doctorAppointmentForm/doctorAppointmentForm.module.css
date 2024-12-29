@@ -1,0 +1,8 @@
+.formInputWrapper + .formInputWrapper {
+    margin-top: 2rem;
+}
+
+.buttonWrapper { 
+    margin-top: 4rem;
+    
+}

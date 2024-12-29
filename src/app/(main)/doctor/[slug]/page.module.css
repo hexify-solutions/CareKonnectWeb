@@ -1,0 +1,31 @@
+.doctorInfo {
+    margin-top: 2rem;
+}
+
+.breadCrumb  {
+text-decoration: none;
+font-family: var(--primary-font);
+font-size: 1.25rem;
+font-weight: 400;
+line-height: 1.625rem;
+display: flex;
+align-items: center;
+gap: .5rem;
+color: var(--mui-palette-design_light-onSecondaryContainer);
+margin-bottom: 1.5rem;
+}
+
+.details {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.tabSection {
+    flex-grow: 1;
+}
+
+.formSection {
+    width: 26.3125rem;
+    flex-shrink: 0;
+}

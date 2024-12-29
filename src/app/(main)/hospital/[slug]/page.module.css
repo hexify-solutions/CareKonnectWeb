@@ -1,0 +1,32 @@
+.galleryWrapper {
+    margin-bottom: 2rem;
+}
+
+.detailWrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 3.9375rem;
+    margin-bottom: 4rem;
+}
+
+.detailSection {
+    flex-grow: 1;
+}
+
+.bookingSection {
+    width: 23.875rem;
+    flex-shrink: 0;
+}
+
+.specialListHeading {
+font-family: var(--primary-font);
+color: var(--mui-palette-primary-main);
+font-size: 1.5rem;
+font-weight: 600;
+line-height: 31.2px;
+}
+
+.specialistWrapper {
+    margin-bottom: 3.875rem;
+
+}

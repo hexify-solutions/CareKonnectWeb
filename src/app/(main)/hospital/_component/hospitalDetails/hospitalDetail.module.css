@@ -1,0 +1,55 @@
+.headingWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--mui-palette-secondary-main);
+    font-family: var(--primary-font);
+    margin-bottom: 1.5rem;
+}
+
+.heading {
+
+font-size: 1.875rem;
+font-weight: 600;
+line-height: 2.4375rem;
+letter-spacing: -0.02em;
+text-align: left;
+margin: 0 .25rem 0 0;
+padding: 0;
+}
+
+.address {
+font-size: 1rem;
+font-weight: 500;
+line-height: 1.625rem;
+}
+.headingActions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.headingActions button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.hospitalCategoryList {
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 2rem;
+    
+}
+
+.hospitalCategoryItem {
+    flex-grow: 1;
+    display: block;
+    height: 6.1875rem;
+}
+
+.hospitalCategoryItem a {
+    text-decoration: none;
+}

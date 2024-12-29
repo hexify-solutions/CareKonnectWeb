@@ -1,0 +1,83 @@
+.wrapper {
+  font-family: var(--primary-font);
+  color: var(--mui-palette-design_secondary-field500);
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+}
+
+.section + .section {
+  margin-top: 3rem;
+}
+
+.sectionHeading {
+  font-family: var(--primary-font);
+  color: var(--mui-palette-primary-main);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.95rem;
+  padding: 0;
+  margin: 0;
+}
+
+.servicesList {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 1.3125rem;
+}
+
+.servicesIcon {
+  background-color: var(--mui-palette-design_light-secondaryContainer);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+}
+.servicesItem {
+  font-family: var(--primary-font);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.625rem;
+}
+
+.workTime {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+}
+
+.moreInfoSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(288px, 1fr));
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  width: 183px;
+}
+
+.infoHeading {
+  font-family: var(--primary-font);
+  color: var(--mui-palette-primary-main);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.75rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
