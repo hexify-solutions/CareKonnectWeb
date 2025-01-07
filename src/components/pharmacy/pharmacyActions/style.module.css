@@ -1,0 +1,17 @@
+.wrapper {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.actionItem {
+  width: 258px;
+  flex-shrink: 0;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

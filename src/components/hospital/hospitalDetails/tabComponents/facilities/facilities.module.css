@@ -1,0 +1,20 @@
+.wrapper {
+  margin-top: 2rem;
+}
+
+.facilities {
+  display: grid;
+  gap: 1.875rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.facility {
+  display: flex;
+  align-items: center;
+  gap: 1.125rem;
+  font-family: var(--secondary-font);
+  color: var(--mui-palette-design_light-onPrimaryContainer);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 19.5px;
+}

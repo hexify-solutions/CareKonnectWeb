@@ -1,10 +1,11 @@
-import { Breadcrumb } from "@hexify/atoms";
+import { Breadcrumb, Modal } from "@hexify/atoms";
 import { Gallery } from "@hexify/components";
-import HospitalDetails from "../_component/hospitalDetails";
-import styles from "./page.module.css";
+import HospitalDetails from "@/components/hospital/hospitalDetails";
 import SpecialistList from "@/components/specialistList";
+import BookingCard from "@/components/hospital/hospitalBookingCard";
+import styles from "./page.module.css";
 import SignupBanner from "../../_components/signupBanner";
-import BookingCard from "../_component/hospitalBookingCard";
+
 const Hospital = () => {
   return (
     <div>

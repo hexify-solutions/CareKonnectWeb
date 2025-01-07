@@ -1,0 +1,8 @@
+.feedbackList {
+    background-color: var(--mui-palette-common-white);
+    padding: .125rem .6563rem
+}
+
+.reviewCardWrapper + .reviewCardWrapper {
+    border-top: 1px solid var(--mui-palette-design_gsf-tan);
+}

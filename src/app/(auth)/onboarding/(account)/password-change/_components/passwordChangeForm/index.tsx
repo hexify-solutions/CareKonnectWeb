@@ -2,16 +2,21 @@
 
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import { Button, InputField, iconLoaderMap } from "@hexify/atoms";
+import { Button, InputField, iconLoaderMap, Spinner } from "@hexify/atoms";
 import styles from "./passwordChangeForm.module.css";
 import Link from "next/link";
 import routes from "../../../../../../../lib/constants/routes";
 import componentData from "../../../../../../../data/passwordChange.json";
+import { useAuthContext } from "@/context/auth";
 
 const PasswordChangeForm = () => {
-  const onSubmitHandler = () => {
-    console.log("i am working");
+
+  const { onTriggerPasswordChange } = useAuthContext();
+
+  const onSubmitHandler = (params: { email: string }) => {
+    onTriggerPasswordChange?.(params)
   };
+
   return (
     <Formik validationSchema={validationSchema} onSubmit={onSubmitHandler} initialValues={initialValues}>
       {({ values, errors, handleChange }) => {
@@ -38,6 +43,7 @@ const PasswordChangeForm = () => {
                 onChange={handleChange}
                 error={!!errors.email}
                 helperText={errors.email}
+                disabled={onTriggerPasswordChange.isLoading}
               />
             </div>
             <div className={styles.signUpPrompt}>
@@ -53,9 +59,14 @@ const PasswordChangeForm = () => {
                 fullWidth
                 color="primary"
                 variant="contained"
-                data-variant="rounded"
+                rounded
+                disabled={onTriggerPasswordChange.isLoading}
               >
-                {componentData.passwordChangeCTA}
+                {onTriggerPasswordChange.isLoading ? (
+                  <Spinner />
+                ) : (
+                  componentData.passwordChangeCTA
+                )}
               </Button>
             </div>
           </Form>

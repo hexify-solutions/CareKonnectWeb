@@ -2,15 +2,20 @@
 
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
-import { Button, InputField, iconLoaderMap } from "@hexify/atoms";
+import { Button, InputField, iconLoaderMap, Spinner } from "@hexify/atoms";
 import styles from "./signInForm.module.css";
-import componentData from "../../../../../../../data/loginForm.json";
-import routes from "../../../../../../../lib/constants/routes";
 import Link from "next/link";
 import SignInOptions from "@/app/(auth)/onboarding/_component/signInOptions";
-
+import { LoginType } from "@/types";
+import { useAuthContext } from "@/context/auth";
+import componentData from "../../../../../../../data/loginForm.json";
+import routes from "../../../../../../../lib/constants/routes";
 const SignInForm = () => {
-  const onSubmitHandler = () => {};
+  const { onLogin } = useAuthContext();
+  const onSubmitHandler = (params: LoginType) => {
+    onLogin(params);
+  };
+
   return (
     <Formik
       validationSchema={validationSchema}
@@ -82,9 +87,9 @@ const SignInForm = () => {
                 fullWidth
                 color="primary"
                 variant="contained"
-                data-variant="rounded"
+                rounded
               >
-                {componentData.signUpCTA}
+                {onLogin.isLoading ? <Spinner /> : componentData.signUpCTA}
               </Button>
             </div>
           </Form>

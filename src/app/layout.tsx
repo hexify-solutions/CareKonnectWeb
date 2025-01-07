@@ -1,6 +1,9 @@
-
 import type { Metadata } from "next";
+import QueryProvider from "@/context/reactQueryProvider";
 import "../styles/global.css";
+import AuthProvider from "@/context/auth";
+import SecureStorageProvider from "@/context/storage";
+import ToastProvider from "@/context/toastProvider";
 
 export const metadata: Metadata = {
   title: "Care Konnect",
@@ -15,7 +18,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <main>{children}</main>
+        <>
+          <QueryProvider>
+            <SecureStorageProvider>
+              <AuthProvider>
+                <main>{children} </main>
+              </AuthProvider>
+            </SecureStorageProvider>
+            <ToastProvider />
+          </QueryProvider>
+        </>
       </body>
     </html>
   );
