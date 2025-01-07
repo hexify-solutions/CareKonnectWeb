@@ -16,6 +16,7 @@ const PasswordResetForm = () => {
       validationSchema={validationSchema}
       onSubmit={onSubmitHandler}
       initialValues={initialValues}
+      enableReinitialize
     >
       {({ values, errors, handleChange }) => {
         return (

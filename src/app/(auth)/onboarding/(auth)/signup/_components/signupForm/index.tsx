@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, InputField, iconLoaderMap } from "@hexify/atoms";
+import { Button, InputField, iconLoaderMap, Spinner } from "@hexify/atoms";
 import * as Yup from "yup";
 import { Formik, Form } from "formik";
 import SignInOptions from "@/app/(auth)/onboarding/_component/signInOptions";
@@ -8,16 +8,22 @@ import Link from "next/link";
 import styles from "./signupForm.module.css";
 import routes from "../../../../../../../lib/constants/routes";
 import componentData from "../../../../../../../data/signupForm.json";
+import { useAuthContext } from "@/context/auth";
 
 type SignupFormType = {
-  name: string;
+  fullName: string;
   email: string;
   password: string;
 };
 
 const SignupForm = () => {
+  const { onRegister } = useAuthContext();
+
   const onSubmitHandler = (params: SignupFormType) => {
-    console.log(params, "i am submitting it here");
+    onRegister({
+      ...params,
+      userType: "patient",
+    });
   };
 
   return (
@@ -47,12 +53,12 @@ const SignupForm = () => {
                 data-hasprefix="true"
                 data-variant="design_primary"
                 type="text"
-                name="name"
+                name="fullName"
                 prefix={iconLoaderMap.profile}
                 onChange={handleChange}
-                value={values.name}
-                error={!!errors.name}
-                helperText={errors.name}
+                value={values.fullName}
+                error={!!errors.fullName}
+                helperText={errors.fullName}
               />
             </div>
             <div className={styles.inputWrapper}>
@@ -92,7 +98,8 @@ const SignupForm = () => {
               />
             </div>
             <div className={styles.signInPrompt}>
-              {componentData.signInPrompt}<Link href={routes.login} className={styles.emp}>
+              {componentData.signInPrompt}
+              <Link href={routes.login} className={styles.emp}>
                 &nbsp;{componentData.signInCTA}
               </Link>
             </div>
@@ -124,9 +131,9 @@ const SignupForm = () => {
                   fullWidth
                   color="primary"
                   variant="contained"
-                  data-variant="rounded"
+                  rounded
                 >
-                  {componentData.signUpCTA}
+                  {onRegister.isLoading ? <Spinner />: componentData.signUpCTA}
                 </Button>
               </div>
             </div>
@@ -139,7 +146,7 @@ const SignupForm = () => {
 
 const initialValues = () => {
   return {
-    name: "",
+    fullName: "",
     email: "",
     password: "",
   };
@@ -150,7 +157,7 @@ const validationSchema = Yup.object({
     .email("Invalid email address")
     .required("Email is required"),
 
-  name: Yup.string()
+  fullName: Yup.string()
     .min(3, "Name must be at least 3 characters")
     .max(50, "Name cannot exceed 50 characters")
     .required("Name is required"),

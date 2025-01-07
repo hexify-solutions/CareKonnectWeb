@@ -1,6 +1,7 @@
 import styles from "./specialistList.module.css";
 import Link from "next/link";
 import { HospitalCard, DoctorCard } from "@hexify/components";
+import routes from "@/lib/constants/routes";
 import mockSpecialistData from "../../data/mockSpecialist.json";
 
 const SpecialistList = ({ size }: { size?: "small" }) => {
@@ -11,7 +12,7 @@ const SpecialistList = ({ size }: { size?: "small" }) => {
           if (type === "hospital") {
             return (
               <li key={id} className={styles.listItem}>
-                <Link href="/">
+                <Link href={routes.hospital(specialist.label)}>
                   <HospitalCard size={size}  info={specialist} image={image} />
                 </Link>
               </li>
@@ -19,7 +20,7 @@ const SpecialistList = ({ size }: { size?: "small" }) => {
           }
           return (
             <li key={id} className={styles.listItem}>
-              <Link href="/">
+              <Link href={routes.doctor(specialist.label)}>
                 <DoctorCard size={size} info={specialist} image={image} />
               </Link>
             </li>

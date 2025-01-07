@@ -1,0 +1,9 @@
+.formWrapper {
+    width: 100%;
+    max-width: 44.3125rem;
+    margin-top: 12.6875rem;
+    height: 33.4375rem;
+    padding: 0 1rem;
+    outline: none;
+    box-shadow: none;
+}

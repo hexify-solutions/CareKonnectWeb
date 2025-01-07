@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import CategorySearch from "../inputs/categorySearch ";
+// import CategorySearch from "../inputs/categorySearch ";
 import styles from "./hero.module.css";
 import clsx from "clsx";
 
 const backgrounds = [
+  "https://images.pexels.com/photos/5452290/pexels-photo-5452290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   "https://images.pexels.com/photos/25568827/pexels-photo-25568827/free-photo-of-smiling-couple-with-vintage-album.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load",
   "https://images.pexels.com/photos/1350560/pexels-photo-1350560.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  "https://images.pexels.com/photos/327098/pexels-photo-327098.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 ];
 
 const duration = 10000;
@@ -43,9 +43,9 @@ const Hero = () => {
             Everyone deserves access to quality care and wellness resources, to
             live their best life.
           </span>
-          <div className={styles.inputField}>
+          {/* <div className={styles.inputField}>
             <CategorySearch />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

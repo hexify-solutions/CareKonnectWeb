@@ -6,7 +6,9 @@
       "path": "/",
       "type": "internal",
       "position": "center",
-      "style": "link"
+      "style": "link",
+      "showWhenAuth": true
+
     },
 
     {
@@ -14,25 +16,31 @@
       "path": "/appointments",
       "type": "internal",
       "position": "center",
-      "style": "link"
+      "style": "link",
+      "showWhenAuth": true
     },
     {
       "label": "Orders",
       "path": "/orders",
       "type": "internal",
       "position": "center",
-      "style": "link"
+      "style": "link",
+      "showWhenAuth": true
+
     },
     {
       "label": "Contact",
       "path": "/contact",
       "type": "internal",
       "position": "center",
-      "style": "link"
+      "style": "link",
+      "showWhenAuth": true
+
     },
     {
       "label": "Sign in",
       "path": "/onboarding/signin",
+      "showWhenAuth": false,
       "type": "internal",
       "position": "left",
       "style": "button",
@@ -40,6 +48,7 @@
     },
     {
       "label": "Register",
+      "showWhenAuth": false,
       "path": "/onboarding/signup",
       "type": "internal",
       "position": "left",

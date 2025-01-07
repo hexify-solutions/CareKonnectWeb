@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { ArrowLeft } from "@hexify/atoms";
+import SpecialistList from "@/components/specialistList";
 import styles from "./page.module.css";
-import DoctorInfoCard from "../_components/doctorInfoCard";
-import DoctorDetails from "../_components/doctorDetails";
-import DoctorAppointmentForm from "../_components/doctorAppointmentForm";
+import DoctorInfoCard from "@/components/doctor/doctorInfoCard";
+import DoctorDetails from "@/components/doctor/doctorDetails";
+import DoctorAppointmentForm from "@/components/doctor/doctorAppointmentForm";
+import SignupBanner from "../../_components/signupBanner";
 
 const Doctor = () => {
   return (
@@ -26,7 +28,20 @@ const Doctor = () => {
             </div>
           </div>
         </div>
+        <div className={styles.specialistSection}>
+          <div className={styles.specialistHeadingWrapper}>
+            <h3
+              className={styles.specialistHeading}
+              arial-label="Top Specialist"
+            >
+              Other Specialists
+            </h3>
+            <button className={styles.specialistButton}>View all</button>
+          </div>
+          <SpecialistList />
+        </div>
       </div>
+        <SignupBanner />
     </div>
   );
 };
