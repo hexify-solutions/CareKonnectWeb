@@ -2,7 +2,9 @@ import { Breadcrumb } from "@hexify/atoms";
 import { ImageBackgroundBanner } from "@hexify/components";
 import PharmacyDetails from "@/components/pharmacy/pharmacyDetails";
 import PharmacyActions from "@/components/pharmacy/pharmacyActions";
+import PharmacyProductList from "@/components/pharmacy/pharmacyProductList";
 import styles from "./pharmacy.module.css";
+import SignupBanner from "@/app/(main)/_components/signupBanner";
 
 const Pharmacy = () => {
   return (
@@ -21,11 +23,13 @@ const Pharmacy = () => {
         <div className={styles.actionsWrapper}>
           <PharmacyActions />
         </div>
+        <div className={styles.productList}>
+          <PharmacyProductList />
+        </div>
       </div>
+      <SignupBanner />
     </div>
   );
 };
-
-
 
 export default Pharmacy;
