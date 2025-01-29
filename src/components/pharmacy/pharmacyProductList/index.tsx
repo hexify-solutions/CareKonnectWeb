@@ -1,4 +1,5 @@
 import { Chip } from "@hexify/atoms";
+import Link from "next/link";
 import styles from "./pharmacyProductList.module.css";
 import DrugCartCard from "../cards/drugCartCard";
 const PharmacyProductList = () => {
@@ -15,9 +16,13 @@ const PharmacyProductList = () => {
         </div>
         <ul className={styles.drugList}>
           {Array.from({ length: 10 })?.map((_, index) => {
-            return <li key={index} className={styles.drugListItem}>
-                <DrugCartCard />
-            </li>;
+            return (
+              <li key={index} className={styles.drugListItem}>
+                <Link href="?drug=id">
+                  <DrugCartCard />
+                </Link>
+              </li>
+            );
           })}
         </ul>
       </div>

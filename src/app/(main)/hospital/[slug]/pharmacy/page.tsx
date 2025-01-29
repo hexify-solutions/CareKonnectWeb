@@ -5,8 +5,13 @@ import PharmacyActions from "@/components/pharmacy/pharmacyActions";
 import PharmacyProductList from "@/components/pharmacy/pharmacyProductList";
 import styles from "./pharmacy.module.css";
 import SignupBanner from "@/app/(main)/_components/signupBanner";
+import DrugCard from "@/components/pharmacy/cards/drugCard";
 
-const Pharmacy = () => {
+const Pharmacy = async ({ searchParams }) => {
+  const params = await searchParams;
+
+  console.log(params, "this is the params");
+
   return (
     <div>
       <div className="inner-wrapper">
@@ -23,9 +28,15 @@ const Pharmacy = () => {
         <div className={styles.actionsWrapper}>
           <PharmacyActions />
         </div>
-        <div className={styles.productList}>
-          <PharmacyProductList />
-        </div>
+          <div className={styles.productList}>
+        {!params?.drug && (
+            <PharmacyProductList />
+          )}
+        {!!params?.drug && (
+            <DrugCard />
+          )}
+          </div>
+ 
       </div>
       <SignupBanner />
     </div>

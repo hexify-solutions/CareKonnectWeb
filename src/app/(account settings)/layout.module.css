@@ -1,0 +1,4 @@
+.main {
+    background-color: var(--mui-palette-design_light-background);
+    min-height: 100vh;
+}

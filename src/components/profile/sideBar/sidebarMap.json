@@ -1,0 +1,64 @@
+{
+  "linkGroups": [
+    {
+      "label": "ACCOUNT",
+      "links": [
+        {
+          "label": "Profile",
+          "icon": "profile",
+          "path": "/user/profile"
+        },
+        {
+          "label": "Emergency Contact",
+          "icon": "phone",
+          "path": "/user/profile/emergency-contact"
+        },
+        {
+          "label": "HMO Provider",
+          "icon": "hmo",
+          "path": "/user/profile/hmo-provider"
+        },
+        {
+          "label": "Vitals",
+          "icon": "vitals",
+          "path": "/user/profile/vitals"
+        }
+      ]
+    },
+    {
+      "label": "SECURITY & SETTINGS",
+      "links": [
+        {
+          "label": "Change Password",
+          "icon": "lock",
+          "path": "/user/profile/change-password"
+        },
+        {
+          "label": "Manage Settings",
+          "icon": "cog",
+          "path": "/user/profile/settings"
+        }
+      ]
+    },
+    {
+      "label": "OTHERS",
+      "links": [
+        {
+          "label": "Feedback",
+          "icon": "chat",
+          "path": "/user/profile/feedback"
+        },
+        {
+          "label": "Log Out",
+          "icon": "logout",
+          "path": "?useraction=logout"
+        },
+        {
+          "label": "Delete Account",
+          "icon": "trash",
+          "path": "?useraction=delete"
+        }
+      ]
+    }
+  ]
+}
