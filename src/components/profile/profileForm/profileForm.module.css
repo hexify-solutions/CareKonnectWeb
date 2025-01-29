@@ -1,0 +1,23 @@
+.profileForm {
+  background-color: var(--mui-palette-common-white);
+  font-family: var(--font-primary);
+  width: 100%;
+}
+
+.formHeading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.625rem;
+  text-align: left;
+  margin: 0 0 2rem 0;
+  color: var(--mui-palette-common-black);
+}
+
+.inputWrapper + .inputWrapper {
+  margin-top: 2rem;
+}
+
+.btnWrapper {
+  margin-top: 4rem;
+  width: 100%;
+}

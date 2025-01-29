@@ -5,6 +5,21 @@
   gap: 1rem;
 }
 
+.drugListItem {
+  list-style: none;
+  border-bottom: 1px solid #00000014;
+  padding-bottom: 1rem;
+}
+
+.drugListItem a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.drugListItem + .drugListItem {
+  padding-top: 1rem;
+}
+
 .heading {
   display: flex;
   align-items: center;
@@ -19,14 +34,4 @@
 
 .drugList {
   padding: 0;
-}
-
-.drugListItem {
-  list-style: none;
-  border-bottom: 1px solid #00000014;
-  padding-bottom: 1rem;
-}
-
-.drugListItem + .drugListItem {
-    padding-top: 1rem;
 }

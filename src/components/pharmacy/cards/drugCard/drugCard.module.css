@@ -1,0 +1,64 @@
+.card {
+  padding: 2rem 4rem;
+  background-color: var(--mui-palette-common-white);
+  border: 1px solid var(--mui-palette-design_light-outlineVariant);
+  border-radius: 1.5rem;
+}
+
+.breadCrumbWrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.drugDetails {
+  display: flex;
+  align-items: flex-start;
+  gap: 3.75rem;
+}
+
+.drugImage {
+  width: 20.3125rem;
+  height: 30rem;
+  padding: 4.0625rem 2.375rem;
+  border-radius: 16px;
+  position: relative;
+  flex-shrink: 0;
+  background-color: var(--mui-palette-design_light-surfaceContainerHighest);
+}
+
+.drugDetails img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.drugInfo {
+  border-top: 1px solid var(--mui-palette-design_light-surfaceVariant);
+  width: 100%;
+}
+
+.heading {
+  font-family: var(--font-primary);
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 2.4375rem;
+  margin: 0;
+  padding: 1.5rem 0px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 26px;
+  gap: 1.25rem;
+}
+
+.star {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
