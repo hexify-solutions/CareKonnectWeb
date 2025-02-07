@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import Link from "next/link";
 import EmergencyForm from "@/app/(main)/_components/emergencyForm";
 import styles from "./hospitalDetail.module.css";
@@ -76,7 +76,7 @@ const HospitalDetails: React.FC = () => {
     }
   };
   return (
-    <>
+    <Suspense fallback={<>Loading</>}>
       <div>
         <div className={styles.headingWrapper}>
           <div>
@@ -114,7 +114,7 @@ const HospitalDetails: React.FC = () => {
         </div>
       </div>
      <EmergencyModal />
-    </>
+    </Suspense>
   );
 };
 

@@ -1,12 +1,12 @@
 import { Avatar } from "@hexify/atoms";
-import { AvatarWithName } from "@hexify/components";
 import styles from "./page.module.css";
 import ProfileForm from "@/components/profile/profileForm";
-import clsx from "clsx";
+import { Suspense } from "react";
 
 const Profile = () => {
   return (
-    <div className={styles.profile}>
+    <Suspense fallback={<>Loading...</>}>
+      <div className={styles.profile}>
       <div className={styles.header}>
         <Avatar src="https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&w=800" />
         <span>
@@ -19,6 +19,7 @@ const Profile = () => {
       <ProfileForm />
       </div>
     </div>
+    </Suspense>
   );
 };
 export default Profile;
