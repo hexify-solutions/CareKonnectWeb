@@ -7,8 +7,8 @@
  [32m[1m✓[22m[39m Compiled successfully
  [37m[1m [22m[39m Skipping validation of types
  [37m[1m [22m[39m Skipping linting
-[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
-[?25l [37m[1m [22m[39m Generating static pages (0/17)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/17)  [36m[=   ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/17)  [36m[==  ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/17)  [36m[=== ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/17)  [36m[ ===][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/17)  [36m[  ==][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/17)  [36m[   =][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/17)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/17)  [36m[   =][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/17)  [36m[  ==][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/17)  [36m[ ===][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/17)  [36m[====][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/17)  [36m[=== ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/17)  [36m[==  ][39m[2K[1G [37m[1m [22m[39m Generating static pages (8/17)  [36m[=   ][39m[2K[1G[?25h [32m[1m✓[22m[39m Generating static pages (17/17)
+[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
+[?25l [37m[1m [22m[39m Generating static pages (0/17)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/17)  [36m[=   ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/17)  [36m[==  ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/17)  [36m[=== ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/17)  [36m[ ===][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/17)  [36m[  ==][39m[2K[1G [37m[1m [22m[39m Generating static pages (8/17)  [36m[   =][39m[2K[1G[?25h [32m[1m✓[22m[39m Generating static pages (17/17)
 [?25l [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[?25l [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G[?25h [37m[1m [22m[39m Collecting build traces     [32m[1m✓[22m[39m Collecting build traces 
 [2K[1G[?25h [37m[1m [22m[39m Finalizing page optimization     [32m[1m✓[22m[39m Finalizing page optimization 
 
@@ -17,20 +17,20 @@
 ├ ○ /_not-found                          904 B           [37m[1m102 kB[22m[39m
 ├ ƒ /doctor/[slug]                       2.66 kB         [37m[1m305 kB[22m[39m
 ├ ƒ /hospital/[slug]                     4.53 kB         [37m[1m307 kB[22m[39m
-├ ƒ /hospital/[slug]/labs                271 B           [37m[1m208 kB[22m[39m
-├ ƒ /hospital/[slug]/pharmacy            3.51 kB         [37m[1m292 kB[22m[39m
+├ ƒ /hospital/[slug]/labs                272 B           [37m[1m208 kB[22m[39m
+├ ƒ /hospital/[slug]/pharmacy            3.5 kB          [37m[1m292 kB[22m[39m
 ├ ○ /onboarding/password-change          3.09 kB         [37m[1m306 kB[22m[39m
-├ ○ /onboarding/password-reset           1.24 kB         [37m[1m248 kB[22m[39m
-├ ○ /onboarding/signin                   3.57 kB         [37m[1m307 kB[22m[39m
+├ ○ /onboarding/password-reset           1.23 kB         [37m[1m248 kB[22m[39m
+├ ○ /onboarding/signin                   3.58 kB         [37m[1m307 kB[22m[39m
 ├ ○ /onboarding/signup                   3.89 kB         [37m[1m307 kB[22m[39m
-├ ○ /onboarding/verify-email             2.91 kB         [37m[1m293 kB[22m[39m
-├ ○ /user/profile                        979 B           [37m[1m235 kB[22m[39m
+├ ○ /onboarding/verify-email             2.92 kB         [37m[1m293 kB[22m[39m
+├ ○ /user/profile                        980 B           [37m[1m235 kB[22m[39m
 ├ ○ /user/profile/change-password        798 B           [37m[1m235 kB[22m[39m
-├ ○ /user/profile/emergency-contact      818 B           [37m[1m235 kB[22m[39m
+├ ○ /user/profile/emergency-contact      819 B           [37m[1m235 kB[22m[39m
 ├ ○ /user/profile/feedback               140 B           [37m[1m101 kB[22m[39m
-├ ○ /user/profile/hmo-provider           805 B           [37m[1m235 kB[22m[39m
-├ ○ /user/profile/settings               432 B           [37m[1m208 kB[22m[39m
-└ ○ /user/profile/vitals                 884 B           [37m[1m235 kB[22m[39m
+├ ○ /user/profile/hmo-provider           806 B           [37m[1m235 kB[22m[39m
+├ ○ /user/profile/settings               433 B           [37m[1m208 kB[22m[39m
+└ ○ /user/profile/vitals                 885 B           [37m[1m235 kB[22m[39m
 + First Load JS shared by all            [37m[1m101 kB[22m[39m
   ├ chunks/2855-3910b18ced488dc1.js      45.8 kB
   ├ chunks/87c73c54-8c278471448bd169.js  52.5 kB
@@ -40,4 +40,4 @@
 ○  (Static)   prerendered as static content
 ƒ  (Dynamic)  server-rendered on demand
 
-[?25h[2K[1G✨  Done in 37.22s.
+[?25h[2K[1G✨  Done in 47.05s.
