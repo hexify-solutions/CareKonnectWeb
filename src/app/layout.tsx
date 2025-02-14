@@ -20,15 +20,15 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <>
-    <Suspense fallback={<>Loading</>}>
-          <QueryProvider>
-            <SecureStorageProvider>
-              <AuthProvider>
-                <main>{children} </main>
-              </AuthProvider>
-            </SecureStorageProvider>
-            <ToastProvider />
-          </QueryProvider>
+          <Suspense fallback={<>Loading</>}>
+            <QueryProvider>
+              <SecureStorageProvider>
+                <AuthProvider>
+                  <main>{children} </main>
+                </AuthProvider>
+              </SecureStorageProvider>
+              <ToastProvider />
+            </QueryProvider>
           </Suspense>
         </>
       </body>
