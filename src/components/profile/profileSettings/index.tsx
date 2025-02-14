@@ -38,7 +38,7 @@ const ProfileSettings = () => {
         <div className={styles.settingCard}>
           <div className={styles.settingCardDetails}>
             <aside className={styles.icon}>
-            <EmailIcon type="two" />
+            <EmailIcon type="outline" />
 
             </aside>
             <div>

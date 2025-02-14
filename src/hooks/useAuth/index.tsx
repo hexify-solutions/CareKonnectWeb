@@ -4,6 +4,7 @@ import {
   useLoginMutation,
   useVerifyMutation,
   useTriggerPasswordReset,
+  useResendVerifyMutation,
 } from "@/http/auth/mutation";
 import {
   RegistrationType,
@@ -39,6 +40,7 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType, }) => {
   const triggerPasswordResetMutation = useTriggerPasswordReset<TriggerPasswordResetType>();
   const loginMutation = useLoginMutation<LoginType>();
   const verifyMutation = useVerifyMutation<VerifyType>();
+  const resendVerifyEmailMutation = useResendVerifyMutation<{email: string}>();
   const { setItem } = useSecureStorage();
 
   const onTriggerPasswordChange = (params: TriggerPasswordResetType) => {
@@ -71,6 +73,19 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType, }) => {
     });
   };
 
+  const resendVerifyEmailHandler = (params: { email: string }) => {
+    resendVerifyEmailMutation?.mutate(params, {
+      onSettled: (response, err?: Error | null) => {
+        if (err) {
+          return toast.error(
+            err?.message || "Could not resend Verification code!"
+          );
+        }
+        toast.success(response?.message || "Verification code sent");
+      },
+    });
+  };
+
   const onRegister = (params: RegistrationType) => {
     registerMutation.mutate(params, {
       onSettled: (response?: RegistrationResponseType, err?: Error | null) => {
@@ -99,6 +114,17 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType, }) => {
     loginMutation.mutate(params, {
       onSettled: (response, err) => {
         if (err) {
+          //TODO: this check should be optimized as it is prone to bug
+          if(err?.message === 'Please verify your email') {
+            setAuthState(prev => ({
+              ...prev,
+              profile: {
+                ...(prev?.profile || {}),
+                email: params?.email,
+              }
+            }))
+            router.push(routes.verifyEmail);
+          }
           return toast.error(err?.message || "Login Failed!");
         }
         if (response) {
@@ -128,18 +154,25 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType, }) => {
 
   onRegister.isLoading = registerMutation.isPending;
   onRegister.error = registerMutation.error;
+
   onLogin.isLoading = loginMutation.isPending;
   onLogin.error = loginMutation.error;
+  
   onVerify.isLoading = verifyMutation.isPending;
   onVerify.error = verifyMutation.error;
+
   onTriggerPasswordChange.isLoading = triggerPasswordResetMutation.isPending;
   onTriggerPasswordChange.error = triggerPasswordResetMutation.error
+
+  resendVerifyEmailHandler.isLoading = resendVerifyEmailMutation.isPending;
+  resendVerifyEmailHandler.error = resendVerifyEmailMutation.error
 
   return {
     onRegister,
     onLogin,
     onVerify,
     onTriggerPasswordChange,
+    resendVerifyEmailHandler,
     ...authState,
   };
 };

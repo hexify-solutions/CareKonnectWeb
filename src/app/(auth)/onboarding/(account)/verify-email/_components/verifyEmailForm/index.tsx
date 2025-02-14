@@ -1,13 +1,14 @@
 "use client";
 
 import styles from "./verifyEmailForm.module.css";
+import {Spinner} from "@hexify/atoms";
 import { OTPInput } from "@hexify/atoms";
 import { Formik, Form } from "formik";
 import componentData from "@/data/verifyEmail.json";
 import { useAuthContext } from "@/context/auth";
 
 const VerifyEmailForm = () => {
-  const {onVerify, profile } = useAuthContext();
+  const {onVerify, profile, resendVerifyEmailHandler } = useAuthContext();
 
   const validateHandler = (params: { otp: string[] }) => {
     const { otp } = params;
@@ -40,16 +41,30 @@ const VerifyEmailForm = () => {
                 {componentData.subHeading}
               </span>
             </aside>
-            <div className={styles.inputWrapper}>
-              <OTPInput
-                value={values?.otp}
-                onChange={(v) => setFieldValue("otp", v)}
-              />
-            </div>
+            {
+              <div className={styles.inputWrapper}>
+                {!onVerify?.isLoading && (
+                  <OTPInput
+                    value={values?.otp}
+                    onChange={(v) => setFieldValue("otp", v)}
+                  />
+                )}
+                {onVerify?.isLoading && <Spinner />}
+              </div>
+            }
             <div className={styles.resendBtnWrapper}>
               <span>{componentData.resendLead}</span>{" "}
-              <button className={styles.resendBtn}>
-                {componentData.resendCTA}
+              <button
+                onClick={() =>
+                  resendVerifyEmailHandler({ email: profile?.email || "" })
+                }
+                className={styles.resendBtn}
+              >
+                {resendVerifyEmailHandler?.isLoading ? (
+                  <Spinner />
+                ) : (
+                  componentData.resendCTA
+                )}
               </button>
             </div>
           </Form>

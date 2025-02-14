@@ -8,6 +8,8 @@ export type RegistrationType = {
 export type ProfileType = {
   email: string;
   id: string;
+  fullName?: string;
+  
 };
 
 export type LoginResponseType = {
@@ -51,3 +53,4 @@ export type OnRegisterType = OperationType<RegistrationType>;
 export type OnLoginType = OperationType<LoginType>;
 export type OnVerifyType = OperationType<VerifyType>;
 export type onTriggerPasswordChangeType = OperationType<{email: string}>;
+export type resendVerifyEmailType = OperationType<{email: string}>;

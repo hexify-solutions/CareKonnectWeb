@@ -1,5 +1,4 @@
 import NavigationComponent from "@/components/navigation";
-import { CustomTheme } from "@hexify/atoms";
 import styles from "./layout.module.css";
 import { Suspense } from "react";
 
@@ -15,14 +14,9 @@ export default function RootLayout({
 }>) {
   return (
     <Suspense fallback={<>Loading</>}>
-    <CustomTheme>
       <main className={styles.main}>
-        <header>
-          <NavigationComponent />
-        </header>
         <>{children}</>
       </main>
-    </CustomTheme>
     </Suspense>
   );
 }

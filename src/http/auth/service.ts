@@ -21,6 +21,9 @@ export const triggerPasswordReset = <T extends {}>(params: T) => {
   return api.post<RegistrationResponseType>(endPoints.triggerPasswordReset, params);
 };
 
+export const resendVerifyEmail = <T extends {}>(params: T) => {
+  return api.post<{message: string}>(endPoints.resendVerifyEmail, params)
+}
 // export const logout = (params: Record<string, any>) => {
 //   return api.post(LOGOUT, params);
 // };

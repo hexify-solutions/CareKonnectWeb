@@ -50,6 +50,10 @@
 
 .inputWrapper {
     margin-bottom: 1.5rem;
+    min-height: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 

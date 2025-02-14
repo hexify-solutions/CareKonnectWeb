@@ -1,0 +1,92 @@
+.wrapper {
+  border-radius: 4px;
+  padding: 1.25rem;
+  background-color: var(--mui-palette-common-white);
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  font-family: var(--primary-font);
+  font-weight: 300;
+  font-size: 0.75rem;
+  line-height: 14px;
+  color: var(--mui-palette-design_secondary-field500);
+  margin-left: auto;
+  display: inline-block;
+  align-items: flex-end;
+  margin-bottom: 4px;
+}
+
+
+.ticketInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Roboto;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  color: var(--mui-palette-primary-main);
+  margin-bottom: 1.375rem;
+}
+
+.chip {
+  border-radius: 8px;
+  padding: 5px 12px;
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  letter-spacing: -2%;
+  text-align: center;
+}
+
+.priorityChip {
+  background-color: var(--mui-palette-design_light-errorContainer);
+  color: var(--mui-palette-error-main);
+}
+
+.statusChip {
+  background: var(--Schemes-Surface-Dim, #d9dbd1);
+  color: var(--mui-palette-primary-main);
+}
+
+.heading {
+  margin: 0 0 0.625rem 0;
+  font-family: var(--primary-font);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  color: var(--mui-palette-design_light-onPrimaryContainer, #062100);
+}
+
+.info {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--mui-palette-design_secondary-field500);
+}
+
+.infoWrapper {
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--mui-palette-design_light-background);
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.openTicketBtn {
+  background-color: transparent;
+  border: none;
+  font-family: var(--primary-font);
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: var(--mui-palette-primary-main);
+  cursor: pointer;
+}

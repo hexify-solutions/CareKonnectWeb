@@ -1,5 +1,3 @@
-
-import type { Metadata } from "next";
 import styles from "./layout.module.css";
 import LogoutModal from "@/components/profile/logoutModal";
 import ProfileDeleteModal from "@/components/profile/deleteModal";
@@ -19,7 +17,7 @@ export default function RootLayout({
       <div className={clsx("inner-wrapper", styles.wrapper)}>
         <h4 className={styles.label}>Account Settings</h4>
         <div className={styles.contentWrapper}>
-<SideBar />
+          <SideBar />
           <div className={styles.content}>{children}</div>
         </div>
       </div>
@@ -29,3 +27,4 @@ export default function RootLayout({
     </Suspense>
   );
 }
+ 
