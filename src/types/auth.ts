@@ -1,6 +1,7 @@
 export type RegistrationType = {
   email: string;
-  fullName: string;
+  firstName: string;
+  lastName: string;
   userType: "patient";
   password: string;
 };
@@ -8,7 +9,8 @@ export type RegistrationType = {
 export type ProfileType = {
   email: string;
   id: string;
-  fullName?: string;
+  firstName?: string;
+  lastName?: string;
   
 };
 

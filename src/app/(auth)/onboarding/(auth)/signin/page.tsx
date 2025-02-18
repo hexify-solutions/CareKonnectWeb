@@ -8,4 +8,4 @@ const SignIn = () => {
   return <SignInForm />
 }
 
-export default withAuthState(SignIn, false, routes.home);
+export default withAuthState(SignIn, false, routes.userDashboard);

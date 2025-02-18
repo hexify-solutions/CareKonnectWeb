@@ -144,7 +144,9 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType, }) => {
 
           toast.success(response?.message, {
             onOpen: () => {
-              router.push(routes.home);
+              // TODO: conditionally redirect user to the last page they visited before auth, if not home
+              // otherwise redirect to user dashboard
+              router.push(routes.userDashboard);
             },
           });
         }

@@ -17,7 +17,7 @@ const DashboardBanner = () => {
             <div className={styles.userDetailsText}>
               <span>Welcome back! </span>
               <div className={styles.userName}>
-                <span>{profile?.fullName}</span> <LineIcon />
+                <span>{profile?.firstName} {profile?.lastName}</span> <LineIcon />
               </div>
             </div>
           </div>
@@ -31,7 +31,7 @@ const DashboardBanner = () => {
               className={styles.btn}
               variant="contained"
               rounded
-              color="secondary"
+              color="primary"
               size="medium"
             >
               View benefit list

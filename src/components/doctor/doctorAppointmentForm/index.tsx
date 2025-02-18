@@ -22,14 +22,14 @@ const DoctorAppointmentForm = () => {
             <div className={styles.formInputWrapper}>
               <TimePicker />
             </div>
-            <div className={styles.formInputWrapper}>
+            {/* <div className={styles.formInputWrapper}>
               <ToggleInput
                 onChange={(v) => setFieldValue("appointmentType", v)}
                 value={values.appointmentType}
                 label="Appointment Type"
                 options={appointmentOptions}
               />
-            </div>
+            </div> */}
             <div className={styles.formInputWrapper}>
               <InputField
                 fullWidth

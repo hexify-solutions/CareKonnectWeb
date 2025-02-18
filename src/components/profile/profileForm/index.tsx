@@ -33,9 +33,9 @@ const ProfileForm = () => {
   return (
     <div className={styles.profile}>
       <div className={styles.header}>
-        <Avatar displayText={profile?.fullName} src={""} />
+        <Avatar displayText={`${profile?.firstName} ${profile?.lastName}`} src={""} />
         <span>
-          <h6 className={styles.userName}>{profile?.fullName}</h6>
+          <h6 className={styles.userName}>{profile?.firstName} {profile?.lastName}</h6>
           {!isEditing && <span className={styles.userEmail}>{profile?.email}</span>}
           {isEditing && <button className={styles.changeAvatarBtn}>Change Avatar</button>}
         </span>
@@ -54,15 +54,30 @@ const ProfileForm = () => {
                   <div className={styles.inputWrapper}>
                     <InputField
                       fullWidth
-                      placeholder="Enter your fullname here"
-                      label="Name"
+                      placeholder="Enter your first name here"
+                      label="First Name"
                       variant="filled"
                       data-variant={isEditing ? "design_primary" : ""}
                       disabled={!isEditing}
                       type="text"
-                      name="fullName"
+                      name="firstName"
                       prefix={ProfileIcon}
-                      value={values?.fullName}
+                      value={values?.firstName}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className={styles.inputWrapper}>
+                    <InputField
+                      fullWidth
+                      placeholder="Enter your last name here"
+                      label="Last Name(surname)"
+                      variant="filled"
+                      data-variant={isEditing ? "design_primary" : ""}
+                      disabled={!isEditing}
+                      type="text"
+                      name="lastName"
+                      prefix={ProfileIcon}
+                      value={values?.lastName}
                       onChange={handleChange}
                     />
                   </div>
@@ -134,7 +149,8 @@ const ProfileForm = () => {
 
 const initialValues = (profile: ProfileType) => {
   return {
-    fullName: profile.fullName || "",
+    firstName: profile.firstName || "",
+    lastName: profile.lastName || "",
     email: profile.email || "",
   };
 };

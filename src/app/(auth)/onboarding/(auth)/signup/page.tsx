@@ -9,4 +9,4 @@ const Signup = () => {
 };
 
 
-export default withAuthState(Signup, false, routes.home);
+export default withAuthState(Signup, false, routes.userDashboard);

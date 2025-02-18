@@ -3,7 +3,7 @@
 import useDropdown from "@/hooks/useDropdown";
 import Link from "next/link";
 import styles from "./userProfileDropdown.module.css";
-import { UserIcon, DashboardIcon, Avatar } from "@hexify/atoms";
+import { UserIcon, DashboardIcon, Avatar, IconLoader, iconLoaderMap } from "@hexify/atoms";
 import routes from "@/lib/constants/routes";
 import { useAuthContext } from "@/context/auth";
 
@@ -15,7 +15,7 @@ const UserProfileDropdown = () => {
     <div ref={dropdownRef} className={styles.wrapper}>
       <button onClick={toggle} className={styles.toggle}>
         <Avatar
-          displayText={profile?.fullName}
+          displayText={`${profile?.firstName} ${profile?.lastName}`}
           size="xsmall"
           //@ts-ignore
           src={profile?.image}
@@ -28,6 +28,10 @@ const UserProfileDropdown = () => {
           </Link>
           <Link href={routes.profile} className={styles.dropdownListItem}>
             <UserIcon /> <span>Profile</span>
+          </Link>
+          <Link href={routes.logout} className={styles.dropdownListItem}>
+          <IconLoader path={"logout"} />
+          <span>Logout</span>
           </Link>
         </div>
       )}

@@ -3,6 +3,7 @@ const routes = {
   // auth routes
   signup: "/onboarding/signup",
   login: "/onboarding/signin",
+  logout: "?useraction=logout",
   passwordChange: "/onboarding/password-change",
   verifyEmail: "/onboarding/verify-email",
   passwordReset: "/onboarding/password-reset",
