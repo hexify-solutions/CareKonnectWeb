@@ -1,0 +1,25 @@
+.bannerContainer {
+    padding: 3.5625rem;
+    font-family: var(--primary-font);
+    color: var(--mui-palette-common-white);
+  }
+  
+  .bannerHeading {
+    width: 32.5rem;
+    font-size: 1.875rem;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 5.9375rem;
+    line-height: 2.4375rem;
+  }
+  
+  .bannerLocation {
+    display: flex;
+    align-items: flex-start;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+    width: 34.4375rem;
+    line-height: 1.625rem;
+  }
+  
