@@ -1,0 +1,59 @@
+.wrapper {
+  background-color: var(--mui-palette-common-white);
+  margin-top: 195px;
+  border-radius: 20px;
+  padding: 2.75rem;
+  position: relative;
+  width: 100%;
+  max-width: 671px;
+}
+
+.cancelBtn {
+  position: absolute;
+  top: 44px;
+  right: 44px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.listWrapper {
+  max-width: 429px;
+}
+
+.listWrapper li + li {
+    margin-top: 1.5rem;
+}
+
+.listItemLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon {
+  height: 32px;
+  width: 32px;
+  background-color: var(--mui-palette-design_light-secondaryContainer);
+  border-radius: 100%;
+  flex-shrink: 0;
+}
+
+.info {
+  font-family: var(--primary-font);
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: var(--mui-palette-design_secondary-field500);
+  letter-spacing: -2%;
+}
+
+.info .subHeading {
+    font-size: 14px;
+    display: block;
+    font-weight: 400;
+}
+
+.leftIcon {
+margin-left: auto;
+}

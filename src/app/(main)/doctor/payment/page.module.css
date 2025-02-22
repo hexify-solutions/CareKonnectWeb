@@ -1,0 +1,21 @@
+.wrapper {
+    padding-top: 2.5rem;
+    padding-bottom: 113px;
+
+    display: flex;
+    gap: 2.6875rem;
+    min-height: 70vh;
+}
+
+.details {
+    flex-grow: 1;
+    overflow: hidden;
+    border-radius: 24px;
+
+}
+
+.payment {
+    max-width: 530px;
+    width: 100%;
+    flex-shrink: 0;
+}

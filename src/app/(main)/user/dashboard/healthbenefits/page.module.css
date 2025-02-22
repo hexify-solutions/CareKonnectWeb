@@ -1,0 +1,32 @@
+.wrapper {
+  padding-top: 1rem;
+}
+
+.banner {
+  background: var(--Schemes-On-Secondary-Fixed-Variant, #3e4a36);
+  border-radius: 12px;
+  padding: 1.9375rem 3.0625rem 1rem 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.375rem;
+  color: var(--mui-palette-common-white);
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  letter-spacing: -2%;
+}
+
+.creditLabel {
+    color: var(--mui-palette-design_light-primaryContainer);
+font-size: 1.125rem;
+line-height: 1.75rem;
+
+}
+
+.creditAmount {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}

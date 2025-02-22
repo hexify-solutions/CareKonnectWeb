@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.875rem;
+}
+
+.ticketLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--primary-font);
+  color: var(--mui-palette-primary-main);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  letter-spacing: -2%;
+}
+.link {
+  display: flex;
+  align-items: center;
+}
+
+.messageWrapper {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+.formWrapper {
+    margin-top: 1.5rem;
+}
+
+.replyBtn {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+}

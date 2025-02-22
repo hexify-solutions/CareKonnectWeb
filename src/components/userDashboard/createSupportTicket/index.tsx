@@ -1,7 +1,7 @@
 "use client";
 import styles from "./createSupportTicket.module.css";
 
-import { Button, InputField, Modal } from "@hexify/atoms";
+import { Button, InputField, Modal, SelectField, SendIcon, TicketIcon } from "@hexify/atoms";
 import { Form, Formik } from "formik";
 import { useState } from "react";
 import clsx from "clsx";
@@ -16,7 +16,7 @@ export const CreateSupportTicket = () => {
         variant="contained"
         rounded
       >
-        Create new ticket
+      <TicketIcon />  Create new ticket
       </Button>
       <Modal onClose={() => setShowModal(false)} open={showModal}>
         <CreateSupportTicketForm cancelHandler={() => setShowModal(false)} />
@@ -48,40 +48,32 @@ const FormComponent = ({ cancelHandler }) => {
         <div>
           <div className={clsx(styles.inputField, styles.inputGrid)}>
             <div className={styles.inputField}>
-              <InputField
-                variant="filled"
-                label="Email"
-                placeholder="Type Email"
-                type="email"
+              <SelectField
                 data-variant="design_primary"
-                fullWidth
-                onChange={() => {}}
-              />
-            </div>
-            <div className={styles.inputField}>
-              <InputField
-                data-variant="design_primary"
-                fullWidth
                 variant="filled"
-                type="text"
                 label="Ticket Type"
+                options={ticketTypeOptions}
+                placeholder="Choose ticket type"
                 onChange={() => {}}
               />
             </div>
             <div className={styles.inputField}>
-              <InputField
+              <SelectField
                 data-variant="design_primary"
-                fullWidth
-                type="text"
+                placeholder="Set priority level"
                 variant="filled"
                 label="Priority Level"
                 onChange={() => {}}
+                options={priorityLevelOptions}
               />
             </div>
           </div>
           <div>
             <InputField
               data-variant="design_primary"
+              multiline
+              minRows={5}
+              placeholder="Type issues here"
               fullWidth
               variant="filled"
               type="text"
@@ -95,11 +87,12 @@ const FormComponent = ({ cancelHandler }) => {
               rounded
               variant="contained"
               color="secondary"
+              className={styles.cancelBtn}
             >
               Cancel
             </Button>
             <Button rounded variant="contained" color="primary">
-              Send Ticket
+             <SendIcon /> Send Ticket
             </Button>
           </div>
         </div>
@@ -107,3 +100,18 @@ const FormComponent = ({ cancelHandler }) => {
     </Form>
   );
 };
+
+const ticketTypeOptions = [
+  { label: "Ticket Type One", value: "1" },
+  { label: "Ticket Type  two", value: "2" },
+  { label: "Ticket Type three", value: "3" },
+  { label: "Ticket Type four", value: "4" },
+  { label: "Ticket Type five", value: "5" },
+];
+const priorityLevelOptions = [
+  { label: "Priority Level One", value: "1" },
+  { label: "Priority Level  two", value: "2" },
+  { label: "Priority Level three", value: "3" },
+  { label: "Priority Level four", value: "4" },
+  { label: "Priority Level five", value: "5" },
+];
