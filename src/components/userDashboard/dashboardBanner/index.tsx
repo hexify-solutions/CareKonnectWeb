@@ -3,11 +3,15 @@
 import { Avatar, Button } from "@hexify/atoms";
 import styles from "./dashboardBanner.module.css";
 import { LineIcon } from "@hexify/atoms";
-import { AvatarWithName, ImageBackgroundBanner } from "@hexify/components";
+import { ImageBackgroundBanner } from "@hexify/components";
 import { useAuthContext } from "@/context/auth";
+import { useRouter } from "next/navigation";
+import routes from "@/lib/constants/routes";
 
 const DashboardBanner = () => {
   const { profile } = useAuthContext();
+  const router = useRouter();
+
   return (
     <div className={styles.wrapper}>
       <ImageBackgroundBanner>
@@ -33,6 +37,7 @@ const DashboardBanner = () => {
               rounded
               color="primary"
               size="medium"
+              onClick={() => router.push(routes.userDashboardHealthBenefits)}
             >
               View benefit list
             </Button>

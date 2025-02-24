@@ -1,0 +1,109 @@
+.wrapper {
+  padding: 1.3125rem 2.3125rem 3.8125rem 3.375rem;
+  background-color: var(--mui-palette-design_light-surfaceVariant);
+  font-family: var(--primary-font);
+}
+
+.heading {
+  font-family: var(--primary-font);
+  color: var(--mui-palette-design_light-onSecondaryContainer);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -2%;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.timing {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -2%;
+  color: var(--mui-palette-primary-main);
+}
+
+.timingItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.timingItemIcon {
+  color: #292d32;
+  display: flex;
+}
+
+.descriptionWrapper {
+  margin-top: 23px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -2%;
+  color: #373a33;
+}
+
+.heading {
+  font-family: Roboto;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -2%;
+  color: #373a33;
+
+  margin-bottom: 8px;
+}
+
+.amountWrapper {
+  margin-top: 14px;
+}
+
+.chargeListWrapper {
+  padding: 8px 17px 20px 20px;
+  border-top: 1px solid #b4b5bb;
+  border-bottom: 1px solid #b4b5bb;
+}
+.chargeList {
+  display: grid;
+  grid-template-columns: 1fr 112px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -2%;
+}
+
+.chargeList li {
+  list-style-type: disc;
+}
+
+.chargeValue {
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 20px;
+  letter-spacing: -2%;
+}
+
+.amountTotal {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-top: 14px;
+font-weight: 700;
+font-size: 24px;
+line-height: 31.2px;
+letter-spacing: -2%;
+
+}
+
+.amountTotalLabel {
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+letter-spacing: -2%;
+color: #81692C;
+}

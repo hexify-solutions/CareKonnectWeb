@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import clsx from "clsx";
 import DashboardBanner from "@/components/userDashboard/dashboardBanner";
 import LinkComponent from "@/components/userDashboard/dashboardLinkComponent ";

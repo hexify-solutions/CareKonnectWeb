@@ -1,0 +1,26 @@
+.wrapper {
+    background-color: var(--mui-palette-common-white);
+    padding: 28px 32px;
+}
+
+.doctorInfoWrapper {
+    display: flex;
+    align-items: center;
+    gap: 33px;
+    margin-bottom: 27px;
+}
+
+.infoCardList {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-bottom: 26px;
+}
+
+.hospitalInfo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}

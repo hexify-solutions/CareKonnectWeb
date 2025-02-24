@@ -1,0 +1,75 @@
+.tabWrapper {
+    width: 100%;
+}
+
+.btnWrapper {
+    margin-top: 2rem;
+    flex-direction: column;
+    display: flex;
+    gap: 1rem;
+}
+
+/*  general overview styling */
+
+.sectionWrapper {
+    padding: 1rem;
+    background-color: var(--mui-palette-common-white);
+    margin-top: 2rem;
+    border-radius: .75rem;
+
+}
+
+.generalOverviewInfoItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-family: var(--primary-font);
+font-weight: 600;
+font-size: 1rem;
+line-height: 26px;
+letter-spacing: -2%;
+color: var(--mui-palette-design_secondary-field500)
+
+}
+
+.generalOverviewInfoItem + .generalOverviewInfoItem {
+    margin-top: 0.75rem;
+}
+.generalOverviewInfoItemValue {
+    text-align: right;
+    max-width: 297px;
+}
+
+/* doctor comment wrapper  */
+
+.doctorCommentInfo {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -2%;
+    color: var(--mui-palette-design_secondary-field500)
+
+     
+}
+
+/* prescription */
+
+.prescription {
+    background-color: var(--mui-palette-common-white);
+    margin-top: 2rem;
+}
+
+.prescriptionItem {
+    display: flex;
+    align-items: center;
+    padding:24px 12px;
+    justify-content: space-between;
+font-weight: 500;
+font-size: 1rem;
+line-height: 26px;
+letter-spacing: -2%;
+color: var(--mui-palette-design_secondary-field500);
+cursor: pointer;
+
+}

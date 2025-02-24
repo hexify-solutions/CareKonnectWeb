@@ -1,48 +1,28 @@
 
 [2K[1G[1myarn run v1.22.19[22m
 [2K[1G[2m$ next build[22m
-   [1m[38;2;173;127;168m▲ Next.js 15.0.3[39m[22m
+   [1m[38;2;173;127;168m▲ Next.js 15.1.6[39m[22m
    - Environments: .env.local, .env.production
 
  [37m[1m [22m[39m Creating an optimized production build ...
  [32m[1m✓[22m[39m Compiled successfully
  [37m[1m [22m[39m Skipping validation of types
  [37m[1m [22m[39m Skipping linting
-[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
-[?25l [37m[1m [22m[39m Generating static pages (0/21)  [36m[    ][39m[2K[1G[1A[2K[1G [37m[1m [22m[39m Generating static pages (0/21)  [36m[=   ][39m[2K[1G[1A[2K[1G [37m[1m [22m[39m Generating static pages (0/21)  [36m[==  ][39m[2K[1G[1A[2K[1G[?25h [32m[1m✓[22m[39m Generating static pages (21/21)
-[?25l [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[?25l [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G[?25h [37m[1m [22m[39m Collecting build traces     [32m[1m✓[22m[39m Collecting build traces 
-[2K[1G[?25h [37m[1m [22m[39m Finalizing page optimization     [32m[1m✓[22m[39m Finalizing page optimization 
-
-[4mRoute (app)[24m                              [4mSize[24m     [4mFirst Load JS[24m
-┌ ○ /                                    2.4 kB          [37m[1m293 kB[22m[39m
-├ ○ /_not-found                          904 B           [37m[1m102 kB[22m[39m
-├ ƒ /doctor/[slug]                       2.66 kB         [37m[1m305 kB[22m[39m
-├ ƒ /hospital/[slug]                     4.53 kB         [37m[1m306 kB[22m[39m
-├ ƒ /hospital/[slug]/labs                272 B           [37m[1m206 kB[22m[39m
-├ ƒ /hospital/[slug]/pharmacy            3.5 kB          [37m[1m292 kB[22m[39m
-├ ○ /onboarding/password-change          3.29 kB         [37m[1m305 kB[22m[39m
-├ ○ /onboarding/password-reset           1.24 kB         [37m[1m247 kB[22m[39m
-├ ○ /onboarding/signin                   1.35 kB         [37m[1m306 kB[22m[39m
-├ ○ /onboarding/signup                   1.68 kB         [37m[1m306 kB[22m[39m
-├ ○ /onboarding/verify-email             3.18 kB         [37m[1m293 kB[22m[39m
-├ ○ /user/dashboard                      3.02 kB         [37m[1m291 kB[22m[39m
-├ ○ /user/dashboard/appointments         145 B           [37m[1m102 kB[22m[39m
-├ ○ /user/dashboard/healthbenefits       145 B           [37m[1m102 kB[22m[39m
-├ ○ /user/dashboard/supports             3.26 kB         [37m[1m302 kB[22m[39m
-├ ○ /user/profile                        3.39 kB         [37m[1m293 kB[22m[39m
-├ ○ /user/profile/change-password        783 B           [37m[1m234 kB[22m[39m
-├ ○ /user/profile/emergency-contact      803 B           [37m[1m234 kB[22m[39m
-├ ○ /user/profile/feedback               145 B           [37m[1m102 kB[22m[39m
-├ ○ /user/profile/hmo-provider           788 B           [37m[1m234 kB[22m[39m
-├ ○ /user/profile/settings               433 B           [37m[1m206 kB[22m[39m
-└ ○ /user/profile/vitals                 867 B           [37m[1m234 kB[22m[39m
-+ First Load JS shared by all            [37m[1m101 kB[22m[39m
-  ├ chunks/2855-3910b18ced488dc1.js      45.8 kB
-  ├ chunks/87c73c54-8c278471448bd169.js  52.5 kB
-  └ other shared chunks (total)          3.11 kB
-
-
-○  (Static)   prerendered as static content
-ƒ  (Dynamic)  server-rendered on demand
-
-[?25h[2K[1G✨  Done in 12.02s.
+[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
+[?25l [37m[1m [22m[39m Generating static pages (0/21)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/21)  [36m[=   ][39m[2K[1G[?25h[TypeError: Cannot read properties of null (reading 'useContext')]
+Error occurred prerendering page "/404". Read more: https://nextjs.org/docs/messages/prerender-error
+TypeError: Cannot read properties of null (reading 'useContext')
+    at exports.useContext (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/react/cjs/react.production.js:488:33)
+    at StyleRegistry (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/styled-jsx/dist/index/index.js:450:30)
+    at renderWithHooks (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4189:18)
+    at renderElement (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4327:14)
+    at retryNode (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4871:16)
+    at renderNodeDestructive (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4689:7)
+    at renderElement (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4623:11)
+    at retryNode (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4871:16)
+    at renderNodeDestructive (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4689:7)
+    at renderElement (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4623:11)
+Export encountered an error on /_error: /404, exiting the build.
+ [31m[1m⨯[22m[39m Static worker exited with code: 1 and signal: null
+[?25h[2K[1G[31merror[39m Command failed with exit code 1.
+[2K[1G[34minfo[39m Visit [1mhttps://yarnpkg.com/en/docs/cli/run[22m for documentation about this command.
