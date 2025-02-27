@@ -1,0 +1,65 @@
+.wrapper {
+  background-color: var(--mui-palette-common-white);
+  margin-top: 15.0625rem;
+  width: 456px;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.iconWrapper {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--mui-palette-design_light-secondaryContainer);
+}
+
+.btnWrapper {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.cancelButton {
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: var(--mui-palette-design_light-errorContainer);
+  cursor: pointer;
+}
+
+.infoWrapper {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: -2%;
+}
+
+.heading {
+  font-family: var(--primary-font);
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  line-height: 26px;
+}
+
+.actionBtnWrapper {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+}
+
+button.appointmentBtn {
+    background-color: var(--mui-palette-design_light-secondaryContainer);
+color: var(--mui-palette-design_light-onSecondaryContainer);
+
+}

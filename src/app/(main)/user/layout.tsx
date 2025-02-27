@@ -1,13 +1,13 @@
-import NavigationComponent from "@/components/navigation";
+
+"use client"
+
 import styles from "./layout.module.css";
 import { Suspense } from "react";
+import { withAuthState } from "@/hoc";
+import routes from "@/lib/constants/routes";
 
-export const metadata = {
-  title: "Care Connect User Profile",
-  description: "All in one health care system",
-};
 
-export default function RootLayout({
+function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -20,3 +20,6 @@ export default function RootLayout({
     </Suspense>
   );
 }
+
+
+export default withAuthState(RootLayout, true, routes.home)
