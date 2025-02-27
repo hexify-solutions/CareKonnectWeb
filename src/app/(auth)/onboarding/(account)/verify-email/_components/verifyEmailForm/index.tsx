@@ -4,11 +4,15 @@ import styles from "./verifyEmailForm.module.css";
 import {Spinner} from "@hexify/atoms";
 import { OTPInput } from "@hexify/atoms";
 import { Formik, Form } from "formik";
-import componentData from "@/data/verifyEmail.json";
-import { useAuthContext } from "@/context/auth";
 
-const VerifyEmailForm = () => {
-  const {onVerify, profile, resendVerifyEmailHandler } = useAuthContext();
+
+const VerifyEmailForm = ({
+  componentData, 
+  onVerify, 
+  profile,
+  resendVerifyEmailHandler,
+
+}) => {
 
   const validateHandler = (params: { otp: string[] }) => {
     const { otp } = params;

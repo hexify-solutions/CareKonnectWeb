@@ -19,6 +19,7 @@ export const AuthContext = createContext<
       profile: ProfileType;
       isAuth: boolean;
       resendVerifyEmailHandler: resendVerifyEmailType
+      onLogOut: () => void;
     }
   | undefined
 >(undefined);
@@ -29,7 +30,7 @@ const AuthProvider = ({
   children: ReactElement<any, string | JSXElementConstructor<any>>;
 }) => {
   const initialAuthState = useInitialAuthSetup();
-  const { onRegister, onLogin, onVerify, profile, isAuth, onTriggerPasswordChange, resendVerifyEmailHandler } = useAuth(initialAuthState);
+  const { onRegister, onLogOut, onLogin, onVerify, profile, isAuth, onTriggerPasswordChange, resendVerifyEmailHandler } = useAuth(initialAuthState);
 
 
   const value = {
@@ -39,7 +40,8 @@ const AuthProvider = ({
     profile,
     isAuth,
     onTriggerPasswordChange,
-    resendVerifyEmailHandler
+    resendVerifyEmailHandler,
+    onLogOut,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

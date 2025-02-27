@@ -1,0 +1,159 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.wrapper {
+  margin-top: 155px;
+  padding-bottom: 48px;
+  width: 100%;
+  max-width: 51.625rem;
+  background-color: var(--mui-palette-common-white);
+  font-family: var(--primary-font);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+  justify-content: space-between;
+  background-color: var(--mui-palette-design_light-surfaceVariant);
+}
+
+.logoWrapper {
+  height: 42px;
+}
+
+.cancelBtn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.detailsWrapper {
+  padding: 12px 48px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: var(--mui-palette-design_secondary-field500);
+}
+
+.heading {
+  margin-top: 24px;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 30px;
+  letter-spacing: 0%;
+  color: var(--mui-palette-primary-main);
+}
+
+.info {
+  flex-direction: column;
+  display: flex;
+  margin-top: 24px;
+}
+
+.paymentSummary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 31.2px;
+  letter-spacing: -2%;
+  text-align: center;
+  color: var(--mui-palette-primary-main);
+}
+
+.paymentLabel {
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 22px;
+  letter-spacing: 0%;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 6px;
+  color: #474747;
+}
+
+.summaryWrapper {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.summarySection {
+  flex-grow: 1;
+  flex-shrink: 0;
+  border: 0.5px solid #0000000f;
+  background-color: #ececec1a;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.summaryInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: var(--mui-palette-design_secondary-field500);
+}
+
+.summaryInfo + .summaryInfo {
+  margin-top: 1.5rem;
+}
+
+.summaryValue {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  max-width: 250px;
+}
+
+.downloadWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0px;
+}
+
+.downloadInfo {
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: var(--mui-palette-design_secondary-field500);
+}
+
+
+.footer {
+  padding: 2rem;
+  background-color: var(--mui-palette-design_light-surfaceVariant);
+  font-family: Roboto;
+font-weight: 400;
+font-size: 14px;
+line-height: 21px;
+letter-spacing: 0%;
+
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+margin-top: 2.5rem;
+}
+
+.emp {
+  color: var(--mui-palette-primary-main);
+}
