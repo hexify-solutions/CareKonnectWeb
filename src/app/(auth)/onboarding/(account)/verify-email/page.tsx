@@ -2,7 +2,7 @@
 
 import componentData from "@/data/verifyEmail.json";
 import { useAuthContext } from "@/context/auth";
-import VerifyEmailForm from "./_components/verifyEmailForm";
+import VerifyEmailForm from "@/components/profile/verifyOtpForm";
 const VerifyEmail = () => {
   const { onVerify, profile, resendVerifyEmailHandler } = useAuthContext();
 

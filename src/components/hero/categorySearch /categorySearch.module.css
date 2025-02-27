@@ -1,0 +1,22 @@
+.dropdown {
+}
+
+.dropdownToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 12px;
+  border-radius: 20px;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border: 1px solid #000;
+  cursor: pointer;
+  background-color: transparent;
+  
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-// import CategorySearch from "../inputs/categorySearch ";
+import CategorySearch from "./categorySearch ";
 import styles from "./hero.module.css";
 import clsx from "clsx";
 
@@ -43,9 +43,9 @@ const Hero = () => {
             Everyone deserves access to quality care and wellness resources, to
             live their best life.
           </span>
-          {/* <div className={styles.inputField}>
+          <div className={styles.inputField}>
             <CategorySearch />
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
