@@ -20,6 +20,3 @@ export function useResendVerifyMutation<T extends {}>() {
 export function useTriggerPasswordReset<T extends {}>() {
     return useMutation({ mutationFn: (params: T) => triggerPasswordReset(params) });
   }
-// export function useLogout() {
-//   return useMutation({ mutationFn: logout });
-// }

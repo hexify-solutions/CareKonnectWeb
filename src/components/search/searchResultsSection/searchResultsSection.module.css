@@ -1,0 +1,20 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 18px;
+}
+
+.sectionHeading {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 46.8px;
+  letter-spacing: -2%;
+  color: var(--mui-palette-primary-main);
+  margin-bottom: 1rem;
+}
+
+.wrapper {
+  margin-top: 2.125rem;
+}
+
+
