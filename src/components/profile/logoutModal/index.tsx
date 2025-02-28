@@ -2,10 +2,20 @@
 
 import { Modal, CancelIcon, Button } from "@hexify/atoms";
 import styles from "./logoutModal.module.css";
+import { useAuthContext } from "@/context/auth";
 import useQueryParams from "@/hooks/useQueryParams";
+
 const LogoutModal = () => {
 const { getAllQueryParams, removeQueryParams } = useQueryParams();
 const { useraction: userAction } = getAllQueryParams();
+const { onLogOut } = useAuthContext();
+
+
+
+const handleLogout = () => {
+  onLogOut?.();
+}
+
 
 const cancelHandler = () => {
     removeQueryParams(['useraction'])
@@ -24,8 +34,7 @@ const cancelHandler = () => {
               <Button variant="contained" rounded size="large" onClick={cancelHandler}>
                 No. Keep me signed in
               </Button>
-              <Button variant="outlined" rounded size="large">
-                {" "}
+              <Button onClick={handleLogout} variant="outlined" rounded size="large">
                 Yes, Log out
               </Button>
             </div>

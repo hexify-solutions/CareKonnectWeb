@@ -31,7 +31,7 @@
   margin-bottom: 1.375rem;
 }
 
-.chip {
+div.chip {
   border-radius: 8px;
   padding: 5px 12px;
   font-family: var(--primary-font);
@@ -42,12 +42,12 @@
   text-align: center;
 }
 
-.priorityChip {
+.chip.priorityChip {
   background-color: var(--mui-palette-design_light-errorContainer);
   color: var(--mui-palette-error-main);
 }
 
-.statusChip {
+.chip.statusChip {
   background: var(--Schemes-Surface-Dim, #d9dbd1);
   color: var(--mui-palette-primary-main);
 }
@@ -67,6 +67,8 @@
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: var(--mui-palette-design_secondary-field500);
+  max-width: 900px;
+  display: inline-block;
 }
 
 .infoWrapper {

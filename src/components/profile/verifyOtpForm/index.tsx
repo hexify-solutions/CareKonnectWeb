@@ -1,15 +1,16 @@
 "use client";
 
 import styles from "./verifyEmailForm.module.css";
-import {Spinner} from "@hexify/atoms";
+import { Spinner } from "@hexify/atoms";
 import { OTPInput } from "@hexify/atoms";
 import { Formik, Form } from "formik";
-import componentData from "@/data/verifyEmail.json";
-import { useAuthContext } from "@/context/auth";
 
-const VerifyEmailForm = () => {
-  const {onVerify, profile, resendVerifyEmailHandler } = useAuthContext();
-
+const VerifyOtp = ({
+  componentData,
+  onVerify,
+  profile,
+  resendVerifyEmailHandler,
+}) => {
   const validateHandler = (params: { otp: string[] }) => {
     const { otp } = params;
     if (otp?.every((v) => v !== "")) {
@@ -18,7 +19,7 @@ const VerifyEmailForm = () => {
         code,
         emailOrPhone: profile.email || "",
         type: "email",
-      })
+      });
     }
   };
 
@@ -55,9 +56,12 @@ const VerifyEmailForm = () => {
             <div className={styles.resendBtnWrapper}>
               <span>{componentData.resendLead}</span>{" "}
               <button
-                onClick={() =>
-                  resendVerifyEmailHandler({ email: profile?.email || "" })
-                }
+                type="button"
+                onClick={(e: any) => {
+                  e?.preventDefault();
+                  e?.stopPropagation();
+                  resendVerifyEmailHandler({ email: profile?.email || "" });
+                }}
                 className={styles.resendBtn}
               >
                 {resendVerifyEmailHandler?.isLoading ? (
@@ -77,4 +81,4 @@ const VerifyEmailForm = () => {
 const initialValues = {
   otp: ["", "", "", ""],
 };
-export default VerifyEmailForm;
+export default VerifyOtp;

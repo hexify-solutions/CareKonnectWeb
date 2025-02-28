@@ -1,4 +1,4 @@
-import { useState, useEffect, useLayoutEffect } from "react";
+import { useState, useLayoutEffect } from "react";
 import {
   useRegisterMutation,
   useLoginMutation,
@@ -21,27 +21,31 @@ import { useSecureStorage } from "@/context/storage";
 import { useRouter } from "next/navigation";
 import api from "@/http/api";
 
-const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType, }) => {
-
+const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
   const [authState, setAuthState] = useState<{
     isAuth: boolean;
     profile: ProfileType;
-  }>(defaultState ||{
-    isAuth: false,
-    profile: {} as ProfileType,
-  });
+  }>(
+    defaultState || {
+      isAuth: false,
+      profile: {} as ProfileType,
+    }
+  );
 
   useLayoutEffect(() => {
-    setAuthState(defaultState)
-  }, [defaultState])
+    setAuthState(defaultState);
+  }, [defaultState]);
 
   const router = useRouter();
   const registerMutation = useRegisterMutation<RegistrationType>();
-  const triggerPasswordResetMutation = useTriggerPasswordReset<TriggerPasswordResetType>();
+  const triggerPasswordResetMutation =
+    useTriggerPasswordReset<TriggerPasswordResetType>();
   const loginMutation = useLoginMutation<LoginType>();
   const verifyMutation = useVerifyMutation<VerifyType>();
-  const resendVerifyEmailMutation = useResendVerifyMutation<{email: string}>();
-  const { setItem } = useSecureStorage();
+  const resendVerifyEmailMutation = useResendVerifyMutation<{
+    email: string;
+  }>();
+  const { setItem, removeItem } = useSecureStorage();
 
   const onTriggerPasswordChange = (params: TriggerPasswordResetType) => {
     triggerPasswordResetMutation.mutate(params, {
@@ -49,14 +53,18 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType, }) => {
         if (err) {
           return toast.error(err?.message || "Password Reset Failed!");
         }
-        return toast.error(response?.message || "Please check email for password reset instructions", {
-          onOpen: () => {
-            router.push(routes.passwordReset)
+        return toast.success(
+          response?.message ||
+            "Please check email for password reset instructions",
+          {
+            onOpen: () => {
+              router.push(routes.passwordReset);
+            },
           }
-        });
-      }
-    })
-  }
+        );
+      },
+    });
+  };
 
   const onVerify = (params: VerifyType) => {
     verifyMutation?.mutate(params, {
@@ -110,19 +118,33 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType, }) => {
     });
   };
 
+  const onLogOut = () => {
+    removeItem(lsKeys.profile);
+    removeItem(lsKeys.token);
+    removeItem(lsKeys.tokenExpiration);
+    setAuthState((prev) => ({
+      ...prev,
+      isAuth: false,
+      profile: {
+        email: "",
+        id: "",
+      },
+    }));
+  };
   const onLogin = (params: LoginType) => {
     loginMutation.mutate(params, {
       onSettled: (response, err) => {
         if (err) {
           //TODO: this check should be optimized as it is prone to bug
-          if(err?.message === 'Please verify your email') {
-            setAuthState(prev => ({
+          if (err?.message === "Please verify your email") {
+            setAuthState((prev) => ({
               ...prev,
               profile: {
                 ...(prev?.profile || {}),
+                id: prev?.profile?.id,
                 email: params?.email,
-              }
-            }))
+              },
+            }));
             router.push(routes.verifyEmail);
           }
           return toast.error(err?.message || "Login Failed!");
@@ -130,9 +152,9 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType, }) => {
         if (response) {
           const { token, ...rest } = response.data;
           api.setAuth(token?.token);
-          setItem(lsKeys.profile, rest)
-          setItem(lsKeys.token, token?.token)
-          setItem(lsKeys.tokenExpiration, token?.expiresAt)
+          setItem(lsKeys.profile, rest);
+          setItem(lsKeys.token, token?.token);
+          setItem(lsKeys.tokenExpiration, token?.expiresAt);
           setAuthState((prev) => {
             return {
               ...prev,
@@ -159,15 +181,15 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType, }) => {
 
   onLogin.isLoading = loginMutation.isPending;
   onLogin.error = loginMutation.error;
-  
+
   onVerify.isLoading = verifyMutation.isPending;
   onVerify.error = verifyMutation.error;
 
   onTriggerPasswordChange.isLoading = triggerPasswordResetMutation.isPending;
-  onTriggerPasswordChange.error = triggerPasswordResetMutation.error
+  onTriggerPasswordChange.error = triggerPasswordResetMutation.error;
 
   resendVerifyEmailHandler.isLoading = resendVerifyEmailMutation.isPending;
-  resendVerifyEmailHandler.error = resendVerifyEmailMutation.error
+  resendVerifyEmailHandler.error = resendVerifyEmailMutation.error;
 
   return {
     onRegister,
@@ -175,6 +197,7 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType, }) => {
     onVerify,
     onTriggerPasswordChange,
     resendVerifyEmailHandler,
+    onLogOut,
     ...authState,
   };
 };

@@ -1,0 +1,73 @@
+.paymentOption {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  background-color: var(--mui-palette-common-white);
+  color: var(--mui-palette-primary-main);
+  font-family: var(--primary-font);
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.paymentOption + .paymentOption {
+    margin-top: 1rem;
+}
+
+.radioButton {  
+  display: flex;
+  margin-left: auto;
+  align-self: center;
+}
+
+.paymentOptionDetails {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 20px;
+  letter-spacing: -2%;
+}
+
+.paymentType {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -2%;
+  color: #373a33;
+}
+
+.heading {
+font-weight: 600;
+font-size: 1.25rem;
+line-height: 26px;
+margin-bottom: 23px;
+letter-spacing: -2%;
+
+}
+
+
+.btnWrapper {
+    margin-top: 36px;
+}
+
+
+
+/* hmo form  styles*/
+
+.inputFieldWrapper + .inputFieldWrapper {
+    margin-top: 24px;
+}
+
+.formBtnWrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 28px;
+    gap: 1rem;
+
+}
+
+button.changePaymentBtn {
+    color: var(--mui-palette-design_secondary-field500);
+}

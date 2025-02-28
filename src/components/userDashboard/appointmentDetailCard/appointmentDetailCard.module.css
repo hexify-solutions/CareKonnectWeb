@@ -1,0 +1,106 @@
+.wrapper {
+  padding: 4rem 3.8125rem 4rem 2.75rem;
+  background-color: var(--mui-palette-common-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: var(--primary-font);
+}
+
+.infoWrapper {
+  display: flex;
+  gap: 24px;
+}
+
+.doctorInfo {
+  display: flex;
+  gap: 0.875rem;
+}
+
+.doctorDetails {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.8125rem;
+}
+
+.doctorsName {
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  letter-spacing: -2%;
+  color: var(--mui-palette-design_light-onPrimaryContainer);
+}
+
+.doctorSpecialty {
+  color: var(--mui-palette-design_secondary-main);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.date {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  letter-spacing: -2%;
+  margin-top: 1.5rem;
+}
+
+.dateItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--mui-palette-design_secondary-main);
+}
+
+.dateItem > span {
+  color: var(--mui-palette-design_light-onSurface);
+}
+
+.separator {
+  width: 1px;
+  background-color: var(--mui-palette-design_light-surfaceVariant);
+}
+
+.hospitalInfoWrapper {
+  margin-left: 1rem;
+  flex-direction: column;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.hospitalName {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 31.2px;
+  letter-spacing: -2%;
+  color: var(--mui-palette-primary-main);
+}
+
+.hospitalDetails {
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  flex-direction: column;
+  display: flex;
+  gap: 6px;
+}
+
+.hospitalDetails > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--mui-palette-secondary-main);
+}
+
+.btnWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+button.cancelBtn {
+  background-color: var(--mui-palette-design_light-errorContainer);
+  color: var(--mui-palette-error-main);
+  padding: 16px !important;
+}

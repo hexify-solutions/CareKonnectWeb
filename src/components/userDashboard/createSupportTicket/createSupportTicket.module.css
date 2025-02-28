@@ -52,3 +52,8 @@ color: #84818A
 .btnWrapper button {
     padding: 1.125rem 2.75rem;
 }
+
+button.cancelBtn {
+  background-color: var(--mui-palette-design_light-secondaryContainer);
+  color: var(--mui-palette-primary-main);
+}

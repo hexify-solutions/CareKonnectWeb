@@ -1,3 +1,4 @@
+
 import styles from "./layout.module.css";
 import LogoutModal from "@/components/profile/logoutModal";
 import ProfileDeleteModal from "@/components/profile/deleteModal";
@@ -6,11 +7,11 @@ import clsx from "clsx";
 import SideBar from "@/components/profile/sideBar";
 import { Suspense } from "react";
 
-export default function RootLayout({
+const Layout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>)  => {
   return (
     <Suspense fallback={<>Loading</>}>
     <div>
@@ -28,3 +29,5 @@ export default function RootLayout({
   );
 }
  
+
+export default  Layout

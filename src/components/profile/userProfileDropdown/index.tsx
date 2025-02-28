@@ -24,7 +24,7 @@ const UserProfileDropdown = () => {
       {isOpen && (
         <div className={styles.dropdown}>
           <Link href={routes.userDashboard} className={styles.dropdownListItem}>
-            <DashboardIcon /> <span>Dashboard</span>
+            <UserIcon /> <span>Dashboard</span>
           </Link>
           <Link href={routes.profile} className={styles.dropdownListItem}>
             <UserIcon /> <span>Profile</span>

@@ -1,6 +1,6 @@
 import styles from "./appointmentCard.module.css";
-import { Badge, Button, CheckMark, Chip, Time } from "@hexify/atoms";
-const AppointmentCard = () => {
+import { CheckMark, Chip, Time } from "@hexify/atoms";
+const AppointmentCard = ({ showPaymentStatus= true }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
@@ -8,7 +8,7 @@ const AppointmentCard = () => {
           <span className={styles.headerSectionSub}>Zoey Hospital</span>
           <span className={styles.headerSectionLead}>Dr Femi johnson</span>
         </div>
-        <div className={styles.headerSection}>
+  { showPaymentStatus &&     <div className={styles.headerSection}>
           <span className={styles.headerSectionSub}>Payment status</span>
           <span>
             <Chip
@@ -21,7 +21,7 @@ const AppointmentCard = () => {
               }
             />
           </span>
-        </div>
+        </div>}
       </div>
       <div className={styles.footer}>
         <div className={styles.footerText}>
