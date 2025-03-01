@@ -1,27 +1,42 @@
 
-[2K[1G[1myarn run v1.22.19[22m
+[2K[1G[1myarn run v1.22.22[22m
 [2K[1G[2m$ next build[22m
    [1m[38;2;173;127;168m▲ Next.js 15.1.6[39m[22m
-   - Environments: .env.local, .env.production
+   - Environments: .env.production, .env
 
  [37m[1m [22m[39m Creating an optimized production build ...
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|javascript/auto|/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/node_modules/next/dist/build/webpack/loaders/next-flight-css-loader.js??ruleSet[1].rules[13].oneOf[5].use[0]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[1]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css|ssr': No serializer registered for Warning
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> Array { 1 items } -> webpack/lib/ModuleWarning -> Warning
+ ⚠ Compiled with warnings
+
+./src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css
+Warning
+
+(21:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css
+./src/components/payment/paymentSuccessModal/index.tsx
+./src/components/payment/paymentForm/index.tsx
+
  [32m[1m✓[22m[39m Compiled successfully
  [37m[1m [22m[39m Skipping validation of types
  [37m[1m [22m[39m Skipping linting
-[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
-[?25l [37m[1m [22m[39m Generating static pages (0/21)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/21)  [36m[=   ][39m[2K[1G[?25h[TypeError: Cannot read properties of null (reading 'useContext')]
+[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
+[?25l [37m[1m [22m[39m Generating static pages (0/23)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/23)  [36m[=   ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/23)  [36m[==  ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/23)  [36m[=== ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/23)  [36m[ ===][39m[2K[1G[?25hhttps://api.carekonnect.hexifysolutions.com/v1 true
+[TypeError: Cannot read properties of null (reading 'useContext')]
 Error occurred prerendering page "/404". Read more: https://nextjs.org/docs/messages/prerender-error
 TypeError: Cannot read properties of null (reading 'useContext')
-    at exports.useContext (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/react/cjs/react.production.js:488:33)
-    at StyleRegistry (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/styled-jsx/dist/index/index.js:450:30)
-    at renderWithHooks (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4189:18)
-    at renderElement (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4327:14)
-    at retryNode (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4871:16)
-    at renderNodeDestructive (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4689:7)
-    at renderElement (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4623:11)
-    at retryNode (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4871:16)
-    at renderNodeDestructive (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4689:7)
-    at renderElement (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4623:11)
+    at exports.useContext (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/styled-jsx/node_modules/react/cjs/react.production.js:488:33)
+    at StyleRegistry (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/styled-jsx/dist/index/index.js:450:30)
+    at renderWithHooks (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4189:18)
+    at renderElement (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4327:14)
+    at retryNode (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4871:16)
+    at renderNodeDestructive (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4689:7)
+    at renderElement (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4623:11)
+    at retryNode (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4871:16)
+    at renderNodeDestructive (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4689:7)
+    at renderElement (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/react-dom/cjs/react-dom-server.edge.production.js:4623:11)
 Export encountered an error on /_error: /404, exiting the build.
  [31m[1m⨯[22m[39m Static worker exited with code: 1 and signal: null
 [?25h[2K[1G[31merror[39m Command failed with exit code 1.
