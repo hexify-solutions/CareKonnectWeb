@@ -10,17 +10,24 @@ import { Breadcrumb } from "@hexify/atoms";
 import { ImageBackgroundBanner } from "@hexify/components";
 import { style } from "motion/react-client";
 import styles from "./page.module.css";
+import CBCModal, { cbcQuery } from "@/components/lab/completeBloodCountModal";
+import { useRouter } from "next/navigation";
 
 const Lab = () => {
   const testFilter = ["All", "Microbiology", "Heamatology", "Pathology"];
 
   // const [activeChip, setActiveChip] = useState<number | null>(null);
+  const router = useRouter();
 
   const [currentPage, setCurrentPage] = React.useState(1);
   const totalPages = 68; 
 
+  const openCBCModal = () => {
+    router.push(`?${cbcQuery}`, { scroll: false });
+  };
+
   return (
-    <div>
+    <>
       <div className="inner-wrapper">
 
         <Breadcrumb excludePaths={["hospital"]} />
@@ -52,9 +59,9 @@ const Lab = () => {
             {Array.from({ length: 5 })?.map((_, index) => {
               return (
                 <li key={index} className={styles.testListItem}>
-                  <Link href="?test=id">
+                  <button onClick={openCBCModal} className={styles.testCardBtn}>
                     <LabTestCard />
-                  </Link>
+                  </button>
                 </li>
               );
             })}
@@ -69,7 +76,8 @@ const Lab = () => {
         />
       </div>
         <SignupBanner />
-    </div>
+        <CBCModal />
+    </>
   );
 };
 

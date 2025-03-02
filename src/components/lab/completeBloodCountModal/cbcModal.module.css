@@ -1,0 +1,19 @@
+.cbcWrapper {
+    margin-top: 12.6875rem;
+    height: 33.4375rem;
+    outline: none;
+    box-shadow: none;
+    background-color: var(--mui-palette-common-white);
+    border-radius: 1.5rem;
+    width: 68.1875rem;
+}
+
+.closeButton {
+    border: none;
+    background: none;
+    color: var(--Schemes-On-Surface, #1D1B20);
+    position: relative;
+    top: 1.25rem;
+    left: 64.0625rem;
+    cursor: pointer;
+}

@@ -27,5 +27,5 @@ export const LabTestCard = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};

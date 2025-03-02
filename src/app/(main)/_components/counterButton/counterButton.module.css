@@ -1,0 +1,32 @@
+.counter {
+    display: flex;
+    width: 12.0625rem;
+    height: 3rem;
+    border-radius: 3.75rem;
+    padding: 0.5rem 0.625rem;
+    gap: 1.5rem;
+    background: var(--Schemes-Surface, #F8FAF0);
+    justify-content: center;
+    align-items: center;
+}
+
+.counterBtnMinus, .counterBtnPlus {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: var(--Schemes-On-Primary-Container, #062100);
+    font-size: 1.5625rem;
+}
+
+.counterBtnMinus {
+    padding-bottom: 0.4375rem;
+}
+
+.count {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: var(--Schemes-On-Primary-Container, #062100);
+    padding-top: 0.3125rem;
+}
