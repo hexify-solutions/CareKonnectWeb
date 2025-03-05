@@ -1,0 +1,9 @@
+
+[2K[1G[1myarn run v1.22.19[22m
+[2K[1G[2m$ next start -p 6900[22m
+   [1m[38;2;173;127;168m▲ Next.js 15.0.3[39m[22m
+   - Local:        http://localhost:6900
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 423ms
+https://whale-uncommon-sheep.ngrok-free.app/v1 [33mtrue[39m
