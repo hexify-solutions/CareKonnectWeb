@@ -51,15 +51,14 @@
 }
 
 .actionBtnWrapper {
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 6px;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
 }
 
 button.appointmentBtn {
-    background-color: var(--mui-palette-design_light-secondaryContainer);
-color: var(--mui-palette-design_light-onSecondaryContainer);
-
+  background-color: var(--mui-palette-design_light-secondaryContainer);
+  color: var(--mui-palette-design_light-onSecondaryContainer);
 }

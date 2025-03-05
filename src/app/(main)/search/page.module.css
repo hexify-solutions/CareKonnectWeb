@@ -2,3 +2,11 @@
     padding-top: 12px;
     padding-bottom: 3.875rem;
 }
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+}

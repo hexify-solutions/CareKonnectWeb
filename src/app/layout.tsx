@@ -1,10 +1,10 @@
+
 import type { Metadata } from "next";
 import QueryProvider from "@/context/reactQueryProvider";
 import "../styles/global.css";
 import AuthProvider from "@/context/auth";
 import SecureStorageProvider from "@/context/storage";
 import ToastProvider from "@/context/toastProvider";
-import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Care Konnect",
@@ -20,7 +20,6 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <>
-          <Suspense fallback={<>Loading</>}>
             <QueryProvider>
               <SecureStorageProvider>
                 <AuthProvider>
@@ -29,7 +28,6 @@ export default function RootLayout({
               </SecureStorageProvider>
               <ToastProvider />
             </QueryProvider>
-          </Suspense>
         </>
       </body>
     </html>

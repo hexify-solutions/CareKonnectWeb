@@ -13,6 +13,9 @@ const routes = {
   doctor: (id: string) => "/doctor/" + id,
   doctorPayment: (queryString: string) =>  "/doctor/payment" + queryString,
 
+  // search
+  search: (queryString: string) => `/search?${queryString}`,
+
   // hospital routes
   hospital: (id: string) => "/hospital/" + id,
 

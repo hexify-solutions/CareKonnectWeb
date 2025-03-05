@@ -11,6 +11,7 @@
   letter-spacing: -2%;
   color: var(--mui-palette-primary-main);
   margin-bottom: 1rem;
+  text-transform: capitalize;
 }
 
 .wrapper {

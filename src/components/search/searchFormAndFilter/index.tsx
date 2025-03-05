@@ -3,11 +3,20 @@ import { Form, Formik } from "formik";
 import styles from "./searchFormAndFilter.module.css";
 import { Chip, FilterIcon, InputField, SearchIcon } from "@hexify/atoms";
 
-const SearchFormAndFilter = () => {
+const SearchFormAndFilter = ({
+  search,
+  searchCategory,
+  onSubmitSearchHandler,
+  onSelectFilterHandler,
+}) => {
+
+
+
+
   return (
     <div className={styles.wrapper}>
-      <Formik onSubmit={() => {}} initialValues={{}}>
-        {() => {
+      <Formik enableReinitialize onSubmit={onSubmitSearchHandler} initialValues={initialValues(search)}>
+        {({ values, handleChange, errors, }) => {
           return (
             <Form className={styles.form}>
               <div className={styles.inputWrapper}>
@@ -16,6 +25,9 @@ const SearchFormAndFilter = () => {
                   placeholder="Search input"
                   prefix={FilterIcon}
                   suffix={SearchIcon}
+                  name="search"
+                  onChange={handleChange}
+                  value={values?.search}
                   suffixProps={{
                     onClick: () => console.log("i am clicked"),
                   }}
@@ -31,13 +43,14 @@ const SearchFormAndFilter = () => {
       <ul className={styles.filterList}>
         {filterOptions?.map((option) => {
           return (
-            <li>
+            <li key={option?.value}>
               <Chip
                 designSize="xlarge"
-                designVariant="ghost"
+                designVariant={searchCategory?.includes(option?.value?.toLowerCase()) ? "primary_dark" :  "ghost"}
                 variant="outlined"
                 label={option?.label}
                 className={styles.filter}
+                onClick={() => onSelectFilterHandler(option?.label?.toLowerCase())}
                 rounded
               />
             </li>
@@ -73,4 +86,12 @@ const filterOptions = [
     value: "Laboratories",
   },
 ];
+
+
+const initialValues = (search: string) => {
+  return {
+    search,
+
+  }
+}
 export default SearchFormAndFilter;
