@@ -2,7 +2,6 @@
 
 import { useAuthContext } from "@/context/auth/index";
 import { useRouter } from "next/navigation";
-import routes from "@/lib/constants/routes";
 
 export const withAuthState = (WrappedComponent, authState = true, redirect) => {
 

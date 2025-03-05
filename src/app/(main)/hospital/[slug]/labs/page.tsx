@@ -1,14 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import SignupBanner from "@/app/(main)/_components/signupBanner";
 import { LabTestCard } from "@/components/lab/cards/labTestCard";
 import LabDetails from "@/components/lab/labDetails";
-import { Pagination } from "@hexify/components";
+// import { Pagination } from "@hexify/components";
 import { Chip } from "@hexify/atoms";
 import Link from "next/link";
 import { Breadcrumb } from "@hexify/atoms";
 import { ImageBackgroundBanner } from "@hexify/components";
-import { style } from "motion/react-client";
 import styles from "./page.module.css";
 
 const Lab = () => {
@@ -62,11 +61,11 @@ const Lab = () => {
         </div>
       </div>
       <div className={styles.pagination}>
-        <Pagination
+        {/* <Pagination
           currentPage={currentPage} 
           totalPages={totalPages} 
           onPageChange={setCurrentPage} 
-        />
+        /> */}
       </div>
         <SignupBanner />
     </div>

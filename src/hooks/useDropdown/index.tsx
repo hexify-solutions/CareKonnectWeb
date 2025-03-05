@@ -7,7 +7,9 @@ function useDropdown<T extends HTMLElement = HTMLDivElement>() {
   const dropdownRef = useRef<T | null>(null);
 
   // Toggle dropdown state
-  const toggle = useCallback(() => {
+  const toggle = useCallback((e) => {
+    e?.preventDefault();
+    e?.stopPropagation();
     setIsOpen((prev) => !prev);
   }, []);
 

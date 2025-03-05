@@ -3,7 +3,7 @@
   position: relative;
   backface-visibility: hidden;
   background-color: rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .reel {
@@ -28,7 +28,6 @@
     margin-top: 2rem;
     width: 49.25rem;
     min-height: 72px;
-    overflow: hidden;
 }
 
 .container {
