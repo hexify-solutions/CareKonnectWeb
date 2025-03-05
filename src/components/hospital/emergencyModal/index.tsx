@@ -12,7 +12,7 @@ const EmergencyModal = () => {
 
   const handleClose = () => {
     setOpenEmergencyModal(false);
-    const currentPath = window.location.pathname;
+    const currentPath = window?.location?.pathname;
     window.history.replaceState(null, "", currentPath);
   };
 
