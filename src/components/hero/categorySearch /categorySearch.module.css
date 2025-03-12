@@ -1,0 +1,75 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdownToggle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 12px;
+  border-radius: 20px;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border: 1px solid #000;
+  cursor: pointer;
+  background-color: transparent;
+  
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.dropdownWrapper {
+  position: absolute;
+padding: 1.5rem;
+background-color: var(--mui-palette-design_light-background);
+z-index: 100;
+border-radius: 1.5rem;
+width: 16.125rem;
+margin-top: 4px;
+transform: translateZ(0);
+}
+
+.heading {
+font-weight: 700;
+font-size: 20px;
+line-height: 26px;
+letter-spacing: -2%;
+color: var(--mui-palette-design_light-onPrimaryContainer)
+
+
+}
+
+.label {
+display: flex;
+align-items: center;
+font-family: var(--primary-font);
+color: var(--mui-palette-design_light-onSurface);
+font-size: 16px;
+line-height: 24px;
+gap: 16px;
+
+}
+
+.categoryItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.form {
+  height: 100%;
+}
+
+.submitBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

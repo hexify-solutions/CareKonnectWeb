@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import QueryProvider from "@/context/reactQueryProvider";
 import "../styles/global.css";
@@ -19,14 +20,14 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <>
-          <QueryProvider>
-            <SecureStorageProvider>
-              <AuthProvider>
-                <main>{children} </main>
-              </AuthProvider>
-            </SecureStorageProvider>
-            <ToastProvider />
-          </QueryProvider>
+            <QueryProvider>
+              <SecureStorageProvider>
+                <AuthProvider>
+                  <main>{children} </main>
+                </AuthProvider>
+              </SecureStorageProvider>
+              <ToastProvider />
+            </QueryProvider>
         </>
       </body>
     </html>

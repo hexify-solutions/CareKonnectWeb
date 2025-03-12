@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState } from "react";
 import SignupBanner from "@/app/(main)/_components/signupBanner";
 import { LabTestCard } from "@/components/lab/cards/labTestCard";
@@ -8,7 +9,6 @@ import { Chip } from "@hexify/atoms";
 import Link from "next/link";
 import { Breadcrumb } from "@hexify/atoms";
 import { ImageBackgroundBanner } from "@hexify/components";
-import { style } from "motion/react-client";
 import styles from "./page.module.css";
 import CBCModal, { cbcQuery } from "@/components/lab/completeBloodCountModal";
 import { useRouter } from "next/navigation";
@@ -17,6 +17,7 @@ const Lab = () => {
   const testFilter = ["All", "Microbiology", "Heamatology", "Pathology"];
 
   // const [activeChip, setActiveChip] = useState<number | null>(null);
+
   const router = useRouter();
 
   const [currentPage, setCurrentPage] = React.useState(1);
@@ -25,7 +26,7 @@ const Lab = () => {
   const openCBCModal = () => {
     router.push(`?${cbcQuery}`, { scroll: false });
   };
-
+        
   return (
     <>
       <div className="inner-wrapper">

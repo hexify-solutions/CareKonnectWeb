@@ -6,11 +6,12 @@ import DoctorInfoCard from "@/components/doctor/doctorInfoCard";
 import DoctorDetails from "@/components/doctor/doctorDetails";
 import DoctorAppointmentForm from "@/components/doctor/doctorAppointmentForm";
 import SignupBanner from "../../_components/signupBanner";
+import clsx from 'clsx';
 
 const Doctor = () => {
   return (
     <div>
-      <div className={"inner-wrapper"}>
+      <div className={clsx("inner-wrapper", styles.wrapper)}>
         <DoctorInfoCard />
         <div className={styles.doctorInfo}>
           <Link href="/" className={styles.breadCrumb}>

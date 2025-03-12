@@ -1,0 +1,130 @@
+.infoCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  justify-content: space-between;
+  font-family: var(--primary-font);
+}
+
+.tabWrapper {
+  flex-grow: 1;
+}
+
+.paymentSection {
+  width: 26.3125rem;
+  background-color: var(--mui-palette-common-white);
+  padding: 23px 27px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.paymentSection .heading {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  letter-spacing: -2%;
+}
+
+.receipt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--mui-palette-design_light-surfaceVariant);
+  padding: 2rem 0.8125rem;
+  margin: 10px 0px;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 20px;
+  letter-spacing: -2%;
+  text-align: center;
+  color: var(--mui-palette-design_secondary-field500);
+}
+
+.otherAppointmentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filterBtn {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  gap: 6px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 20px;
+  letter-spacing: -2%;
+}
+
+
+
+
+.otherAppointmentCardWrapper {
+  padding: 1.625rem 1.5rem;
+  background-color: var(--mui-palette-design_light-surfaceVariant);
+  border-radius: 12px;
+  margin-top: 16px;
+}
+.appointmentCardDetailsSection {
+  font-family: var(--primary-font);
+  display: flex;
+  flex-direction: column;
+font-weight: 500;
+font-size: .75rem;
+line-height: 1.25rem;
+letter-spacing: -2%;
+
+}
+
+
+.appointmentCardDetailsSection + .appointmentCardDetailsSection {
+  margin-top: 12px;
+}
+
+.scheduleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 16px;
+}
+
+.scheduleWrapper button {
+flex: 1;
+padding: 10px 11px;
+}
+
+.scheduleWrapper button[data-action="reschedule"] {
+background-color: var(--mui-palette-design_light-primaryContainer);
+color: var(--mui-palette-design_light-onPrimaryContainer);
+
+}
+
+.scheduleWrapper button[data-action="cancel"] {
+background-color: var(--mui-palette-design_light-errorContainer);
+color: var(--mui-palette-design_light-onPrimaryContainer);
+
+}
+
+
+.cardDetailsInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filterBtnWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.filterBtnWrapper .filterBtn {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--mui-palette-primary-main);
+  cursor: pointer;
+}

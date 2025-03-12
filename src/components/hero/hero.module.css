@@ -3,7 +3,7 @@
   position: relative;
   backface-visibility: hidden;
   background-color: rgba(0, 0, 0, 0.2);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .reel {
@@ -26,7 +26,8 @@
 
 .inputField {
     margin-top: 2rem;
-    width: 49.25rem
+    width: 49.25rem;
+    min-height: 72px;
 }
 
 .container {

@@ -65,12 +65,6 @@
     color: inherit;
 }
 
-.testCardBtn {
-    border: none;
-    background: none;
-    width: 100%;
-}
-
 .pagination {
     display: flex;
     justify-content: center;

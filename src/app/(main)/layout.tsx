@@ -1,10 +1,14 @@
+
+
+
 import NavigationComponent from "@/components/navigation";
 import { CustomTheme } from "@hexify/atoms";
 import { Footer } from "@hexify/components";
 import footerMap from "../../data/footerMap.json";
 import styles from "./layout.module.css";
 
-export default function RootLayout({
+
+ function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -28,3 +32,6 @@ export default function RootLayout({
     </CustomTheme>
   );
 }
+
+export default RootLayout;
+

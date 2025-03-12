@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 export const withAuthState = (WrappedComponent, authState = true, redirect) => {
 
-  const Hoc = () => {
+  const Hoc = (props: any) => {
     const { isAuth } = useAuthContext();
     const router = useRouter();
 
@@ -16,7 +16,7 @@ export const withAuthState = (WrappedComponent, authState = true, redirect) => {
       return null;
     }
 
-    return <WrappedComponent />;
+    return <WrappedComponent {...props} />;
   };
 
   return Hoc;

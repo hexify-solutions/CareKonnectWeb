@@ -1,17 +1,29 @@
 "use client";
 
 import { DatePicker, TimePicker } from "@hexify/components";
+import { useRouter } from "next/navigation";
+import routes from "@/lib/constants/routes";
 import { Formik, Form } from "formik";
 import styles from "./doctorAppointmentForm.module.css";
+import useQueryParams from "@/hooks/useQueryParams";
 import { Button, InputField, ToggleInput } from "@hexify/atoms";
 
 const DoctorAppointmentForm = () => {
+
+  const { buildQueryString } = useQueryParams();
+  const router = useRouter();
+
+  const onSubmitHandler = (params) => {
+      const queryString = buildQueryString(params || {})
+      console.log(queryString, "this i sthe query string")
+      router.push(routes.doctorPayment(`?${queryString}`))
+
+
+  }
   return (
     <Formik
       initialValues={initialValue}
-      onSubmit={() => {
-        console.log("checking");
-      }}
+      onSubmit={onSubmitHandler}
     >
       {({ setFieldValue, values, errors, handleChange }) => {
         return (

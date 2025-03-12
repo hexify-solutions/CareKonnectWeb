@@ -4,14 +4,8 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "images.pexels.com",
-        port: "",
-      },
-      {
-        protocol: "https",
-        hostname: "s3-alpha-sig.figma.com",
-        port: "",
+        protocol: 'https',
+        hostname: '**', // Allows images from any domain
       },
     ],
   },

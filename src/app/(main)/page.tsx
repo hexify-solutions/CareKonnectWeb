@@ -1,11 +1,10 @@
-
-import Categories from "./_components/categories";
-import SpecialistList from "@/components/specialistList";
-import SignupBanner from "./_components/signupBanner";
-import Hero from "@/components/hero";
-import ScrollableBanner from "./_components/scrollableBanner";
-import styles from "./page.module.css";
-import clsx from 'clsx';
+import Categories from "./_components/categories"
+import SpecialistList from "@/components/specialistList"
+import SignupBanner from "./_components/signupBanner"
+import Hero from "@/components/hero"
+import ScrollableBanner from "./_components/scrollableBanner"
+import styles from "./page.module.css"
+import clsx from "clsx"
 
 export default function Home() {
   return (
@@ -27,6 +26,5 @@ export default function Home() {
       </div>
       <SignupBanner />
     </>
-  );
+  )
 }
-

@@ -1,0 +1,22 @@
+
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  font-family: var(--primary-font);
+  font-weight: 600;
+  font-size: 1.875rem;
+  line-height: 2.4375rem;
+  color: var(--mui-palette-primary-main);
+  flex-wrap: wrap;
+
+}
+
+.action {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}

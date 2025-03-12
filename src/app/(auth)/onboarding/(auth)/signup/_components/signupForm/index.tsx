@@ -11,7 +11,8 @@ import componentData from "../../../../../../../data/signupForm.json";
 import { useAuthContext } from "@/context/auth";
 
 type SignupFormType = {
-  fullName: string;
+  firstName: string;
+  lasName: string;
   email: string;
   password: string;
 };
@@ -46,19 +47,36 @@ const SignupForm = () => {
             </aside>
             <div className={styles.inputWrapper}>
               <InputField
-                placeholder="Enter your name here"
+                placeholder="Enter your first name here"
                 fullWidth
                 label="Name"
                 variant="filled"
                 data-hasprefix="true"
                 data-variant="design_primary"
                 type="text"
-                name="fullName"
+                name="firstName"
                 prefix={iconLoaderMap.profile}
                 onChange={handleChange}
-                value={values.fullName}
-                error={!!errors.fullName}
-                helperText={errors.fullName}
+                value={values.firstName}
+                error={!!errors.firstName}
+                helperText={errors.firstName}
+              />
+            </div>
+            <div className={styles.inputWrapper}>
+              <InputField
+                placeholder="Enter your last name here"
+                fullWidth
+                label="Last Name (surname)"
+                variant="filled"
+                data-hasprefix="true"
+                data-variant="design_primary"
+                type="text"
+                name="lastName"
+                prefix={iconLoaderMap.profile}
+                onChange={handleChange}
+                value={values.lastName}
+                error={!!errors.lastName}
+                helperText={errors.lastName}
               />
             </div>
             <div className={styles.inputWrapper}>
@@ -146,7 +164,8 @@ const SignupForm = () => {
 
 const initialValues = () => {
   return {
-    fullName: "",
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
   };
@@ -157,10 +176,15 @@ const validationSchema = Yup.object({
     .email("Invalid email address")
     .required("Email is required"),
 
-  fullName: Yup.string()
-    .min(3, "Name must be at least 3 characters")
-    .max(50, "Name cannot exceed 50 characters")
-    .required("Name is required"),
+  firstName: Yup.string()
+    .min(3, "First name must be at least 3 characters")
+    .max(50, "First name cannot exceed 50 characters")
+    .required("First name is required"),
+
+  lastName: Yup.string()
+    .min(3, "Last name must be at least 3 characters")
+    .max(50, "Last name cannot exceed 50 characters")
+    .required("Last name is required"),
 
   password: Yup.string()
     .min(8, "Password must be at least 8 characters")
