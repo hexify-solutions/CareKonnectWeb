@@ -1,0 +1,46 @@
+.container {
+    width: 29.625rem;
+    height: 49.9375rem;
+    font-family: var(--primary-font);
+}
+
+.heading {
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: -2%;
+    color: var(--Schemes-Primary, #446832);
+    text-transform: uppercase;
+    margin-top: 1.875rem;
+    margin-bottom: 1.25rem;
+}
+
+.flex {
+    display: flex;  
+}
+
+.headParagraph, .subParagraph {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0%;
+    color: var(--Schemes-On-Primary-Container, #062100);
+    margin: 0;
+}
+
+.subParagraph {
+    padding-top: 0.1875rem;
+}
+
+.bullet {
+    padding: 0rem 0.625rem 0.625rem;
+}
+
+.note {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0%;
+    color: var(--Schemes-On-Primary-Container, #062100);
+    padding-top: 0.625rem;
+}

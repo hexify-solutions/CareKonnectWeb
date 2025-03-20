@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import SignupBanner from "@/app/(main)/_components/signupBanner";
 import { LabTestCard } from "@/components/lab/cards/labTestCard";
-import LabDetails from "@/components/lab/labDetails";
+import LabLocation from "@/components/lab/labLocation";
 import { Pagination } from "@hexify/components";
 import { Chip } from "@hexify/atoms";
 import Link from "next/link";
@@ -23,7 +23,8 @@ const Lab = () => {
   const [currentPage, setCurrentPage] = React.useState(1);
   const totalPages = 68; 
 
-  const openCBCModal = () => {
+  const openCBCModal = (e) => {
+    e.stopPropagation();
     router.push(`?${cbcQuery}`, { scroll: false });
   };
         
@@ -38,7 +39,7 @@ const Lab = () => {
               background: `url('https://images.pexels.com/photos/6129879/pexels-photo-6129879.jpeg?auto=compress&cs=tinysrgb&w=600')`,
             }}
           >
-            <LabDetails />
+            <LabLocation />
           </ImageBackgroundBanner>
         </div>
       </div>
@@ -60,9 +61,10 @@ const Lab = () => {
             {Array.from({ length: 5 })?.map((_, index) => {
               return (
                 <li key={index} className={styles.testListItem}>
-                  <button onClick={openCBCModal} className={styles.testCardBtn}>
-                    <LabTestCard />
-                  </button>
+                  <LabTestCard
+                    onAddToCart={openCBCModal}
+                    testLink="./labs/hematology/blood-count-booking"
+                  />
                 </li>
               );
             })}

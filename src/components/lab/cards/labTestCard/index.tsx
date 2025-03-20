@@ -1,10 +1,10 @@
 import { Button, Info, CartIconTwo, Star } from "@hexify/atoms";
 import style from "./style.module.css";
 
-export const LabTestCard = () => {
+export const LabTestCard = ({ onAddToCart, testLink }) => {
     return (
-        <div>
-            <div className={style.card}>
+        <div className={style.card}>
+            <a href={testLink}>
                 <div className={style.testInfo}>
                     <h6 className={style.testName}>Kidney Function Test</h6>
                     <span className={style.description}>Measures kidney performance and detects potential kidney diseases</span>
@@ -20,12 +20,12 @@ export const LabTestCard = () => {
                             <Star fill="" stroke="currentColor" />
                             <span>Save for later </span>
                         </Button>
-                        <Button size="medium" variant="contained" rounded>
+                        <Button size="medium" variant="contained" onClick={onAddToCart} rounded>
                             <CartIconTwo /> <span>Add to cart</span>
                         </Button>
                     </div>
                 </div>
-            </div>
+            </a>        
         </div>
     );
 };

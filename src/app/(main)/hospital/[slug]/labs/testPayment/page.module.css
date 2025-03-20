@@ -1,0 +1,19 @@
+.flex {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+    padding-bottom: 28.125rem;
+}
+
+.payment h6 {
+    font-family: var(--primary-font);
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 130%;
+    letter-spacing: -2%;
+    vertical-align: middle;
+    color: var(--Schemes-On-Primary-Container, #062100); 
+    margin: 0;
+    padding-left: 0.1875rem;
+    padding-bottom: 0.8125rem;
+}

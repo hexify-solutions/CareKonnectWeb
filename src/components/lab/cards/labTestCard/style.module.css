@@ -8,6 +8,11 @@
   cursor: pointer;
   border-top: 1px solid #00000014;
   border-bottom: 1px solid #00000014;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.card a {
+  text-decoration: none;
 }
   
 .card:hover {
