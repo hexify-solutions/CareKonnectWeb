@@ -1,0 +1,37 @@
+.wrapper {
+    width: 60.1875rem;
+    height: 11.5rem;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    background: var(--Schemes-Primary-Container, #C4EFAC);
+    font-family: var(--primary-font);
+}
+
+.detailHeader {
+    display: flex;
+    justify-content: space-between;
+    width: 56.1875rem;
+    height: 2.5rem;
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 130%;
+    letter-spacing: -2%;
+    padding-bottom: 3.4375rem;
+}
+
+.title {
+    font-size: 1.875rem;
+    color: var(--Schemes-On-Primary-Container, #062100);
+}
+
+.price {
+    color: var(--Schemes-On-Surface, #191D16);
+}
+
+.description {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0%;
+    color: var(--Schemes-On-Surface, #062100);
+}

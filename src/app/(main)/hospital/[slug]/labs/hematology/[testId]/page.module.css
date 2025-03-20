@@ -1,0 +1,62 @@
+.actionsWrapper {
+    padding: 2rem 0 2rem 0;
+}
+
+.appointment {
+    background-color: var(--mui-palette-common-white);
+    width: 68.3125rem;
+    height: 106.3125rem;
+    border-radius: 1.5rem;
+    padding: 1rem 4.0625rem 2rem;
+    margin-bottom: 5rem;
+}
+
+.cbcDetails {
+    margin-top: 2.5rem;
+}
+
+.title {
+    font-family: var(--primary-font);
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 130%;
+    letter-spacing: -2%;
+    vertical-align: middle;
+    color: var(--Schemes-Primary, #446832);
+    margin: 2.1875rem 0rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.timePicker {
+    margin-top: 1.875rem;
+}
+
+.toggle {
+    font-family: var(--primary-font);
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 130%;
+    letter-spacing: -2%;
+    vertical-align: middle;
+    color: var(--Schemes-Primary, #446832);
+    margin: 2.1875rem 0 1.5625rem;
+}
+
+.comment {
+    font-family: var(--primary-font);
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 130%;
+    letter-spacing: -2%;
+    vertical-align: middle;
+    color: var(--Schemes-Primary, #446832);
+    margin: 2.1875rem 0 1.375rem;
+}
+
+.buttonWrapper {
+    margin-top: 3.75rem;
+}

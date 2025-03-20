@@ -1,0 +1,99 @@
+.cbcContainer {
+    display: flex;
+    gap: 3.75rem;
+    font-family: var(--font-primary);
+    width: 57.625rem;
+    height: 25.4375rem;
+    margin-left: 3.4375rem;
+    margin-top: 1.875rem;
+}
+
+.dropWrap {
+    background-color: var(--Schemes-Outline-Variant, #C3C8BB);
+    width: 20.3125rem;
+    height: 25.4375rem;
+    border-radius: 1rem;
+}
+
+.droplet {
+    position: relative;
+    top: 5.9375rem;
+    left: 5.1875rem;
+    width: 9.6544rem;
+    height: 12.3212rem;
+}
+
+.details {
+    width: 33.5625rem;
+    height: 23.3125rem;
+    padding-top: 0.5rem;
+}
+
+.details h6{
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 2.4375rem;
+    letter-spacing: -2%;
+    padding-bottom: 1.4375rem;
+    margin: 0;
+}
+
+.rating {
+    display: flex;
+    gap: 1.25rem;
+    padding-bottom: 1.4375rem;
+}
+
+.review {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    letter-spacing: -2%;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 2.4375rem;
+    letter-spacing: -2%;
+}
+
+.details p {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.625rem;
+}
+
+.actions, .like {
+    display: flex;
+}
+
+.actions {
+    gap: 1rem;
+    padding-bottom: 1.125rem;
+}
+
+.like {
+    gap: 40px;
+}
+
+.wishlist, .vow {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    letter-spacing: -2%;
+}
+
+.wishlist {
+    padding-top: 0.1875rem;
+}
+
+.pledge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}

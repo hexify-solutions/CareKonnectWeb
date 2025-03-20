@@ -1,25 +1,35 @@
 "use client";
-import React from "react";
+
+import React, { useState } from "react";
 import SignupBanner from "@/app/(main)/_components/signupBanner";
 import { LabTestCard } from "@/components/lab/cards/labTestCard";
-import LabDetails from "@/components/lab/labDetails";
-// import { Pagination } from "@hexify/components";
+import LabLocation from "@/components/lab/labLocation";
+import { Pagination } from "@hexify/components";
 import { Chip } from "@hexify/atoms";
 import Link from "next/link";
 import { Breadcrumb } from "@hexify/atoms";
 import { ImageBackgroundBanner } from "@hexify/components";
 import styles from "./page.module.css";
+import CBCModal, { cbcQuery } from "@/components/lab/completeBloodCountModal";
+import { useRouter } from "next/navigation";
 
 const Lab = () => {
   const testFilter = ["All", "Microbiology", "Heamatology", "Pathology"];
 
   // const [activeChip, setActiveChip] = useState<number | null>(null);
 
+  const router = useRouter();
+
   const [currentPage, setCurrentPage] = React.useState(1);
   const totalPages = 68; 
 
+  const openCBCModal = (e) => {
+    e.stopPropagation();
+    router.push(`?${cbcQuery}`, { scroll: false });
+  };
+        
   return (
-    <div>
+    <>
       <div className="inner-wrapper">
 
         <Breadcrumb excludePaths={["hospital"]} />
@@ -29,7 +39,7 @@ const Lab = () => {
               background: `url('https://images.pexels.com/photos/6129879/pexels-photo-6129879.jpeg?auto=compress&cs=tinysrgb&w=600')`,
             }}
           >
-            <LabDetails />
+            <LabLocation />
           </ImageBackgroundBanner>
         </div>
       </div>
@@ -51,9 +61,10 @@ const Lab = () => {
             {Array.from({ length: 5 })?.map((_, index) => {
               return (
                 <li key={index} className={styles.testListItem}>
-                  <Link href="?test=id">
-                    <LabTestCard />
-                  </Link>
+                  <LabTestCard
+                    onAddToCart={openCBCModal}
+                    testLink="./labs/hematology/blood-count-booking"
+                  />
                 </li>
               );
             })}
@@ -61,14 +72,15 @@ const Lab = () => {
         </div>
       </div>
       <div className={styles.pagination}>
-        {/* <Pagination
+        <Pagination
           currentPage={currentPage} 
           totalPages={totalPages} 
           onPageChange={setCurrentPage} 
-        /> */}
+        />
       </div>
         <SignupBanner />
-    </div>
+        <CBCModal />
+    </>
   );
 };
 

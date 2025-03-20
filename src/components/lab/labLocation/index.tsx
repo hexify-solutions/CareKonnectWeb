@@ -1,7 +1,7 @@
 import style from "./style.module.css";
 import { LocationPin } from "@hexify/atoms";
 
-const LabDetails = () => {
+const LabLocation = () => {
     return (
       <div className={style.bannerContainer}>
         <div className={style.bannerHeading}>
@@ -19,4 +19,4 @@ const LabDetails = () => {
     );
   };
 
-  export default LabDetails;
+  export default LabLocation;
