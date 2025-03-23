@@ -1,6 +1,6 @@
 import Image from "next/image";
 import style from "./style.module.css";
-import { CalendarTwo, Clock, Directory, LocationPin, Star, } from "@hexify/atoms";
+import { AlarmClock, CalendarTwo, Directory, LocationPin, Star, } from "@hexify/atoms";
 
 const LabBookingCard = () => {
     return (
@@ -29,7 +29,7 @@ const LabBookingCard = () => {
                 <h6>Booking Details</h6>
                 <div className={style.flexb}>
                     <div className={style.flexContent}><CalendarTwo /><span className={style.booking}>Tue, Mar 12, 2025</span></div>
-                    <div className={style.flexContent}><Clock /><span className={style.booking}>3:00 PM</span></div>
+                    <div className={style.flexContent}><AlarmClock /><span className={style.booking}>3:00 PM</span></div>
                     <div className={style.flexContent}><Directory /><span className={style.booking}>123-45678</span></div>
                 </div>
                 <span className={style.test}>Kidney Function Test x 1</span>

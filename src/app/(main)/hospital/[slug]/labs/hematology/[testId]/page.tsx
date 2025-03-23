@@ -16,7 +16,7 @@ const BloodCountBooking = () => {
     const router = useRouter();
 
     const handlePayment = () => {
-        router.push("/labs/testPayment");
+        router.push("/hospital/salem/labs/testPayment");
     }
 
     return (
