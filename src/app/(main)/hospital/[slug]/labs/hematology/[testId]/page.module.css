@@ -7,12 +7,12 @@
     width: 68.3125rem;
     height: 106.3125rem;
     border-radius: 1.5rem;
-    padding: 1rem 4.0625rem 2rem;
+    padding: 2rem 4.0625rem 0;
     margin-bottom: 5rem;
 }
 
 .cbcDetails {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
 }
 
 .title {

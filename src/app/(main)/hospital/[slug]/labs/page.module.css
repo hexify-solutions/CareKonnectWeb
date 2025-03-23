@@ -63,6 +63,9 @@
 .testListItem a {
     text-decoration: none;
     color: inherit;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .pagination {

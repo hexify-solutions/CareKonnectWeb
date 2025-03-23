@@ -19,7 +19,7 @@
 }
 
 .location {
-    padding-bottom: 3.4375rem;
+    padding-bottom: 7px;
 }
 
 .name {
@@ -76,7 +76,7 @@
     flex-direction: column;
     border-bottom-right-radius: 1.5rem;
     border-bottom-left-radius: 1.5rem;
-    padding: 0.4375rem 2.625rem 1.25rem 2.625rem;
+    padding: 2.5rem 2.625rem 0.625rem 2.625rem;
 }
 
 .details h6 {
