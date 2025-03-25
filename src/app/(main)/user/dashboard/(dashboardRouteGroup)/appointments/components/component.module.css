@@ -1,25 +1,24 @@
 .appointmentListWrapper {
-    margin-top: 2.75rem;
-    margin-bottom: 2.75rem;
+  margin-top: 2.75rem;
+  margin-bottom: 2.75rem;
 }
 .listActionsWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .listBtnWrapper {
-    display: flex;
-    align-items: center;
-    gap: .5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .listHeading {
-font-weight: 600;
-font-size: 1.5rem;
-line-height: 1.95rem;
-letter-spacing: -2%;
-margin-bottom: 1.5rem;
-
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.95rem;
+  letter-spacing: -2%;
+  margin-bottom: 1.5rem;
 }

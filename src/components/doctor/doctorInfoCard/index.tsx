@@ -2,27 +2,28 @@ import styles from "./doctorInfoCard.module.css";
 import { Avatar, IconSquareChip, iconLoaderMap } from "@hexify/atoms";
 import { DoctorInfo } from "@hexify/components";
 
-const DoctorInfoCard = () => {
+const DoctorInfoCard = ({ doctor }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.doctorInfoSection}>
         <Avatar
           size="xlarge"
-          src="https://images.pexels.com/photos/5732461/pexels-photo-5732461.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          src={doctor?.doctorDetails?.avatarUrl}
+          displayText={`${doctor?.firstName} ${doctor?.lastName}`}
         />
         <div>
           <DoctorInfo
             size="medium"
-            label="Dr Innocent Edosa"
+            label={`${doctor?.firstName} ${doctor?.lastName}`}
             rating={5}
             distance={"1.5 km from you"}
-            tags={["Neurologist"]}
+            tags={doctor?.doctorDetails?.specializations}
           />
         </div>
       </div>
       <div className={styles.infoCards}>
         <IconSquareChip
-          title="3 Years +"
+          title={`${doctor?.doctorDetails?.yearsOfExperience || 0} Years +`}
           subtitle="Experience"
           Icon={iconLoaderMap.badge}
         />

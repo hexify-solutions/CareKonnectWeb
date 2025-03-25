@@ -18,13 +18,26 @@ const Dashboard = () => {
           <DashboardSummaryCard icon={<EmailIcon />} />
         </li>
         <li className={styles.summaryListItem}>
-          <DashboardSummaryCard title="Services" theme="primary" icon={<EmailIcon />} />
+          <DashboardSummaryCard
+            title="Services"
+            theme="primary"
+            icon={<EmailIcon />}
+          />
         </li>
         <li className={styles.summaryListItem}>
-          <DashboardSummaryCard title="Prescriptions" theme="secondary" icon={<EmailIcon />} />
+          <DashboardSummaryCard
+            title="Prescriptions"
+            theme="secondary"
+            icon={<EmailIcon />}
+          />
         </li>
         <li className={styles.summaryListItem}>
-          <DashboardSummaryCard title="Spendings" digit={`NGN 567,899`} theme="error" icon={<EmailIcon />} />
+          <DashboardSummaryCard
+            title="Spendings"
+            digit={`NGN 567,899`}
+            theme="error"
+            icon={<EmailIcon />}
+          />
         </li>
       </ul>
       <ul className={styles.vitalInfoWrapper}>

@@ -1,16 +1,23 @@
-import { useMutation } from "@tanstack/react-query";
-import { login, register, verify, triggerPasswordReset, resendVerifyEmail  } from "./service";
+import { useMutation } from "@tanstack/react-query"
+import {
+  login,
+  register,
+  verify,
+  triggerPasswordReset,
+  changePassword,
+  resendVerifyEmail,
+} from "./service"
 
 export function useLoginMutation<T extends {}>() {
-  return useMutation({ mutationFn: (params: T) => login(params) });
+  return useMutation({ mutationFn: (params: T) => login(params) })
 }
 
 export function useRegisterMutation<T extends { userType: string }>() {
-  return useMutation({ mutationFn: (params: T) => register(params) });
+  return useMutation({ mutationFn: (params: T) => register(params) })
 }
 
 export function useVerifyMutation<T extends {}>() {
-  return useMutation({ mutationFn: (params: T) => verify(params) });
+  return useMutation({ mutationFn: (params: T) => verify(params) })
 }
 
 export function useResendVerifyMutation<T extends {}>() {
@@ -18,5 +25,14 @@ export function useResendVerifyMutation<T extends {}>() {
 }
 
 export function useTriggerPasswordReset<T extends {}>() {
-    return useMutation({ mutationFn: (params: T) => triggerPasswordReset(params) });
-  }
+  return useMutation({
+    mutationFn: (params: T) => triggerPasswordReset(params),
+  })
+}
+
+
+export function usePasswordChangeMutation<T extends {}>() {
+  return useMutation({
+    mutationFn: (params: T) => changePassword(params)
+  })
+}

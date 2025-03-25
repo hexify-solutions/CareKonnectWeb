@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, InputField, iconLoaderMap, Spinner } from "@hexify/atoms";
+import { Button, InputField, iconLoaderMap, Spinner, CalendarIcon  } from "@hexify/atoms";
 import * as Yup from "yup";
 import { Formik, Form } from "formik";
 import SignInOptions from "@/app/(auth)/onboarding/_component/signInOptions";
@@ -8,11 +8,14 @@ import Link from "next/link";
 import styles from "./signupForm.module.css";
 import routes from "../../../../../../../lib/constants/routes";
 import componentData from "../../../../../../../data/signupForm.json";
+import { SelectField } from "@hexify/atoms";
 import { useAuthContext } from "@/context/auth";
 
 type SignupFormType = {
   firstName: string;
-  lasName: string;
+  lastName: string;
+  gender?: string;
+  dob: string;
   email: string;
   password: string;
 };
@@ -77,6 +80,40 @@ const SignupForm = () => {
                 value={values.lastName}
                 error={!!errors.lastName}
                 helperText={errors.lastName}
+              />
+            </div>
+            <div className={styles.inputWrapper}>
+              <InputField
+                placeholder="Enter your date of birth"
+                fullWidth
+                label="Date of Birth"
+                variant="filled"
+                data-hasprefix="true"
+                data-variant="design_primary"
+                type="date"
+                name="dob"
+                prefix={CalendarIcon}
+                onChange={handleChange}
+                value={values.dob}
+                error={!!errors.dob}
+                helperText={errors.dob}
+              />
+            </div>
+            <div className={styles.inputWrapper}>
+              <SelectField
+                fullWidth
+                placeholder="Select your Gender"
+                label="Gender"
+                variant="filled"
+                data-hasprefix="true"
+                data-variant="design_primary"
+                name="gender"
+                prefix={iconLoaderMap.profile}
+                options={genderOptions}
+                onChange={(e)=>handleChange("gender")(e.target.value)}
+                value={values.gender}
+                error={!!errors.gender}
+                helperText={errors.gender}
               />
             </div>
             <div className={styles.inputWrapper}>
@@ -162,12 +199,24 @@ const SignupForm = () => {
   );
 };
 
+
+const genderOptions = [
+  { "value": "male", "label": "Male" },
+  { "value": "female", "label": "Female" },
+  { "value": "other", "label": "Other" },
+  { "value": "prefer-not-to-say", "label": "Prefer not to Say" },
+  { "value": "unknown", "label": "Not Specified" }
+]
+
+
 const initialValues = () => {
   return {
     firstName: "",
     lastName: "",
     email: "",
     password: "",
+    dob: "",
+    gender: ""
   };
 };
 

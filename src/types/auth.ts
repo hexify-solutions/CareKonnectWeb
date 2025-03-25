@@ -2,6 +2,8 @@ export type RegistrationType = {
   email: string
   firstName: string
   lastName: string
+  gender?: string;
+  dob: string;
   userType: "patient" | "doctor"
   password: string
 }
@@ -32,6 +34,12 @@ export type TriggerPasswordResetType = {
   email: string
 }
 
+export type PasswordChangeType = {
+  email: string;
+  otp: string;
+  newPassword: string;
+}
+
 export type VerifyType = {
   emailOrPhone: string
   type: "email"
@@ -45,13 +53,14 @@ export type RegistrationResponseType = {
 
 // A generic type for operations like register, login, and verify
 export type OperationType<ParamsType> = {
-  (params: ParamsType): void
+  (params: ParamsType, cb?: (p: ParamsType) => void): void
   isLoading: boolean
   error: unknown
 }
 
 export type OnRegisterType = OperationType<RegistrationType>
 export type OnLoginType = OperationType<LoginType>
+export type OnPasswordChangeType = OperationType<PasswordChangeType>
 export type OnVerifyType = OperationType<VerifyType>
 export type onTriggerPasswordChangeType = OperationType<{ email: string }>
 export type resendVerifyEmailType = OperationType<{ email: string }>

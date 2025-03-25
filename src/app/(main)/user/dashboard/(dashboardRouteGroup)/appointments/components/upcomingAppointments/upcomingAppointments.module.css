@@ -1,0 +1,22 @@
+.topSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.selectFieldWrapper {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+
+}
+
+.wrapper {
+    margin-top: 44px;
+}
+
+.field {
+    width: 147px;
+}
