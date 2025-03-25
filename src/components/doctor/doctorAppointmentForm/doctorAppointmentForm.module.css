@@ -6,3 +6,9 @@
     margin-top: 4rem;
     
 }
+
+.selectField {
+    background-color: var(--mui-palette-design_light-surfaceContainerHigh);
+    width: 100%;
+
+}

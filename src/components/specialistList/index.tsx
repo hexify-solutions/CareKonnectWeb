@@ -15,7 +15,6 @@ const SpecialistList = async ({ size }: { size?: "small" }) => {
     <div className="inner-wrapper">
       <ul className={styles.list}>
         {topSpecialists?.data?.data?.map(({ image, id, userType, ...specialist }) => {
-          console.log(specialist)
           if (userType === "hospital") {
             return (
               <li key={id} className={styles.listItem}>

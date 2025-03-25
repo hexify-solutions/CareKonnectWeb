@@ -5,6 +5,7 @@ import {
   useVerifyMutation,
   useTriggerPasswordReset,
   useResendVerifyMutation,
+  usePasswordChangeMutation
 } from "@/http/auth/mutation";
 import {
   RegistrationType,
@@ -13,6 +14,7 @@ import {
   VerifyType,
   ProfileType,
   TriggerPasswordResetType,
+  PasswordChangeType
 } from "@/types";
 import { toast } from "react-toastify";
 import routes from "@/lib/constants/routes";
@@ -38,43 +40,78 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
 
   const router = useRouter();
   const registerMutation = useRegisterMutation<RegistrationType>();
-  const triggerPasswordResetMutation =
-    useTriggerPasswordReset<TriggerPasswordResetType>();
+  const triggerPasswordResetMutation = useTriggerPasswordReset<
+    TriggerPasswordResetType
+  >();
   const loginMutation = useLoginMutation<LoginType>();
   const verifyMutation = useVerifyMutation<VerifyType>();
   const resendVerifyEmailMutation = useResendVerifyMutation<{
     email: string;
   }>();
+
+  const passwordChangeMutation = usePasswordChangeMutation();
+
   const { setItem, removeItem } = useSecureStorage();
 
   const onTriggerPasswordChange = (params: TriggerPasswordResetType) => {
     triggerPasswordResetMutation.mutate(params, {
-      onSettled: (response, err?: Error | null) => {
+      onSettled: (
+        response,
+        err: Error | null,
+        variables: { email: string }
+      ) => {
         if (err) {
-          return toast.error(err?.message || "Password Reset Failed!");
+          return toast.error(err?.message || "Password Reset Failed!")
         }
+        setItem(lsKeys.resetPasswordEmail, variables?.email)
         return toast.success(
           response?.message ||
             "Please check email for password reset instructions",
           {
             onOpen: () => {
-              router.push(routes.passwordReset);
+              router.push(routes.passwordReset)
             },
           }
-        );
+        )
       },
-    });
-  };
+    })
+  }
 
-  const onVerify = (params: VerifyType) => {
+  const onPasswordChange = (params: PasswordChangeType) => {
+    passwordChangeMutation.mutate(params, {
+      onSettled: (response, err, variables) => {
+        if (err) {
+          return toast.error(err?.message || "Password Reset Failed!")
+        }
+        removeItem(lsKeys.resetPasswordEmail)
+        return toast.success(
+          response?.message || "Password Change Successfully Please Login",
+          {
+            onOpen: () => {
+              router.push(routes.login)
+            },
+          }
+        )
+      },
+    })
+  } 
+
+
+
+  const onVerify = (params: VerifyType, cb?: (params: VerifyType) => void) => {
     verifyMutation?.mutate(params, {
-      onSettled: (response, err?: Error | null) => {
+      onSettled: (response, err: Error | null, variables: VerifyType) => {
         if (err) {
           return toast.error(err?.message || "Verification Failed!");
         }
+
         toast.success(response?.message || "Verification Successful", {
           onOpen: () => {
-            router.push(routes.login);
+            if (cb) {
+              cb?.(variables);
+            } else {
+              router.push(routes.login);
+            }
           },
         });
       },
@@ -176,6 +213,10 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
     });
   };
 
+
+  onPasswordChange.isLoading  = passwordChangeMutation.isPending;
+  onPasswordChange.error = passwordChangeMutation.error;
+
   onRegister.isLoading = registerMutation.isPending;
   onRegister.error = registerMutation.error;
 
@@ -198,6 +239,7 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
     onTriggerPasswordChange,
     resendVerifyEmailHandler,
     onLogOut,
+    onPasswordChange,
     ...authState,
   };
 };

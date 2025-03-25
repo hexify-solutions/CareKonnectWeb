@@ -6,22 +6,25 @@ import Review from "./review";
 import About from "./about";
 import Patient from "./patients";
 
-const tabs = [
-  {
-    label: "About",
-    Component: About,
-  },
-  {
-    label: "Reviews",
-    Component: Review,
-  },
-  {
-    label: "Patients",
-    Component: Patient,
-  },
-];
 
-const DoctorDetails = () => {
+
+const DoctorDetails = ({ doctor }) => {
+
+  const tabs = [
+    {
+      label: "About",
+      Component: () =>  <About doctor={doctor} />,
+    },
+    {
+      label: "Reviews",
+      Component: Review,
+    },
+    // {
+    //   label: "Patients",
+    //   Component: Patient,
+    // },
+  ];
+
   return (
     <div>
       <Tabs tabs={tabs} />
@@ -29,5 +32,4 @@ const DoctorDetails = () => {
   );
 };
 
-const Test = () => <div>dfdfdf</div>;
 export default DoctorDetails;

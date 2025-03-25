@@ -1,5 +1,5 @@
 "use client";
-import { Button, CalendarIcon, InputField } from "@hexify/atoms";
+import { Button, CalendarIcon, InputField, SearchIcon} from "@hexify/atoms";
 import { useState } from "react";
 import FilterButton from "@/components/filterButton";
 import styles from "./component.module.css";
@@ -10,7 +10,17 @@ const AppointmentListHeader = () => {
     <div className={styles.appointmentListWrapper}>
       <h6 className={styles.listHeading}>Appointment History</h6>
       <div className={styles.listActionsWrapper}>
-        <InputField />
+      <InputField
+            type="text"
+            name="search"
+            onChange={() => {}}
+            placeholder="Search benefits"
+            suffix={SearchIcon}
+            className={styles.searchInput}
+            rounded
+            data-variant="design_primary"
+            hasSuffix
+          />
         <div className={styles.listBtnWrapper}>
           <FilterButton label="Appointments" />
           <BookAppointment />

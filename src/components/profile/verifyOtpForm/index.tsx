@@ -10,7 +10,8 @@ const VerifyOtp = ({
   onVerify,
   profile,
   resendVerifyEmailHandler,
-}) => {
+  onVerifyCallback,
+}: any) => {
   const validateHandler = (params: { otp: string[] }) => {
     const { otp } = params;
     if (otp?.every((v) => v !== "")) {
@@ -19,7 +20,7 @@ const VerifyOtp = ({
         code,
         emailOrPhone: profile.email || "",
         type: "email",
-      });
+      }, onVerifyCallback);
     }
   };
 

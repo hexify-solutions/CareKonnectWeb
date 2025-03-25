@@ -19,3 +19,8 @@
   font-family: var(--primary-font);
   color: var(--mui-palette-primary-main);
 }
+
+.innovationBannerWrapper {
+  padding-top: 6rem;
+  padding-bottom: 4.0625rem;
+}

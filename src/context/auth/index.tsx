@@ -15,6 +15,7 @@ import {
   ProfileType,
   onTriggerPasswordChangeType,
   resendVerifyEmailType,
+  OnPasswordChangeType,
 } from "@/types"
 
 export const AuthContext = createContext<
@@ -26,6 +27,7 @@ export const AuthContext = createContext<
       profile: ProfileType
       isAuth: boolean
       resendVerifyEmailHandler: resendVerifyEmailType
+      onPasswordChange: OnPasswordChangeType
       onLogOut: () => void
     }
   | undefined
@@ -46,6 +48,7 @@ const AuthProvider = ({
     isAuth,
     onTriggerPasswordChange,
     resendVerifyEmailHandler,
+    onPasswordChange
   } = useAuth(initialAuthState)
 
   const value = {
@@ -57,6 +60,7 @@ const AuthProvider = ({
     onTriggerPasswordChange,
     resendVerifyEmailHandler,
     onLogOut,
+    onPasswordChange,
   }
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
