@@ -12,7 +12,7 @@ import { useAuthContext } from "@/context/auth";
 
 type SignupFormType = {
   firstName: string;
-  lasName: string;
+  lastName: string;
   email: string;
   password: string;
 };
