@@ -168,9 +168,9 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
       },
     }));
   };
-  const onLogin = (params: LoginType) => {
+  const onLogin = async (params: LoginType) => {
     loginMutation.mutate(params, {
-      onSettled: (response, err) => {
+      onSettled: async (response, err) => {
         if (err) {
           //TODO: this check should be optimized as it is prone to bug
           if (err?.message === "Please verify your email") {
@@ -187,11 +187,12 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
           return toast.error(err?.message || "Login Failed!");
         }
         if (response) {
-          const { token, ...rest } = response.data;
+          const { token, ...rest } = response?.data?.data;
           api.setAuth(token?.token);
           setItem(lsKeys.profile, rest);
           setItem(lsKeys.token, token?.token);
           setItem(lsKeys.tokenExpiration, token?.expiresAt);
+            
           setAuthState((prev) => {
             return {
               ...prev,

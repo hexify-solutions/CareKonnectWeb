@@ -9,13 +9,22 @@ import { EmailIcon } from "@hexify/atoms";
 import DoctorInfoCard from "@/components/doctor/doctorInfoCard";
 import mockSpecialistData from "@/data/mockSpecialist.json";
 import routes from "@/lib/constants/routes";
+import { fetchData } from "@/http";
 
-const Dashboard = () => {
+const Dashboard = async () => {
+
+
+  const stats  = await fetchData(
+    `${process.env.PUBLIC_URL}/dashboard/stats`,
+    "Error fetching doctor details:"
+  )
+
+
   return (
     <div>
       <ul className={styles.summaryList}>
         <li className={styles.summaryListItem}>
-          <DashboardSummaryCard icon={<EmailIcon />} />
+          <DashboardSummaryCard title="Appointments" icon={<EmailIcon />} />
         </li>
         <li className={styles.summaryListItem}>
           <DashboardSummaryCard

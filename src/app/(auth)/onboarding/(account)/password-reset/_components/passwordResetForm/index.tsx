@@ -17,7 +17,8 @@ const PasswordResetForm = () => {
   const [checkingOtp, setCheckingOtp] = useState(true);
   const { onVerify, resendVerifyEmailHandler, onPasswordChange } = useAuthContext();
   const { getItem } = useSecureStorage();
-  const email = getItem(lsKeys.resetPasswordEmail)
+  console.log(getItem)
+  const email = getItem?.(lsKeys.resetPasswordEmail)
 
   const onSubmitHandler = (params) => { 
     onPasswordChange?.({
