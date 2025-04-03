@@ -25,11 +25,10 @@ export default function Home() {
           Top Specialists
         </h3>
         <Suspense fallback={<div>Loading</div>}>
-        <SpecialistList />
+          <SpecialistList />
         </Suspense>
         <div className={styles.innovationBannerWrapper}>
-
-        <InnovationBanner />
+          <InnovationBanner />
         </div>
       </div>
       <SignupBanner />

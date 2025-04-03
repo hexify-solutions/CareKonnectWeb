@@ -14,7 +14,7 @@ const DashboardSummaryCard = ({ icon, theme, digit, title }: DashboardSummaryCar
       <aside className={styles.iconWrapper}>{icon}</aside>
       <div className={styles.leadWrapper}>
         <div className={styles.lead}>{digit || 0}</div>
-        <div>{title || 'Appointments'}</div>
+        <div>{title}</div>
       </div>
       <div className={styles.infoGrid}>
         <div>
