@@ -37,22 +37,24 @@ const SocialAuthCallback = ({ params }: { params: { provider: string } }) => {
         const code = urlParams.get("code");
 
         if (code) {
-            api.post<AuthCallbackResponse>(
-                "http://localhost:9000/auth/callback",
-                { code }   
+            api.get<AuthCallbackResponse>(
+                `auth/callback/${params.provider}?${urlParams.toString()}`,
+                // { params: {code} }   
             )
             .then((response) => {
-                if (response.data && response.data.token.token) {
+                console.log("Auth Response:", response.data)
+
+                if (response.data && response.data.token && response.data.token.token) {
                     localStorage.setItem("authToken", response.data.token.token)
-                    router.push("/user-dashboard");
+                    router.push("/user/dashboard");
                 } else {
                     console.error("Authentication failed: No token received");
-                    router.push("/signin");
+                    router.push("/onboarding/signin");
                 }
             })
             .catch((error) => {
                 console.error("Error completing authentication:", error);
-                router.push("/signin");
+                router.push("/onboarding/signin");
             });
         }
     }, [router, params.provider]);

@@ -8,12 +8,13 @@ import api from "@/http/api";
 export const handleSocialLogin = async (provider: string) => {
     try {
         const redirectUri = `${window.location.origin}/auth/callback/${provider}`;
-        const response = await api.get<{ data: { url: string } }>(`auth/oauth/${provider}?redirect_uri=${encodeURIComponent(redirectUri)}`);
+        const response = await api.get<{ data: { url: string } }>(`auth/oauth/${provider}?redirectUrl=${encodeURIComponent(redirectUri)}`);
 
         // if (response.data?.verificationUrl) {
         //     window.location.href = response.data.verificationUrl;
         // }
         if (response.data.url) {
+            console.log(response.data)
             window.location.href = response.data.url; 
         } else {
             console.error("Error: No URL received from backend");
