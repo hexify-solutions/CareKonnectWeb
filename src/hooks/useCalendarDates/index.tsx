@@ -6,40 +6,26 @@ interface CalendarDay {
   dayOfWeek: string;
 }
 
-const useCalendarDates = (monthOffset: number = 0): (CalendarDay | null)[] => {
+const useCalendarDates = (month?: number, year?: number): (CalendarDay | null)[] => {
   const [dates, setDates] = useState<(CalendarDay | null)[]>([]);
 
   useEffect(() => {
     const currentDate = new Date();
+    const targetMonth = month ?? currentDate.getMonth();
+    const targetYear = year ?? currentDate.getFullYear();
 
-    // Adjust the month
-    currentDate.setMonth(currentDate.getMonth() + monthOffset);
+    // Ensure valid month and year
+    if (targetMonth < 0 || targetMonth > 11 || targetYear < 0) return;
 
-    // Get the first and last days of the current month
-    const firstDay = new Date(
-      currentDate.getFullYear(),
-      currentDate.getMonth(),
-      1
-    );
-    const lastDay = new Date(
-      currentDate.getFullYear(),
-      currentDate.getMonth() + 1,
-      0
-    );
+    // Get the first and last days of the specified month
+    const firstDay = new Date(targetYear, targetMonth, 1);
+    const lastDay = new Date(targetYear, targetMonth + 1, 0);
 
     // Get the day of the week for the first day of the month
     const firstDayOfWeek = firstDay.getDay();
 
-    // Array of weekday names
-    const weekdayNames: string[] = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ];
+    // Array of weekday abbreviations
+    const weekdayNames: string[] = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
     // Create an array of dates with the corresponding day of the week
     const daysInMonth: (CalendarDay | null)[] = [];
@@ -51,17 +37,12 @@ const useCalendarDates = (monthOffset: number = 0): (CalendarDay | null)[] => {
 
     // Add the actual days of the month
     for (let i = 1; i <= lastDay.getDate(); i++) {
-      const date = new Date(
-        currentDate.getFullYear(),
-        currentDate.getMonth(),
-        i
-      );
-      const dayOfWeek = weekdayNames[date.getDay()]; // Get the name of the day
-      daysInMonth.push({ date: i, dayOfWeek: dayOfWeek || "" });
+      const date = new Date(targetYear, targetMonth, i);
+      daysInMonth.push({ date: i, dayOfWeek: weekdayNames[date.getDay()] });
     }
 
     setDates(daysInMonth);
-  }, [monthOffset]);
+  }, [month, year]);
 
   return dates;
 };

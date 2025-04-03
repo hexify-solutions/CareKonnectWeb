@@ -7,7 +7,7 @@ import routes from "@/lib/constants/routes";
 const SpecialistList = async ({ size }: { size?: "small" }) => {
 
   const data = await fetch(`${process.env.PUBLIC_URL}/global/top-specialists`)
-  const topSpecialists = await data.json()
+  const topSpecialists = await data?.json()
 
 
 
@@ -26,7 +26,7 @@ const SpecialistList = async ({ size }: { size?: "small" }) => {
           }
           return (
             <li key={specialist?.doctorDetails?.id} className={styles.listItem}>
-              <Link href={routes.doctor(specialist?.doctorDetails?.userId)}>
+              <Link href={`${routes.doctor(specialist?.doctorDetails?.userId)}?availability=${specialist?.doctorDetails?.id}`}>
                 <DoctorCard
                   size={size}
                   info={{

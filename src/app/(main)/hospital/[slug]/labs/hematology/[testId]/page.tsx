@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Button, Breadcrumb, CommentBox, ToggleInput } from "@hexify/atoms";
-import { DatePicker, ImageBackgroundBanner, TimePicker } from "@hexify/components";
+import { DatePicker, ImageBackgroundBanner } from "@hexify/components";
 import LabDetails from "@/components/lab/labLocation";
 import { LabActions } from "@/components/lab/labActions";
 import { CompleteBloodCountDetails } from "@/components/lab/testDetails/cbcDetails/cbcDetails";
@@ -48,7 +48,7 @@ const BloodCountBooking = () => {
                         <div>
                             <DatePicker />
                             <div className={style.timePicker}>
-                                <TimePicker />
+                                {/* <TimePicker /> */}
                             </div>
                             <div>
                                 <h6 className={style.toggle}>Appointment Type</h6>

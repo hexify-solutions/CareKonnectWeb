@@ -7,7 +7,13 @@ const endPoints = {
     changePassword: 'auth/forgot-password',
 
     // globals
-    search: 'global/search'
+    search: 'global/search',
+
+
+    // appointments
+    createAppointment: 'appointments/book',
+    
+
 }
 
 export default endPoints;

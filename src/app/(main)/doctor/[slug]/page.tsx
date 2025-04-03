@@ -7,22 +7,26 @@ import DoctorDetails from "@/components/doctor/doctorDetails"
 import DoctorAppointmentForm from "@/components/doctor/doctorAppointmentForm"
 import SignupBanner from "../../_components/signupBanner"
 import { fetchData } from "@/http"
+import { Suspense } from "react"
 import clsx from "clsx"
 
-const Doctor = async ({ params }) => {
+const Doctor = async ({ params, searchParams }) => {
   let doctor = null
   let doctorsAvailability = null
+  const pageParams = await params;
+  const pageSearchParams = await searchParams;
 
   doctor = await fetchData(
-    `${process.env.PUBLIC_URL}/doctors/${params?.slug}`,
+    `${process.env.PUBLIC_URL}/doctors/${pageParams?.slug}`,
     "Error fetching doctor details:"
   )
+
+
   doctorsAvailability = await fetchData(
-    `${process.env.PUBLIC_URL}/availabilities/${doctor?.doctorDetails?.userId}`,
+    `${process.env.PUBLIC_URL}/availabilities/${pageSearchParams?.availability || doctor?.data?.doctorDetails?.id}`,
     "Error fetching doctor availabilities:"
   )
 
-  console.log(doctorsAvailability, doctor, ">>>>>>>>>>>>")
 
   return (
     <div>
@@ -44,7 +48,7 @@ const Doctor = async ({ params }) => {
               {doctor?.data ? <DoctorDetails doctor={doctor.data} /> : null}
             </div>
             <div className={styles.formSection}>
-              <DoctorAppointmentForm />
+              <DoctorAppointmentForm appointmentSlots={doctorsAvailability?.data?.data?.appointmentSlot} />
             </div>
           </div>
         </div>
@@ -58,7 +62,9 @@ const Doctor = async ({ params }) => {
             </h3>
             <button className={styles.specialistButton}>View all</button>
           </div>
+          <Suspense fallback={<></>}>
           <SpecialistList />
+          </Suspense>
         </div>
       </div>
       <SignupBanner />

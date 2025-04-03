@@ -8,8 +8,9 @@ import Link from "next/link";
 import SignInOptions from "@/app/(auth)/onboarding/_component/signInOptions";
 import { LoginType } from "@/types";
 import { useAuthContext } from "@/context/auth";
-import componentData from "../../../../../../../data/loginForm.json";
-import routes from "../../../../../../../lib/constants/routes";
+import componentData from "@/data/loginForm.json";
+
+import routes from "@/lib/constants/routes";
 const SignInForm = () => {
   const { onLogin } = useAuthContext();
   const onSubmitHandler = (params: LoginType) => {
