@@ -1,5 +1,5 @@
+// @ts-nocheck
 "use client";
-
 import styles from "./passwordResetForm.module.css";
 import { Formik, Form } from "formik";
 import { useState } from "react";

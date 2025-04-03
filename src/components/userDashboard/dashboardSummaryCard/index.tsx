@@ -8,7 +8,7 @@ interface DashboardSummaryCardProps {
   title?: React.ReactNode;
 }
 
-const DashboardSummaryCard: React.FC<DashboardSummaryCardProps> = ({ icon, theme, digit, title }) => {
+const DashboardSummaryCard = ({ icon, theme, digit, title }: DashboardSummaryCardProps) => {
   return (
     <div className={styles.wrapper} data-theme={theme}>
       <aside className={styles.iconWrapper}>{icon}</aside>
