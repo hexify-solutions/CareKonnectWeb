@@ -17,7 +17,7 @@ const DoctorInfoCard = ({ doctor }) => {
             label={`${doctor?.firstName} ${doctor?.lastName}`}
             rating={5}
             distance={"1.5 km from you"}
-            tags={doctor?.doctorDetails?.specializations}
+            tags={doctor?.doctorDetails?.specializations?.map((s) => s?.name || "")}
           />
         </div>
       </div>
@@ -29,7 +29,7 @@ const DoctorInfoCard = ({ doctor }) => {
         />
         <IconSquareChip
           color="secondary"
-          title="62+"
+          title={`${doctor?.doctorDetails?.stats?.patients}+`}
           subtitle="Patients"
           Icon={iconLoaderMap.badge}
         />
