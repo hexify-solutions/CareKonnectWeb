@@ -12,19 +12,14 @@
 // }
 
 
-import { cookies } from "next/headers";
 
 export const fetchData = async (url: string, errorMessage?: string) => {
   try {
-    const cookieStore =  await cookies(); // Get cookies on the server
-    const token = cookieStore.get("auth_token")?.value; // Extract token
-    console.log(token, "this is the token >>>>>>>>> ")
 
     const response = await fetch(url, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        ...(token ? { Authorization: `Bearer ${token}` } : {}), // Attach token if it exists
       },
     });
 

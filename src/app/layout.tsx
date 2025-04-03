@@ -20,14 +20,14 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <>
-            <QueryProvider>
               <SecureStorageProvider>
+            <QueryProvider>
                 <AuthProvider>
                   <main>{children} </main>
                 </AuthProvider>
-              </SecureStorageProvider>
               <ToastProvider />
             </QueryProvider>
+              </SecureStorageProvider>
         </>
       </body>
     </html>

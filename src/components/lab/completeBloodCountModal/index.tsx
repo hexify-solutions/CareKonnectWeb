@@ -14,7 +14,7 @@ const CBCModal = () => {
 
     const handleClose = () => {
         setOpenCBCModal(false);
-        router.push(window.location.pathname, { scroll: false }); 
+        router.push(window?.location?.pathname, { scroll: false }); 
     };
 
     useEffect(() => {

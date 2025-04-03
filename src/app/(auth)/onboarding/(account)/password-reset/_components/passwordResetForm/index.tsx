@@ -7,7 +7,7 @@ import * as Yup from "yup";
 import { Button, InputField, Spinner, iconLoaderMap } from "@hexify/atoms";
 import componentData from "../../../../../../../data/passwordChange.json";
 import VerifyOtp from "@/components/profile/verifyOtpForm";
-import { useSecureStorage } from "@/context/storage";
+// import { useSecureStorage } from "@/context/storage";
 import componentDataForVerifyOtp from "@/data/verifyEmail.json";
 import { useAuthContext } from "@/context/auth";
 import lsKeys from "@/lib/constants/lsKeys";
@@ -16,9 +16,8 @@ const PasswordResetForm = () => {
   const [otp, setValidOtp] = useState("");
   const [checkingOtp, setCheckingOtp] = useState(true);
   const { onVerify, resendVerifyEmailHandler, onPasswordChange } = useAuthContext();
-  const { getItem } = useSecureStorage();
-  console.log(getItem)
-  const email = getItem?.(lsKeys.resetPasswordEmail) || "";
+  // const { getItem } = useSecureStorage();
+  const email = "";
 
   const onSubmitHandler = (params) => { 
     onPasswordChange?.({
