@@ -18,7 +18,7 @@ const PasswordResetForm = () => {
   const { onVerify, resendVerifyEmailHandler, onPasswordChange } = useAuthContext();
   const { getItem } = useSecureStorage();
   console.log(getItem)
-  const email = getItem?.(lsKeys.resetPasswordEmail)
+  const email = getItem?.(lsKeys.resetPasswordEmail) || "";
 
   const onSubmitHandler = (params) => { 
     onPasswordChange?.({

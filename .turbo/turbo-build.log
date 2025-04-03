@@ -1,11 +1,11 @@
 
-[2K[1G[1myarn run v1.22.22[22m
+[2K[1G[1myarn run v1.22.19[22m
 [2K[1G[2m$ next build[22m
    [1m[38;2;173;127;168m▲ Next.js 15.0.3[39m[22m
-   - Environments: .env.production, .env
+   - Environments: .env.local, .env.production
 
  [37m[1m [22m[39m Creating an optimized production build ...
-<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|javascript/auto|/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/next-flight-css-loader.js??ruleSet[1].rules[13].oneOf[5].use[0]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[1]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css|ssr': No serializer registered for Warning
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|javascript/auto|/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/build/webpack/loaders/next-flight-css-loader.js??ruleSet[1].rules[13].oneOf[5].use[0]!/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[1]!/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css|ssr': No serializer registered for Warning
 <w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> Array { 1 items } -> webpack/lib/ModuleWarning -> Warning
  ⚠ Compiled with warnings
 
@@ -22,732 +22,200 @@ Import trace for requested module:
  [32m[1m✓[22m[39m Compiled successfully
  [37m[1m [22m[39m Skipping validation of types
  [37m[1m [22m[39m Skipping linting
-[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data    
- [32m[1m✓[22m[39m Collecting page data 
-[?25l [37m[1m [22m[39m Generating static pages (0/23)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/23)  [36m[=   ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/23)  [36m[==  ][39m[2K[1G[?25hhttps://api.carekonnect.hexifysolutions.com/v1 true
-{
-  firstName: 'Jake',
-  lastName: 'Abshire',
-  email: 'Jake_Abshire59@yahoo.com',
-  phoneNumber: '16686392068',
-  emailVerified: true,
-  phoneVerified: true,
-  userRef: 'UF3xqoKuk-TXc5TykVLIi',
-  acceptedTerms: null,
-  status: 'active',
-  meta: null,
-  createdAt: '2025-03-05T05:41:47.280+00:00',
-  updatedAt: '2025-03-10T11:11:06.717+00:00',
-  deletedAt: null,
-  address: null,
-  gender: null,
-  dob: null,
-  location: { lat: -6.77598, long: 4.42339, type: 'Point' },
-  doctorDetails: {
-    id: 'd0a402a9-4e48-4753-b187-25bc971102f8',
-    userId: 'f281ca62-2da4-4068-85e1-37861a180cdd',
-    medicalLicenseNumber: 'ML78225650',
-    licenseIssuingAuthority: 'State Medical Board',
-    licenseStartDate: '2010-01-01T00:00:00.000Z',
-    licenseEndDate: '2025-12-31T00:00:00.000Z',
-    yearsOfExperience: 17,
-    certifications: 'Senior Integration Officer',
-    education: 'MD from Harvard Medical School, Residency at Mayo Clinic',
-    spokenLanguages: 'English, Spanish',
-    patientRating: null,
-    preferredPatientTypes: 'Children, Youth',
-    emergencyCallsAvailable: true,
-    accountStatus: null,
-    verified: false,
-    profileCompletionPercentage: 0,
-    researchPublications: null,
-    awardsAchievements: null,
-    memberships: null,
-    adminNotes: null,
-    affiliatedHospitals: null,
-    clinicName: 'Grant Group',
-    consultationFee: '200.00',
-    locations: '901 N Center Street Suite 145',
-    telemedicineEnabled: true,
-    workingHours: 'Mon-Fri: 9:00 AM - 5:00 PM',
-    appointmentSlotDuration: '35',
-    createdAt: '2025-03-05T05:41:48.026+00:00',
-    updatedAt: '2025-03-14T09:43:06.228+00:00',
-    visitCount: 22,
-    createdByAdmin: false,
-    createdByAdminId: null,
-    bio: 'Experienced inventor with over 5 years of practice in treating care diseases.',
-    avatarUrl: 'https://whale-uncommon-sheep.ngrok-free.app/doctors-image/pngtree-young-afro-professional-doctor-png-image_13227671-1654050293.png',
-    rating: null
-  }
+[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
+[?25l [37m[1m [22m[39m Generating static pages (0/24)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/24)  [36m[=   ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/24)  [36m[==  ][39m[2K[1G[?25hhttps://whale-uncommon-sheep.ngrok-free.app/v1 true
+[Function: getItem]
+Error fetching doctor details: Error: Dynamic server usage: Route /user/dashboard couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at m (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/.next/server/chunks/3849.js:1:41176)
+    at d (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/.next/server/chunks/255.js:1:3836)
+    at r (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/.next/server/app/(main)/doctor/payment/page.js:1:21816)
+    at y (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:17621)
+    at ek (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:84:13409)
+    at e (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:84:17307)
+    at eO (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:84:17769)
+    at Array.toJSON (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:84:14915)
+    at stringify (<anonymous>)
+    at eU (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:84:26272) {
+  description: "Route /user/dashboard couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
 }
-{
-  firstName: 'Mack',
-  lastName: 'Nienow',
-  email: 'Mack.Nienow89@yahoo.com',
-  phoneNumber: '16758607669',
-  emailVerified: true,
-  phoneVerified: true,
-  userRef: 'Guj99aHY1-WZIqpo2eJ3j',
-  acceptedTerms: null,
-  status: 'active',
-  meta: null,
-  createdAt: '2025-03-05T05:41:51.750+00:00',
-  updatedAt: '2025-03-10T11:11:09.717+00:00',
-  deletedAt: null,
-  address: null,
-  gender: null,
-  dob: null,
-  location: { lat: -5.46361, long: -4.35522, type: 'Point' },
-  doctorDetails: {
-    id: '4961f495-451e-4f45-aae6-4ba4e4f1f1ee',
-    userId: '9ad5b0ec-bad9-4dfa-9c60-aa546decb717',
-    medicalLicenseNumber: 'ML18638392',
-    licenseIssuingAuthority: 'State Medical Board',
-    licenseStartDate: '2010-01-01T00:00:00.000Z',
-    licenseEndDate: '2025-12-31T00:00:00.000Z',
-    yearsOfExperience: 9,
-    certifications: 'Customer Marketing Strategist',
-    education: 'MD from Harvard Medical School, Residency at Mayo Clinic',
-    spokenLanguages: 'English, Spanish',
-    patientRating: null,
-    preferredPatientTypes: 'Children, Youth',
-    emergencyCallsAvailable: true,
-    accountStatus: null,
-    verified: false,
-    profileCompletionPercentage: 0,
-    researchPublications: null,
-    awardsAchievements: null,
-    memberships: null,
-    adminNotes: null,
-    affiliatedHospitals: null,
-    clinicName: 'Reynolds Group',
-    consultationFee: '200.00',
-    locations: '41954 Reta Station Apt. 227',
-    telemedicineEnabled: true,
-    workingHours: 'Mon-Fri: 9:00 AM - 5:00 PM',
-    appointmentSlotDuration: '30',
-    createdAt: '2025-03-05T05:41:52.475+00:00',
-    updatedAt: '2025-03-19T10:31:37.854+00:00',
-    visitCount: 8,
-    createdByAdmin: false,
-    createdByAdminId: null,
-    bio: 'Experienced teacher, artist with over 5 years of practice in treating care diseases.',
-    avatarUrl: 'https://whale-uncommon-sheep.ngrok-free.app/doctors-image/portrait-black-man-serious-doctor-with-arms-crossed-hospital-healthcare-african-medical-professional-face-surgeon-person-confident-employee-from-nigeria-with-wellness-career_590464-203729-3094595249.jpg',
-    rating: null
-  }
+ReferenceError: location is not defined
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
+    at t.startTransition (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
+    at Object.push (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:10141)
+    at n$ (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
+    at nI (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
+    at nL (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
+    at nN (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
+    at nO (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
+ReferenceError: location is not defined
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
+    at t.startTransition (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
+    at Object.push (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:10141)
+    at n$ (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
+    at nI (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
+    at nL (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
+    at nN (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
+    at nO (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
+ReferenceError: location is not defined
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
+    at t.startTransition (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
+    at Object.push (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:10141)
+    at n$ (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
+    at nI (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
+    at nL (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
+    at nN (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
+    at nO (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
+ReferenceError: location is not defined
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
+    at t.startTransition (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
+    at Object.push (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:10141)
+    at n$ (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
+    at nI (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
+    at nL (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
+    at nN (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
+    at nO (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
+ReferenceError: location is not defined
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
+    at t.startTransition (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
+    at Object.push (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:10141)
+    at n$ (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
+    at nI (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
+    at nL (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
+    at nN (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
+    at nO (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
+Error fetching top specialists: Error: Dynamic server usage: Route / couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at m (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/.next/server/chunks/3849.js:1:41176)
+    at d (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/.next/server/chunks/255.js:1:3836)
+    at r (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/.next/server/app/(main)/doctor/payment/page.js:1:21816)
+    at u (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/.next/server/app/(main)/page.js:1:130253)
+    at ek (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:84:13409)
+    at e (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:84:17307)
+    at eO (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:84:17769)
+    at Object.toJSON (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:84:14915)
+    at stringify (<anonymous>)
+    at eU (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:84:26272) {
+  description: "Route / couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
 }
-{
-  firstName: 'Clotilde',
-  lastName: 'Dare',
-  email: 'Clotilde_Dare17@hotmail.com',
-  phoneNumber: '14655806011',
-  emailVerified: true,
-  phoneVerified: true,
-  userRef: 'LHcc0XeXApLaOt9uefVvC',
-  acceptedTerms: null,
-  status: 'active',
-  meta: null,
-  createdAt: '2025-03-05T05:41:56.245+00:00',
-  updatedAt: '2025-03-10T11:11:12.764+00:00',
-  deletedAt: null,
-  address: null,
-  gender: null,
-  dob: null,
-  location: { lat: -3.8518, long: 3.80898, type: 'Point' },
-  doctorDetails: {
-    id: 'c61447b6-ad18-4d45-a674-556a828408a7',
-    userId: 'a1ed31bb-8efd-4745-9c65-1c112efb4fe4',
-    medicalLicenseNumber: 'ML05849319',
-    licenseIssuingAuthority: 'State Medical Board',
-    licenseStartDate: '2010-01-01T00:00:00.000Z',
-    licenseEndDate: '2025-12-31T00:00:00.000Z',
-    yearsOfExperience: 7,
-    certifications: 'District Functionality Associate',
-    education: 'MD from Harvard Medical School, Residency at Mayo Clinic',
-    spokenLanguages: 'English, Spanish',
-    patientRating: null,
-    preferredPatientTypes: 'Children, Youth',
-    emergencyCallsAvailable: true,
-    accountStatus: null,
-    verified: false,
-    profileCompletionPercentage: 0,
-    researchPublications: null,
-    awardsAchievements: null,
-    memberships: null,
-    adminNotes: null,
-    affiliatedHospitals: null,
-    clinicName: 'Bauch Group',
-    consultationFee: '200.00',
-    locations: '147 Ida Green Apt. 292',
-    telemedicineEnabled: true,
-    workingHours: 'Mon-Fri: 9:00 AM - 5:00 PM',
-    appointmentSlotDuration: '50',
-    createdAt: '2025-03-05T05:41:57.361+00:00',
-    updatedAt: '2025-03-14T09:11:46.123+00:00',
-    visitCount: 3,
-    createdByAdmin: false,
-    createdByAdminId: null,
-    bio: 'Experienced piglet supporter, dreamer with over 5 years of practice in treating care diseases.',
-    avatarUrl: 'https://whale-uncommon-sheep.ngrok-free.app/doctors-image/thoughtful-young-african-american-doctor-standing-by-window-looking-away-arms-crossed-portrait-male-doctor-holds-stethoscope-seriously-thinking-pondering-professional-medical-occupation-lifestyle-photo-2767029403.jpg',
-    rating: null
-  }
-}
-{
-  firstName: 'Isaiah',
-  lastName: 'Weissnat',
-  email: 'Isaiah_Weissnat76@yahoo.com',
-  phoneNumber: '13084167338',
-  emailVerified: true,
-  phoneVerified: true,
-  userRef: 'lFbGl8bhyagjq-MmG_fk6',
-  acceptedTerms: null,
-  status: 'active',
-  meta: null,
-  createdAt: '2025-03-05T05:41:29.297+00:00',
-  updatedAt: '2025-03-10T11:10:54.553+00:00',
-  deletedAt: null,
-  address: null,
-  gender: null,
-  dob: null,
-  location: { lat: -3.34047, long: 3.03104, type: 'Point' },
-  doctorDetails: {
-    id: '70b49d1e-26b9-4579-8ec9-9f726591e655',
-    userId: '6900bc97-7733-413f-90f6-fc9c8b4bd72e',
-    medicalLicenseNumber: 'ML62993100',
-    licenseIssuingAuthority: 'State Medical Board',
-    licenseStartDate: '2010-01-01T00:00:00.000Z',
-    licenseEndDate: '2025-12-31T00:00:00.000Z',
-    yearsOfExperience: 21,
-    certifications: 'Regional Program Coordinator',
-    education: 'MD from Harvard Medical School, Residency at Mayo Clinic',
-    spokenLanguages: 'English, Spanish',
-    patientRating: null,
-    preferredPatientTypes: 'Children, Youth',
-    emergencyCallsAvailable: true,
-    accountStatus: null,
-    verified: false,
-    profileCompletionPercentage: 0,
-    researchPublications: null,
-    awardsAchievements: null,
-    memberships: null,
-    adminNotes: null,
-    affiliatedHospitals: null,
-    clinicName: 'Farrell, Parker and Hansen',
-    consultationFee: '200.00',
-    locations: '991 Sandy Curve Apt. 842',
-    telemedicineEnabled: true,
-    workingHours: 'Mon-Fri: 9:00 AM - 5:00 PM',
-    appointmentSlotDuration: '55',
-    createdAt: '2025-03-05T05:41:30.023+00:00',
-    updatedAt: '2025-03-10T11:10:55.275+00:00',
-    visitCount: 2,
-    createdByAdmin: false,
-    createdByAdminId: null,
-    bio: 'Experienced model with over 5 years of practice in treating care diseases.',
-    avatarUrl: 'https://whale-uncommon-sheep.ngrok-free.app/doctors-image/black-man-doctor-face-hospital-with-trust-confidence-smile-medical-clinic-professional_590464-199169-1049406630.jpg',
-    rating: null
-  }
-}
-{
-  firstName: 'Imani',
-  lastName: 'Greenholt',
-  email: 'Imani_Greenholt91@gmail.com',
-  phoneNumber: '13329153962',
-  emailVerified: true,
-  phoneVerified: true,
-  userRef: 'WErn3pLCS1z1cYiyNlUFM',
-  acceptedTerms: null,
-  status: 'active',
-  meta: null,
-  createdAt: '2025-03-05T05:41:31.526+00:00',
-  updatedAt: '2025-03-10T11:10:56.070+00:00',
-  deletedAt: null,
-  address: null,
-  gender: null,
-  dob: null,
-  location: { lat: -3.31892, long: -0.12214, type: 'Point' },
-  doctorDetails: {
-    id: '210405e2-a35a-413f-94be-7f717fba63db',
-    userId: '7caef40d-ec77-403f-96d1-c890e63530b3',
-    medicalLicenseNumber: 'ML69295136',
-    licenseIssuingAuthority: 'State Medical Board',
-    licenseStartDate: '2010-01-01T00:00:00.000Z',
-    licenseEndDate: '2025-12-31T00:00:00.000Z',
-    yearsOfExperience: 15,
-    certifications: 'Global Markets Producer',
-    education: 'MD from Harvard Medical School, Residency at Mayo Clinic',
-    spokenLanguages: 'English, Spanish',
-    patientRating: null,
-    preferredPatientTypes: 'Children, Youth',
-    emergencyCallsAvailable: true,
-    accountStatus: null,
-    verified: false,
-    profileCompletionPercentage: 0,
-    researchPublications: null,
-    awardsAchievements: null,
-    memberships: null,
-    adminNotes: null,
-    affiliatedHospitals: null,
-    clinicName: 'Kris, Howe and Kessler',
-    consultationFee: '200.00',
-    locations: '909 Ambrose Camp Suite 336',
-    telemedicineEnabled: true,
-    workingHours: 'Mon-Fri: 9:00 AM - 5:00 PM',
-    appointmentSlotDuration: '60',
-    createdAt: '2025-03-05T05:41:32.269+00:00',
-    updatedAt: '2025-03-19T10:30:18.976+00:00',
-    visitCount: 8,
-    createdByAdmin: false,
-    createdByAdminId: null,
-    bio: 'Experienced premium enthusiast, streamer with over 5 years of practice in treating care diseases.',
-    avatarUrl: 'https://whale-uncommon-sheep.ngrok-free.app/doctors-image/black-woman-doctor-face-hospital-with-trust-confidence-smile-medical-clinic_590464-199165-804617632.jpg',
-    rating: null
-  }
-}
-{
-  firstName: 'Ruben',
-  lastName: 'Wisoky',
-  email: 'Ruben.Wisoky85@hotmail.com',
-  phoneNumber: '13155720571',
-  emailVerified: true,
-  phoneVerified: true,
-  userRef: 'ELIdxSTzoJKI6RoSlim7B',
-  acceptedTerms: null,
-  status: 'active',
-  meta: null,
-  createdAt: '2025-03-05T05:41:49.527+00:00',
-  updatedAt: '2025-03-10T11:11:08.220+00:00',
-  deletedAt: null,
-  address: null,
-  gender: null,
-  dob: null,
-  location: { lat: -3.31388, long: 2.1377, type: 'Point' },
-  doctorDetails: {
-    id: 'cdd6a90b-9045-4f15-8c85-886bd880c433',
-    userId: 'e71a6d4c-40b4-489c-9140-8d8abfe7a265',
-    medicalLicenseNumber: 'ML88771221',
-    licenseIssuingAuthority: 'State Medical Board',
-    licenseStartDate: '2010-01-01T00:00:00.000Z',
-    licenseEndDate: '2025-12-31T00:00:00.000Z',
-    yearsOfExperience: 37,
-    certifications: 'Chief Group Analyst',
-    education: 'MD from Harvard Medical School, Residency at Mayo Clinic',
-    spokenLanguages: 'English, Spanish',
-    patientRating: null,
-    preferredPatientTypes: 'Children, Youth',
-    emergencyCallsAvailable: true,
-    accountStatus: null,
-    verified: false,
-    profileCompletionPercentage: 0,
-    researchPublications: null,
-    awardsAchievements: null,
-    memberships: null,
-    adminNotes: null,
-    affiliatedHospitals: null,
-    clinicName: 'Langosh, Watsica and Borer',
-    consultationFee: '200.00',
-    locations: '793 Riverside Avenue Suite 381',
-    telemedicineEnabled: true,
-    workingHours: 'Mon-Fri: 9:00 AM - 5:00 PM',
-    appointmentSlotDuration: '15',
-    createdAt: '2025-03-05T05:41:50.253+00:00',
-    updatedAt: '2025-03-10T11:11:08.945+00:00',
-    visitCount: 0,
-    createdByAdmin: false,
-    createdByAdminId: null,
-    bio: 'Experienced model, filmmaker, grad 😤 with over 5 years of practice in treating care diseases.',
-    avatarUrl: 'https://whale-uncommon-sheep.ngrok-free.app/doctors-image/portrait-black-doctor-wearing-his-overalls-with-stethoscope-around-his-neck_252214-8221-300474831.jpg',
-    rating: null
-  }
-}
-{
-  firstName: 'Kira',
-  lastName: 'Feest',
-  email: 'Kira_Feest@yahoo.com',
-  phoneNumber: '13017287546',
-  emailVerified: true,
-  phoneVerified: true,
-  userRef: 'PNO-nA81kN_1uXyZkKeHb',
-  acceptedTerms: null,
-  status: 'active',
-  meta: null,
-  createdAt: '2025-03-05T05:41:36.060+00:00',
-  updatedAt: '2025-03-10T11:10:59.111+00:00',
-  deletedAt: null,
-  address: null,
-  gender: null,
-  dob: null,
-  location: { lat: -2.90327, long: -5.63342, type: 'Point' },
-  doctorDetails: {
-    id: '2e5edca3-badd-49d9-90a1-5e1eaa4a9b43',
-    userId: '3047c9ea-8e8d-4cfa-8928-830d6e8c782a',
-    medicalLicenseNumber: 'ML52755753',
-    licenseIssuingAuthority: 'State Medical Board',
-    licenseStartDate: '2010-01-01T00:00:00.000Z',
-    licenseEndDate: '2025-12-31T00:00:00.000Z',
-    yearsOfExperience: 26,
-    certifications: 'Forward Directives Strategist',
-    education: 'MD from Harvard Medical School, Residency at Mayo Clinic',
-    spokenLanguages: 'English, Spanish',
-    patientRating: null,
-    preferredPatientTypes: 'Children, Youth',
-    emergencyCallsAvailable: true,
-    accountStatus: null,
-    verified: false,
-    profileCompletionPercentage: 0,
-    researchPublications: null,
-    awardsAchievements: null,
-    memberships: null,
-    adminNotes: null,
-    affiliatedHospitals: null,
-    clinicName: 'Purdy - Romaguera',
-    consultationFee: '200.00',
-    locations: '245 Ezekiel Ferry Apt. 932',
-    telemedicineEnabled: true,
-    workingHours: 'Mon-Fri: 9:00 AM - 5:00 PM',
-    appointmentSlotDuration: '90',
-    createdAt: '2025-03-05T05:41:36.819+00:00',
-    updatedAt: '2025-03-15T16:37:04.919+00:00',
-    visitCount: 7,
-    createdByAdmin: false,
-    createdByAdminId: null,
-    bio: 'Experienced inventor with over 5 years of practice in treating care diseases.',
-    avatarUrl: 'https://whale-uncommon-sheep.ngrok-free.app/doctors-image/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA5L3Jhd3BpeGVsb2ZmaWNlMl9waG90b19vZl9hX2JsYWNrX3BsdXNfc2l6ZV9mZW1hbGVfZG9jdG9yX2luX2hvc19mOGU4MTBlMi1kOWEyLTQ5OTMtOWM0Zi1kNWI2OTQ5ODVmZTNfMi5qcGc-1699906083.jpg',
-    rating: null
-  }
-}
-{
-  firstName: 'Marta',
-  lastName: 'Heaney',
-  email: 'Marta.Heaney73@hotmail.com',
-  phoneNumber: '13475715578',
-  emailVerified: true,
-  phoneVerified: true,
-  userRef: 'rKBzn6mHRzkZFqozwQ4Xe',
-  acceptedTerms: null,
-  status: 'active',
-  meta: null,
-  createdAt: '2025-03-05T05:41:45.025+00:00',
-  updatedAt: '2025-03-10T11:11:05.153+00:00',
-  deletedAt: null,
-  address: null,
-  gender: null,
-  dob: null,
-  location: { lat: -2.63047, long: 0.05983, type: 'Point' },
-  doctorDetails: {
-    id: '9e9b5567-a306-42c3-8e56-a30625958534',
-    userId: 'b36d8e31-82ed-4896-9f54-48d5f671db08',
-    medicalLicenseNumber: 'ML19552945',
-    licenseIssuingAuthority: 'State Medical Board',
-    licenseStartDate: '2010-01-01T00:00:00.000Z',
-    licenseEndDate: '2025-12-31T00:00:00.000Z',
-    yearsOfExperience: 32,
-    certifications: 'Internal Accounts Consultant',
+ReferenceError: location is not defined
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
+    at t.startTransition (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
+    at Object.push (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:10141)
+    at n$ (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
+    at nI (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
+    at nL (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
+    at nN (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
+    at nO (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
+ReferenceError: location is not defined
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
+    at t.startTransition (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
+    at Object.push (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:10141)
+    at n$ (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
+    at nI (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
+    at nL (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
+    at nN (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
+    at nO (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
+ReferenceError: location is not defined
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
+    at t.startTransition (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
+    at Object.push (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:10141)
+    at n$ (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
+    at nI (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
+    at nL (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
+    at nN (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
+    at nO (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
+ReferenceError: location is not defined
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
+    at t.startTransition (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
+    at Object.push (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:10141)
+    at n$ (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
+    at nI (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
+    at nL (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
+    at nN (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
+    at nO (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
+ReferenceError: location is not defined
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
+    at t.startTransition (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
+    at Object.push (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:10141)
+    at n$ (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
+    at nI (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
+    at nL (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
+    at nN (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
+    at nO (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
+ReferenceError: location is not defined
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
+    at t.startTransition (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
+    at Object.push (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
+    at <unknown> (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:10141)
+    at n$ (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
+    at nI (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
+    at nL (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
+    at nN (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
+    at nO (/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
+[?25h [32m[1m✓[22m[39m Generating static pages (24/24)
+[?25l [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[?25l [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G[?25h [37m[1m [22m[39m Collecting build traces     [32m[1m✓[22m[39m Collecting build traces 
+[2K[1G[?25h [37m[1m [22m[39m Finalizing page optimization     [32m[1m✓[22m[39m Finalizing page optimization 
 
-    education: 'MD from Harvard Medical School, Residency at Mayo Clinic',
-    spokenLanguages: 'English, Spanish',
-    patientRating: null,
-    preferredPatientTypes: 'Children, Youth',
-    emergencyCallsAvailable: true,
-    accountStatus: null,
-    verified: false,
-    profileCompletionPercentage: 0,
-    researchPublications: null,
-    awardsAchievements: null,
-    memberships: null,
-    adminNotes: null,
-    affiliatedHospitals: null,
-    clinicName: 'Will - Kuhn',
-    consultationFee: '200.00',
-    locations: '4136 Trinity Road Suite 338',
-    telemedicineEnabled: true,
-    workingHours: 'Mon-Fri: 9:00 AM - 5:00 PM',
-    appointmentSlotDuration: '15',
-    createdAt: '2025-03-05T05:41:45.777+00:00',
-    updatedAt: '2025-03-14T09:25:39.078+00:00',
-    visitCount: 15,
-    createdByAdmin: false,
-    createdByAdminId: null,
-    bio: 'Experienced license fan, scientist with over 5 years of practice in treating care diseases.',
-    avatarUrl: 'https://whale-uncommon-sheep.ngrok-free.app/doctors-image/intro-1580490445-1388572505.jpg',
-    rating: null
-  }
-}
-{
-  firstName: 'Ike',
-  lastName: 'Hackett',
-  email: 'Ike.Hackett93@gmail.com',
-  phoneNumber: '19408779333',
-  emailVerified: true,
-  phoneVerifieReferenceError: location is not defined
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
-    at t.startTransition (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
-    at Object.push (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:9160)
-    at n$ (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
-    at nI (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
-    at nL (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
-    at nN (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
-    at nO (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
-ReferenceError: location is not defined
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
-    at t.startTransition (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
-    at Object.push (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:9160)
-    at n$ (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
-    at nI (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
-    at nL (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
-    at nN (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
-    at nO (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
-ReferenceError: location is not defined
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
-    at t.startTransition (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
-    at Object.push (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:9160)
-    at n$ (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
-    at nI (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
-    at nL (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
-    at nN (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
-    at nO (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
-ReferenceError: location is not defined
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
-    at t.startTransition (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
-    at Object.push (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:9160)
-    at n$ (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
-    at nI (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
-    at nL (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
-    at nN (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
-    at nO (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
-ReferenceError: location is not defined
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
-    at t.startTransition (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
-    at Object.push (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:9160)
-    at n$ (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
-    at nI (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
-    at nL (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
-    at nN (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
-    at nO (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
-ReferenceError: location is not defined
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
-    at t.startTransition (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
-    at Object.push (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:9160)
-    at n$ (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
-    at nI (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
-    at nL (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
-    at nN (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
-    at nO (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
-d: true,
-  userRef: 'dUq4ZNynnU2uO-XVQ6BIU',
-  acceptedTerms: null,
-  status: 'active',
-  meta: null,
-  createdAt: '2025-03-05T05:41:38.328+00:00',
-  updatedAt: '2025-03-10T11:11:00.611+00:00',
-  deletedAt: null,
-  address: null,
-  gender: null,
-  dob: null,
-  location: { lat: -1.08049, long: 5.33322, type: 'Point' },
-  doctorDetails: {
-    id: 'ca9a8e6b-95b8-463c-8aa7-85eb96c6ac75',
-    userId: '140611c2-f5bb-478c-9a87-b69e391e2399',
-    medicalLicenseNumber: 'ML65809788',
-    licenseIssuingAuthority: 'State Medical Board',
-    licenseStartDate: '2010-01-01T00:00:00.000Z',
-    licenseEndDate: '2025-12-31T00:00:00.000Z',
-    yearsOfExperience: 14,
-    certifications: 'International Group Designer',
-    education: 'MD from Harvard Medical School, Residency at Mayo Clinic',
-    spokenLanguages: 'English, Spanish',
-    patientRating: null,
-    preferredPatientTypes: 'Children, Youth',
-    emergencyCallsAvailable: true,
-    accountStatus: null,
-    verified: false,
-    profileCompletionPercentage: 0,
-    researchPublications: null,
-    awardsAchievements: null,
-    memberships: null,
-    adminNotes: null,
-    affiliatedHospitals: null,
-    clinicName: 'Mayer LLC',
-    consultationFee: '200.00',
-    locations: '2472 Northfield Road Apt. 591',
-    telemedicineEnabled: true,
-    workingHours: 'Mon-Fri: 9:00 AM - 5:00 PM',
-    appointmentSlotDuration: '50',
-    createdAt: '2025-03-05T05:41:39.051+00:00',
-    updatedAt: '2025-03-10T13:25:03.468+00:00',
-    visitCount: 3,
-    createdByAdmin: false,
-    createdByAdminId: null,
-    bio: 'Experienced nerd, streamer, philosopher with over 5 years of practice in treating care diseases.',
-    avatarUrl: 'https://whale-uncommon-sheep.ngrok-free.app/doctors-image/f9704a5a1d355e59a1af1ee75ac45249-1589590335.jpg',
-    rating: null
-  }
-}
-{
-  firstName: 'Lonie',
-  lastName: 'Hammes',
-  email: 'Lonie.Hammes@gmail.com',
-  phoneNumber: '14423138767',
-  emailVerified: true,
-  phoneVerified: true,
-  userRef: 'gJ89IpWi9aA8tqP0NjtxQ',
-
-  acceptedTerms: null,
-  status: 'active',
-  meta: null,
-  createdAt: '2025-03-05T05:26:51.149+00:00',
-  updatedAt: '2025-03-10T11:10:46.957+00:00',
-  deletedAt: null,
-  address: null,
-  gender: null,
-  dob: null,
-  location: { lat: -0.7538, long: 0.50462, type: 'Point' },
-  doctorDetails: {
-    id: '9eaa529d-ada9-4c1c-a3ef-cd077ea16627',
-    userId: 'b04313bb-2879-4049-b365-a4557366a348',
-    medicalLicenseNumber: 'ML87608312',
-    licenseIssuingAuthority: 'State Medical Board',
-    licenseStartDate: '2010-01-01T00:00:00.000Z',
-    licenseEndDate: '2025-12-31T00:00:00.000Z',
-    yearsOfExperience: 29,
-    certifications: 'Regional Data Strategist',
-    education: 'MD from Harvard Medical School, Residency at Mayo Clinic',
-    spokenLanguages: 'English, Spanish',
-    patientRating: null,
-    preferredPatientTypes: 'Children, Youth',
-    emergencyCallsAvailable: true,
-    accountStatus: null,
-    verified: false,
-    profileCompletionPercentage: 0,
-    researchPublications: null,
-    awardsAchievements: null,
-    memberships: null,
-    adminNotes: null,
-    affiliatedHospitals: null,
-    clinicName: 'Ferry Group',
-    consultationFee: '200.00',
-    locations: '55974 Hartmann Via Apt. 771',
-    telemedicineEnabled: true,
-    workingHours: 'Mon-Fri: 9:00 AM - 5:00 PM',
-    appointmentSlotDuration: '40',
-    createdAt: '2025-03-05T05:26:51.881+00:00',
-    updatedAt: '2025-03-19T09:14:31.429+00:00',
-    visitCount: 4,
-    createdByAdmin: false,
-    createdByAdminId: null,
-    bio: 'Experienced gamer with over 5 years of practice in treating care diseases.',
-    avatarUrl: 'https://whale-uncommon-sheep.ngrok-free.app/doctors-image/6af27263baed3567a095a3c0ddbcf912-3484560315.jpg',
-    rating: null
-  }
-}
-ReferenceError: location is not defined
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
-    at t.startTransition (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
-    at Object.push (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:9160)
-    at n$ (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
-    at nI (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
-    at nL (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
-    at nN (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
-    at nO (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
-ReferenceError: location is not defined
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
-    at t.startTransition (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
-    at Object.push (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:9160)
-    at n$ (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
-    at nI (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
-    at nL (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
-    at nN (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
-    at nO (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
-ReferenceError: location is not defined
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
-    at t.startTransition (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
-    at Object.push (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:9160)
-    at n$ (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
-    at nI (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
-    at nL (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
-    at nN (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
-    at nO (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
-ReferenceError: location is not defined
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
-    at t.startTransition (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
-    at Object.push (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:9160)
-    at n$ (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
-    at nI (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
-    at nL (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
-    at nN (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
-    at nO (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
-ReferenceError: location is not defined
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:24993)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25882)
-    at t.startTransition (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:68:5818)
-    at Object.push (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:127:25870)
-    at <unknown> (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/.next/server/app/(auth)/onboarding/(auth)/signup/page.js:1:9160)
-    at n$ (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:45906)
-    at nI (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:47681)
-    at nL (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:65480)
-    at nN (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:63111)
-    at nO (/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/compiled/next-server/app-page.runtime.prod.js:20:46258)
-[?25h [32m[1m✓[22m[39m Generating static pages (23/23)
-[?25l [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[?25l [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting build traces    
- [32m[1m✓[22m[39m Collecting build traces 
-[2K[1G[?25h [37m[1m [22m[39m Finalizing page optimization    
- [32m[1m✓[22m[39m Finalizing page optimization 
-
-[4mRoute (app)[24m                              [4mSize[24m     [4mFirst Load JS[24m
-┌ ○ /                                    3.98 kB         [37m[1m372 kB[22m[39m
-├ ○ /_not-found                          148 B           [37m[1m102 kB[22m[39m
-├ ƒ /appointment/details/[slug]          2.14 kB         [37m[1m242 kB[22m[39m
-├ ƒ /doctor/[slug]                       3.29 kB         [37m[1m323 kB[22m[39m
-├ ○ /doctor/payment                      5.39 kB         [37m[1m322 kB[22m[39m
-├ ƒ /hospital/[slug]                     4.56 kB         [37m[1m325 kB[22m[39m
-├ ƒ /hospital/[slug]/labs                2.73 kB         [37m[1m312 kB[22m[39m
-├ ƒ /hospital/[slug]/pharmacy            3.94 kB         [37m[1m310 kB[22m[39m
-├ ○ /onboarding/password-change          1.14 kB         [37m[1m324 kB[22m[39m
-├ ○ /onboarding/password-reset           1.93 kB         [37m[1m324 kB[22m[39m
-├ ○ /onboarding/signin                   1.75 kB         [37m[1m324 kB[22m[39m
-├ ○ /onboarding/signup                   2.13 kB         [37m[1m325 kB[22m[39m
-├ ○ /onboarding/verify-email             1.12 kB         [37m[1m311 kB[22m[39m
-├ ○ /search                              8.14 kB         [37m[1m387 kB[22m[39m
-├ ○ /user/dashboard                      3.44 kB         [37m[1m309 kB[22m[39m
-├ ○ /user/dashboard/appointments         2.3 kB          [37m[1m242 kB[22m[39m
-├ ○ /user/dashboard/healthbenefits       1.02 kB         [37m[1m241 kB[22m[39m
-├ ○ /user/dashboard/supports             2.39 kB         [37m[1m322 kB[22m[39m
-├ ƒ /user/dashboard/supports/[slug]      3.54 kB         [37m[1m320 kB[22m[39m
-├ ○ /user/profile                        1.29 kB         [37m[1m311 kB[22m[39m
-├ ○ /user/profile/change-password        779 B           [37m[1m251 kB[22m[39m
-├ ○ /user/profile/emergency-contact      799 B           [37m[1m251 kB[22m[39m
-├ ○ /user/profile/feedback               148 B           [37m[1m102 kB[22m[39m
-├ ○ /user/profile/hmo-provider           784 B           [37m[1m251 kB[22m[39m
-├ ○ /user/profile/settings               444 B           [37m[1m213 kB[22m[39m
-└ ○ /user/profile/vitals                 862 B           [37m[1m251 kB[22m[39m
-+ First Load JS shared by all            [37m[1m102 kB[22m[39m
-  ├ chunks/2855-3910b18ced488dc1.js      45.8 kB
-  ├ chunks/87c73c54-8c278471448bd169.js  52.5 kB
-  └ other shared chunks (total)          3.54 kB
+[4mRoute (app)[24m                                    [4mSize[24m     [4mFirst Load JS[24m
+┌ ƒ /                                          42.3 kB         [37m[1m420 kB[22m[39m
+├ ○ /_not-found                                154 B           [37m[1m102 kB[22m[39m
+├ ƒ /appointment/details/[slug]                2.14 kB         [37m[1m248 kB[22m[39m
+├ ƒ /doctor/[slug]                             5.58 kB         [37m[1m407 kB[22m[39m
+├ ƒ /doctor/payment                            4.76 kB         [37m[1m361 kB[22m[39m
+├ ƒ /hospital/[slug]                           5.77 kB         [37m[1m335 kB[22m[39m
+├ ƒ /hospital/[slug]/labs                      3.44 kB         [37m[1m324 kB[22m[39m
+├ ƒ /hospital/[slug]/labs/hematology           154 B           [37m[1m102 kB[22m[39m
+├ ƒ /hospital/[slug]/labs/hematology/[testId]  2.98 kB         [37m[1m324 kB[22m[39m
+├ ƒ /hospital/[slug]/labs/testPayment          1.69 kB         [37m[1m320 kB[22m[39m
+├ ƒ /hospital/[slug]/pharmacy                  1.89 kB         [37m[1m320 kB[22m[39m
+├ ○ /onboarding/password-change                1.13 kB         [37m[1m331 kB[22m[39m
+├ ○ /onboarding/password-reset                 2.07 kB         [37m[1m332 kB[22m[39m
+├ ○ /onboarding/signin                         1.77 kB         [37m[1m331 kB[22m[39m
+├ ƒ /onboarding/signin/api                     154 B           [37m[1m102 kB[22m[39m
+├ ○ /onboarding/signup                         2.35 kB         [37m[1m332 kB[22m[39m
+├ ○ /onboarding/verify-email                   1.14 kB         [37m[1m318 kB[22m[39m
+├ ○ /search                                    2.42 kB         [37m[1m399 kB[22m[39m
+├ ƒ /user/dashboard                            1.38 kB         [37m[1m320 kB[22m[39m
+├ ○ /user/dashboard/appointments               3.57 kB         [37m[1m250 kB[22m[39m
+├ ○ /user/dashboard/healthbenefits             1.34 kB         [37m[1m247 kB[22m[39m
+├ ○ /user/dashboard/supports                   3.65 kB         [37m[1m333 kB[22m[39m
+├ ƒ /user/dashboard/supports/[slug]            1.59 kB         [37m[1m331 kB[22m[39m
+├ ○ /user/profile                              1.29 kB         [37m[1m318 kB[22m[39m
+├ ○ /user/profile/change-password              779 B           [37m[1m258 kB[22m[39m
+├ ○ /user/profile/emergency-contact            799 B           [37m[1m258 kB[22m[39m
+├ ○ /user/profile/feedback                     154 B           [37m[1m102 kB[22m[39m
+├ ○ /user/profile/hmo-provider                 783 B           [37m[1m258 kB[22m[39m
+├ ○ /user/profile/settings                     449 B           [37m[1m214 kB[22m[39m
+└ ○ /user/profile/vitals                       863 B           [37m[1m258 kB[22m[39m
++ First Load JS shared by all                  [37m[1m102 kB[22m[39m
+  ├ chunks/2855-3910b18ced488dc1.js            45.8 kB
+  ├ chunks/87c73c54-8c278471448bd169.js        52.5 kB
+  └ other shared chunks (total)                3.71 kB
 
 
 ○  (Static)   prerendered as static content
 ƒ  (Dynamic)  server-rendered on demand
 
-[?25h[2K[1G✨  Done in 52.08s.
+[?25h[2K[1G✨  Done in 29.61s.
