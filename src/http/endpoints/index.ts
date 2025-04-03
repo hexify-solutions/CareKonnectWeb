@@ -12,7 +12,8 @@ const endPoints = {
 
     // appointments
     createAppointment: 'appointments/book',
-    
+    getAppointment: (id: string) => `appointments/${id}`,
+
 
 }
 

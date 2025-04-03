@@ -87,7 +87,7 @@ const DoctorAppointmentForm = ({ isAuth, triggerAuth, appointmentSlots }) => {
                   )
                 }
                 error={touched.date && Boolean(errors.date)}
-                helperText={touched.date && errors.date}
+                // helperText={touched.date && errors.date}
               />
             </div>
             <div className={styles.formInputWrapper}>
@@ -99,7 +99,7 @@ const DoctorAppointmentForm = ({ isAuth, triggerAuth, appointmentSlots }) => {
                 options={timeOptions}
                 label="Select Time"
                 error={touched.time && Boolean(errors.time)}
-                helperText={touched.time && errors.time}
+                // helperText={touched.time && errors.time}
               />
             </div>
             <div className={styles.formInputWrapper}>

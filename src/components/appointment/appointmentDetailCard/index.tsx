@@ -2,7 +2,7 @@ import Calendar from "@hexify/atoms/src/vectors/calendar";
 import styles from "./appointmentDetailCard.module.css";
 import { StopWatch } from "@hexify/atoms";
 
-const AppointmentDetailCard = () => {
+const AppointmentDetailCard = ({ appointment }) => {
   return (
     <div className={styles.wrapper}>
       <span className={styles.heading}>Booking Details</span>

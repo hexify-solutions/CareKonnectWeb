@@ -62,7 +62,7 @@ const Doctor = async ({ params, searchParams }) => {
             </h3>
             <button className={styles.specialistButton}>View all</button>
           </div>
-          <Suspense fallback={<></>}>
+          <Suspense fallback={<div>loading</div>}>
           <SpecialistList />
           </Suspense>
         </div>

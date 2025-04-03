@@ -24,8 +24,7 @@ export default function Home() {
         <h3 className={styles.heading} arial-label="Top Specialist">
           Top Specialists
         </h3>
-        <Suspense fallback={<></>}>
-
+        <Suspense fallback={<div>Loading</div>}>
         <SpecialistList />
         </Suspense>
         <div className={styles.innovationBannerWrapper}>
