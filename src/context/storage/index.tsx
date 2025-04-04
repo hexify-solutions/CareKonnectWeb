@@ -7,9 +7,6 @@ interface SecureStorageContextType {
   getItem: (key: string) => any
   setItem: (key: string, value: any) => void
   removeItem: (key: string) => void
-  // setEngine: (
-  //   engine: Pick<Storage, "setItem" | "getItem" | "removeItem">
-  // ) => void
 }
 
 const SecureStorageContext = createContext<
@@ -23,9 +20,7 @@ export const SecureStorageProvider: React.FC<{ children: React.ReactNode }> = ({
   const setItem = (key: string, value: any) =>
     secureLocalStorage.setItem(key, value)
   const removeItem = (key: string) => secureLocalStorage.removeItem(key)
-  // const setEngine = (
-  //   engine: Pick<Storage, "setItem" | "getItem" | "removeItem">
-  // ) => secureLocalStorage.setStorageEngine(engine)
+
 
   return (
     <SecureStorageContext.Provider

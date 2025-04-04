@@ -10,7 +10,6 @@ import DrugCard from "@/components/pharmacy/cards/drugCard";
 const Pharmacy = async ({ searchParams }) => {
   const params = await searchParams;
 
-  console.log(params, "this is the params");
 
   return (
     <div>

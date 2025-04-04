@@ -18,5 +18,6 @@ function RootLayout({
   );
 }
 
+export default RootLayout;
 
-export default withAuthState(RootLayout, true, routes.home)
+// export default withAuthState(RootLayout, false, routes.home)
