@@ -1,13 +1,27 @@
-"use client"
 import AppointmentDetailCard from "@/components/appointment/appointmentDetailCard"
-import { useAppointmentQuery } from "@/http/appointment/query"
+import { fetchData } from "@/http"
+import { cookies } from "next/headers"
+import cookieKeys from "@/lib/constants/cokieKeys"
+import routes from "@/lib/constants/routes"
 
-const AppointmentDetails = ({ id }) => {
-  const appointment = useAppointmentQuery({ id })
+const AppointmentDetails = async ({ id }) => {
+  const cookieStore = await cookies()
+  const token = cookieStore.get(cookieKeys.token)?.value
 
-  console.log(appointment?.data, "this is the appointment data here")
+  const appointment = await fetchData({
+    url: `${process.env.PUBLIC_URL}${routes?.appointmentById(id)}`,
+    errorMessage: "Error fetching doctor details:",
+    options: {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    },
+  })
 
-  return <AppointmentDetailCard appointment={appointment?.data}/>
+  console.log(appointment, "this is the appointment here")
+
+  return <AppointmentDetailCard appointment={appointment?.data} />
 }
 
 export default AppointmentDetails

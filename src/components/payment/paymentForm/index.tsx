@@ -182,13 +182,13 @@ const HmoForm = ({
 };
 
 const paymentOptions = [
-  {
-    label: "Credit Card",
-    value: "credit_card",
-    description: "Pay with MasterCard, Visa or Verve",
-    subDescription: "MasterCard *****1234",
-    iconType: "card",
-  },
+  // {
+  //   label: "Credit Card",
+  //   value: "credit_card",
+  //   description: "Pay with MasterCard, Visa or Verve",
+  //   subDescription: "MasterCard *****1234",
+  //   iconType: "card",
+  // },
   {
     label: "HMO Provideer",
     value: "hmo",
@@ -196,12 +196,12 @@ const paymentOptions = [
     subDescription: "Red Beryl Lite Individual",
     iconType: "card",
   },
-  {
-    label: "Internet Banking",
-    value: "internet",
-    description: "Pay directly from your bank account",
-    iconType: "bank",
-  },
+  // {
+  //   label: "Internet Banking",
+  //   value: "internet",
+  //   description: "Pay directly from your bank account",
+  //   iconType: "bank",
+  // },
   {
     label: "Paystack",
     value: "paystack",

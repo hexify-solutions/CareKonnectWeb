@@ -31,6 +31,7 @@ const routes = {
 
   // appointment routes
   appointmentDetails: (slug: string) => "/appointment/details/" + slug,
+  appointmentById: (id: string) => `/appointments/${id}`
 
 };
 

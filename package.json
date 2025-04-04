@@ -13,6 +13,7 @@
     "@hexify/components": "*",
     "@tanstack/react-query": "^5.62.11",
     "@tanstack/react-query-devtools": "^5.62.11",
+    "@types/crypto-js": "^4.2.2",
     "axios": "^1.7.9",
     "dayjs": "^1.11.13",
     "formik": "^2.4.6",

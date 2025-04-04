@@ -6,10 +6,10 @@ import { fetchData } from "@/http"
 // import mockSpecialistData from "../../data/mockSpecialist.json";
 
 const SpecialistList = async ({ size }: { size?: "small" }) => {
-  const topSpecialists = await fetchData(
-    `${process.env.PUBLIC_URL}/global/top-specialists`,
-    "Error fetching top specialists:"
-  )
+  const topSpecialists = await fetchData({
+    url: `${process.env.PUBLIC_URL}/global/top-specialists`,
+    errorMessage: "Error fetching top specialists:",
+  })
 
   return (
     <div className="inner-wrapper">

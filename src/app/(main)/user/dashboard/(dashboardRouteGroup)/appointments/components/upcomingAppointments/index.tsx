@@ -13,7 +13,6 @@ const UpcomingAppointments = () => {
   const [selectedMonth, setSelectedMonth ] = useState(currentMonth)
   const [selectedYear, setSelectedYear] = useState(currentYear)
 
-  console.log(selectedMonth)
 
   return (
     <div className={styles.wrapper}>
@@ -47,9 +46,9 @@ const UpcomingAppointments = () => {
           </div>
         </div>
       </div>
-      <div className={styles.dateStripWrapper}>
+      {/* <div className={styles.dateStripWrapper}>
       <DateStripComponent />
-      </div>
+      </div> */}
       <AppointmentDetailCard />
     </div>
   )

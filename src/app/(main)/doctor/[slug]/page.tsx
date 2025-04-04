@@ -14,18 +14,18 @@ const Doctor = async ({ params, searchParams }) => {
   let doctor = null
   let doctorsAvailability = null
   const pageParams = await params;
-  const pageSearchParams = await searchParams;
+  const pageSearchParams = await searchParams
 
-  doctor = await fetchData(
-    `${process.env.PUBLIC_URL}/doctors/${pageParams?.slug}`,
-    "Error fetching doctor details:"
-  )
+  doctor = await fetchData({
+    url: `${process.env.PUBLIC_URL}/doctors/${pageParams?.slug}`,
+    errorMessage: "Error fetching doctor details:",
+  })
 
 
-  doctorsAvailability = await fetchData(
-    `${process.env.PUBLIC_URL}/availabilities/${pageSearchParams?.availability || doctor?.data?.doctorDetails?.id}`,
-    "Error fetching doctor availabilities:"
-  )
+  doctorsAvailability = await fetchData({
+    url: `${process.env.PUBLIC_URL}/availabilities/${pageSearchParams?.availability || doctor?.data?.doctorDetails?.id}`,
+    errorMessage: "Error fetching doctor availabilities:",
+  })
 
 
   return (

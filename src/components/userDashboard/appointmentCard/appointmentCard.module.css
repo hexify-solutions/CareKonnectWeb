@@ -61,6 +61,7 @@ div.headerChip {
 .chipLabel {
   display: flex;
   align-items: center;
+  text-transform: capitalize;
   gap: 2px;
 }
 
