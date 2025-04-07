@@ -2,11 +2,11 @@ import { Button, ChevronLeft, ChevronRight, ProviderIcon, Time } from "@hexify/a
 import styles from "./appointmentGeneralInfoCard.module.css";
 import { AppointmentGeneralInfoCardTabComponent } from "./tabComponents";
 
-const AppointmentGeneralInfoCard = () => {
+const AppointmentGeneralInfoCard = ({ appointment }) => {
   return (
     <div className={styles.infoCard}>
       <div className={styles.tabWrapper}>
-        <AppointmentGeneralInfoCardTabComponent />
+        <AppointmentGeneralInfoCardTabComponent appointment={appointment} />
       </div>
       <div className={styles.paymentSection}>
         <div className={styles.heading}>Payment Receipt</div>
@@ -19,9 +19,9 @@ const AppointmentGeneralInfoCard = () => {
         <div>
           <div className={styles.otherAppointmentHeader}>
             <div className={styles.heading}>Other Appointments</div>
-            <button className={styles.filterBtn}>
+            {/* <button className={styles.filterBtn}>
               In 7 days <ChevronLeft />
-            </button>
+            </button> */}
           </div>
           <OtherAppointmentCard />
           <div className={styles.filterBtnWrapper}>

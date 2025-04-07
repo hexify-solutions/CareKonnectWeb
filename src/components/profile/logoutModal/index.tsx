@@ -4,6 +4,7 @@ import { Modal, CancelIcon, Button } from "@hexify/atoms";
 import styles from "./logoutModal.module.css";
 import { useAuthContext } from "@/context/auth";
 import useQueryParams from "@/hooks/useQueryParams";
+import { withSuspense } from "@/hoc";
 
 const LogoutModal = () => {
 const { getAllQueryParams, removeQueryParams } = useQueryParams();
@@ -48,4 +49,4 @@ const cancelHandler = () => {
   );
 };
 
-export default LogoutModal;
+export default withSuspense(LogoutModal);

@@ -22,12 +22,12 @@ const ProfileForm = () => {
   const [isEditing, setIsEditing ] = useState<boolean>(false);
 
 
+
   const onClickHandler = () => {
     if(!isEditing) {
       setIsEditing(true);
       return;
     }
-    console.log('updateing profile now')
   }
 
   return (

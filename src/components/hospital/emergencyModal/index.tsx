@@ -1,8 +1,10 @@
+"use client"
 import { useEffect, useState } from "react";
 import { Modal } from "@hexify/atoms";
 import { useSearchParams } from "next/navigation";
 import EmergencyForm from "@/app/(main)/_components/emergencyForm";
 import styles from "./emergencyModal.module.css";
+import { withSuspense } from '@/hoc';
 
 export const emergencyQuery = "action=emergency";
 
@@ -32,4 +34,4 @@ const EmergencyModal = () => {
   );
 };
 
-export default EmergencyModal;
+export default withSuspense(EmergencyModal);

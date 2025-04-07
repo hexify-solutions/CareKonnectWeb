@@ -6,6 +6,7 @@ import {
   triggerPasswordReset,
   changePassword,
   resendVerifyEmail,
+  changePasswordByUser
 } from "./service"
 
 export function useLoginMutation<T extends {}>() {
@@ -34,5 +35,11 @@ export function useTriggerPasswordReset<T extends {}>() {
 export function usePasswordChangeMutation<T extends {}>() {
   return useMutation({
     mutationFn: (params: T) => changePassword(params)
+  })
+}
+
+export function useUserChangePassword <T extends {}>() {
+  return useMutation({
+    mutationFn: (params: T) => changePasswordByUser(params)
   })
 }

@@ -45,6 +45,11 @@ export const changePassword = <T extends {}>(params: T) => {
   return api.post<{message: string}>(endPoints.changePassword, params)
 }
 
+export const changePasswordByUser = <T extends {}>(params: T) => {
+  return api.post<{message: string}>(endPoints.userChangePassword, params)
+}
+
+
 // export const logout = (params: Record<string, any>) => {
 //   return api.post(LOGOUT, params);
 // };

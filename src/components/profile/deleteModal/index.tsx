@@ -1,4 +1,5 @@
 "use client";
+import { withSuspense } from "@/hoc";
 
 import { Modal, Button } from "@hexify/atoms";
 import styles from "./deleteModal.module.css";
@@ -40,4 +41,4 @@ const ProfileDeleteModal = () => {
   );
 };
 
-export default ProfileDeleteModal;
+export default withSuspense(ProfileDeleteModal);

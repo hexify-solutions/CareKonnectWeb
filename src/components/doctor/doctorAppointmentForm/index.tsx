@@ -13,6 +13,7 @@ import { useMemo } from "react"
 import { toast } from "react-toastify";
 import { useCreateAppointment } from "@/http/appointment/mutation"
 import dayjs from "dayjs"
+import { withSuspense } from '@/hoc';
 
 const validationSchema = Yup.object().shape({
   date: Yup.date().required("Date is required"),
@@ -137,4 +138,4 @@ const DoctorAppointmentForm = ({ isAuth, triggerAuth, appointmentSlots }) => {
   )
 }
 
-export default withAuthModal(DoctorAppointmentForm)
+export default withAuthModal(withSuspense(DoctorAppointmentForm))

@@ -1,0 +1,174 @@
+.container {
+    display: flex;
+    min-height: 789px;
+    font-family: var(--primary-font)
+  }
+  
+  .sidebar {
+    width: 19.4375rem;
+    padding: 0.75rem;
+    background-color: var(--mui-palette-common-white);
+    border-radius: 0.5rem;
+    margin: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+  }
+  
+  .sidebarSection {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .sectionTitle {
+
+    font-family: var(--font-primary);
+    color: var(--mui-palette-design_light-onSurfaceVariant);
+    display: inline-block;
+    padding: 16px 18px;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 20px;
+    width: 100%;
+    opacity: 0.7;
+    animation: pulse 2s infinite;
+  }
+  
+  .menuItem {
+    color: var(--mui-palette-design_light-onSurfaceVariant);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-radius: 100px;
+    padding: 16px;
+    width: 100%;
+  }
+  
+  .active {
+    background-color: #e8f0e8;
+  }
+  
+  .contentHeader {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .formGroup {
+    margin-bottom: 30px;
+    background-color: #f5f5f0;
+    padding: 15px;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .inputContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+  }
+  
+  .inputIcon {
+    height: 30px;
+    width: 30px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #ddd 25%, #eee 50%, #ddd 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+  
+  /* Skeleton elements */
+  .skeletonText {
+    height: 24px;
+    width: 70%;
+    background: linear-gradient(90deg, #eee 25%, #f5f5f5 50%, #eee 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+  }
+  
+  .skeletonIcon {
+    height: 30px;
+    width: 30px;
+    flex-shrink: 0;
+    margin-right: 12px;
+    background: linear-gradient(90deg, #eee 25%, #f5f5f5 50%, #eee 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 50%;
+  }
+  
+  .skeletonTitle {
+    height: 32px;
+    width: 250px;
+    background: linear-gradient(90deg, #eee 25%, #f5f5f5 50%, #eee 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+  }
+  
+  .skeletonLabel {
+    height: 14px;
+    width: 100px;
+    margin-bottom: 12px;
+    background: linear-gradient(90deg, #eee 25%, #f5f5f5 50%, #eee 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+  }
+  
+  .skeletonInput {
+    height: 24px;
+    width: 100%;
+    background: linear-gradient(90deg, #eee 25%, #f5f5f5 50%, #eee 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+  }
+  
+  .skeletonButton {
+    height: 50px;
+    width: 100%;
+    margin-top: 40px;
+    background: linear-gradient(90deg, #3c5e3c 25%, #4a6e4a 50%, #3c5e3c 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 25px;
+    opacity: .3;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+  
+  

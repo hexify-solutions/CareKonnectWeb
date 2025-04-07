@@ -1,8 +1,10 @@
 import styles from "../styles/page.module.css"
 import AppointmentCard from "@/components/userDashboard/appointmentCard"
 import { cookies } from "next/headers"
-import cookieKeys from "@/lib/constants/cokieKeys"
+import Link from "next/link"
+import cookieKeys from "@/lib/constants/cookieKeys"
 import { fetchData } from "@/http"
+import routes from '@/lib/constants/routes';
 
 const RecentAppointment = async () => {
   const cookieStore = await cookies()
@@ -19,11 +21,14 @@ const RecentAppointment = async () => {
     },
   })
 
+
   return (
     <div className={styles.section}>
       <div className={styles.sectionHeader}>
         <div>New Appointments</div>
-        <button className={styles.sectionBtn}>View All</button>
+        <Link href={routes.userDashboardAppointments}>
+        <div className={styles.sectionBtn}>View All</div>
+        </Link>
       </div>
       <ul className={styles.sectionList}>
         {stats?.data?.recentAppointments?.map((appointment, index) => {

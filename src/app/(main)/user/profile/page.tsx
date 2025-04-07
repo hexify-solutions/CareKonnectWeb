@@ -1,13 +1,12 @@
-"use client";
+"use client"
 
-import ProfileForm from "@/components/profile/profileForm";
+import ProfileForm from "@/components/profile/profileForm"
 
 const Profile = () => {
-
   return (
     <div>
-        <ProfileForm />
+      <ProfileForm />
     </div>
-  );
-};
-export default Profile;
+  )
+}
+export default Profile

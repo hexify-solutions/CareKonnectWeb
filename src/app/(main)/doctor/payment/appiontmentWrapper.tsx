@@ -1,7 +1,7 @@
 import AppointmentDetailCard from "@/components/appointment/appointmentDetailCard"
 import { fetchData } from "@/http"
 import { cookies } from "next/headers"
-import cookieKeys from "@/lib/constants/cokieKeys"
+import cookieKeys from "@/lib/constants/cookieKeys"
 import routes from "@/lib/constants/routes"
 
 const AppointmentDetails = async ({ id }) => {
@@ -19,7 +19,6 @@ const AppointmentDetails = async ({ id }) => {
     },
   })
 
-  console.log(appointment, "this is the appointment here")
 
   return <AppointmentDetailCard appointment={appointment?.data} />
 }

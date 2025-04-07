@@ -8,12 +8,13 @@ import { DoctorCard, HospitalCard } from "@hexify/components";
 import { BookIcon, EmailIcon } from "@hexify/atoms";
 import DoctorInfoCard from "@/components/doctor/doctorInfoCard";
 import mockSpecialistData from "@/data/mockSpecialist.json";
-import cookieKeys from "@/lib/constants/cokieKeys";
+import cookieKeys from "@/lib/constants/cookieKeys";
 import routes from "@/lib/constants/routes";
 import { HospitalWithCrossIcon, DashboardCalendarIcon, MedicinalBowl} from "@hexify/atoms";
-import { fetchData } from "@/http";
 import RecentAppointment from "./components/recentAppointments";
 import { Suspense } from "react";
+import { getUserStats } from "@/http/user/serverAction";
+import { getUserAgeInfo } from "@/lib/utils/getUserAgeInfo";
 
 const generateSummaryData = (data: Record<string, string>) => {
   return Object.entries(data || {}).reduce((acc, [key, value]) => {
@@ -27,24 +28,13 @@ const generateSummaryData = (data: Record<string, string>) => {
 };
 
 const Dashboard = async () => {
-  const cookieStore = await cookies()
-  const token = cookieStore.get(cookieKeys.token)?.value
 
-  const stats = await fetchData({
-    url: `${process.env.PUBLIC_URL}/dashboard/stats`,
-    errorMessage: "Error fetching doctor details:",
-    options: {
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${token}`,
-      },
-    },
-  })
+  const stats = await getUserStats();
 
-
-  const appointmentData = generateSummaryData(stats?.data?.appointment)
-  const serviceData = generateSummaryData(stats?.data?.service)
-  const prescriptionData = generateSummaryData(stats?.data?.prescriptions);
+  const appointmentData = generateSummaryData(stats?.appointment)
+  const serviceData = generateSummaryData(stats?.service)
+  const prescriptionData = generateSummaryData(stats?.prescriptions);
+  const userAgeInfo = getUserAgeInfo(stats?.user?.dob)
 
 
 
@@ -53,8 +43,12 @@ const Dashboard = async () => {
       <ul className={styles.summaryList}>
         <li className={styles.summaryListItem}>
           <DashboardSummaryCard
-            total={stats?.data?.appointment?.total || 0}
-            data={appointmentData?.length ? appointmentData : defaultData?.appointments}
+            total={stats?.appointment?.total || 0}
+            data={
+              appointmentData?.length
+                ? appointmentData
+                : defaultData?.appointments
+            }
             title="Appointments"
             icon={<HospitalWithCrossIcon />}
           />
@@ -63,40 +57,49 @@ const Dashboard = async () => {
           <DashboardSummaryCard
             title="Services"
             theme="primary"
-            total={stats?.data?.service?.total || 0}
+            total={stats?.service?.total || 0}
             data={serviceData?.length ? serviceData : defaultData?.services}
-            icon={<span><DashboardCalendarIcon type="large" /> </span>}
+            icon={
+              <span>
+                <DashboardCalendarIcon type="large" />{" "}
+              </span>
+            }
           />
         </li>
         <li className={styles.summaryListItem}>
           <DashboardSummaryCard
             title="Prescriptions"
             theme="secondary"
-            total={stats?.data?.prescriptions?.total || 0}
-            data={prescriptionData?.length ? prescriptionData : defaultData?.prescriptions}
-
+            total={stats?.prescriptions?.total || 0}
+            data={
+              prescriptionData?.length
+                ? prescriptionData
+                : defaultData?.prescriptions
+            }
             icon={<MedicinalBowl type="large" />}
           />
         </li>
         <li className={styles.summaryListItem}>
           <DashboardSummaryCard
             title="Spendings"
-            total={`NGN ${stats?.data?.totalSpending?.toLocaleString() || 0}`}
+            total={`NGN ${stats?.totalSpending?.toLocaleString() || 0}`}
             theme="error"
             icon={<BookIcon />}
           />
         </li>
       </ul>
       <ul className={styles.vitalInfoWrapper}>
-        <li className={styles.vitalInfoItem}>
-          <VitalCard />
-        </li>
+        {stats?.vitals && (
+          <li className={styles.vitalInfoItem}>
+            <VitalCard vitals={{...(stats?.vitals || {}), age: userAgeInfo?.age}} />
+          </li>
+        )}
         <li className={styles.vitalInfoItem}>
           <PrescriptionCard />
         </li>
       </ul>
-      <Suspense fallback={<>loading</>}>
-       <RecentAppointment />
+      <Suspense fallback={<div>loading</div>}>
+        <RecentAppointment />
       </Suspense>
       <div className={styles.section}>
         <div className={styles.sectionHeader}>
