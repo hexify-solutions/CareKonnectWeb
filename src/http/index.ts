@@ -19,6 +19,7 @@ export const fetchData = async ({
     })
 
     if (!response.ok) {
+      console.log(response)
       throw new Error(errorMessage || "Error")
     }
 

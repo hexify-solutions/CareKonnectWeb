@@ -5,14 +5,19 @@ const endPoints = {
     triggerPasswordReset: 'auth/trigger-forgot-password',
     resendVerifyEmail: 'auth/resend-verification',
     changePassword: 'auth/forgot-password',
+    userChangePassword: "auth/reset-password",
 
     // globals
     search: 'global/search',
 
+    // user dashboard and profile 
+    stats: '/dashboard/stats',
+    vitals: '/vitals',
+
 
     // appointments
     createAppointment: 'appointments/book',
-    getAppointment: (id: string) => `appointments/${id}`,
+    getAppointment: (id: string) => `/appointments/${id}`,
 
 
 }

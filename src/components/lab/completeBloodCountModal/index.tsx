@@ -1,3 +1,6 @@
+"use client"
+
+import { withSuspense } from "@/hoc";
 import { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import CompleteBloodCount from "@/app/(main)/_components/testsModal/completeBloodCount";
@@ -37,4 +40,4 @@ const CBCModal = () => {
     );
 };
 
-export default CBCModal;
+export default withSuspense(CBCModal);

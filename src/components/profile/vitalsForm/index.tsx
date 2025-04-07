@@ -6,30 +6,19 @@ import {
   InputField,
   Button,
   Shield,
-  ProfileIcon,
 } from "@hexify/atoms";
 import { Formik, Form } from "formik";
 
-const VitalsForm = () => {
+const VitalsForm = ({ vitals }) => {
+
+  
   return (
     <div className={styles.form}>
       <h6 className={styles.formHeading}> Vitals </h6>
-      <Formik initialValues={{}} onSubmit={() => {}}>
-        {() => {
+      <Formik initialValues={initialValues(vitals)} onSubmit={() => {}} enableReinitialize>
+        {({ values, handleChange, isValid, handleBlur, dirty  }) => {
           return (
             <Form>
-              <div className={styles.inputWrapper}>
-                <InputField
-                  fullWidth
-                  placeholder="Age"
-                  label="Age"
-                  variant="filled"
-                  data-variant="design_primary"
-                  type="text"
-                  name="age"
-                  prefix={ProfileIcon}
-                />
-              </div>
               <div className={styles.inputWrapper}>
                 <InputField
                   name="weight"
@@ -39,6 +28,8 @@ const VitalsForm = () => {
                   variant="filled"
                   placeholder="Weight"
                   data-variant="design_primary"
+                  value={values?.weight}
+                  onChange={handleChange}
                   prefix={Shield}
                 />
               </div>
@@ -52,6 +43,9 @@ const VitalsForm = () => {
                   fullWidth
                   variant="filled"
                   name="heartRate"
+                  value={values?.heartRate}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
                   data-variant="design_primary"
                 />
               </div>
@@ -65,6 +59,9 @@ const VitalsForm = () => {
                   fullWidth
                   variant="filled"
                   name="oxygenSaturation"
+                  value={values?.oxygenSaturation}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
                   data-variant="design_primary"
                 />
               </div>
@@ -77,7 +74,10 @@ const VitalsForm = () => {
                   hasPrefix
                   fullWidth
                   variant="filled"
-                  name="bodyTemp"
+                  name="temperature"
+                  value={values?.temperature}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
                   data-variant="design_primary"
                 />
               </div>
@@ -90,7 +90,10 @@ const VitalsForm = () => {
                   hasPrefix
                   fullWidth
                   variant="filled"
-                  name="number"
+                  name="bloodPressure"
+                  value={values?.bloodPressure}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
                   data-variant="design_primary"
                 />
               </div>
@@ -100,6 +103,7 @@ const VitalsForm = () => {
                   fullWidth
                   color="primary"
                   rounded
+                  disabled={!(isValid && dirty)}
                   size="large"
                 >
                   Update vitals
@@ -113,4 +117,14 @@ const VitalsForm = () => {
   );
 };
 
+
+const initialValues = (values) => {
+  return {
+    weight: values?.weight + " " + (values?.weightUnit || "kg"),
+    heartRate: values?.heartRate,
+    oxygenSaturation: values?.oxygenSaturation,
+    temperature: values?.temperature,
+    bloodPressure: values?.bloodPressure,
+  }
+}
 export default VitalsForm;

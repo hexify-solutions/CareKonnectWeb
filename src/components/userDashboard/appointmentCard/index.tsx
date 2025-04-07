@@ -1,10 +1,13 @@
 import styles from "./appointmentCard.module.css"
 import { CheckMark, Chip, Time } from "@hexify/atoms"
 import formatAppointmentDate from "@/lib/utils/formatAppointmentDate"
+import Link from "next/link"
+import routes from '@/lib/constants/routes';
 const AppointmentCard = ({ showPaymentStatus = true, appointment }) => {
   const { status, date: formattedDate } =
     formatAppointmentDate(appointment?.appointmentStartAt) || {}
   return (
+    <Link href={routes.appointmentDetails(appointment?.id)} className={styles.link}>
     <div className={styles.wrapper}>
       <div className={styles.header}>
         <div className={styles.headerSection}>
@@ -47,6 +50,7 @@ const AppointmentCard = ({ showPaymentStatus = true, appointment }) => {
         ></Chip>
       </div>
     </div>
+    </Link>
   )
 }
 
