@@ -12,8 +12,8 @@
     },
 
     {
-      "label": "Appointments",
-      "path": "/appointments",
+      "label": "About us",
+      "path": "/about",
       "type": "internal",
       "position": "center",
       "style": "link",

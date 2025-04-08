@@ -61,3 +61,38 @@ export const getUserVitals = async () => {
     throw error
   }
 }
+
+export const getEmergencyContact = async () => {
+  try {
+   
+    const token = await getToken()
+    const url = `${process.env.PUBLIC_URL}/${endPoints?.getEmergencyContact}`
+
+    const contact = await fetchData({
+      url,
+      errorMessage: "Error fetching emergency contact:",
+      options: {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        next: {
+          revalidate: 3600,
+          tags: ["user-emergency-contact"]
+        },
+      },
+    })
+    return contact?.data?.[0]
+  } catch (error) {
+    console.error("Error in get /emergency:", error)
+    throw error
+  }
+}
+
+
+import { revalidateTag } from 'next/cache'
+
+export async function revalidateUserStats(tag: string) {
+  console.log('checking, tag ....... ', tag)
+  revalidateTag(tag)
+}

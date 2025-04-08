@@ -1,3 +1,4 @@
+
 const endPoints = {
     login: 'auth/login',
     register: 'auth/register',
@@ -13,6 +14,8 @@ const endPoints = {
     // user dashboard and profile 
     stats: '/dashboard/stats',
     vitals: '/vitals',
+    createEmergencyContact: 'emergency',
+    getEmergencyContact: "emergency",
 
 
     // appointments

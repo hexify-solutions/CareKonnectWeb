@@ -22,30 +22,40 @@ Import trace for requested module:
  [32m[1m✓[22m[39m Compiled successfully
  [37m[1m [22m[39m Skipping validation of types
  [37m[1m [22m[39m Skipping linting
-[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
-[?25l [37m[1m [22m[39m Generating static pages (0/24)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/24)  [36m[=   ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/24)  [36m[==  ][39m[2K[1G[?25hhttps://api.carekonnect.hexifysolutions.com/v1 true
+[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
+[?25l [37m[1m [22m[39m Generating static pages (0/24)  [36m[    ][39m[2K[1G[1A[2K[1G [37m[1m [22m[39m Generating static pages (0/24)  [36m[=   ][39m[2K[1G[1A[2K[1G[?25hhttps://api.carekonnect.hexifysolutions.com/v1 true
 Error in get dashboard/stats: Error: Dynamic server usage: Route /user/dashboard couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
     at m (.next/server/chunks/986.js:12:14676)
     at f (.next/server/chunks/5208.js:1:13247)
-    at p (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:17021)
-    at S (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:8348)
+    at c (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:17237)
+    at S (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:8349)
     at stringify (<anonymous>) {
   description: "Route /user/dashboard couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Error in get /emergency: Error: Dynamic server usage: Route /user/profile/emergency-contact couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at m (.next/server/chunks/986.js:12:14676)
+    at f (.next/server/chunks/5208.js:1:13247)
+    at p (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:17166)
+    at m (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:17875)
+    at p (.next/server/app/(main)/user/profile/emergency-contact/page.js:1:5710)
+    at stringify (<anonymous>) {
+  description: "Route /user/profile/emergency-contact couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
   digest: 'DYNAMIC_SERVER_USAGE'
 }
 Error in get /vitals: Error: Dynamic server usage: Route /user/profile/vitals couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
     at m (.next/server/chunks/986.js:12:14676)
     at f (.next/server/chunks/5208.js:1:13247)
-    at d (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:16950)
-    at c (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:17353)
-    at p (.next/server/app/(main)/user/profile/vitals/page.js:1:617)
+    at p (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:17166)
+    at h (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:17569)
+    at p (.next/server/app/(main)/user/profile/vitals/page.js:1:969)
     at stringify (<anonymous>) {
   description: "Route /user/profile/vitals couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
   digest: 'DYNAMIC_SERVER_USAGE'
 }
 [?25h [32m[1m✓[22m[39m Generating static pages (24/24)
-[?25l [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[?25l [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting build traces     [32m[1m✓[22m[39m Collecting build traces 
-[2K[1G[?25h [37m[1m [22m[39m Finalizing page optimization     [32m[1m✓[22m[39m Finalizing page optimization 
+[?25l [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[?25l [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G[1A[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G[1A[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G[1A[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G[1A[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G[1A[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G[1A[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G[1A[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G[1A[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting build traces     [32m[1m✓[22m[39m Collecting build traces 
+[2K[1G[1A[2K[1G[?25h [37m[1m [22m[39m Finalizing page optimization     [32m[1m✓[22m[39m Finalizing page optimization 
 
 [4mRoute (app)[24m                                       [4mSize[24m  [4mFirst Load JS[24m  [4m[24m  [4m[24m
 ┌ ○ /                                          42.4 kB         [37m[1m420 kB[22m[39m
@@ -63,28 +73,28 @@ Error in get /vitals: Error: Dynamic server usage: Route /user/profile/vitals co
 ├ ○ /onboarding/password-reset                 2.06 kB         [37m[1m332 kB[22m[39m
 ├ ○ /onboarding/signin                         1.77 kB         [37m[1m332 kB[22m[39m
 ├ ƒ /onboarding/signin/api                       154 B         [37m[1m103 kB[22m[39m
-├ ○ /onboarding/signup                         2.37 kB         [37m[1m332 kB[22m[39m
+├ ○ /onboarding/signup                         2.37 kB         [37m[1m333 kB[22m[39m
 ├ ○ /onboarding/verify-email                   1.15 kB         [37m[1m319 kB[22m[39m
-├ ○ /search                                    7.35 kB         [37m[1m398 kB[22m[39m
+├ ○ /search                                    7.35 kB         [37m[1m399 kB[22m[39m
 ├ ƒ /user/dashboard                            1.39 kB         [37m[1m319 kB[22m[39m
-├ ○ /user/dashboard/appointments               3.85 kB         [37m[1m250 kB[22m[39m
+├ ○ /user/dashboard/appointments               3.84 kB         [37m[1m250 kB[22m[39m
 ├ ○ /user/dashboard/healthbenefits             1.34 kB         [37m[1m248 kB[22m[39m
 ├ ○ /user/dashboard/supports                   3.65 kB         [37m[1m332 kB[22m[39m
 ├ ƒ /user/dashboard/supports/[slug]             1.6 kB         [37m[1m330 kB[22m[39m
 ├ ○ /user/profile                              1.27 kB         [37m[1m319 kB[22m[39m
-├ ○ /user/profile/change-password              2.53 kB         [37m[1m306 kB[22m[39m
-├ ○ /user/profile/emergency-contact              798 B         [37m[1m258 kB[22m[39m
+├ ○ /user/profile/change-password              2.55 kB         [37m[1m306 kB[22m[39m
+├ ƒ /user/profile/emergency-contact            2.33 kB         [37m[1m305 kB[22m[39m
 ├ ○ /user/profile/feedback                       154 B         [37m[1m103 kB[22m[39m
 ├ ○ /user/profile/hmo-provider                   785 B         [37m[1m258 kB[22m[39m
 ├ ○ /user/profile/settings                       450 B         [37m[1m213 kB[22m[39m
 └ ƒ /user/profile/vitals                       1.02 kB         [37m[1m258 kB[22m[39m
 + First Load JS shared by all                   [37m[1m103 kB[22m[39m
-  ├ chunks/8315-76c5aa48fd08ae2d.js              46 kB
-  ├ chunks/87c73c54-48e31624d0b6d435.js        53.3 kB
+  ├ chunks/8315-24af6374db49d768.js              46 kB
+  ├ chunks/87c73c54-64b52c7d0d45dc3f.js        53.3 kB
   └ other shared chunks (total)                3.73 kB
 
 
 ○  (Static)   prerendered as static content
 ƒ  (Dynamic)  server-rendered on demand
 
-[?25h[2K[1G✨  Done in 28.53s.
+[?25h[2K[1G✨  Done in 16.83s.
