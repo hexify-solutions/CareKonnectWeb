@@ -2,6 +2,7 @@
 import { cookies } from "next/headers"
 import cookieKeys from "@/lib/constants/cookieKeys"
 import endPoints from "../endpoints"
+import tags from "../tags"
 import { fetchData } from ".."
 
 
@@ -42,9 +43,9 @@ export const getUserVitals = async () => {
   try {
    
     const token = await getToken()
-    const url = `${process.env.PUBLIC_URL}${endPoints?.vitals}`
+    const url = `${process.env.PUBLIC_URL}${endPoints?.getUserVitals}`
 
-    const stats = await fetchData({
+    const vitals = await fetchData({
       url,
       errorMessage: "Error fetching user vitals:",
       options: {
@@ -52,10 +53,15 @@ export const getUserVitals = async () => {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
+        next: {
+          revalidate: 3600,
+          tags: [tags.userVitals]
+        }
       },
     })
 
-    return stats?.data?.[0]
+    return vitals?.data
+
   } catch (error) {
     console.error("Error in get /vitals:", error)
     throw error
@@ -78,7 +84,7 @@ export const getEmergencyContact = async () => {
         },
         next: {
           revalidate: 3600,
-          tags: ["user-emergency-contact"]
+          tags: [tags.emergencyContact]
         },
       },
     })
@@ -92,7 +98,6 @@ export const getEmergencyContact = async () => {
 
 import { revalidateTag } from 'next/cache'
 
-export async function revalidateUserStats(tag: string) {
-  console.log('checking, tag ....... ', tag)
+export async function revalidate(tag: string) {
   revalidateTag(tag)
 }

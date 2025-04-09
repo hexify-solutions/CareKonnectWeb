@@ -13,6 +13,7 @@ import styles from "./appointmentDetailCard.module.css"
 import formatAppointmentDate from "@/lib/utils/formatAppointmentDate"
 
 const AppointmentDetailCard = ({ appointment }) => {
+
   const { doctor, appointmentStartAt } = appointment || {}
   const {
     status: dateStatus,
@@ -21,17 +22,25 @@ const AppointmentDetailCard = ({ appointment }) => {
     timeZoneAbbreviation,
   } = formatAppointmentDate(appointmentStartAt) || {}
 
+
+  const doctorFirstName = doctor?.users?.firstName || appointment?.firstName || "";
+const doctorLastName = doctor?.users?.lastName || appointment?.lastName || "";
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.infoWrapper}>
         <div className={styles.doctorInfo}>
-          <Avatar src={doctor?.avatarUrl} displayText="Innocent edsa" />
+          <Avatar
+            src={doctor?.avatarUrl || appointment?.avatarUrl}
+            displayText="Innocent edsa"
+          />
           <div>
             <div className={styles.doctorDetails}>
               <div>
                 <h6 className={styles.doctorsName}>
-                  Dr {doctor?.users?.firstName || ""}{" "}
-                  {doctor?.users?.lastName}{" "}
+                  {doctorFirstName || doctorLastName
+                    ? `Dr ${doctorFirstName} ${doctorLastName}`
+                    : ""}
                 </h6>
                 <span className={styles.doctorSpecialty}>
                   Specialty: Cardiologist
@@ -65,9 +74,9 @@ const AppointmentDetailCard = ({ appointment }) => {
         <div className={styles.hospitalInfoWrapper}>
           <h6 className={styles.hospitalName}>{doctor?.clinicName}</h6>
           <div className={styles.hospitalDetails}>
-            <div>
+           {doctor?.locations && <div>
               <LocationPin /> <span>{doctor?.locations}</span>
-            </div>
+            </div>}
             {doctor?.users?.email && (
               <div>
                 <DirectIcon /> <span>{doctor?.users?.email}</span>

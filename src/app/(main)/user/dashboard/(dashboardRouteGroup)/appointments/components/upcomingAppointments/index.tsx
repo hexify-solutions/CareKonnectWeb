@@ -1,55 +1,30 @@
-"use client"
-
 import styles from "./upcomingAppointments.module.css"
-import { useState } from "react"
-import AppointmentDetailCard from "@/components/userDashboard/appointmentDetailCard"
-import useMonthYearOptions from "@/hooks/useMonthYearOptions"
-import DateStripComponent from "@/components/appointment/dateStripComponent"
-import { SelectField } from "@hexify/atoms"
+import { Suspense } from "react"
+import UpcomingAppointmentFilter from "./Filter"
+import UpcomingAppointmentList from "./List"
+import { getUsersAppointments } from "@/http/appointment/serverActions"
 
-const UpcomingAppointments = () => {
+const UpcomingAppointments = async () => {
+  const today = new Date()
+  const startDate = today.toISOString().split("T")[0]
 
-  const { months, years, currentMonth, currentYear } = useMonthYearOptions(2000, 2030)
-  const [selectedMonth, setSelectedMonth ] = useState(currentMonth)
-  const [selectedYear, setSelectedYear] = useState(currentYear)
-
+  const appointments = await getUsersAppointments({
+    startDate,
+    orderBy: "appointmentStartAt",
+    sort: "asc",
+  })
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.topSection}>
         <h3 className={styles.heading}>Upcoming Appointments</h3>
-        <div className={styles.selectFieldWrapper}>
-          <div className={styles.field}>
-            <SelectField
-              placeholder="Month"
-              label="Month"
-              type="month"
-              name="month"
-              onChange={(e) => {
-                setSelectedMonth(e?.target?.value)
-              }}
-              value={selectedMonth}
-              options={months}
-            />
-          </div>
-          <div className={styles.field}>
-            <SelectField
-              placeholder="Year"
-              onChange={(e) => {
-                setSelectedYear(e?.target?.value)
-              }}
-              label="Year"
-              name="year"
-              value={selectedYear}
-              options={years}
-            />
-          </div>
-        </div>
+        <UpcomingAppointmentFilter />
       </div>
-      {/* <div className={styles.dateStripWrapper}>
-      <DateStripComponent />
-      </div> */}
-      <AppointmentDetailCard />
+      <Suspense fallback={<>loading</>}>
+        <UpcomingAppointmentList
+          appointments={appointments?.data?.data || []}
+        />
+      </Suspense>
     </div>
   )
 }

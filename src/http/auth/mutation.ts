@@ -1,6 +1,7 @@
 import { useMutation } from "@tanstack/react-query"
 import {
   login,
+  logOut,
   register,
   verify,
   triggerPasswordReset,
@@ -11,6 +12,10 @@ import {
 
 export function useLoginMutation<T extends {}>() {
   return useMutation({ mutationFn: (params: T) => login(params) })
+}
+
+export function useLogoutMutation <T extends {}>() {
+  return useMutation({ mutationFn: (params: T) => logOut() })
 }
 
 export function useRegisterMutation<T extends { userType: string }>() {

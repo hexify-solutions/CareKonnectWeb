@@ -7,3 +7,7 @@ export const createEmergencyContact = (params) => {
     return api.post(endPoints.createEmergencyContact, params);
   };
   
+export const createUserVital = (params) => {
+    return api.post(endPoints.createUserVitals, params);
+  };
+  

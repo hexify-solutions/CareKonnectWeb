@@ -29,10 +29,10 @@ const UserProfileDropdown = () => {
           <Link href={routes.profile} className={styles.dropdownListItem}>
             <UserIcon /> <span>Profile</span>
           </Link>
-          <Link href={routes.logout} className={styles.dropdownListItem}>
+          {/* <Link href={routes.logout} className={styles.dropdownListItem}>
           <IconLoader path={"logout"} />
           <span>Logout</span>
-          </Link>
+          </Link> */}
         </div>
       )}
     </div>

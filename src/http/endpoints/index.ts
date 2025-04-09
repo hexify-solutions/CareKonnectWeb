@@ -14,6 +14,8 @@ const endPoints = {
     // user dashboard and profile 
     stats: '/dashboard/stats',
     vitals: '/vitals',
+    createUserVitals: "/vitals",
+    getUserVitals: "/vitals/user",
     createEmergencyContact: 'emergency',
     getEmergencyContact: "emergency",
 
@@ -21,6 +23,7 @@ const endPoints = {
     // appointments
     createAppointment: 'appointments/book',
     getAppointment: (id: string) => `/appointments/${id}`,
+    getUsersAppointments: 'appointments',
 
 
 }

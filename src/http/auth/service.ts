@@ -50,6 +50,21 @@ export const changePasswordByUser = <T extends {}>(params: T) => {
 }
 
 
-// export const logout = (params: Record<string, any>) => {
-//   return api.post(LOGOUT, params);
-// };
+export const logOut = async () => {
+  try {
+    const response = await fetch('/onboarding/logout/api', {
+      method: 'POST',
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (!response.ok) {
+      const errorMessage = await response.text(); 
+      throw new Error(`Logout failed: ${errorMessage || response.statusText}`);
+    }
+
+    return response
+  } catch (error) {
+    console.error("Logout request error:", error);
+    throw error;
+  }
+};
