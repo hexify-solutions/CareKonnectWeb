@@ -5,7 +5,8 @@ import {
   useVerifyMutation,
   useTriggerPasswordReset,
   useResendVerifyMutation,
-  usePasswordChangeMutation
+  usePasswordChangeMutation,
+  useLogoutMutation,
 } from "@/http/auth/mutation";
 import {
   RegistrationType,
@@ -44,6 +45,7 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
     TriggerPasswordResetType
   >();
   const loginMutation = useLoginMutation<LoginType>();
+  const logoutMutation = useLogoutMutation<{}>();
   const verifyMutation = useVerifyMutation<VerifyType>();
   const resendVerifyEmailMutation = useResendVerifyMutation<{
     email: string;
@@ -138,6 +140,7 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
           return toast.error(err?.message || "Registration Failed!");
         }
         if (response) {
+          setItem(lsKeys.verifyUserEmail, response?.data?.email);
           setAuthState((prev) => ({
             ...prev,
             profile: {
@@ -148,6 +151,7 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
         }
         toast.success(response?.message, {
           onOpen: () => {
+            
             router.push(routes.verifyEmail);
           },
         });
@@ -156,6 +160,11 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
   };
 
   const onLogOut = () => {
+    logoutMutation?.mutate({}, {
+      onSettled: () =>  {
+        router.push(routes.home)
+      }
+    });
     removeItem(lsKeys.profile);
     removeItem(lsKeys.token);
     removeItem(lsKeys.tokenExpiration);

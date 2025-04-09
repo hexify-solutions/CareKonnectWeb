@@ -1,9 +1,11 @@
-"use client";
+"use client"
 
-import styles from "./verifyEmailForm.module.css";
-import { Spinner } from "@hexify/atoms";
-import { OTPInput } from "@hexify/atoms";
-import { Formik, Form } from "formik";
+import styles from "./verifyEmailForm.module.css"
+import { Spinner } from "@hexify/atoms"
+import { OTPInput } from "@hexify/atoms"
+import { Formik, Form } from "formik"
+import { useSecureStorage } from "@/context/storage"
+import lsKeys from "@/lib/constants/lsKeys"
 
 const VerifyOtp = ({
   componentData,
@@ -12,17 +14,24 @@ const VerifyOtp = ({
   resendVerifyEmailHandler,
   onVerifyCallback,
 }: any) => {
+  const { getItem } = useSecureStorage()
+
+  const email = getItem?.(lsKeys.verifyUserEmail)
+
   const validateHandler = (params: { otp: string[] }) => {
-    const { otp } = params;
+    const { otp } = params
     if (otp?.every((v) => v !== "")) {
-      const code = otp?.join("");
-      onVerify({
-        code,
-        emailOrPhone: profile.email || "",
-        type: "email",
-      }, onVerifyCallback);
+      const code = otp?.join("")
+      onVerify(
+        {
+          code,
+          emailOrPhone: profile.email || email,
+          type: "email",
+        },
+        onVerifyCallback
+      )
     }
-  };
+  }
 
   return (
     <Formik
@@ -59,9 +68,9 @@ const VerifyOtp = ({
               <button
                 type="button"
                 onClick={(e: any) => {
-                  e?.preventDefault();
-                  e?.stopPropagation();
-                  resendVerifyEmailHandler({ email: profile?.email || "" });
+                  e?.preventDefault()
+                  e?.stopPropagation()
+                  resendVerifyEmailHandler({ email: profile?.email || "" })
                 }}
                 className={styles.resendBtn}
               >
@@ -73,13 +82,13 @@ const VerifyOtp = ({
               </button>
             </div>
           </Form>
-        );
+        )
       }}
     </Formik>
-  );
-};
+  )
+}
 
 const initialValues = {
   otp: ["", "", "", ""],
-};
-export default VerifyOtp;
+}
+export default VerifyOtp

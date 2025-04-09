@@ -27,3 +27,7 @@
 .field {
     width: 147px;
 }
+
+.appointmentListItem  + .appointmentListItem {
+margin-top: 2rem;
+}

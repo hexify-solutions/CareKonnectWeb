@@ -7,9 +7,10 @@ import {Spinner} from "@hexify/atoms"
 import { InputField, Call, Button, EmailIcon, ProfileIcon } from "@hexify/atoms"
 import * as Yup from "yup"
 import { useCreateEmergencyContact } from "@/http/user/mutation"
+import tags from "@/http/tags"
 import { toast } from "react-toastify"
 
-const EmergencyContactForm = ({ contact, revalidateUserStats }) => {
+const EmergencyContactForm = ({ contact, revalidate }) => {
   const emergencyContactMutation = useCreateEmergencyContact()
   const [_, startTransition ] = useTransition();
 
@@ -18,7 +19,7 @@ const EmergencyContactForm = ({ contact, revalidateUserStats }) => {
       onSettled: (data, err) => {
         if (!err) {
           startTransition(() => {
-            revalidateUserStats('user-emergency-contact')
+            revalidate(tags.emergencyContact)
           })
           toast.success("Emergency Contact Updated Successfull ")
         } else {

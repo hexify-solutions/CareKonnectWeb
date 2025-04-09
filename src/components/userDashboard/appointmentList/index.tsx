@@ -3,18 +3,21 @@ import AppointmentCard from "../appointmentCard"
 import AppointmentListHeader from "@/components/appointment/appointmentListHeader"
 import routes from "@/lib/constants/routes"
 import Link from "next/link"
-import { fetchData } from "@/http"
+import { getUsersAppointments } from "@/http/appointment/serverActions"
 
-const AppointmentList = () => {
+const AppointmentList = async () => {
+
+  const appointments = await getUsersAppointments({})
+  
   return (
     <>
       <AppointmentListHeader />
       <ul className={styles.list}>
-        {Array.from({ length: 12 })?.map(() => {
+        {appointments?.data?.data?.map((appointment, idx) => {
           return (
-            <li>
-              <Link href={`${routes.appointmentDetails("slug")}`}>
-                <AppointmentCard showPaymentStatus={false} />
+            <li key={appointment?.id + idx}>
+              <Link href={`${routes.appointmentDetails(appointment?.id)}`}>
+                <AppointmentCard appointment={appointment} showPaymentStatus={false} />
               </Link>
             </li>
           )
