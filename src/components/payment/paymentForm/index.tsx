@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import {
   CreditCardIcon,
@@ -7,34 +7,70 @@ import {
   Button,
   InputField,
   SelectField,
-} from "@hexify/atoms";
-import styles from "./paymentForm.module.css";
-import { useState } from "react";
-import { Form, Formik } from "formik";
-import PaymentSuccessModal from "../paymentSuccessModal";
-import PaymentReceiptModal from "../paymentReceiptModal";
+  Spinner,
+} from "@hexify/atoms"
+import styles from "./paymentForm.module.css"
+import { useState } from "react"
+import { Form, Formik } from "formik"
+import PaymentSuccessModal from "../paymentSuccessModal"
+import { useMakePaymentForAppointment, useVerifyPaymentForAppointment } from "@/http/appointment/mutation"
+import PaymentReceiptModal from "../paymentReceiptModal"
+import Paystack from "@paystack/inline-js"
 
-const PaymentForm = () => {
-  const [paymentOption, setPaymentOption] = useState();
-  const [showPaymentSuccessModal, setShowPaymentSuccessModal] = useState(false);
-  const [showPaymentReceiptModal, setShowPaymentReceiptModal] = useState(false);
-  const [step, setStep] = useState(1);
+const PaymentForm = ({ appointmentId }: { appointmentId: string }) => {
+  const [paymentOption, setPaymentOption] = useState()
+  const [showPaymentSuccessModal, setShowPaymentSuccessModal] = useState(false)
+  const [paymentSuccessState, setPaymentSuccessState] = useState(false)
+  const [showPaymentReceiptModal, setShowPaymentReceiptModal] = useState(false)
+  const paymentMutation = useMakePaymentForAppointment()
+  const verifyPaymentMutation = useVerifyPaymentForAppointment()
+  const [step, setStep] = useState(1)
 
   const onSelectPaymentOptionHandler = (e: any) => {
-    setPaymentOption(e?.target?.value);
-  };
+    setPaymentOption(e?.target?.value)
+  }
+
+  const handlePayStackPayment = () => {
+    const payStackPopup = new Paystack()
+    paymentMutation.mutate(
+      {
+        provider: "paystack",
+        appointmentId: appointmentId,
+      },
+      {
+        onSuccess: (data: { data: { access_code: string } }) => {
+          payStackPopup?.resumeTransaction(data?.data?.access_code, {
+            onSuccess: (response) => {
+              verifyPaymentMutation?.mutate({
+                provider: "paystack",
+                reference: response?.reference
+              }, {
+                onSuccess: () => {
+                  setPaymentSuccessState(true)
+                  setShowPaymentSuccessModal(true)
+                }
+              })
+            }
+          })
+        },
+      }
+    )
+  }
 
   const nextHandler = () => {
-    setStep((prev) => prev + 1);
-  };
-
+    if (paymentOption === "paystack" && appointmentId) {
+      handlePayStackPayment?.();
+    }
+    return
+    setStep((prev) => prev + 1)
+  }
 
   const paymentHandler = (params) => {
-    setShowPaymentSuccessModal(true);
-  } 
+    setShowPaymentSuccessModal(true)
+  }
 
   const changePaymentMethodHandler = () => {
-    setPaymentOption(undefined);
+    setPaymentOption(undefined)
     setStep(1)
   }
 
@@ -45,72 +81,81 @@ const PaymentForm = () => {
 
   return (
     <>
-    
-    <div>
-      {step === 1 && (
-        <>
-          <h4 className={styles.heading}>Payment Method</h4>
-          <div className={styles.paymentOptionsWrapper}>
-            {paymentOptions?.map((payment) => {
-              return (
-                <label className={styles.paymentOption}>
-                  {payment?.iconType === "bank" ? (
-                    <BankIcon />
-                  ) : (
-                    <CreditCardIcon type="two" />
-                  )}
-                  <div className={styles.paymentOptionDetails}>
-                    <span className={styles.paymentType}>{payment.label}</span>
-                    <span>{payment.description}</span>
-                    <span>{payment.subDescription}</span>
-                  </div>
-                  <div className={styles.radioButton}>
-                    <RadioButtons
-                      onChange={onSelectPaymentOptionHandler}
-                      selectedValue={paymentOption}
-                      name="paymentOption"
-                      value={payment.value}
-                    />
-                  </div>
-                </label>
-              );
-            })}
-            <div className={styles.btnWrapper}>
-              <Button
-                disabled={!paymentOption}
-                type="button"
-                onClick={nextHandler}
-                variant="contained"
-                fullWidth
-                rounded
-                size="large"
-              >
-                Next
-              </Button>
+      <div>
+        {step === 1 && (
+          <>
+            <h4 className={styles.heading}>Payment Method</h4>
+            <div className={styles.paymentOptionsWrapper}>
+              {paymentOptions?.map((payment) => {
+                return (
+                  <label className={styles.paymentOption}>
+                    {payment?.iconType === "bank" ? (
+                      <BankIcon />
+                    ) : (
+                      <CreditCardIcon type="two" />
+                    )}
+                    <div className={styles.paymentOptionDetails}>
+                      <span className={styles.paymentType}>
+                        {payment.label}
+                      </span>
+                      <span>{payment.description}</span>
+                      <span>{payment.subDescription}</span>
+                    </div>
+                    <div className={styles.radioButton}>
+                      <RadioButtons
+                        onChange={onSelectPaymentOptionHandler}
+                        selectedValue={paymentOption}
+                        name="paymentOption"
+                        value={payment.value}
+                      />
+                    </div>
+                  </label>
+                )
+              })}
+{   !paymentSuccessState &&           <div className={styles.btnWrapper}>
+                <Button
+                  disabled={!paymentOption || paymentMutation?.isPending}
+                  type="button"
+                  onClick={nextHandler}
+                  variant="contained"
+                  fullWidth
+                  rounded
+                  size="large"
+                >
+                  {paymentMutation?.isPending ? <Spinner /> : "Next"}
+                </Button>
+              </div>}
             </div>
-          </div>
-        </>
-      )}
-      {step === 2 && paymentOption === "credit_card" && (
-        <div>this is the payment</div>
-      )}
-      {step === 2 && paymentOption === "hmo" && <HmoForm changePaymentMethodHandler={changePaymentMethodHandler}  paymentHandler={paymentHandler} />}
-    </div>
-    <PaymentSuccessModal viewReceiptHandler={viewReceiptHandler} open={showPaymentSuccessModal} cancelHandler={() => setShowPaymentSuccessModal(false)} />
-      <PaymentReceiptModal open={showPaymentReceiptModal} cancelHandler={() => setShowPaymentReceiptModal(false)} />
+          </>
+        )}
+        {step === 2 && paymentOption === "credit_card" && (
+          <div>this is the payment</div>
+        )}
+        {step === 2 && paymentOption === "hmo" && (
+          <HmoForm
+            changePaymentMethodHandler={changePaymentMethodHandler}
+            paymentHandler={paymentHandler}
+          />
+        )}
+      </div>
+      <PaymentSuccessModal
+        viewReceiptHandler={viewReceiptHandler}
+        open={showPaymentSuccessModal}
+        cancelHandler={() => setShowPaymentSuccessModal(false)}
+      />
+      <PaymentReceiptModal
+        open={showPaymentReceiptModal}
+        cancelHandler={() => setShowPaymentReceiptModal(false)}
+      />
     </>
-  );
-};
+  )
+}
 
 const CardPaymentForm = () => {
-  return <div>card payments</div>;
-};
+  return <div>card payments</div>
+}
 
-const HmoForm = ({
-  paymentHandler, 
-  changePaymentMethodHandler, 
-}) => {
-
+const HmoForm = ({ paymentHandler, changePaymentMethodHandler }) => {
   const onsubmit = (params) => {
     paymentHandler?.(params)
   }
@@ -121,13 +166,12 @@ const HmoForm = ({
           <Form>
             <h4 className={styles.heading}>Pay Via HMO Provider</h4>
             <div className={styles.inputFieldWrapper}>
-              <SelectField 
-              
-              variant="filled"
-              label="HMO"
-              options={[]}
-              placeholder="Select provider"
-              onChange={() => {}}
+              <SelectField
+                variant="filled"
+                label="HMO"
+                options={[]}
+                placeholder="Select provider"
+                onChange={() => {}}
               />
             </div>
             <div className={styles.inputFieldWrapper}>
@@ -171,15 +215,25 @@ const HmoForm = ({
               />
             </div>
             <div className={styles.formBtnWrapper}>
-              <Button type="submit" variant="contained" rounded size="large">Pay NGN 26,878.56</Button>
-              <Button type="button" onClick={changePaymentMethodHandler} className={styles.changePaymentBtn} rounded size="large" >Change Payment Method</Button>
+              <Button type="submit" variant="contained" rounded size="large">
+                Pay NGN 26,878.56
+              </Button>
+              <Button
+                type="button"
+                onClick={changePaymentMethodHandler}
+                className={styles.changePaymentBtn}
+                rounded
+                size="large"
+              >
+                Change Payment Method
+              </Button>
             </div>
           </Form>
-        );
+        )
       }}
     </Formik>
-  );
-};
+  )
+}
 
 const paymentOptions = [
   // {
@@ -208,6 +262,6 @@ const paymentOptions = [
     description: "Pay using paystack",
     iconType: "bank",
   },
-];
+]
 
-export default PaymentForm;
+export default PaymentForm

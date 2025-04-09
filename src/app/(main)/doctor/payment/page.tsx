@@ -22,7 +22,7 @@ const DoctorAppointmentPayment = async ({ params, searchParams }) => {
           <AppointmentDetailCard id={pageSearchParams?.appointmentId} />
         </div>
         <div className={styles.payment}>
-          <PaymentForm />
+          <PaymentForm appointmentId={pageSearchParams?.appointmentId} />
         </div>
       </div>
     </div>
