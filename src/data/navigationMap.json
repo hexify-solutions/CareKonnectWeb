@@ -1,9 +1,9 @@
 {
-  "logo": "/",
+  "logo": "/home",
   "links": [
     {
       "label": "Home",
-      "path": "/",
+      "path": "/home",
       "type": "internal",
       "position": "center",
       "style": "link",

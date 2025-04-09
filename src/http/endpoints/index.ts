@@ -22,8 +22,10 @@ const endPoints = {
 
     // appointments
     createAppointment: 'appointments/book',
+    payment: "payment",
     getAppointment: (id: string) => `/appointments/${id}`,
     getUsersAppointments: 'appointments',
+    transaction: "transaction",
 
 
 }

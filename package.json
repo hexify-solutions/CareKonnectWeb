@@ -11,6 +11,7 @@
   "dependencies": {
     "@hexify/atoms": "*",
     "@hexify/components": "*",
+    "@paystack/inline-js": "^2.22.3",
     "@tanstack/react-query": "^5.62.11",
     "@tanstack/react-query-devtools": "^5.62.11",
     "@types/crypto-js": "^4.2.2",
