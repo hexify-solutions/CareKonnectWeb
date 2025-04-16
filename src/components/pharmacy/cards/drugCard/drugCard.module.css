@@ -1,7 +1,7 @@
 .card {
   padding: 2rem 4rem;
   background-color: var(--mui-palette-common-white);
-  border: 1px solid var(--mui-palette-design_light-outlineVariant);
+  border: 1px solid var(--mui-color-outlineVariant);
   border-radius: 1.5rem;
 }
 

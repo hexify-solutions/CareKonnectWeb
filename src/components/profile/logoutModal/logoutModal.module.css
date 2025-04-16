@@ -1,5 +1,5 @@
 .contentWrapper {
-  background-color: var(--mui-palette-design_light-background);
+  background-color: var(--mui-color-background);
   display: flex;
   align-items: flex-start;
   width: 100%;
