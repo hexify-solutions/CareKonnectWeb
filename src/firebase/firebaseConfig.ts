@@ -2,14 +2,14 @@ import { initializeApp } from "firebase/app";
 import { getMessaging, getToken, onMessage } from "firebase/messaging";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB5UvKAHzUl-dFRnHqim9MC6YFO8JQmVtQ",
-    authDomain: "emmsdan-dc7e6.firebaseapp.com",
-    databaseURL: "https://emmsdan-dc7e6-default-rtdb.firebaseio.com",
-    projectId: "emmsdan-dc7e6",
-    storageBucket: "emmsdan-dc7e6.firebasestorage.app",
-    messagingSenderId: "510742554950",
-    appId: "1:510742554950:web:65432847a3033987709d47",
-    measurementId: "G-ECP9E1CXP5"
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+    measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase

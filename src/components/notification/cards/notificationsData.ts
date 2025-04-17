@@ -1,0 +1,36 @@
+export const notifications = [
+    {
+      id: 1,
+      icon: "/firstaid.svg",
+      title: "Appointment",
+      body: "Your consultation with Dr. Adie is scheduled for November 30th at 11:30 AM",
+      time: "2:14 PM",
+      date: "Nov 20, 2024",
+    },
+    {
+      id: 2,
+      icon: "/firstaid.svg",
+      title: "Lab Test",
+      body: "Your lab test results are ready",
+      time: "2:14 PM",
+      date: "Nov 20, 2024",
+      action: "Tap to view",
+    },
+    {
+      id: 3,
+      icon: "/firstaid.svg",
+      title: "Prescription",
+      body: "New prescription uploaded by Dr. Blossom",
+      time: "2:14 PM",
+      date: "Nov 19, 2024",
+      action: "Tap to view",
+    },
+    {
+      id: 4,
+      icon: "/firstaid.svg",
+      title: "Appointment",
+      body: "Your consultation with Dr. Adie is scheduled for November 30th at 11:30 AM",
+      time: "2:15 PM",
+      date: "Nov 19, 2024",
+    },
+];

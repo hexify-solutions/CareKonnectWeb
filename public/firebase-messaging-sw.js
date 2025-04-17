@@ -1,14 +1,14 @@
-importScripts("https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js");
-importScripts("https://www.gstatic.com/firebasejs/10.8.1/firebase-messaging-compat.js");
+importScripts("https://www.gstatic.com/firebasejs/11.6.0/firebase-app-compat.js");
+importScripts("https://www.gstatic.com/firebasejs/11.6.0/firebase-messaging-compat.js");
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB5UvKAHzUl-dFRnHqim9MC6YFO8JQmVtQ",
-  authDomain: "emmsdan-dc7e6.firebaseapp.com",
-  projectId: "emmsdan-dc7e6",
-  storageBucket: "emmsdan-dc7e6.firebasestorage.app",
-  messagingSenderId: "510742554950",
-  appId: "1:510742554950:web:65432847a3033987709d47",
-  measurementId: "G-ECP9E1CXP5",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -19,6 +19,6 @@ messaging.onBackgroundMessage((payload) => {
   console.log("Received background message ", payload);
   self.registration.showNotification(payload.notification.title, {
     body: payload.notification.body,
-    icon: "/firebase-logo.png",
+    icon: "/careKonnect.png",
   });
 });
