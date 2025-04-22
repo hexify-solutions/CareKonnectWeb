@@ -22,27 +22,36 @@ Import trace for requested module:
  [32m[1m✓[22m[39m Compiled successfully
  [37m[1m [22m[39m Skipping validation of types
  [37m[1m [22m[39m Skipping linting
-[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
-[?25l [37m[1m [22m[39m Generating static pages (0/26)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/26)  [36m[=   ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/26)  [36m[==  ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/26)  [36m[=== ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/26)  [36m[ ===][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/26)  [36m[  ==][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/26)  [36m[   =][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/26)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/26)  [36m[   =][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/26)  [36m[  ==][39m[2K[1G[?25hhttps://api.carekonnect.hexifysolutions.com/v1 true
+[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
+[?25l [37m[1m [22m[39m Generating static pages (0/26)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/26)  [36m[=   ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/26)  [36m[==  ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/26)  [36m[=== ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/26)  [36m[ ===][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/26)  [36m[  ==][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/26)  [36m[   =][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/26)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/26)  [36m[   =][39m[2K[1G[?25hhttps://api.carekonnect.hexifysolutions.com/v1 true
 https://api.carekonnect.hexifysolutions.com/v1 true
+Error in get /vitals: Error: Dynamic server usage: Route /user/profile/vitals couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at m (.next/server/chunks/986.js:12:14676)
+    at f (.next/server/chunks/5208.js:1:13247)
+    at u (.next/server/app/(main)/user/profile/vitals/page.js:1:330)
+    at h (.next/server/app/(main)/user/profile/vitals/page.js:1:733)
+    at l (.next/server/app/(main)/user/profile/vitals/page.js:1:2436)
+    at stringify (<anonymous>) {
+  description: "Route /user/profile/vitals couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
 Error in get /emergency: Error: Dynamic server usage: Route /user/profile/emergency-contact couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
     at m (.next/server/chunks/986.js:12:14676)
     at f (.next/server/chunks/5208.js:1:13247)
-    at d (.next/server/app/(main)/user/profile/emergency-contact/page.js:1:330)
-    at h (.next/server/app/(main)/user/profile/emergency-contact/page.js:1:1084)
+    at u (.next/server/app/(main)/user/profile/vitals/page.js:1:330)
+    at m (.next/server/app/(main)/user/profile/vitals/page.js:1:1084)
     at l (.next/server/app/(main)/user/profile/emergency-contact/page.js:1:3367)
     at stringify (<anonymous>) {
   description: "Route /user/profile/emergency-contact couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
   digest: 'DYNAMIC_SERVER_USAGE'
 }
-Error in get /vitals: Error: Dynamic server usage: Route /user/profile/vitals couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+Error in get dashboard/stats: Error: Dynamic server usage: Route /user/dashboard couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
     at m (.next/server/chunks/986.js:12:14676)
     at f (.next/server/chunks/5208.js:1:13247)
-    at d (.next/server/app/(main)/user/profile/emergency-contact/page.js:1:330)
-    at u (.next/server/app/(main)/user/profile/emergency-contact/page.js:1:733)
-    at l (.next/server/app/(main)/user/profile/vitals/page.js:1:2436)
+    at c (.next/server/app/(main)/user/profile/vitals/page.js:1:401)
+    at k (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:11156)
     at stringify (<anonymous>) {
-  description: "Route /user/profile/vitals couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  description: "Route /user/dashboard couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
   digest: 'DYNAMIC_SERVER_USAGE'
 }
 Error in get /appointments: Error: Dynamic server usage: Route /user/dashboard/appointments couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
@@ -63,52 +72,43 @@ Error in get /appointments: Error: Dynamic server usage: Route /user/dashboard/a
   description: "Route /user/dashboard/appointments couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
   digest: 'DYNAMIC_SERVER_USAGE'
 }
-Error in get dashboard/stats: Error: Dynamic server usage: Route /user/dashboard couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
-    at m (.next/server/chunks/986.js:12:14676)
-    at f (.next/server/chunks/5208.js:1:13247)
-    at m (.next/server/app/(main)/user/profile/emergency-contact/page.js:1:401)
-    at k (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:11156)
-    at stringify (<anonymous>) {
-  description: "Route /user/dashboard couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
-  digest: 'DYNAMIC_SERVER_USAGE'
-}
 [?25h [32m[1m✓[22m[39m Generating static pages (26/26)
-[?25l [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[?25l [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting build traces     [32m[1m✓[22m[39m Collecting build traces 
+[?25l [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[?25l [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G[?25h [37m[1m [22m[39m Collecting build traces     [32m[1m✓[22m[39m Collecting build traces 
 [2K[1G[?25h [37m[1m [22m[39m Finalizing page optimization     [32m[1m✓[22m[39m Finalizing page optimization 
 
 [4mRoute (app)[24m                                       [4mSize[24m  [4mFirst Load JS[24m  [4m[24m  [4m[24m
-┌ ○ /                                            532 B         [37m[1m420 kB[22m[39m
+┌ ○ /                                            533 B         [37m[1m439 kB[22m[39m
 ├ ○ /_not-found                                  157 B         [37m[1m103 kB[22m[39m
 ├ ƒ /appointment/details/[slug]                2.19 kB         [37m[1m248 kB[22m[39m
-├ ƒ /doctor/[slug]                             5.83 kB         [37m[1m407 kB[22m[39m
-├ ƒ /doctor/payment                            48.1 kB         [37m[1m400 kB[22m[39m
-├ ○ /home                                        535 B         [37m[1m420 kB[22m[39m
-├ ƒ /hospital/[slug]                           6.04 kB         [37m[1m395 kB[22m[39m
-├ ƒ /hospital/[slug]/labs                      3.66 kB         [37m[1m384 kB[22m[39m
+├ ƒ /doctor/[slug]                             5.83 kB         [37m[1m426 kB[22m[39m
+├ ƒ /doctor/payment                            48.1 kB         [37m[1m401 kB[22m[39m
+├ ○ /home                                        535 B         [37m[1m439 kB[22m[39m
+├ ƒ /hospital/[slug]                           6.04 kB         [37m[1m414 kB[22m[39m
+├ ƒ /hospital/[slug]/labs                      3.66 kB         [37m[1m403 kB[22m[39m
 ├ ƒ /hospital/[slug]/labs/hematology             157 B         [37m[1m103 kB[22m[39m
-├ ƒ /hospital/[slug]/labs/hematology/[testId]  2.99 kB         [37m[1m322 kB[22m[39m
-├ ƒ /hospital/[slug]/labs/testPayment           1.7 kB         [37m[1m318 kB[22m[39m
-├ ƒ /hospital/[slug]/pharmacy                  1.91 kB         [37m[1m319 kB[22m[39m
+├ ƒ /hospital/[slug]/labs/hematology/[testId]  2.99 kB         [37m[1m323 kB[22m[39m
+├ ƒ /hospital/[slug]/labs/testPayment           1.7 kB         [37m[1m319 kB[22m[39m
+├ ƒ /hospital/[slug]/pharmacy                  1.91 kB         [37m[1m320 kB[22m[39m
 ├ ƒ /onboarding/logout/api                       157 B         [37m[1m103 kB[22m[39m
-├ ○ /onboarding/password-change                1.14 kB         [37m[1m331 kB[22m[39m
-├ ○ /onboarding/password-reset                 2.09 kB         [37m[1m332 kB[22m[39m
-├ ○ /onboarding/signin                         1.77 kB         [37m[1m332 kB[22m[39m
+├ ○ /onboarding/password-change                1.14 kB         [37m[1m350 kB[22m[39m
+├ ○ /onboarding/password-reset                 2.09 kB         [37m[1m351 kB[22m[39m
+├ ○ /onboarding/signin                         1.78 kB         [37m[1m351 kB[22m[39m
 ├ ƒ /onboarding/signin/api                       157 B         [37m[1m103 kB[22m[39m
-├ ○ /onboarding/signup                         2.36 kB         [37m[1m332 kB[22m[39m
-├ ○ /onboarding/verify-email                    1.2 kB         [37m[1m318 kB[22m[39m
-├ ○ /search                                    7.35 kB         [37m[1m398 kB[22m[39m
-├ ƒ /user/dashboard                            1.39 kB         [37m[1m318 kB[22m[39m
-├ ƒ /user/dashboard/appointments               2.93 kB         [37m[1m248 kB[22m[39m
-├ ○ /user/dashboard/healthbenefits             1.34 kB         [37m[1m247 kB[22m[39m
-├ ○ /user/dashboard/supports                   3.66 kB         [37m[1m331 kB[22m[39m
-├ ƒ /user/dashboard/supports/[slug]             1.6 kB         [37m[1m329 kB[22m[39m
-├ ○ /user/profile                              1.27 kB         [37m[1m318 kB[22m[39m
-├ ○ /user/profile/change-password              2.65 kB         [37m[1m305 kB[22m[39m
-├ ƒ /user/profile/emergency-contact            2.43 kB         [37m[1m305 kB[22m[39m
+├ ○ /onboarding/signup                         2.37 kB         [37m[1m352 kB[22m[39m
+├ ○ /onboarding/verify-email                    1.2 kB         [37m[1m338 kB[22m[39m
+├ ○ /search                                    7.35 kB         [37m[1m418 kB[22m[39m
+├ ƒ /user/dashboard                            1.39 kB         [37m[1m319 kB[22m[39m
+├ ƒ /user/dashboard/appointments               2.93 kB         [37m[1m249 kB[22m[39m
+├ ○ /user/dashboard/healthbenefits             1.34 kB         [37m[1m248 kB[22m[39m
+├ ○ /user/dashboard/supports                   3.66 kB         [37m[1m332 kB[22m[39m
+├ ƒ /user/dashboard/supports/[slug]             1.6 kB         [37m[1m330 kB[22m[39m
+├ ○ /user/profile                              1.27 kB         [37m[1m338 kB[22m[39m
+├ ○ /user/profile/change-password              2.65 kB         [37m[1m306 kB[22m[39m
+├ ƒ /user/profile/emergency-contact            2.43 kB         [37m[1m306 kB[22m[39m
 ├ ○ /user/profile/feedback                       157 B         [37m[1m103 kB[22m[39m
-├ ○ /user/profile/hmo-provider                   784 B         [37m[1m257 kB[22m[39m
-├ ○ /user/profile/settings                       449 B         [37m[1m213 kB[22m[39m
-└ ƒ /user/profile/vitals                       2.72 kB         [37m[1m305 kB[22m[39m
+├ ○ /user/profile/hmo-provider                   785 B         [37m[1m258 kB[22m[39m
+├ ○ /user/profile/settings                       450 B         [37m[1m213 kB[22m[39m
+└ ƒ /user/profile/vitals                       2.72 kB         [37m[1m306 kB[22m[39m
 + First Load JS shared by all                   [37m[1m103 kB[22m[39m
   ├ chunks/8315-24af6374db49d768.js              46 kB
   ├ chunks/87c73c54-64b52c7d0d45dc3f.js        53.3 kB
@@ -120,4 +120,4 @@ Error in get dashboard/stats: Error: Dynamic server usage: Route /user/dashboard
 ○  (Static)   prerendered as static content
 ƒ  (Dynamic)  server-rendered on demand
 
-[?25h[2K[1G✨  Done in 68.74s.
+[?25h[2K[1G✨  Done in 62.40s.

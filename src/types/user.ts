@@ -1,6 +1,6 @@
 import { DoctorDetailsType } from "@/types/doctor"
-import {FileType} from "@/types/file";
-import {OrganizationType} from "@/types/organization";
+import { FileType } from "@/types/file"
+import { OrganizationType } from "@/types/organization"
 
 export type UserType =
   | "pharmacy"
@@ -45,6 +45,7 @@ export interface UserTypeDef {
 
   // Virtual
   fullName?: string
+  backgroundUrl?: string
 }
 
 export interface UserProfileType extends UserTypeDef {

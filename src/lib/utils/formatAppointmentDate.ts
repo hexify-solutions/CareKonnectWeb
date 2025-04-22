@@ -6,6 +6,8 @@ type AppointmentInfo = {
   fullLongDate?: string
   timeZoneName?: string
   timeZoneAbbreviation?: string
+  formattedDate?: string
+  time?: string
 }
 
 function formatAppointmentDate(appointmentStartAt: string): AppointmentInfo {
@@ -102,6 +104,8 @@ function formatAppointmentDate(appointmentStartAt: string): AppointmentInfo {
     fullLongDate,
     timeZoneName,
     timeZoneAbbreviation,
+    formattedDate,
+    time
   }
 }
 
