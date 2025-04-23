@@ -11,6 +11,8 @@ const AppointmentDetails = async ({ params}) => {
   const pageParams = await params;
   const appointment =  await getAppointmentById(pageParams?.slug)
 
+  console.log(appointment, ">>>>>>>>>>>>>>>>>>>>>>>")
+
   return (
     <div>
       <div className={clsx("inner-wrapper", styles.wrapper)}>

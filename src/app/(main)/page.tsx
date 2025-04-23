@@ -7,6 +7,7 @@ import InnovationBanner from "@/components/innovationBanner"
 import styles from "./page.module.css"
 import clsx from "clsx"
 import { Suspense } from "react"
+import SpecialistListLoader from "@/components/specialistList/specialistLoader"
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
         <h3 className={styles.heading} arial-label="Top Specialist">
           Top Specialists
         </h3>
-        <Suspense fallback={<div>Loading</div>}>
+        <Suspense fallback={<SpecialistListLoader />}>
           <SpecialistList />
         </Suspense>
         <div className={styles.innovationBannerWrapper}>

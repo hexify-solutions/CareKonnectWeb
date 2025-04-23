@@ -7,8 +7,13 @@ import {
   Twitter,
   Linkedin,
 } from "@hexify/atoms";
+import formatAppointmentDate from "@/lib/utils/formatAppointmentDate";
 
-const PaymentReceiptModal = ({ open, cancelHandler }) => {
+const PaymentReceiptModal = ({ open, cancelHandler, receipt }) => {
+
+  const date = formatAppointmentDate(receipt?.transaction?.verifiedAt || "")
+  console.log(date, "this is the date here")
+
   return (
     <Modal open={open} onClose={cancelHandler}>
       <div className={styles.container}>
@@ -27,75 +32,74 @@ const PaymentReceiptModal = ({ open, cancelHandler }) => {
             </aside>
             <div className={styles.heading}>Payment Receipt!</div>
             <div className={styles.info}>
-              <span>Hey Martha,</span>
+              <span>Hey {receipt?.appointment?.user?.firstName || receipt?.appointment?.user?.lastName},</span>
               <span>
                 We have successfully processed your payment for a booking
               </span>
             </div>
             <div className={styles.paymentSummary}>
               <span className={styles.paymentLabel}>Total Payment</span>
-              <span>NGN 26,655.87</span>
+              <span>NGN {receipt?.appointment?.fee?.toLocaleString()}</span>
             </div>
             <div className={styles.summaryWrapper}>
               <div className={styles.summarySection}>
                 <div className={styles.summaryInfo}>
                   <span>Payment Method</span>
-                  <span className={styles.summaryValue}>Card Payment</span>
+                  <span className={styles.summaryValue}>{receipt?.transaction?.provider}</span>
                 </div>
                 <div className={styles.summaryInfo}>
                   <span>Received by</span>
                   <span className={styles.summaryValue}>
-                    LEX Medicals Limited{" "}
+                    {receipt?.transaction?.receiver || "LEX Medicals Limited"}
                   </span>
                 </div>
                 <div className={styles.summaryInfo}>
                   <span>Ref Number</span>
                   <span className={styles.summaryValue}>
-                    0069784210000085752257
+                    {receipt?.transaction?.reference}
                   </span>
                 </div>
-                <div className={styles.summaryInfo}>
+                {/* <div className={styles.summaryInfo}>
                   <span>Account Name</span>
                   <span className={styles.summaryValue}>
                     Martha Blackwood G.
                   </span>
-                </div>
-                <div className={styles.summaryInfo}>
+                </div> */}
+                {/* <div className={styles.summaryInfo}>
                   <span>Card Number</span>
                   <span className={styles.summaryValue}>
                     Ending with ....1234
                   </span>
-                </div>
+                </div> */}
               </div>
               <div className={styles.summarySection}>
                 <div className={styles.summaryInfo}>
                   <span>Payment Time</span>
                   <span className={styles.summaryValue}>
-                    Monday, 25 Feb 2025, 13:22
+                    {date?.fullLongDate} {date.formattedTime}
                   </span>
                 </div>
                 <div className={styles.summaryInfo}>
                   <span>Description</span>
                   <span className={styles.summaryValue}>
-                    I am having chronic headache for days now, and I’ve tried
-                    different prescriptions.
+                    {receipt?.transaction?.narration}
                   </span>
                 </div>
-                <div className={styles.summaryInfo}>
+                {/* <div className={styles.summaryInfo}>
                   <span>Billing Address</span>
                   <span className={styles.summaryValue}>
                     13, Jacob Street, Fadeyi, Lagos
                   </span>
-                </div>
+                </div> */}
                 <div className={styles.summaryInfo}>
                   <span>Payment for</span>
                   <span className={styles.summaryValue}>
-                    Booking Dr. Johnson Awe
+                    Booking Dr. {receipt?.appointment?.doctor?.users?.fullName}
                   </span>
                 </div>
                 <div className={styles.summaryInfo}>
                   <span>Amount</span>
-                  <span className={styles.summaryValue}>NGN 26,655.87</span>
+                  <span className={styles.summaryValue}>NGN {receipt?.appointment?.fee?.toLocaleString()}</span>
                 </div>
               </div>
             </div>

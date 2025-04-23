@@ -24,6 +24,8 @@ export const getAppointmentById = async (id: string) => {
       },
     })
 
+    console.log(appointment, "appointment data")
+
     return appointment?.data
   } catch (error) {
     console.error("Error in get appointment by id:", error)
@@ -38,9 +40,6 @@ export const getUsersAppointments = async (params = {}) => {
     const token = cookieStore.get(cookieKeys.token)?.value
 
     const url = `${process.env.PUBLIC_URL}/${endPoints?.getUsersAppointments}${queryString ? `?${queryString}` : ""}`
-
-    console.log(url, ">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>.")
-
     const appointments = await fetchData({
       url,
       errorMessage: "Error fetching appointments:",

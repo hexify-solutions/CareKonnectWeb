@@ -2,6 +2,8 @@
 import { Button, ChevronRight, Tabs } from "@hexify/atoms";
 import styles from "./tabComponent.module.css";
 import clsx from "clsx";
+import Link from "next/link";
+import routes from "@/lib/constants/routes";
 
 const GeneralOverview = ({ appointment }) => {
   return (
@@ -67,6 +69,8 @@ const Prescriptions = () => {
 
 
 export const AppointmentGeneralInfoCardTabComponent = ({ appointment }) => {
+
+  console.log(appointment, ">>>>>>>>>>>>> this should be used")
   const tabs = [
     {
       label: "General Overview",
@@ -86,9 +90,16 @@ export const AppointmentGeneralInfoCardTabComponent = ({ appointment }) => {
     <div className={styles.tabWrapper}>
       <Tabs tabs={tabs} />
       <div className={styles.btnWrapper}>
+        <Link href={routes.appointmentMeeting({
+          appointmentId: appointment?.meetings?.appointmentId,
+          meetingId: appointment?.meetings?.zoom?.id,
+          password: appointment?.meetings?.zoom?.password,
+        })}>
+        
         <Button rounded variant="contained" size="large" fullWidth>
           Join session
         </Button>
+        </Link>
         <Button size="large" data-variant="text" fullWidth>
           Copy Consultation Link
         </Button>
