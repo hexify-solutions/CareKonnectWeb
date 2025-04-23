@@ -10,6 +10,7 @@ const endPoints = {
 
     // globals
     search: 'global/search',
+    getTopSpecialists: 'global/top-specialists',
 
     // user dashboard and profile 
     stats: '/dashboard/stats',
@@ -26,6 +27,13 @@ const endPoints = {
     getAppointment: (id: string) => `/appointments/${id}`,
     getUsersAppointments: 'appointments',
     transaction: "transaction",
+
+
+    // doctor 
+    getDoctor: (id: string) => `doctors/${id}`,
+
+    // pharmacies 
+    getPharmacy: (id: string) => `pharmacies/${id}`
 
 
 }

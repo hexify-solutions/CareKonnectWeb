@@ -16,7 +16,7 @@ const SearchFormAndFilter = ({
   return (
     <div className={styles.wrapper}>
       <Formik enableReinitialize onSubmit={onSubmitSearchHandler} initialValues={initialValues(search)}>
-        {({ values, handleChange, errors, }) => {
+        {({ values, handleChange, errors, submitForm }) => {
           return (
             <Form className={styles.form}>
               <div className={styles.inputWrapper}>
@@ -29,7 +29,7 @@ const SearchFormAndFilter = ({
                   onChange={handleChange}
                   value={values?.search}
                   suffixProps={{
-                    onClick: () => console.log("i am clicked"),
+                    onClick: () => submitForm(),
                   }}
                   rounded
                   type="text"

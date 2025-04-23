@@ -21,6 +21,7 @@ const PaymentForm = ({ appointmentId }: { appointmentId: string }) => {
   const [paymentOption, setPaymentOption] = useState()
   const [showPaymentSuccessModal, setShowPaymentSuccessModal] = useState(false)
   const [paymentSuccessState, setPaymentSuccessState] = useState(false)
+  const [paymentReceiptData, setPaymentReceiptData] = useState({})
   const [showPaymentReceiptModal, setShowPaymentReceiptModal] = useState(false)
   const paymentMutation = useMakePaymentForAppointment()
   const verifyPaymentMutation = useVerifyPaymentForAppointment()
@@ -45,7 +46,8 @@ const PaymentForm = ({ appointmentId }: { appointmentId: string }) => {
                 provider: "paystack",
                 reference: response?.reference
               }, {
-                onSuccess: () => {
+                onSuccess: (response: { data: Record<string, any>}) => {
+                  setPaymentReceiptData(response?.data)
                   setPaymentSuccessState(true)
                   setShowPaymentSuccessModal(true)
                 }
@@ -114,7 +116,7 @@ const PaymentForm = ({ appointmentId }: { appointmentId: string }) => {
               })}
 {   !paymentSuccessState &&           <div className={styles.btnWrapper}>
                 <Button
-                  disabled={!paymentOption || paymentMutation?.isPending}
+                  disabled={!paymentOption || paymentMutation?.isPending || verifyPaymentMutation?.isPending}
                   type="button"
                   onClick={nextHandler}
                   variant="contained"
@@ -122,7 +124,7 @@ const PaymentForm = ({ appointmentId }: { appointmentId: string }) => {
                   rounded
                   size="large"
                 >
-                  {paymentMutation?.isPending ? <Spinner /> : "Next"}
+                  {(verifyPaymentMutation?.isPending || paymentMutation?.isPending) ? <Spinner /> : "Next"}
                 </Button>
               </div>}
             </div>
@@ -141,10 +143,12 @@ const PaymentForm = ({ appointmentId }: { appointmentId: string }) => {
       <PaymentSuccessModal
         viewReceiptHandler={viewReceiptHandler}
         open={showPaymentSuccessModal}
+        receipt={paymentReceiptData}
         cancelHandler={() => setShowPaymentSuccessModal(false)}
       />
       <PaymentReceiptModal
         open={showPaymentReceiptModal}
+        receipt={paymentReceiptData}
         cancelHandler={() => setShowPaymentReceiptModal(false)}
       />
     </>

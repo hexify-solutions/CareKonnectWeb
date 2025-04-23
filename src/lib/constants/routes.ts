@@ -8,6 +8,9 @@ const routes = {
   verifyEmail: "/onboarding/verify-email",
   passwordReset: "/onboarding/password-reset",
 
+  //pharmacy
+  pharmacy: (id: string) => "/pharmacy/" + id,
+
 
   // doctors
   doctor: (id: string) => "/doctor/" + id,
@@ -31,7 +34,8 @@ const routes = {
 
   // appointment routes
   appointmentDetails: (slug: string) => "/appointment/details/" + slug,
-  appointmentById: (id: string) => `/appointments/${id}`
+  appointmentById: (id: string) => `/appointments/${id}`,
+  appointmentMeeting: (meeting: Record<string, string>) => `${process.env.NEXT_PUBLIC_COMMUNICATIONS_URL}/a-${meeting?.appointmentId}/z-${meeting?.meetingId}/p-${meeting.password}`
 
 };
 
