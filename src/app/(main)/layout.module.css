@@ -3,6 +3,6 @@
 }
 
 .main {
-    background-color: var(--mui-palette-design_light-background);
+    background-color: var(--mui-color-background);
     min-height: 100vh;
 }

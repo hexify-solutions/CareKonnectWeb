@@ -1,7 +1,7 @@
 "use client"
 
-import SignInForm from "./_components/signInForm";
 import routes from "@/lib/constants/routes";
+import SignInForm from "@/components/auth/signInForm";
 import { withAuthState } from "@/hoc";
 
 const SignIn = () => {

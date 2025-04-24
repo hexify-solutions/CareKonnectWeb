@@ -2,18 +2,18 @@ import { Avatar, IconSquareChip, iconLoaderMap } from "@hexify/atoms";
 import styles from "./doctorInfoCardWithHospital.module.css";
 import { DoctorInfo } from "@hexify/components";
 
-const DoctorInfoCardWithHospital = () => {
+const DoctorInfoCardWithHospital = ({ doctor }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.doctorInfoWrapper}>
         <Avatar
           size="xlarge"
-          src="https://images.pexels.com/photos/5732461/pexels-photo-5732461.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          src={doctor?.doctorDetails?.avatarUrl}
         />
         <div>
           <DoctorInfo
             size="medium"
-            label="Dr Innocent Edosa"
+            label={`Dr ${doctor?.firstName} ${doctor?.lastName}`}
             rating={5}
             distance={"1.5 km from you"}
             tags={["Neurologist"]}
@@ -22,13 +22,13 @@ const DoctorInfoCardWithHospital = () => {
       </div>
       <div className={styles.infoCardList}>
         <IconSquareChip
-          title="3 Years +"
+          title={`${doctor?.doctorDetails?.yearsOfExperience} Years +`}
           subtitle="Experience"
           Icon={iconLoaderMap.badge}
         />
         <IconSquareChip
           color="secondary"
-          title="62+"
+          title={`${doctor?.doctorDetails?.stats?.patients}+`}
           subtitle="Patients"
           Icon={iconLoaderMap.badge}
         />
@@ -40,8 +40,8 @@ const DoctorInfoCardWithHospital = () => {
         />
       </div>
       <div className={styles.hospitalInfo}>
-        <h4>Superior Specialist Hospital</h4>
-        <span>13, Jacob Street, Fadeyi, Lagos. Nigeria</span>
+        <h4>{doctor?.doctorDetails?.clinicName}</h4>
+        <span>{doctor?.doctorDetails?.locations}</span>
       </div>
     </div>
   );

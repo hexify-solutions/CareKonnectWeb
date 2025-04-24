@@ -1,28 +1,41 @@
+// @ts-nocheck
 "use client";
-
 import styles from "./passwordResetForm.module.css";
 import { Formik, Form } from "formik";
 import { useState } from "react";
 import * as Yup from "yup";
-import { Button, InputField, iconLoaderMap } from "@hexify/atoms";
+import { Button, InputField, Spinner, iconLoaderMap } from "@hexify/atoms";
 import componentData from "../../../../../../../data/passwordChange.json";
 import VerifyOtp from "@/components/profile/verifyOtpForm";
+import { useSecureStorage } from "@/context/storage";
 import componentDataForVerifyOtp from "@/data/verifyEmail.json";
 import { useAuthContext } from "@/context/auth";
+import lsKeys from "@/lib/constants/lsKeys";
 
 const PasswordResetForm = () => {
-  const [isOtpValid, setIsOtpValid] = useState(false);
+  const [otp, setValidOtp] = useState("");
   const [checkingOtp, setCheckingOtp] = useState(true);
-  const { } = useAuthContext();
+  const { onVerify, resendVerifyEmailHandler, onPasswordChange } = useAuthContext();
+  const { getItem } = useSecureStorage();
+  const email = getItem?.(lsKeys.resetPasswordEmail);
 
-  const onSubmitHandler = () => {
-    console.log("resetting password");
+  const onSubmitHandler = (params) => { 
+    onPasswordChange?.({
+     otp,
+      email,
+      newPassword: params.password
+    })
   };
+
+  const onVerifyHandler = (data: { code: string}) => {
+      setCheckingOtp(false)
+      setValidOtp(data?.code)
+  }
 
   return (
     <>
-      {checkingOtp && <VerifyOtp componentData={componentDataForVerifyOtp} />}
-      {!checkingOtp && isOtpValid && (
+      {checkingOtp && <VerifyOtp resendVerifyEmailHandler={resendVerifyEmailHandler} onVerifyCallback={onVerifyHandler} profile={{email}} onVerify={onVerify} componentData={componentDataForVerifyOtp} />}
+      {!checkingOtp && !!otp && (
         <Formik
           validationSchema={validationSchema}
           onSubmit={onSubmitHandler}
@@ -79,13 +92,14 @@ const PasswordResetForm = () => {
                 <div className={styles.btn}>
                   <Button
                     type="submit"
+                    disabled={onPasswordChange.isLoading}
                     size="large"
                     fullWidth
                     color="primary"
                     variant="contained"
-                    data-variant="rounded"
+                    rounded
                   >
-                    {componentData.passwordChangeCTA}
+                    {onPasswordChange.isLoading ? <Spinner /> : componentData.passwordChangeCTA}
                   </Button>
                 </div>
               </Form>

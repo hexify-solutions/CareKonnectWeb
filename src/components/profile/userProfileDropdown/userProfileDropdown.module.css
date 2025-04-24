@@ -11,7 +11,7 @@
 .dropdown {
   position: absolute;
   right: 0;
-  background-color: var(--mui-palette-design_light-background);
+  background-color: var(--mui-color-background);
   z-index: 1;
   border-radius: 12px;
   display: flex;

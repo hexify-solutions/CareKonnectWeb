@@ -2,14 +2,16 @@
 import { Button, ChevronRight, Tabs } from "@hexify/atoms";
 import styles from "./tabComponent.module.css";
 import clsx from "clsx";
+import Link from "next/link";
+import routes from "@/lib/constants/routes";
 
-const GeneralOverview = () => {
+const GeneralOverview = ({ appointment }) => {
   return (
     <div className={styles.sectionWrapper}>
-      <div className={styles.generalOverviewInfoItem}>
+      {appointment?.appointmentRef && <div className={styles.generalOverviewInfoItem}>
         <span>Appointment ID</span>
-        <span className={styles.generalOverviewInfoItemValue}>0123-45678</span>
-      </div>
+        <span className={styles.generalOverviewInfoItemValue}>{appointment?.appointmentRef}</span>
+      </div>}
       <div className={styles.generalOverviewInfoItem}>
         <span>Appointment Type</span>
         <span className={styles.generalOverviewInfoItemValue}>
@@ -18,18 +20,17 @@ const GeneralOverview = () => {
       </div>
       <div className={styles.generalOverviewInfoItem}>
         <span>Status</span>
-        <span className={styles.generalOverviewInfoItemValue}>Pending</span>
+        <span className={styles.generalOverviewInfoItemValue}>{appointment?.status}</span>
       </div>
       <div className={styles.generalOverviewInfoItem}>
         <span>Description</span>
         <span className={styles.generalOverviewInfoItemValue}>
-          I am having chronic headache for days now, and I’ve tried different
-          prescriptions
+          {appointment?.notes}
         </span>
       </div>
       <div className={styles.generalOverviewInfoItem}>
         <span>Amount</span>
-        <span className={styles.generalOverviewInfoItemValue}>N 5000</span>
+        <span className={styles.generalOverviewInfoItemValue}>&#8358;{appointment?.fee?.toLocaleString()}</span>
       </div>
     </div>
   );
@@ -65,31 +66,44 @@ const Prescriptions = () => {
   );
 };
 
-const tabs = [
-  {
-    label: "General Overview",
-    Component: GeneralOverview,
-  },
-  {
-    label: "Doctor's Comments",
-    Component: DoctorComment,
-  },
-  {
-    label: "Prescriptions",
-    Component: Prescriptions,
-  },
-];
 
-export const AppointmentGeneralInfoCardTabComponent = () => {
+
+export const AppointmentGeneralInfoCardTabComponent = ({ appointment }) => {
+
+  console.log(appointment, ">>>>>>>>>>>>> this should be used")
+  const tabs = [
+    {
+      label: "General Overview",
+      Component: () => <GeneralOverview appointment={appointment} />,
+    },
+    {
+      label: "Doctor's Comments",
+      Component: DoctorComment,
+    },
+    {
+      label: "Prescriptions",
+      Component: Prescriptions,
+    },
+  ]
+
   return (
     <div className={styles.tabWrapper}>
       <Tabs tabs={tabs} />
       <div className={styles.btnWrapper}>
-        <Button rounded variant="contained" size="large" fullWidth>Join session</Button>
+        <Link href={routes.appointmentMeeting({
+          appointmentId: appointment?.meetings?.appointmentId,
+          meetingId: appointment?.meetings?.zoom?.id,
+          password: appointment?.meetings?.zoom?.password,
+        })}>
+        
+        <Button rounded variant="contained" size="large" fullWidth>
+          Join session
+        </Button>
+        </Link>
         <Button size="large" data-variant="text" fullWidth>
           Copy Consultation Link
         </Button>
       </div>
     </div>
-  );
-};
+  )
+}

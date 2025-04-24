@@ -1,0 +1,33 @@
+.topSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+}
+
+.dateStripWrapper {
+    margin-bottom: 44px;
+
+}
+
+
+.selectFieldWrapper {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+
+}
+
+.wrapper {
+    margin-top: 44px;
+}
+
+.field {
+    width: 147px;
+}
+
+.appointmentListItem  + .appointmentListItem {
+margin-top: 2rem;
+}

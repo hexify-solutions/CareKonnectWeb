@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import CategorySearch from "./categorySearch "
+import CategorySearch from "./categorySearch"
 import styles from "./hero.module.css"
 import clsx from "clsx"
 

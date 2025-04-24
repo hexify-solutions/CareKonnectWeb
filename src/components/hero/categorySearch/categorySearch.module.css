@@ -25,7 +25,7 @@
 .dropdownWrapper {
   position: absolute;
 padding: 1.5rem;
-background-color: var(--mui-palette-design_light-background);
+background-color: var(--mui-color-background);
 z-index: 100;
 border-radius: 1.5rem;
 width: 16.125rem;

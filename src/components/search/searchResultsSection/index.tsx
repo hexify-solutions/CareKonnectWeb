@@ -12,27 +12,31 @@ const SearchResultSection = ({ label, list }) => {
       <h4 className={styles.sectionHeading}>{pluralize(label)}</h4>
       <div className={styles.list}>
         {list?.map((item) => {
-          return (
-            <Link
-              key={item?.doctorDetails?.userId}
-              href={routes?.doctor(item?.doctorDetails?.userId)}
-            >
-              <DoctorCard
-                image={
-                  item?.doctorDetails?.avatarUrl ||
-                  "https://images.pexels.com/photos/12311410/pexels-photo-12311410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                }
-                info={{
-                  label: item?.firstName + " " + item?.lastName,
-                  tags: item?.doctorDetails?.specializations?.map(
-                    (spec) => spec?.name
-                  ),
-                  rating: item?.doctorDetails?.rating || 5,
-                  distance: "1.5km from you",
-                }}
-              />
-            </Link>
-          )
+          if(item?.userType === "doctor") {
+            
+            return (
+              <Link
+                key={item?.doctorDetails?.id}
+                href={routes?.doctor(item?.doctorDetails?.id)}
+              >
+                <DoctorCard
+                  image={
+                    item?.doctorDetails?.avatarUrl ||
+                    "https://images.pexels.com/photos/12311410/pexels-photo-12311410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                  }
+                  info={{
+                    label: item?.firstName + " " + item?.lastName,
+                    tags: item?.doctorDetails?.specializations?.map(
+                      (spec) => spec?.name
+                    ),
+                    rating: item?.doctorDetails?.rating || 5,
+                    distance: "1.5km from you",
+                  }}
+                />
+              </Link>
+            )
+          }
+          return null
         })}
       </div>
     </div>

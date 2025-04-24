@@ -3,23 +3,31 @@ import styles from "./page.module.css";
 import clsx from "clsx";
 import AppointmentDetailCard from "@/components/userDashboard/appointmentDetailCard";
 import AppointmentGeneralInfoCard from "@/components/appointment/appointmentGeneralInfoCard/index";
+import { getAppointmentById } from "@/http/appointment/serverActions";
 
-const AppointmentDetails = () => {
+
+const AppointmentDetails = async ({ params}) => {
+
+  const pageParams = await params;
+  const appointment =  await getAppointmentById(pageParams?.slug)
+
+  console.log(appointment, ">>>>>>>>>>>>>>>>>>>>>>>")
+
   return (
     <div>
       <div className={clsx("inner-wrapper", styles.wrapper)}>
         <Breadcrumb
           excludePaths={["details"]}
           renamePaths={{
-            appointments: "Appointments",
-            slug: "Appointment Details",
+            appointment: "Appointments",
+            [pageParams.slug]: "Appointment Details",
           }}
         />
         <div className={styles.appointCardWrapper}>
-          <AppointmentDetailCard />
+          <AppointmentDetailCard appointment={appointment} />
         </div>
         <div className={styles.generalInfoWrapper}>
-          <AppointmentGeneralInfoCard />
+          <AppointmentGeneralInfoCard appointment={appointment} />
         </div>
       </div>
     </div>

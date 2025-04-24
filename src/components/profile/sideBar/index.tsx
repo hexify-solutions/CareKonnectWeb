@@ -5,6 +5,7 @@ import Link from "next/link";
 import { IconLoader, iconLoaderMap } from "@hexify/atoms";
 import useQueryParams from "@/hooks/useQueryParams";
 import styles from "./sideBar.module.css";
+import { withSuspense } from '@/hoc';
 
 const SideBar = () => {
   const { pathname } = useQueryParams();
@@ -34,4 +35,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+export default withSuspense(SideBar);

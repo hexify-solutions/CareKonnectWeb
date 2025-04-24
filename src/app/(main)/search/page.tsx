@@ -17,7 +17,7 @@ const Search = () => {
   const { category, search } = getAllQueryParams()
   const searchCategory = category?.split(",")
 
-  const { data, isLoading } = useSearch({ search })
+  const { data, isLoading, isPending } = useSearch({ search })
 
   const onFilterClickedHandler = (value) => {
     if (searchCategory?.includes(value)) {
@@ -44,11 +44,23 @@ const Search = () => {
           searchCategory={searchCategory}
         />
         <div>
-          <div className={styles.loader}>{isLoading && <Spinner />}</div>
-          {Object.keys(data?.data || {})?.map((key) => {
-            const list = data?.data?.[key]
-            return <SearchResultSection list={list} key={key} label={key} />
-          })}
+          <>
+            {(isLoading || isPending) && (
+              <div className={styles.loader}>
+                <Spinner />
+              </div>
+            )}{" "}
+          </>
+          {!isLoading  && ( (
+              <>
+                {Object.keys(data?.data || {})?.map((key) => {
+                  const list = data?.data?.[key]
+                  return (
+                    <SearchResultSection list={list} key={key} label={key} />
+                  )
+                })}
+              </>
+            ))}
         </div>
       </div>
       <SignupBanner />

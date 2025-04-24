@@ -1,41 +1,44 @@
 "use client"
 
-import React, { createContext, useContext, useEffect, useState } from "react";
-import { secureStorage as secureLocalStorage } from "@hexify/shared";
+import React, { createContext, useContext } from "react"
+import { secureStorage as secureLocalStorage } from "@hexify/shared"
 
 interface SecureStorageContextType {
-  getItem: (key: string) => any;
-  setItem: (key: string, value: any) => void;
-  removeItem: (key: string) => void;
+  getItem: (key: string) => any
+  setItem: (key: string, value: any) => void
+  removeItem: (key: string) => void
 }
 
 const SecureStorageContext = createContext<
   SecureStorageContextType | undefined
->(undefined);
+>(undefined)
 
 export const SecureStorageProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const getItem = (key: string) => secureLocalStorage.getItem(key);
+  const getItem = (key: string) => secureLocalStorage.getItem(key)
   const setItem = (key: string, value: any) =>
-    secureLocalStorage.setItem(key, value);
-  const removeItem = (key: string) => secureLocalStorage.removeItem(key);
+    secureLocalStorage.setItem(key, value)
+  const removeItem = (key: string) => secureLocalStorage.removeItem(key)
+
 
   return (
-    <SecureStorageContext.Provider value={{ getItem, setItem, removeItem }}>
+    <SecureStorageContext.Provider
+      value={{ getItem, setItem, removeItem }}
+    >
       {children}
     </SecureStorageContext.Provider>
-  );
-};
+  )
+}
 
 export const useSecureStorage = () => {
-  const context = useContext(SecureStorageContext);
+  const context = useContext(SecureStorageContext)
   if (!context) {
     throw new Error(
-      "useSecureStorage must be used within a SecureStorageProvider"
-    );
+      "useSecureStorage must be used within a SecureStorageProvider."
+    )
   }
-  return context;
-};
+  return context
+}
 
 export default SecureStorageProvider
