@@ -22,8 +22,10 @@
   align-items: center;
   border-radius: 1rem;
   justify-content: center;
+  overflow: hidden;
   background-color: var(--mui-palette-design_neutral-neutral100);
 }
+
 
 .rightSection {
   display: flex;
@@ -33,7 +35,7 @@
 .image img {
   height: 79px;
   width: 57px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .drugDetails {

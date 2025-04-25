@@ -5,7 +5,7 @@ import styles from "./filterButton.module.css";
 import { FilterIcon } from "@hexify/atoms";
 import clsx from 'clsx';
 
-const FilterButton = ({ label = "Filter", className }: { label?:string; className?: string}) => {
+const FilterButton = ({ label = "Filter", className, dir = "right" }: { label?:string; className?: string, dir?: string}) => {
   const { isOpen, toggle, dropdownRef } = useDropdown();
 
   return (
@@ -15,8 +15,8 @@ const FilterButton = ({ label = "Filter", className }: { label?:string; classNam
         <span>{label}</span>
       </button>
       {isOpen && (
-        <div className={styles.dropdown}>
-          <span className={styles.dropdownHeading}>Select {label}</span>
+        <div className={styles.dropdown} data-dir={dir}>
+          <span className={styles.dropdownHeading}></span>
         </div>
       )}
     </div>

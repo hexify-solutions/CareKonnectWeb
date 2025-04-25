@@ -47,6 +47,7 @@ const PaymentForm = ({ appointmentId }: { appointmentId: string }) => {
                 reference: response?.reference
               }, {
                 onSuccess: (response: { data: Record<string, any>}) => {
+                  console.log(data, ">>>>>>>>>>>> receipt")
                   setPaymentReceiptData(response?.data)
                   setPaymentSuccessState(true)
                   setShowPaymentSuccessModal(true)

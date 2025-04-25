@@ -18,6 +18,8 @@ const SearchResultSection = ({ label, list }) => {
               <Link
                 key={item?.doctorDetails?.id}
                 href={routes?.doctor(item?.doctorDetails?.id)}
+                // href={`${routes.doctor(item.doctorDetails?.id)}?availability=${item?.doctorDetails?.id}`}
+
               >
                 <DoctorCard
                   image={

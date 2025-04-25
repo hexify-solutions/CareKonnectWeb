@@ -43,7 +43,7 @@ const specialistRenderers: Record<
     return (
       <li key={doctorId || specialist.id} className={styles.listItem}>
         <Link
-          href={`${routes.doctor(specialist.id)}?availability=${specialist?.doctorDetails?.id}`}
+          href={`${routes.doctor(specialist.doctorDetails?.id)}?availability=${specialist?.doctorDetails?.id}`}
         >
           <DoctorCard
             size={size}

@@ -10,7 +10,7 @@ const DrugCartCard = () => {
           <Image
             alt="drug"
             fill
-            src="https://s3-alpha-sig.figma.com/img/33ec/0ad1/d2cbf66fea204da46ca6f7c9c79fc067?Expires=1738540800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hYnTjyRRo2SCGd1WbKkOdWLalECWCJ9qXTujTFbr2~L6UTPTv13NkuWtodXBJljM1~KczrKvY-pDVFvXg6qwYYLBNlR-VmMiODxeMBVlGkeFNE3Mrm-ZA8RyQNAz-iH1ClGhfNBc87KGJue4URqsdMpM8fzW~UXDZvqUhGO7vYWxv~zmN7RnFQs9kDhnY8eSshc4jtxPKBFJFyLE866NDMRgE-AzddpcTvk9M8f38H7RJ8x4NDJsomhxZf5pbqLBeMHXKirLWPHK~-LjDujsUijC64MtKGPbt6pqgNpo47IN6jdaGT-5vapHAnOLuMu1J8CWuEVx~yZmNw0FoptQ9Q__"
+            src="https://images.pexels.com/photos/2386141/pexels-photo-2386141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           />
         </aside>
         <div className={styles.drugDetails}>
