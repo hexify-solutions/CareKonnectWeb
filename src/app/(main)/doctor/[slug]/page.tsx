@@ -25,6 +25,8 @@ const Doctor = async ({ params, searchParams }) => {
     errorMessage: "Error fetching doctor availabilities:",
   })
 
+  console.log(doctorsAvailability, ">>>>>>>>>>>>>> doctor availabity")
+
 
 
 

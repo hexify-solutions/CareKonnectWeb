@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body style={{backgroundColor: "#F8FAF0"}}>
         <>
           <SecureStorageProvider>
             <QueryProvider>
