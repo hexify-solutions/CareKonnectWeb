@@ -3,10 +3,19 @@
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronLeft, Heart, Plus, Minus, Check, ArrowRight, ShoppingCart } from "lucide-react"
+import {
+  ChevronLeft,
+  Heart,
+  Plus,
+  Minus,
+  Check,
+  ArrowRight,
+  ShoppingCart,
+} from "lucide-react"
 import styles from "./drugCard.module.css"
-import { ArrowLeft, Button, ChevronRight, Rating } from "@hexify/atoms"
-import clsx from 'clsx';
+import { ArrowLeft, Button, ChevronRight, Rating, Tabs } from "@hexify/atoms"
+import clsx from "clsx"
+import Details from "./detailsComponent"
 
 interface ProductDetailProps {
   product: {
@@ -48,17 +57,20 @@ const productD = {
     {
       name: "Orange",
       color: "#fff9e6",
-      image: "https://media.istockphoto.com/id/155302141/photo/healthy-food-background-orange.jpg?s=2048x2048&w=is&k=20&c=J8PxrZGORaP9VcbowxoTtf9e__lmR-DtTRrJdx9fRJk=",
+      image:
+        "https://media.istockphoto.com/id/155302141/photo/healthy-food-background-orange.jpg?s=2048x2048&w=is&k=20&c=J8PxrZGORaP9VcbowxoTtf9e__lmR-DtTRrJdx9fRJk=",
     },
     {
       name: "Blueberry",
       color: "#f0f5ff",
-      image: "https://images.pexels.com/photos/1395958/pexels-photo-1395958.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      image:
+        "https://images.pexels.com/photos/1395958/pexels-photo-1395958.jpeg?auto=compress&cs=tinysrgb&w=1200",
     },
     {
       name: "Lime",
       color: "#F8FAF0",
-      image: "https://images.pexels.com/photos/4457153/pexels-photo-4457153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      image:
+        "https://images.pexels.com/photos/4457153/pexels-photo-4457153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     },
   ],
   usage:
@@ -69,8 +81,6 @@ const ProductDetail = ({ product = productD }: ProductDetailProps) => {
   const [selectedImage, setSelectedImage] = useState(0)
   const [selectedFlavor, setSelectedFlavor] = useState(0)
   const [quantity, setQuantity] = useState(1)
-  const [activeTab, setActiveTab] = useState("details")
-  const [expandedSection, setExpandedSection] = useState("how-to-use")
 
   const handlePrevImage = () => {
     setSelectedImage((prev) =>
@@ -91,9 +101,21 @@ const ProductDetail = ({ product = productD }: ProductDetailProps) => {
     }
   }
 
-  const toggleSection = (section: string) => {
-    setExpandedSection(expandedSection === section ? "" : section)
-  }
+
+  const tabs = [
+    {
+      label: "Details",
+      Component: () => <Details product={product} />,
+    },
+    {
+      label: "Packing",
+      Component: () => <div>No Design </div>,
+    },
+    {
+      label: "Shipping details",
+      Component: () => <div>No Design</div>,
+    },
+  ]
 
   return (
     <div className={styles.container}>
@@ -119,12 +141,10 @@ const ProductDetail = ({ product = productD }: ProductDetailProps) => {
         <div className={styles.productImageContainer}>
           <div className={styles.mainImage}>
             <Image
-              src={
-                product.images[selectedImage]
-              }
+              src={product.images[selectedImage]}
               alt={product.name}
-              width={325}
-              height={480}
+              width={249}
+              height={350}
               className={styles.image}
             />
           </div>
@@ -149,7 +169,7 @@ const ProductDetail = ({ product = productD }: ProductDetailProps) => {
           {/* Thumbnail Gallery */}
           <div className={styles.thumbnailGallery}>
             <button onClick={handlePrevImage} className={styles.galleryButton}>
-            <ArrowLeft />
+              <ArrowLeft />
             </button>
             {product.images.map((image, index) => (
               <div
@@ -165,7 +185,10 @@ const ProductDetail = ({ product = productD }: ProductDetailProps) => {
                 />
               </div>
             ))}
-            <button onClick={handleNextImage} className={clsx(styles.galleryButton, styles.next)}>
+            <button
+              onClick={handleNextImage}
+              className={clsx(styles.galleryButton, styles.next)}
+            >
               <ArrowLeft />
             </button>
           </div>
@@ -178,19 +201,18 @@ const ProductDetail = ({ product = productD }: ProductDetailProps) => {
           </div>
 
           {/* Description */}
-          <p className={styles.description}>{product.description}
-{" "}
-          <button className={styles.readMore}>Read more...</button>
+          <p className={styles.description}>
+            {product.description}{" "}
+            <button className={styles.readMore}>Read more...</button>
           </p>
 
           {/* Flavor Selection */}
           <div className={styles.flavorSection}>
             <div>
-
-            <h3 className={styles.sectionTitle}>Flavour</h3>
-            <div className={styles.selectedFlavorName}>
-              {product.flavors[selectedFlavor].name}
-            </div>
+              <h3 className={styles.sectionTitle}>Flavour</h3>
+              <div className={styles.selectedFlavorName}>
+                {product.flavors[selectedFlavor].name}
+              </div>
             </div>
             <div className={styles.flavorOptions}>
               {product.flavors.map((flavor, index) => (
@@ -209,7 +231,6 @@ const ProductDetail = ({ product = productD }: ProductDetailProps) => {
                 </div>
               ))}
             </div>
-           
           </div>
 
           {/* Quantity and Add to Cart */}
@@ -239,7 +260,15 @@ const ProductDetail = ({ product = productD }: ProductDetailProps) => {
                 <Plus size={16} />
               </button>
             </div>
-            <Button variant="contained" color="primary" rounded className={styles.addToCartButton}>  <ShoppingCart size={18} /> Add to cart</Button>
+            <Button
+              variant="contained"
+              color="primary"
+              rounded
+              className={styles.addToCartButton}
+            >
+              {" "}
+              <ShoppingCart size={18} /> Add to cart
+            </Button>
           </div>
 
           {/* Wishlist and Guarantee */}
@@ -250,8 +279,7 @@ const ProductDetail = ({ product = productD }: ProductDetailProps) => {
             </button>
             <div className={styles.guarantee}>
               <span className={styles.iconWrapper}>
-
-              <Check size={16} className={styles.checkIcon} />
+                <Check size={16} className={styles.checkIcon} />
               </span>
               <span>30 days money back guarantee</span>
             </div>
@@ -259,89 +287,7 @@ const ProductDetail = ({ product = productD }: ProductDetailProps) => {
 
           {/* Tabs */}
           <div className={styles.tabsContainer}>
-            <div className={styles.tabs}>
-              <button
-                className={`${styles.tab} ${activeTab === "details" ? styles.activeTab : ""}`}
-                onClick={() => setActiveTab("details")}
-              >
-                Details
-              </button>
-              <button
-                className={`${styles.tab} ${activeTab === "packing" ? styles.activeTab : ""}`}
-                onClick={() => setActiveTab("packing")}
-              >
-                Packing
-              </button>
-              <button
-                className={`${styles.tab} ${activeTab === "shipping" ? styles.activeTab : ""}`}
-                onClick={() => setActiveTab("shipping")}
-              >
-                Shipping details
-              </button>
-            </div>
-          </div>
-
-          {/* Accordion Sections */}
-          <div className={styles.accordionContainer}>
-            <div className={styles.accordionItem}>
-              <button
-                className={styles.accordionHeader}
-                onClick={() => toggleSection("key-features")}
-              >
-                KEY FEATURES
-                <Plus size={16} className={styles.accordionIcon} />
-              </button>
-              {expandedSection === "key-features" && (
-                <div className={styles.accordionContent}>Content here</div>
-              )}
-            </div>
-
-            <div className={styles.accordionItem}>
-              <button
-                className={styles.accordionHeader}
-                onClick={() => toggleSection("ingredients")}
-              >
-                INGREDIENTS
-                <Plus size={16} className={styles.accordionIcon} />
-              </button>
-              {expandedSection === "ingredients" && (
-                <div className={styles.accordionContent}>Content here</div>
-              )}
-            </div>
-
-            <div className={styles.accordionItem}>
-              <button
-                className={styles.accordionHeader}
-                onClick={() => toggleSection("how-to-use")}
-              >
-                HOW TO USE
-                {expandedSection === "how-to-use" ? (
-                  <div className={styles.accordionIconCircle}>
-                    <Minus size={16} className={styles.accordionIcon} />
-                  </div>
-                ) : (
-                  <Plus size={16} className={styles.accordionIcon} />
-                )}
-              </button>
-              {expandedSection === "how-to-use" && (
-                <div className={styles.accordionContent}>
-                  <p>{product.usage}</p>
-                </div>
-              )}
-            </div>
-
-            <div className={styles.accordionItem}>
-              <button
-                className={styles.accordionHeader}
-                onClick={() => toggleSection("quality")}
-              >
-                QUALITY
-                <Plus size={16} className={styles.accordionIcon} />
-              </button>
-              {expandedSection === "quality" && (
-                <div className={styles.accordionContent}>Content here</div>
-              )}
-            </div>
+            <Tabs tabs={tabs} />
           </div>
         </div>
       </div>

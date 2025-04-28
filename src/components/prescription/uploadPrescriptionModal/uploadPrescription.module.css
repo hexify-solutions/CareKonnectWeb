@@ -1,0 +1,80 @@
+.wrapper {
+  background-color: var(--mui-palette-common-white);
+  margin-top: 132px;
+  border-radius: 20px;
+  padding: 77px 116px;
+  position: relative;
+  width: 100%;
+  max-width: 747px;
+}
+
+.cancelBtn {
+  position: absolute;
+  top: 44px;
+  right: 44px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heading {
+  font-family: var(--primary-font);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 130%;
+  letter-spacing: -2%;
+  color: var(--mui-palette-design_secondary-field500);
+  text-align: center;
+}
+
+.subHeading {
+  font-family: var(--primary-font);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -2%;
+  text-align: center;
+  color: var(--mui-palette-design_secondary-field500);
+}
+
+.form {
+  margin-top: 1.75rem;
+}
+.inputWrapper + .inputWrapper {
+  margin-top: 1.3125rem;
+}
+
+.addMoreBtnWrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: .75rem;
+}
+
+.submitButtonWrapper {
+    margin-top: 2.5rem
+}
+
+
+.addMoreButton {
+    font-family: var(--primary-font);
+    color: var(--mui-palette-primary-main);
+font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+letter-spacing: -2%;
+vertical-align: middle;
+border: none;
+background-color: transparent;
+cursor: pointer;
+
+}
+
+.formSection + .formSection {
+    margin-top: 40px;
+}
