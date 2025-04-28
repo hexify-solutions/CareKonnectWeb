@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import Link from "next/link";
 import styles from "./styles/page.module.css";
 import VitalCard from "@/components/userDashboard/vitalCard";
-import PrescriptionCard from "@/components/userDashboard/prescriptionCard";
+import PrescriptionCard from "@/components/prescription/prescriptionCard";
 import { DoctorCard, HospitalCard } from "@hexify/components";
 import { BookIcon, EmailIcon } from "@hexify/atoms";
 import DoctorInfoCard from "@/components/doctor/doctorInfoCard";
@@ -108,15 +108,15 @@ const Dashboard = async () => {
         </div>
         <ul className={styles.sectionList}>
           {mockSpecialistData?.map(({ image, id, type, ...specialist }) => {
-            if (type === "hospital") {
-              return (
-                <li key={id} className={styles.sectionListItem}>
-                  <Link href={routes.hospital(specialist.label)}>
-                    <HospitalCard info={specialist} image={image} />
-                  </Link>
-                </li>
-              )
-            }
+            // if (type === "hospital") {
+            //   return (
+            //     <li key={id} className={styles.sectionListItem}>
+            //       <Link href={routes.hospital(specialist.label)}>
+            //         <HospitalCard {...(specialist || {})} image={image} />
+            //       </Link>
+            //     </li>
+            //   )
+            // }
             return (
               <li key={id} className={styles.sectionListItem}>
                 <Link href={routes.doctor(specialist.label)}>

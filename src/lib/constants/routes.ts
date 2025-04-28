@@ -12,6 +12,8 @@ const routes = {
   pharmacy: (id: string) => "/pharmacy/" + id,
 
 
+
+
   // doctors
   doctor: (id: string) => "/doctor/" + id,
   doctorPayment: (queryString: string) =>  "/doctor/payment" + queryString,
