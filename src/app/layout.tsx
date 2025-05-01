@@ -4,6 +4,7 @@ import "../styles/global.css"
 import AuthProvider from "@/context/auth"
 import SecureStorageProvider from "@/context/storage"
 import ToastProvider from "@/context/toastProvider"
+import UserLocationProvider from "@/context/location"
 
 export const metadata: Metadata = {
   title: "Care Konnect",
@@ -17,8 +18,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body style={{backgroundColor: "#F8FAF0"}}>
-        <>
+      <body style={{ backgroundColor: "#F8FAF0" }}>
+        <UserLocationProvider>
           <SecureStorageProvider>
             <QueryProvider>
               <AuthProvider>
@@ -27,7 +28,7 @@ export default function RootLayout({
               <ToastProvider />
             </QueryProvider>
           </SecureStorageProvider>
-        </>
+        </UserLocationProvider>
       </body>
     </html>
   )

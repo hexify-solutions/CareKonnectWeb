@@ -1,4 +1,4 @@
-
+import Api from "@/http/api/api"
 
 export const fetchData = async ({
   url,
@@ -10,10 +10,12 @@ export const fetchData = async ({
   errorMessage?: string
 }) => {
   try {
+    const headers = await Api.generateHeader()
     const response = await fetch(url, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
+        ...headers,
       },
       ...(options || {}),
     })

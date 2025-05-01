@@ -4,6 +4,8 @@ import { HospitalCard, DoctorCard } from "@hexify/components"
 import routes from "@/lib/constants/routes"
 import { getTopSpecialists } from "@/http/globals/serverActions"
 import Pharmacy from "@/app/(main)/hospital/[slug]/pharmacy/page"
+import { getStoredUserLocation } from "@/lib/utils/getStoredUserLocation"
+import { calculatePatientDistance } from "@hexify/providers/src/lib/utils"
 
 type SpecialistListProps = {
   size?: "small"
@@ -14,9 +16,13 @@ const fallbackImage =
 
 const specialistRenderers: Record<
   string,
-  (specialist: any, size?: "small") => JSX.Element | null
+  (
+    specialist: any,
+    coords: GeolocationPosition["coords"],
+    size?: "small"
+  ) => JSX.Element | null
 > = {
-  pharmacy: (specialist, size) => {
+  pharmacy: (specialist, coords, size) => {
     return (
       <li key={specialist.id} className={styles.listItem}>
         <Link href={routes.pharmacy(specialist.pharmacyDetailsId)}>
@@ -32,14 +38,20 @@ const specialistRenderers: Record<
     )
   },
 
-  doctor: (specialist, size) => {
+  doctor: (specialist, coords, size) => {
     const doctorId = specialist?.doctorDetails?.id
     const fullName =
       `${specialist?.firstName ?? ""} ${specialist?.lastName ?? ""}`.trim()
     const avatar = specialist?.avatarUrl || fallbackImage
     const tags =
-      specialist?.specializations?.map((spec: any) => spec?.name) ?? []
+      specialist?.specializations?.length > 0
+        ? [specialist?.specializations[0].name]
+        : []
+    if (specialist?.specializations.length > 1) {
+      tags.push(`+${specialist?.specializations.length - 1}`)
+    }
 
+    const distance = calculatePatientDistance(specialist, { location: coords })
     return (
       <li key={doctorId || specialist.id} className={styles.listItem}>
         <Link
@@ -50,7 +62,7 @@ const specialistRenderers: Record<
             info={{
               label: fullName || "Doctor",
               rating: specialist?.rating || 5,
-              distance: "1.5km from you",
+              distance: `${distance} from you`,
               tags,
             }}
             image={avatar}
@@ -63,21 +75,23 @@ const specialistRenderers: Record<
 
 const renderSpecialistItem = (
   specialist: any,
+  coords: GeolocationPosition["coords"],
   size?: "small"
 ): JSX.Element | null => {
   const renderer = specialistRenderers[specialist.userType]
-  return renderer ? renderer(specialist, size) : null
+  return renderer ? renderer(specialist, coords, size) : null
 }
 
 const SpecialistList = async ({ size }: SpecialistListProps) => {
   const response = await getTopSpecialists()
+  const coords = await getStoredUserLocation()
 
   const specialists = response?.data ?? []
   return (
     <div className="inner-wrapper">
       <ul className={styles.list}>
         {specialists.map((specialist: any) =>
-          renderSpecialistItem(specialist, size)
+          renderSpecialistItem(specialist, coords, size)
         )}
       </ul>
     </div>

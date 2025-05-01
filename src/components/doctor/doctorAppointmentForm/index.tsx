@@ -10,10 +10,10 @@ import useQueryParams from "@/hooks/useQueryParams"
 import { Button, InputField, SelectField, Spinner } from "@hexify/atoms"
 import { withAuthModal } from "@/hoc/withAuthModal"
 import { useMemo } from "react"
-import { toast } from "react-toastify";
+import { toast } from "react-toastify"
 import { useCreateAppointment } from "@/http/appointment/mutation"
 import dayjs from "dayjs"
-import { withSuspense } from '@/hoc';
+import { withSuspense } from "@/hoc"
 
 const validationSchema = Yup.object().shape({
   date: Yup.date().required("Date is required"),
@@ -53,7 +53,7 @@ const DoctorAppointmentForm = ({ isAuth, triggerAuth, appointmentSlots }) => {
       },
       onError: () => {
         toast.error("Could not book appointment")
-      }
+      },
     })
   }
 
@@ -91,18 +91,20 @@ const DoctorAppointmentForm = ({ isAuth, triggerAuth, appointmentSlots }) => {
                 // helperText={touched.date && errors.date}
               />
             </div>
-            <div className={styles.formInputWrapper}>
-              <SelectField
-                className={styles.selectField}
-                onChange={(e) => setFieldValue("time", e?.target?.value)}
-                name="time"
-                value={values.time}
-                options={timeOptions}
-                label="Select Time"
-                error={touched.time && Boolean(errors.time)}
-                // helperText={touched.time && errors.time}
-              />
-            </div>
+            {timeOptions && timeOptions.length && (
+              <div className={styles.formInputWrapper}>
+                <SelectField
+                  className={styles.selectField}
+                  onChange={(e) => setFieldValue("time", e?.target?.value)}
+                  name="time"
+                  value={values.time}
+                  options={timeOptions}
+                  label="Select Time"
+                  error={touched.time && Boolean(errors.time)}
+                  // helperText={touched.time && errors.time}
+                />
+              </div>
+            )}
             <div className={styles.formInputWrapper}>
               <InputField
                 fullWidth
@@ -128,7 +130,11 @@ const DoctorAppointmentForm = ({ isAuth, triggerAuth, appointmentSlots }) => {
                 rounded
                 disabled={appointmentMutation.isPending}
               >
-                {appointmentMutation.isPending ? <Spinner /> : "Book Appointment"}
+                {appointmentMutation.isPending ? (
+                  <Spinner />
+                ) : (
+                  "Book Appointment"
+                )}
               </Button>
             </div>
           </Form>

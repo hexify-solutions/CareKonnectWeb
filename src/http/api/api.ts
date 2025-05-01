@@ -1,28 +1,44 @@
-import { AxiosRequestConfig } from "axios";
-import customRequest, { Transformer } from "./customRequest";
+import { AxiosRequestConfig } from "axios"
+import customRequest, { Transformer } from "./customRequest"
+import { aes } from "@hexify/shared"
+import cookieKeys from "@/lib/constants/cookieKeys"
+import { getStoredUserLocation } from "@/lib/utils/getStoredUserLocation"
 
 class Api {
-  url: string;
-  errCb?: (err: Error) => void;
+  url: string
+  errCb?: (err: Error) => void
 
   private readonly defaultHeaders: {
-    Authorization: string;
-    "Content-Type": string;
-  };
+    Authorization: string
+    "Content-Type": string
+  }
 
   constructor(url: string, errCb?: (err: any) => void) {
-    this.url = url;
+    this.url = url
     this.errCb = errCb
     this.defaultHeaders = {
       Authorization: "",
       "Content-Type": "application/json",
-    };
+    }
 
-    this.setAuth = this.setAuth.bind(this);
+    this.setAuth = this.setAuth.bind(this)
   }
 
   setAuth(accessToken: string) {
-    this.defaultHeaders.Authorization = `Bearer ${accessToken}`;
+    this.defaultHeaders.Authorization = `Bearer ${accessToken}`
+  }
+
+  static async generateHeader() {
+    try {
+      const location = await getStoredUserLocation()
+      return {
+        "X-User-Latitude": location.latitude + "",
+        "X-User-Longitude": location.longitude + "",
+        "X-User-Altitude": location.altitude + "",
+      }
+    } catch (e) {
+      return {}
+    }
   }
 
   get<T, R = T>(
@@ -34,8 +50,8 @@ class Api {
       `${this.url}/${path}`,
       { method: "GET", ...options },
       transform,
-      this.errCb,
-    );
+      this.errCb
+    )
   }
 
   post<T, R = T>(
@@ -52,7 +68,7 @@ class Api {
       ...this.defaultHeaders,
       "Content-Type": isFileUpload ? "multipart/form-data" : "application/json",
       ...(options?.headers || {}),
-    };
+    }
     return this.request<T, R>(
       `${this.url}/${path}`,
       {
@@ -62,8 +78,8 @@ class Api {
         ...options,
       },
       transform,
-      this.errCb,
-    );
+      this.errCb
+    )
   }
 
   put<T, R = T>(
@@ -80,8 +96,8 @@ class Api {
         ...options,
       },
       transform,
-      this.errCb,
-    );
+      this.errCb
+    )
   }
 
   delete<T, R = T>(
@@ -98,8 +114,8 @@ class Api {
         ...options,
       },
       transform,
-      this.errCb,
-    );
+      this.errCb
+    )
   }
 
   private request: typeof customRequest = (path, options, transform, errCb) =>
@@ -113,8 +129,8 @@ class Api {
         },
       },
       transform,
-      errCb,
-    );
+      errCb
+    )
 }
 
-export default Api;
+export default Api
