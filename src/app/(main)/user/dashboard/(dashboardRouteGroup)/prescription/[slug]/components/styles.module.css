@@ -1,0 +1,26 @@
+.header { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+margin-top: 57px;
+}
+
+.headingWrapper { 
+    display: flex;
+    align-items: center;
+    gap: 8px
+}
+
+.heading {
+    font-family: var(--primary-font);
+font-weight: 600;
+font-size: 1.5rem;
+line-height: 130%;
+
+}
+
+.backBtn {
+    display: flex;
+    align-items: center;
+}

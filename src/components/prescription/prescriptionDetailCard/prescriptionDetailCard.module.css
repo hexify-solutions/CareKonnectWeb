@@ -1,0 +1,106 @@
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2.25rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-family: var(--primary-font);
+  }
+  
+  .header {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+  
+  .iconContainer {
+    flex-shrink: 0;
+    width: 3.625rem;
+    margin-top: 16px;
+    flex-shrink: 0;
+    height: 73px;
+  }
+  
+
+  
+  .prescriptionId {
+    color: var(--mui-palette-primary-main);
+    font-family: var(--primary-font);
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+  }
+  
+  .doctorName {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--mui-palette-design_secondary-field500);
+    margin: 0 0 4px 0;
+  }
+  
+  .hospitalInfo {
+    font-size: 14px;
+    color: var(--mui-palette-secondary-main);
+    margin: 0 0 3px 0;
+  }
+  
+  .dateTime {
+    font-size: 14px;
+    color: var(--mui-palette-secondary-main);
+    margin: 0;
+  }
+  
+  .content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+  }
+  
+  .section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sectionTitle {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--mui-palette-design_secondary-field500);
+    margin: 0 0 4px 0;
+  }
+  
+  .diagnosisItem,
+  .medicationItem,
+  .refillInfo {
+    font-size: 14px;
+    color: var(--mui-palette-design_light-onPrimaryContainer);
+    margin: 0 0 4px 0;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1024px) {
+    .content {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .content {
+      grid-template-columns: 1fr;
+    }
+  
+    .header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .prescriptionInfo {
+      width: 100%;
+    }
+  }
+  
