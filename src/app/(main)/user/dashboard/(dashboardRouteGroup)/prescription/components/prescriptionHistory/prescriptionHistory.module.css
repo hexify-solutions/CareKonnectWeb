@@ -34,4 +34,5 @@ color: var(--mui-palette-primary-main)
 
 .listItem {
     background-color: var(--mui-palette-common-white);
+    cursor: pointer;
 }

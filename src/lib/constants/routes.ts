@@ -4,12 +4,14 @@ const routes = {
   signup: "/onboarding/signup",
   login: "/onboarding/signin",
   logout: "?useraction=logout",
+  cart: "/product/cart",
   passwordChange: "/onboarding/password-change",
   verifyEmail: "/onboarding/verify-email",
   passwordReset: "/onboarding/password-reset",
 
   //pharmacy
   pharmacy: (id: string) => "/pharmacy/" + id,
+  findAPharmacy: (id: string) => "/pharmacy/drugsearch/" + id,
 
 
 
@@ -30,6 +32,7 @@ const routes = {
   userDashboardAppointments: "/user/dashboard/appointments",
   userDashboardServices: "/user/dashboard/services",
   userDashboardPrescription: "/user/dashboard/prescription",
+  userDashboardPrescriptionDetails: (slug: string) => "/user/dashboard/prescription/" + slug,
   userDashboardHealthRecords: "/user/dashboard/records",
   userDashboardSupports: "/user/dashboard/supports",
   userDashboardHealthBenefits: "/user/dashboard/healthbenefits",

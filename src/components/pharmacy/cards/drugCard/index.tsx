@@ -18,7 +18,7 @@ import clsx from "clsx"
 import Details from "./detailsComponent"
 
 interface ProductDetailProps {
-  product: {
+  product?: {
     id: string
     name: string
     price: number

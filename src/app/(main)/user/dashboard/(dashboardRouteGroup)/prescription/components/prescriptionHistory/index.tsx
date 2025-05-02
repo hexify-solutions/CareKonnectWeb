@@ -1,6 +1,8 @@
 import styles from "./prescriptionHistory.module.css"
 import PrescriptionCard from "@/components/prescription/prescriptionCard"
 import PrescriptionHistoryHeader from "./header"
+import Link from "next/link"
+import routes from "@/lib/constants/routes"
 
 const PrescriptionHistory = () => {
   return (
@@ -10,7 +12,9 @@ const PrescriptionHistory = () => {
         {Array.from({ length: 10 })?.map(() => {
           return (
             <li className={styles.listItem}>
-              <PrescriptionCard />
+              <Link href={routes.userDashboardPrescriptionDetails("123")}>
+                <PrescriptionCard />
+              </Link>
             </li>
           )
         })}
