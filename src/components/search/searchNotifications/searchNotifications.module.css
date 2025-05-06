@@ -1,0 +1,8 @@
+.inputWrapper {
+    width: 100%;
+}
+  
+.input {
+    width: 100%;
+    background-color: var(--mui-palette-design_light-background);
+}

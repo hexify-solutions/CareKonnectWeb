@@ -82,6 +82,24 @@ class Api {
     )
   }
 
+  patch<T, R = T>(
+    path: string,
+    body?: T,
+    options?: Record<never, never>,
+    transform?: Transformer<T, R>
+  ) {
+    return this.request<T, R>(
+      `${this.url}/${path}`,
+      {
+        method: "PATCH",
+        data: body,
+        ...options,
+      },
+      transform,
+      this.errCb,
+    );
+  }
+
   put<T, R = T>(
     path: string,
     body: T,

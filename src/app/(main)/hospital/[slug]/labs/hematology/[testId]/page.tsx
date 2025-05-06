@@ -36,7 +36,7 @@ const BloodCountBooking = () => {
                     <LabActions />
                 </div>
                 <div className={style.appointment}>
-                    <Breadcrumb excludePaths={["Home"]} />
+                    <Breadcrumb excludePaths={["hospital"]} />
                     <div className={style.cbcDetails}>
                         <CompleteBloodCountDetails />
                     </div>
@@ -47,9 +47,6 @@ const BloodCountBooking = () => {
                         </div>
                         <div>
                             <DatePicker />
-                            <div className={style.timePicker}>
-                                {/* <TimePicker /> */}
-                            </div>
                             <div>
                                 <h6 className={style.toggle}>Appointment Type</h6>
                                 <ToggleInput

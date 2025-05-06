@@ -1,5 +1,6 @@
-import { IconButton, Facebook, Instagram, Google } from "@hexify/atoms";
+import { IconButton, Facebook, Instagram, Google, Linkedin } from "@hexify/atoms";
 import styles from "./signInOptions.module.css";
+import { handleSocialLogin } from "@/app/utils/auth";
 
 const SignInOptions = () => {
   return (
@@ -7,18 +8,18 @@ const SignInOptions = () => {
       <span className={styles.lead}>Other sign in options</span>
       <ul className={styles.list}>
         <li className={styles.listItem}>
-          <IconButton  data-variant="not-filled">
+          <IconButton  data-variant="not-filled" onClick={() => handleSocialLogin("facebook")}>
             <Facebook />
           </IconButton>
         </li>
         <li className={styles.listItem}>
-          <IconButton data-variant="not-filled">
+          <IconButton data-variant="not-filled" onClick={() => handleSocialLogin("google")}>
             <Google />
           </IconButton>
         </li>
         <li className={styles.listItem}>
-          <IconButton  data-variant="not-filled">
-            <Instagram />
+          <IconButton  data-variant="not-filled" onClick={() => handleSocialLogin("linkedin")}>
+            <Linkedin variant="boarded" />
           </IconButton>
         </li>
       </ul>

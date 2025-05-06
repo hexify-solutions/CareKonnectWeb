@@ -6,6 +6,7 @@ import { CustomTheme } from "@hexify/atoms";
 import { Footer } from "@hexify/components";
 import footerMap from "../../data/footerMap.json";
 import styles from "./layout.module.css";
+import NotificationProvider from "@/context/notification/notificationProvider";
 
 
  function RootLayout({
@@ -15,20 +16,22 @@ import styles from "./layout.module.css";
 }>) {
   return (
     <CustomTheme>
-      <main className={styles.main}>
-        <header>
-          <NavigationComponent />
-        </header>
-        <>{children}</>
-        <div className={styles.footer}>
-          <Footer
-            terms={footerMap.terms}
-            copyright={footerMap.copyright}
-            socialLinks={footerMap.socialLinks}
-            linkGroups={footerMap?.linkGroup}
-          />
-        </div>
-      </main>
+      <NotificationProvider>
+        <main className={styles.main}>
+          <header>
+            <NavigationComponent />
+          </header>
+          <>{children}</>
+          <div className={styles.footer}>
+            <Footer
+              terms={footerMap.terms}
+              copyright={footerMap.copyright}
+              socialLinks={footerMap.socialLinks}
+              linkGroups={footerMap?.linkGroup}
+            />
+          </div>
+        </main>
+      </NotificationProvider>
     </CustomTheme>
   );
 }
