@@ -1,0 +1,67 @@
+.cartTotalWrapper {
+    background-color: var(--mui-palette-common-white);  
+    padding: 1.25rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0px 2px 12px 0px #00000014;
+    flex-grow: 1;
+
+}
+
+.lead {
+   font-family: var(--primary-font);
+font-weight: 600;
+font-size: 16px;
+line-height: 26px;
+letter-spacing: -2%;
+color: var(--mui-palette-primary-main);
+
+}
+
+.subLead {
+font-weight: 400;
+font-size: 16px;
+line-height: 26px;
+letter-spacing: -2%;
+color: #0000007A;
+
+
+}
+
+.infoWrapper {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin-top: 1.625rem;
+}
+
+.total {
+font-weight: 400;
+font-size: 20px;
+line-height: 130%;
+letter-spacing: -2%;
+text-align: center;
+margin-bottom: .625rem;
+color: var(--mui-palette-design_light-onPrimaryContainer)
+
+}
+
+.price {
+font-weight: 700;
+font-size: 30px;
+line-height: 130%;
+letter-spacing: -2%;
+margin-bottom: 1.625rem;
+}
+
+.enquiryWrapper {
+   margin-top: 14px;
+font-weight: 700;
+font-size: 14px;
+line-height: 19.6px;
+letter-spacing: -2%;
+color: #696B77;
+display: flex;
+align-items: center;
+gap: 2rem;
+}

@@ -1,12 +1,17 @@
 "use client"
 
-import ShoppingCart from "@/components/cart"
+import ShoppingCart from "@/components/cart/cart"
 import { useState } from "react"
 import { Breadcrumb, Button } from "@hexify/atoms"
 import styles from "./cart.module.css"
 import clsx from "clsx"
+import { useRouter } from "next/navigation"
+import CartSummaryCard from "../../../../components/cart/cartSummaryCard"
+import routes from "@/lib/constants/routes"
 
 const CartPage = () => {
+  const router = useRouter()
+
   const [cartItems, setCartItems] = useState([
     {
       id: "1",
@@ -83,27 +88,7 @@ const CartPage = () => {
           onUpdateQuantity={handleUpdateQuantity}
           onDeleteItem={handleDeleteItem}
         />
-        <div className={styles.cartTotalWrapper}>
-          <div className={styles.lead}>Product: 5pcs</div>
-          <div className={styles.subLead}>Found in 3 pharmacies, 2 Labs</div>
-          <div className={styles.infoWrapper}>
-            <div className={styles.total}>Total</div>
-            <div className={styles.price}>NGN 67,000</div>
-            <Button
-              size="large"
-              variant="contained"
-              color="primary"
-              fullWidth
-              rounded
-            >
-              Checkout
-            </Button>
-            <div className={styles.enquiryWrapper}>
-              <span>Product Inquiry?</span>
-              <span>Contact Us</span>
-            </div>
-          </div>
-        </div>
+        <CartSummaryCard  onCheckout={() => router.push(routes.checkout)}/>
       </div>
     </div>
   )

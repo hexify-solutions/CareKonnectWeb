@@ -13,7 +13,8 @@ const routes = {
   pharmacy: (id: string) => "/pharmacy/" + id,
   findAPharmacy: (id: string) => "/pharmacy/drugsearch/" + id,
 
-
+  // checkout 
+  checkout: "/product/cart/checkout",
 
 
   // doctors
