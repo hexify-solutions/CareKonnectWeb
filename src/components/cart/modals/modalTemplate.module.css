@@ -1,0 +1,64 @@
+.container {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .wrapper {
+    margin-top: 155px;
+    padding-bottom: 48px;
+    width: 100%;
+    max-width: 51.625rem;
+    background-color: var(--mui-palette-common-white);
+    font-family: var(--primary-font);
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    justify-content: space-between;
+    background-color: var(--mui-palette-design_light-surfaceVariant);
+  }
+  
+  .logoWrapper {
+    height: 42px;
+  }
+  
+  .cancelBtn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .detailsWrapper {
+    padding: 12px 48px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    color: var(--mui-palette-design_secondary-field500);
+  }
+
+
+  .footer {
+    padding: 2rem;
+    background-color: var(--mui-palette-design_light-surfaceVariant);
+    font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0%;
+  
+  }
+  
+  .iconWrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  margin-top: 2.5rem;
+  }
+  
+  .emp {
+    color: var(--mui-palette-primary-main);
+  }

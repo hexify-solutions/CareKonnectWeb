@@ -12,7 +12,6 @@ import formatAppointmentDate from "@/lib/utils/formatAppointmentDate";
 const PaymentReceiptModal = ({ open, cancelHandler, receipt }) => {
 
   const date = formatAppointmentDate(receipt?.transaction?.verifiedAt || "")
-  console.log(date, "this is the date here")
 
   return (
     <Modal open={open} onClose={cancelHandler}>
