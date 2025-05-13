@@ -243,6 +243,7 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
   resendVerifyEmailHandler.error = resendVerifyEmailMutation.error;
 
   return {
+    setAuthState,
     onRegister,
     onLogin,
     onVerify,

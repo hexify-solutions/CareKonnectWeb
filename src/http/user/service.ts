@@ -10,4 +10,9 @@ export const createEmergencyContact = (params) => {
 export const createUserVital = (params) => {
     return api.post(endPoints.createUserVitals, params);
   };
+
+  
+export const updateProfile = (params: any) => {
+    return api.patch(endPoints.updateProfile, params);
+  };
   

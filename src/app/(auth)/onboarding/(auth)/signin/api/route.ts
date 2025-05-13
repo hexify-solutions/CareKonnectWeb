@@ -1,4 +1,5 @@
 import { cookies } from "next/headers";
+import { NextResponse } from 'next/server'
 
 export async function POST(req: Request) {
   try {
@@ -49,5 +50,38 @@ export async function POST(req: Request) {
         headers: { "Content-Type": "application/json" },
       }
     );
+  }
+}
+
+
+
+
+export async function GET() {
+  const cookieStore = await cookies()
+  const token =  cookieStore.get('auth_token')?.value
+  const apiUrl = process.env.NEXT_PUBLIC_URL_PROD ?? "http://localhost:9000";
+
+
+  if (!token) {
+    return NextResponse.json({ authenticated: false }, { status: 401 })
+  }
+
+  try {
+
+    const response = await fetch(`${apiUrl}/auth/me`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+
+      },
+     
+    });
+    const data = await response.json();
+
+
+    return NextResponse.json({ authenticated: true , token, profile: data?.data})
+  } catch (err) {
+    return NextResponse.json({ authenticated: false }, { status: 401 })
   }
 }

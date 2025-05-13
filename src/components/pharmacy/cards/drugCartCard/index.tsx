@@ -1,25 +1,38 @@
-import Image from "next/image";
-import styles from "./drugCartCard.module.css";
-import { Button, Info, CartIconTwo, Star } from "@hexify/atoms";
+"use client"
 
-const DrugCartCard = () => {
+import Image from "next/image"
+import styles from "./drugCartCard.module.css"
+import { Button, Info, CartIconTwo, Star } from "@hexify/atoms"
+import { useCartContext } from "@/context/cart"
+
+const DrugCartCard = ({ drug }: any) => {
+  const { addToCart } = useCartContext()
+
+  const addToCartHandler = (e) => {
+    e?.preventDefault?.()
+    e?.stopPropagation?.()
+    addToCart(drug?.id, drug)
+  }
+
+  const inStock = drug?.status?.toLowerCase() === "in stock"
+
+  const displayedData = {
+    thumbnail: drug?.thumbnail,
+    name: drug?.name,
+    description: drug?.description,
+    price: drug?.doses?.[0]?.price?.toLocaleString() || 1000
+  }
+
+  
   return (
     <div className={styles.card}>
       <div className={styles.rightSection}>
         <aside className={styles.image}>
-          <Image
-            alt="drug"
-            fill
-            src="https://images.pexels.com/photos/2386141/pexels-photo-2386141.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-          />
+          <Image alt="drug" fill src={displayedData?.thumbnail} />
         </aside>
         <div className={styles.drugDetails}>
-          <h6 className={styles.drugName}>
-            Red SealVitamin C-100ML- Natural Orange Original
-          </h6>
-          <span className={styles.drugDescription}>
-            For oral administration, Gedeon Richter, Hungary
-          </span>
+          <h6 className={styles.drugName}>{displayedData?.name}</h6>
+          <span className={styles.drugDescription}>{displayedData?.description}</span>
           <button className={styles.drugInstruction}>
             <Info />
             <span>Instructions</span>
@@ -27,19 +40,34 @@ const DrugCartCard = () => {
         </div>
       </div>
       <div className={styles.actions}>
-        <span className={styles.price}>NGN 2,599.00</span>
+        <span className={styles.price}>NGN {displayedData?.price}</span>
         <div className={styles.btnActions}>
-          <Button className={styles.saveBtn} size="medium" variant="outlined" color="secondary" rounded>
+          <Button
+            className={styles.saveBtn}
+            size="medium"
+            variant="outlined"
+            color="secondary"
+            rounded
+          >
             <Star fill="" stroke="currentColor" />
             <span>Save for later </span>
           </Button>
-          <Button size="medium" variant="contained" rounded>
-            <CartIconTwo /> <span>Add to cart</span>
-          </Button>
+          {
+            <Button
+              onClick={addToCartHandler}
+              disabled={!inStock}
+              size="medium"
+              variant="contained"
+              rounded
+            >
+              <CartIconTwo />{" "}
+              <span>{inStock ? "Add to cart" : "Not in Stock"}</span>
+            </Button>
+          }
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default DrugCartCard;
+export default DrugCartCard

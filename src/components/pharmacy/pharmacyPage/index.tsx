@@ -38,7 +38,7 @@ const PharmacyPage = ({ slug, pharmacy }) => {
         )}
         {activeSection === "about" && (
           <div className={styles.productList}>
-            <PharmacyAboutUsCard />
+            <PharmacyAboutUsCard pharmacy={pharmacy} />
           </div>
         )}
         {activeSection === "review" && (

@@ -31,6 +31,7 @@ export const AuthContext = createContext<
       resendVerifyEmailHandler: resendVerifyEmailType
       onPasswordChange: OnPasswordChangeType
       onLogOut: () => void
+      setAuthState: (p: any) => void
     }
   | undefined
 >(undefined)
@@ -50,7 +51,8 @@ const AuthProvider = ({
     isAuth,
     onTriggerPasswordChange,
     resendVerifyEmailHandler,
-    onPasswordChange
+    onPasswordChange,
+    setAuthState,
   } = useAuth(initialAuthState)
 
   const value = {
@@ -63,6 +65,7 @@ const AuthProvider = ({
     resendVerifyEmailHandler,
     onLogOut,
     onPasswordChange,
+    setAuthState,
   }
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

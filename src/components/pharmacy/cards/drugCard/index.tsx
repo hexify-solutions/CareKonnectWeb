@@ -16,6 +16,7 @@ import styles from "./drugCard.module.css"
 import { ArrowLeft, Button, ChevronRight, Rating, Tabs } from "@hexify/atoms"
 import clsx from "clsx"
 import Details from "./detailsComponent"
+import { useGetPharmacyDrugById } from "@/http/pharmacy/query"
 
 interface ProductDetailProps {
   product?: {
@@ -35,6 +36,8 @@ interface ProductDetailProps {
     }>
     usage: string
   }
+  pharmacyId: string;
+  drugId: string;
 }
 
 const productD = {
@@ -77,20 +80,36 @@ const productD = {
     "Using vitamin C supplements effectively involves understanding the appropriate dosage, the form that best suits your needs, and the timing of intake. Here are some guidelines.",
 }
 
-const ProductDetail = ({ product = productD }: ProductDetailProps) => {
+const ProductDetail = ({ product = productD, pharmacyId, drugId,  }: ProductDetailProps) => {
+
+
+
+  const {data, isLoading, error  } = useGetPharmacyDrugById({
+    pharmacyId,
+    drugId,
+  })
+
+  console.log(data, isLoading, error, "this is from the drug card")
+
+  const displayedData = {
+    images: data?.data?.images || [],
+    name: data?.data?.name, 
+    description: data?.data?.description
+  }
+
   const [selectedImage, setSelectedImage] = useState(0)
   const [selectedFlavor, setSelectedFlavor] = useState(0)
   const [quantity, setQuantity] = useState(1)
 
   const handlePrevImage = () => {
     setSelectedImage((prev) =>
-      prev === 0 ? product?.images?.length - 1 : prev - 1
+      prev === 0 ? displayedData?.images?.length - 1 : prev - 1
     )
   }
 
   const handleNextImage = () => {
     setSelectedImage((prev) =>
-      prev === product?.images?.length - 1 ? 0 : prev + 1
+      prev === displayedData?.images?.length - 1 ? 0 : prev + 1
     )
   }
 
@@ -141,7 +160,7 @@ const ProductDetail = ({ product = productD }: ProductDetailProps) => {
         <div className={styles.productImageContainer}>
           <div className={styles.mainImage}>
             <Image
-              src={product.images[selectedImage]}
+              src={displayedData.images[selectedImage]}
               alt={product.name}
               width={249}
               height={350}
@@ -152,7 +171,7 @@ const ProductDetail = ({ product = productD }: ProductDetailProps) => {
 
         {/* Product Info */}
         <div className={styles.productInfo}>
-          <h1 className={styles.productTitle}>{product.name}</h1>
+          <h1 className={styles.productTitle}>{displayedData?.name}</h1>
 
           {/* Rating */}
           <div className={styles.ratingContainer}>
@@ -171,14 +190,14 @@ const ProductDetail = ({ product = productD }: ProductDetailProps) => {
             <button onClick={handlePrevImage} className={styles.galleryButton}>
               <ArrowLeft />
             </button>
-            {product.images.map((image, index) => (
+            {displayedData.images.map((image, index) => (
               <div
                 key={index}
                 className={`${styles.thumbnail} ${selectedImage === index ? styles.activeThumbnail : ""}`}
                 onClick={() => setSelectedImage(index)}
               >
                 <Image
-                  src={image || "/placeholder.svg"}
+                  src={image}
                   alt={`${product.name} thumbnail ${index + 1}`}
                   height={79}
                   width={57}
@@ -201,10 +220,10 @@ const ProductDetail = ({ product = productD }: ProductDetailProps) => {
           </div>
 
           {/* Description */}
-          <p className={styles.description}>
-            {product.description}{" "}
+         {displayedData?.description && <p className={styles.description}>
+            {displayedData?.description}{" "}
             <button className={styles.readMore}>Read more...</button>
-          </p>
+          </p>}
 
           {/* Flavor Selection */}
           <div className={styles.flavorSection}>

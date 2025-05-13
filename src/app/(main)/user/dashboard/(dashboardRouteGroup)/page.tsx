@@ -31,6 +31,7 @@ const Dashboard = async () => {
 
   const stats = await getUserStats();
 
+
   const appointmentData = generateSummaryData(stats?.appointment)
   const serviceData = generateSummaryData(stats?.service)
   const prescriptionData = generateSummaryData(stats?.prescriptions);

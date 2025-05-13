@@ -1,3 +1,4 @@
+import routes from "@/lib/constants/routes"
 import styles from "./vitalCard.module.css"
 import { EmailIcon, Button } from "@hexify/atoms"
 
@@ -9,7 +10,7 @@ const VitalCard = ({ vitals }) => {
           <EmailIcon />
           <span>Vitals</span>
         </div>
-        <Button data-variant="text" color="primary" className={styles.btn}>
+        <Button href={routes.profileVitals} data-variant="text" color="primary" className={styles.btn}>
           Update
         </Button>
       </div>

@@ -18,7 +18,7 @@ const UserProfileDropdown = () => {
           displayText={`${profile?.firstName} ${profile?.lastName}`}
           size="xsmall"
           //@ts-ignore
-          src={profile?.image}
+          src={profile?.avatarUrl}
         ></Avatar>
       </button>
       {isOpen && (

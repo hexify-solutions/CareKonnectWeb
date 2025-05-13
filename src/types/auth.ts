@@ -12,7 +12,14 @@ export type ProfileType = {
   email: string
   id: string
   firstName?: string
+  fullName?: string;
+  profile?: {avatarUrl?: string};
   lastName?: string
+  dob?: string;
+  avatarUrl?: string
+  gender?: string;
+  phoneNumber?: string;
+  address?: string;
 }
 
 export type LoginResponseType = {

@@ -3,6 +3,7 @@ import categoriesData from "../../../../data/categories.json";
 import { ArrowCurvedRight, } from "@hexify/atoms";
 import Link from "next/link";
 import styles from "./categories.module.css";
+import routes from "@/lib/constants/routes";
 
 const Categories = () => {
   return (
@@ -23,7 +24,7 @@ const Categories = () => {
           {categoriesData?.map(({path, ...category}) => {
             return (
               <li key={category.label}  className={styles.categoryListItem}>
-                <Link href={path}>
+                <Link href={routes?.search(`category=${path}`)}>
                 <CategoryCard {...category} />
                 </Link>
               </li>

@@ -29,6 +29,7 @@ const routes = {
 
   // user routes
   profile: "/user/profile",
+  profileVitals: "/user/profile/vitals",
   userDashboard: "/user/dashboard",
   userDashboardAppointments: "/user/dashboard/appointments",
   userDashboardServices: "/user/dashboard/services",
