@@ -15,6 +15,9 @@
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.625rem;
+  display: flex;
+  align-items: center;
+  gap: .375rem;
   text-align: left;
   margin: 0 0 2rem 0;
   color: var(--mui-palette-common-black);
@@ -72,4 +75,13 @@
   font-size: 0.75rem;
   font-family: var(--font-primary);
   font-weight: 600;
+}
+
+
+.updateBackBtn {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 4px;
 }

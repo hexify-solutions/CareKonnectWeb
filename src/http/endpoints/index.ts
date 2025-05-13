@@ -19,6 +19,7 @@ const endPoints = {
     getUserVitals: "/vitals/user",
     createEmergencyContact: 'emergency',
     getEmergencyContact: "emergency",
+    updateProfile: 'auth/profile',
 
 
     // appointments
@@ -33,8 +34,12 @@ const endPoints = {
     getDoctor: (id: string) => `doctors/${id}`,
 
     // pharmacies 
-    getPharmacy: (id: string) => `pharmacies/${id}`
+    getPharmacy: (id: string) => `pharmacies/${id}`,
+    getPharmacyDrugs: () => `inventory`,
+    getPharmacyDrug: (params: { pharmacyId: string; drugId: string }) => `inventory/${params.drugId}`,
 
+    // documents 
+    uploadDocument: "/documents"
 
 }
 

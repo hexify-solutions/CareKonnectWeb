@@ -1,4 +1,5 @@
 import styles from "./prescriptionCard.module.css";
+import routes from "@/lib/constants/routes";
 import { EmailIcon, Button } from "@hexify/atoms";
 
 const PrescriptionCard = () => {
@@ -9,7 +10,7 @@ const PrescriptionCard = () => {
           <EmailIcon />
           <span>New prescription - PR764-2535E</span>
         </div>
-        <Button data-variant="text" color="primary" className={styles.btn}>
+        <Button href={routes?.userDashboardPrescriptionDetails('0')} data-variant="text" color="primary" className={styles.btn}>
           View details
         </Button>
       </div>

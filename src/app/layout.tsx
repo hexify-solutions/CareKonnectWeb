@@ -5,6 +5,7 @@ import AuthProvider from "@/context/auth"
 import SecureStorageProvider from "@/context/storage"
 import ToastProvider from "@/context/toastProvider"
 import UserLocationProvider from "@/context/location"
+import CartProvider from "@/context/cart"
 
 export const metadata: Metadata = {
   title: "Care Konnect",
@@ -23,7 +24,9 @@ export default function RootLayout({
           <SecureStorageProvider>
             <QueryProvider>
               <AuthProvider>
+                <CartProvider>
                 <main>{children} </main>
+                </CartProvider>
               </AuthProvider>
               <ToastProvider />
             </QueryProvider>

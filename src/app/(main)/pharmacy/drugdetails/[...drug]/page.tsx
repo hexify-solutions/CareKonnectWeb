@@ -11,15 +11,10 @@ const PharmacyDrugPage = async ({ params }) => {
   const parsedParams = await params
   const formattedParams = parseKeyValueArray(parsedParams?.drug)
 
-  console.log(
-    parsedParams,
-    formattedParams,
-    ">>>>>>>>>>>>>>>>>>>> tis is the pased params"
-  )
+
 
   const pharmacy = await getPharmacyById(formattedParams?.p || "")
 
-  console.log(pharmacy, ">>>>>>>>>>>>>>>> from drugs page")
   return (
     <div>
       <div className={clsx("inner-wrapper", styles.wrapper)}>
@@ -36,7 +31,7 @@ const PharmacyDrugPage = async ({ params }) => {
         />
         <PharmacyBanner pharmacy={pharmacy} />
         <div className={styles.drugCardWrapper}>
-        <DrugCard />
+        <DrugCard pharmacyId={formattedParams?.p || ""} drugId={formattedParams?.d || ""} />
         </div>
       </div>
     </div>
