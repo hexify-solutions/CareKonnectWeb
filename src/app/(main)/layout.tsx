@@ -6,7 +6,7 @@ import { CustomTheme } from "@hexify/atoms";
 import { Footer } from "@hexify/components";
 import footerMap from "../../data/footerMap.json";
 import styles from "./layout.module.css";
-import NotificationProvider from "@/context/notification/notificationProvider";
+// import NotificationProvider from "@/context/notification/notificationProvider";
 
 
  function RootLayout({
@@ -16,7 +16,7 @@ import NotificationProvider from "@/context/notification/notificationProvider";
 }>) {
   return (
     <CustomTheme>
-      <NotificationProvider>
+      {/* <NotificationProvider> */}
         <main className={styles.main}>
           <header>
             <NavigationComponent />
@@ -31,7 +31,7 @@ import NotificationProvider from "@/context/notification/notificationProvider";
             />
           </div>
         </main>
-      </NotificationProvider>
+      {/* </NotificationProvider> */}
     </CustomTheme>
   );
 }
