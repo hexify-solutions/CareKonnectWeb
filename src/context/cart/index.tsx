@@ -31,10 +31,10 @@ const cartReducer = (state, action) => {
       let updatedCart
       if (existing) {
         updatedCart = state.cartItems.map((item) =>
-          item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+          item.id === id ? { ...product } : item
         )
       } else {
-        updatedCart = [...state.cartItems, { ...product, quantity: 1 }]
+        updatedCart = [...state.cartItems, { ...product }]
       }
 
       return updateTotals({ ...state, cartItems: updatedCart })

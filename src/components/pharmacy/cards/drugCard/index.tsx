@@ -4,19 +4,20 @@ import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import {
-  ChevronLeft,
   Heart,
   Plus,
   Minus,
   Check,
-  ArrowRight,
   ShoppingCart,
 } from "lucide-react"
 import styles from "./drugCard.module.css"
-import { ArrowLeft, Button, ChevronRight, Rating, Tabs } from "@hexify/atoms"
+import { ArrowLeft, Button, ChevronRight, Rating, Spinner, Tabs } from "@hexify/atoms"
 import clsx from "clsx"
 import Details from "./detailsComponent"
 import { useGetPharmacyDrugById } from "@/http/pharmacy/query"
+import routes from "@/lib/constants/routes"
+import { useMemo } from "react"
+import { useCart } from "@/context/cart"
 
 interface ProductDetailProps {
   product?: {
@@ -94,7 +95,36 @@ const ProductDetail = ({
     images: data?.data?.images || [],
     name: data?.data?.name,
     description: data?.data?.description,
+    doses: data?.data?.doses,
+    review: undefined,
+    reviewCount: undefined,
+    flavors: [],
+    currency: "NGN",
   }
+
+  const [selectedDoseId, setSelectedDoseId] = useState(
+    displayedData?.doses?.[0]?.id
+  )
+
+
+  const selectedDose = useMemo(() => {
+    const dose = displayedData?.doses?.find((d) => d?.id === selectedDoseId)
+    if (!!dose) {
+      return dose
+    }
+
+    return displayedData?.doses?.[0]
+  }, [selectedDoseId, displayedData])
+
+  const { addToCart, cartItems } = useCart();
+
+
+  console.log(cartItems, "these are the items here")
+
+
+
+
+
 
   const [selectedImage, setSelectedImage] = useState(0)
   const [selectedFlavor, setSelectedFlavor] = useState(0)
@@ -119,10 +149,17 @@ const ProductDetail = ({
     }
   }
 
+  const handleDoseSelection = (e: any) => {
+    setSelectedDoseId(e?.target?.value)
+  }
+
+
+
+
   const tabs = [
     {
       label: "Details",
-      Component: () => <Details product={product} />,
+      Component: () => <Details product={data?.data} selectedDose={selectedDose} />,
     },
     {
       label: "Packing",
@@ -134,23 +171,36 @@ const ProductDetail = ({
     },
   ]
 
+
+  const addToCartHandler = () => {
+    addToCart(selectedDose?.id, {
+      name: displayedData?.name,
+      form: selectedDose?.form,
+      quantity,
+
+    })
+  }
+
+
+  if(isLoading) {
+    return <div className={styles.container}>
+      <Spinner />
+    </div>
+  }
   return (
     <div className={styles.container}>
       <div className={styles.breadcrumb}>
-        <Link href="/" className={styles.breadcrumbLink}>
+        <Link
+          href={routes.pharmacy(pharmacyId)}
+          className={styles.breadcrumbLink}
+        >
           <ArrowLeft />
           Products
         </Link>
         <span className={styles.breadcrumbSeparator}>
           <ChevronRight />
         </span>
-        <Link href="/" className={styles.breadcrumbLink}>
-          Supplements
-        </Link>
-        <span className={styles.breadcrumbSeparator}>
-          <ChevronRight />
-        </span>
-        <span className={styles.breadcrumbCurrent}>Vitamin C</span>
+        <span className={styles.breadcrumbCurrent}>{displayedData?.name}</span>
       </div>
 
       <div className={styles.productGrid}>
@@ -159,7 +209,7 @@ const ProductDetail = ({
           <div className={styles.mainImage}>
             <Image
               src={displayedData.images[selectedImage]}
-              alt={product.name}
+              alt={displayedData.name || ""}
               width={249}
               height={350}
               className={styles.image}
@@ -172,48 +222,55 @@ const ProductDetail = ({
           <h1 className={styles.productTitle}>{displayedData?.name}</h1>
 
           {/* Rating */}
-          <div className={styles.ratingContainer}>
-            <div className={styles.stars}>
-              <Rating defaultValue={4} readOnly />
+          {displayedData?.review && (
+            <div className={styles.ratingContainer}>
+              <div className={styles.stars}>
+                <Rating defaultValue={4} readOnly />
+              </div>
+              <span className={styles.reviewCount}>
+                {displayedData.reviewCount} reviews
+              </span>
+              <span className={styles.separator}>|</span>
+              <span className={styles.size}>{selectedDose.quantity}</span>
             </div>
-            <span className={styles.reviewCount}>
-              {product.reviewCount} reviews
-            </span>
-            <span className={styles.separator}>|</span>
-            <span className={styles.size}>{product.size}</span>
-          </div>
+          )}
 
           {/* Thumbnail Gallery */}
-          <div className={styles.thumbnailGallery}>
-            <button onClick={handlePrevImage} className={styles.galleryButton}>
-              <ArrowLeft />
-            </button>
-            {displayedData.images.map((image, index) => (
-              <div
-                key={index}
-                className={`${styles.thumbnail} ${selectedImage === index ? styles.activeThumbnail : ""}`}
-                onClick={() => setSelectedImage(index)}
+          {!!displayedData?.images?.length && (
+            <div className={styles.thumbnailGallery}>
+              <button
+                onClick={handlePrevImage}
+                className={styles.galleryButton}
               >
-                <Image
-                  src={image}
-                  alt={`${product.name} thumbnail ${index + 1}`}
-                  height={79}
-                  width={57}
-                />
-              </div>
-            ))}
-            <button
-              onClick={handleNextImage}
-              className={clsx(styles.galleryButton, styles.next)}
-            >
-              <ArrowLeft />
-            </button>
-          </div>
+                <ArrowLeft />
+              </button>
+              {displayedData.images.map((image, index) => (
+                <div
+                  key={index}
+                  className={`${styles.thumbnail} ${selectedImage === index ? styles.activeThumbnail : ""}`}
+                  onClick={() => setSelectedImage(index)}
+                >
+                  <Image
+                    src={image}
+                    alt={`${displayedData.name} thumbnail ${index + 1}`}
+                    height={79}
+                    width={57}
+                  />
+                </div>
+              ))}
+              <button
+                onClick={handleNextImage}
+                className={clsx(styles.galleryButton, styles.next)}
+              >
+                <ArrowLeft />
+              </button>
+            </div>
+          )}
 
           {/* Price */}
           <div className={styles.priceContainer}>
             <h2 className={styles.price}>
-              {product.currency} {product.price.toLocaleString()}
+              {displayedData.currency} {selectedDose?.price?.toLocaleString()}
             </h2>
           </div>
 
@@ -226,37 +283,53 @@ const ProductDetail = ({
           )}
 
           {/* Flavor Selection */}
-          <div className={styles.flavorSection}>
-            <div>
-              <h3 className={styles.sectionTitle}>Flavour</h3>
-              <div className={styles.selectedFlavorName}>
-                {product.flavors[selectedFlavor].name}
+          {!!displayedData?.flavors?.length && (
+            <div className={styles.flavorSection}>
+              <div>
+                <h3 className={styles.sectionTitle}>Flavour</h3>
+                <div className={styles.selectedFlavorName}>
+                  {displayedData?.flavors[selectedFlavor].name}
+                </div>
+              </div>
+              <div className={styles.flavorOptions}>
+                {displayedData.flavors.map((flavor, index) => (
+                  <div
+                    key={index}
+                    className={`${styles.flavorOption} ${selectedFlavor === index ? styles.selectedFlavor : ""}`}
+                    onClick={() => setSelectedFlavor(index)}
+                    style={{ backgroundColor: flavor.color }}
+                  >
+                    <Image
+                      src={flavor.image || "/placeholder.svg"}
+                      alt={flavor.name}
+                      width={56}
+                      height={52}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
-            <div className={styles.flavorOptions}>
-              {product.flavors.map((flavor, index) => (
-                <div
-                  key={index}
-                  className={`${styles.flavorOption} ${selectedFlavor === index ? styles.selectedFlavor : ""}`}
-                  onClick={() => setSelectedFlavor(index)}
-                  style={{ backgroundColor: flavor.color }}
-                >
-                  <Image
-                    src={flavor.image || "/placeholder.svg"}
-                    alt={flavor.name}
-                    width={56}
-                    height={52}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+          )}
 
           {/* Quantity and Add to Cart */}
           <div className={styles.purchaseOptions}>
             <label htmlFor="quantity" className={styles.sizeSelector}>
-              <select id="quantity" className={styles.select}>
-                <option>{product.size}</option>
+              <select
+                onChange={handleDoseSelection}
+                id="quantity"
+                className={styles.select}
+              >
+                {displayedData?.doses?.map((dose) => {
+                  return (
+                    <option
+                      value={dose?.id}
+                      className={styles.option}
+                      key={dose?.id}
+                    >
+                      {dose?.form?.[0]?.toUpperCase()}{dose?.form?.slice(1)} {`(${dose?.strength}${dose?.unit})`}
+                    </option>
+                  )
+                })}
               </select>
             </label>
             <div className={styles.quantitySelector}>
@@ -284,6 +357,7 @@ const ProductDetail = ({
               color="primary"
               rounded
               className={styles.addToCartButton}
+             onClick={addToCartHandler}
             >
               {" "}
               <ShoppingCart size={18} /> Add to cart

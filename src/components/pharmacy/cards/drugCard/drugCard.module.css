@@ -295,6 +295,10 @@
   line-height: 1.625rem;
 }
 
+.option {
+  text-transform: capitalize;
+}
+
 .quantitySelector {
   background-color: #f8faf0;
 

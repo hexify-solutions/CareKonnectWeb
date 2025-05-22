@@ -17,6 +17,7 @@ const PharmacyProductList = ({ pharmacy }: any) => {
     id: pharmacy?.id,
   })
 
+
   return (
     <div>
       <div className={styles.productList}>

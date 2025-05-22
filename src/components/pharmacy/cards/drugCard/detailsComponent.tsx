@@ -6,7 +6,9 @@ import styles from "./drugCard.module.css"
 
 
 
-const Details = ({ product  }) => {
+const Details = ({ product, selectedDose  }: any) => {
+
+
   const [expandedSection, setExpandedSection] = useState("how-to-use")
 
   const toggleSection = (section: string) => {
@@ -33,7 +35,7 @@ const Details = ({ product  }) => {
             )}
         </button>
         {expandedSection === "key-features" && (
-          <div className={styles.accordionContent}>Content here</div>
+          <div className={styles.accordionContent}>{product?.keyFeatures}</div>
         )}
       </div>
 
@@ -55,7 +57,7 @@ const Details = ({ product  }) => {
             )}
         </button>
         {expandedSection === "ingredients" && (
-          <div className={styles.accordionContent}>Content here</div>
+          <div className={styles.accordionContent}>{product?.ingredients}</div>
         )}
       </div>
 
@@ -78,7 +80,7 @@ const Details = ({ product  }) => {
         </button>
         {expandedSection === "how-to-use" && (
           <div className={styles.accordionContent}>
-            <p>{product?.usage}</p>
+            <p>{product?.howToUse}</p>
           </div>
         )}
       </div>
@@ -101,7 +103,7 @@ const Details = ({ product  }) => {
             )}
         </button>
         {expandedSection === "quality" && (
-          <div className={styles.accordionContent}>Content here</div>
+          <div className={styles.accordionContent}>{selectedDose?.quantity}</div>
         )}
       </div>
     </div>

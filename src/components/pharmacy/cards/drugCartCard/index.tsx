@@ -6,13 +6,8 @@ import { Button, Info, CartIconTwo, Star } from "@hexify/atoms"
 import { useCartContext } from "@/context/cart"
 
 const DrugCartCard = ({ drug }: any) => {
-  const { addToCart } = useCartContext()
 
-  const addToCartHandler = (e) => {
-    e?.preventDefault?.()
-    e?.stopPropagation?.()
-    addToCart(drug?.id, drug)
-  }
+
 
   const inStock = drug?.status?.toLowerCase() === "in stock"
 
@@ -20,7 +15,7 @@ const DrugCartCard = ({ drug }: any) => {
     thumbnail: drug?.thumbnail,
     name: drug?.name,
     description: drug?.description,
-    price: drug?.doses?.[0]?.price?.toLocaleString() || 1000
+    price: drug?.doses?.[0]?.price?.toLocaleString(),
   }
 
   
@@ -40,8 +35,9 @@ const DrugCartCard = ({ drug }: any) => {
         </div>
       </div>
       <div className={styles.actions}>
-        <span className={styles.price}>NGN {displayedData?.price}</span>
-        <div className={styles.btnActions}>
+{     displayedData?.price &&   <span className={styles.price}>NGN {displayedData?.price}</span>
+}        
+<div className={styles.btnActions}>
           <Button
             className={styles.saveBtn}
             size="medium"
@@ -54,7 +50,6 @@ const DrugCartCard = ({ drug }: any) => {
           </Button>
           {
             <Button
-              onClick={addToCartHandler}
               disabled={!inStock}
               size="medium"
               variant="contained"
