@@ -22,7 +22,7 @@
     line-height: 130%;
     letter-spacing: -2%;
     vertical-align: middle;
-    color: var(--Schemes-Primary, #446832);
+    color: var(--mui-color-primary);
     margin: 2.1875rem 0rem;
 }
 
@@ -42,7 +42,7 @@
     line-height: 130%;
     letter-spacing: -2%;
     vertical-align: middle;
-    color: var(--Schemes-Primary, #446832);
+    color: var(--mui-color-primary);
     margin: 2.1875rem 0 1.5625rem;
 }
 
@@ -53,7 +53,7 @@
     line-height: 130%;
     letter-spacing: -2%;
     vertical-align: middle;
-    color: var(--Schemes-Primary, #446832);
+    color: var(--mui-color-primary);
     margin: 2.1875rem 0 1.375rem;
 }
 

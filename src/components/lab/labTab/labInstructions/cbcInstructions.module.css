@@ -9,7 +9,7 @@
     font-size: 1.125rem;
     line-height: 1.75rem;
     letter-spacing: -2%;
-    color: var(--Schemes-Primary, #446832);
+    color: var(--mui-color-primary);
     text-transform: uppercase;
     margin-top: 1.875rem;
     margin-bottom: 1.25rem;

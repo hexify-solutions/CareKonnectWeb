@@ -68,6 +68,6 @@
     text-decoration-style: solid;
     /* text-decoration-thickness: 0%;
     text-decoration-skip-ink: auto; */
-    color: var(--Schemes-Primary, #446832);
+    color: var(--mui-color-primary);
 
 }

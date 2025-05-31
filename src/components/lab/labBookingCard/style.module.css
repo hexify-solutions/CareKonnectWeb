@@ -108,7 +108,7 @@
     font-size: 0.875rem;
     line-height: 1.25rem;
     letter-spacing: -2%;
-    color: var(--Schemes-Primary, #446832);
+    color: var(--mui-color-primary);
 }
 
 .test {
@@ -117,7 +117,7 @@
     font-size: 1rem;
     line-height: 1.625rem;
     letter-spacing: -2%;
-    color: var(--Schemes-Primary, #446832);
+    color: var(--mui-color-primary);
     margin-bottom: 0.625rem;
 }
 
@@ -142,7 +142,7 @@
 .appointment {
     line-height: 1.25rem;
     letter-spacing: -2%;
-    color: var(--Schemes-Primary, #446832); 
+    color: var(--mui-color-primary);
 }
 
 .visit {
@@ -163,7 +163,7 @@
 
 .title {  
     line-height: 1.25rem;
-    color: var(--Schemes-Primary, #446832);
+    color: var(--mui-color-primary);
 }
 
 .text {
