@@ -1,11 +1,11 @@
 
-[2K[1G[1myarn run v1.22.19[22m
+[2K[1G[1myarn run v1.22.22[22m
 [2K[1G[2m$ next build[22m
    [1m[38;2;173;127;168m▲ Next.js 15.2.4[39m[22m
    - Environments: .env.local, .env.production
 
  [37m[1m [22m[39m Creating an optimized production build ...
-<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|javascript/auto|/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/next-flight-css-loader.js??ruleSet[1].rules[13].oneOf[5].use[0]!/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[1]!/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!/Users/handiwoker/Desktop/Application/Handiwoker/carekonnect-web-monorepo/apps/patients/src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css|ssr': No serializer registered for Warning
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|javascript/auto|/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/next-flight-css-loader.js??ruleSet[1].rules[13].oneOf[5].use[0]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[1]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css|ssr': No serializer registered for Warning
 <w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> Array { 1 items } -> webpack/lib/ModuleWarning -> Warning
  ⚠ Compiled with warnings
 
@@ -19,161 +19,176 @@ Import trace for requested module:
 ./src/components/payment/paymentSuccessModal/index.tsx
 ./src/components/payment/paymentForm/index.tsx
 
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css': No serializer registered for Warning
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> Array { 1 items } -> webpack/lib/ModuleWarning -> Warning
+ ⚠ Compiled with warnings
+
+./src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css.webpack[javascript/auto]!=!../../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!../../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css
+Warning
+
+(21:3) autoprefixer: start value has mixed support, consider using flex-start instead
+
+Import trace for requested module:
+./src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css.webpack[javascript/auto]!=!../../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!../../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css
+./src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css
+./src/components/payment/paymentSuccessModal/index.tsx
+./src/components/payment/paymentForm/index.tsx
+
  [32m[1m✓[22m[39m Compiled successfully
  [37m[1m [22m[39m Skipping validation of types
  [37m[1m [22m[39m Skipping linting
-[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
-[?25l [37m[1m [22m[39m Generating static pages (0/30)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/30)  [36m[=   ][39m[2K[1G[?25hhttps://api.carekonnect.hexifysolutions.com/v1 true
-https://api.carekonnect.hexifysolutions.com/v1 true
+[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
+[?25l [37m[1m [22m[39m Generating static pages (0/30)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/30)  [36m[=   ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/30)  [36m[==  ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/30)  [36m[=== ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/30)  [36m[ ===][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/30)  [36m[  ==][39m[2K[1G[?25hhttps://whale-uncommon-sheep.ngrok-free.app/v1 true
 Error in get dashboard/stats: Error: Dynamic server usage: Route /user/dashboard couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
     at m (.next/server/chunks/986.js:12:14676)
     at f (.next/server/chunks/5208.js:1:17774)
     at h (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:411)
-    at A (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:28488)
+    at S (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:27717)
     at stringify (<anonymous>) {
   description: "Route /user/dashboard couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
   digest: 'DYNAMIC_SERVER_USAGE'
 }
-Error in get /appointments: Error: Dynamic server usage: Route /user/dashboard/appointments couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
-    at m (.next/server/chunks/986.js:12:14676)
-    at f (.next/server/chunks/5208.js:1:17774)
-    at d (.next/server/chunks/1877.js:2:2984)
-    at f (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/appointments/page.js:1:12206)
-    at stringify (<anonymous>) {
-  description: "Route /user/dashboard/appointments couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
-  digest: 'DYNAMIC_SERVER_USAGE'
-}
-Error in get /appointments: Error: Dynamic server usage: Route /user/dashboard/appointments couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
-    at m (.next/server/chunks/986.js:12:14676)
-    at f (.next/server/chunks/5208.js:1:17774)
-    at d (.next/server/chunks/1877.js:2:2984)
-    at m (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/appointments/page.js:1:11593)
-    at stringify (<anonymous>) {
-  description: "Route /user/dashboard/appointments couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
-  digest: 'DYNAMIC_SERVER_USAGE'
-}
-{
-  status: 'success',
-  data: {
-    data: [
-      [Object], [Object],
-      [Object], [Object],
-      [Object], [Object],
-      [Object], [Object],
-      [Object], [Object]
-    ],
-    meta: {
-      total: 104,
-      perPage: 10,
-      currentPage: 1,
-      lastPage: 11,
-      firstPage: 1,
-      firstPageUrl: '/?page=1',
-      lastPageUrl: '/?page=11',
-      nextPageUrl: '/?page=2',
-      previousPageUrl: null
-    }
-  }
-} top specialist data
-{
-  status: 'success',
-  data: {
-    data: [
-      [Object], [Object],
-      [Object], [Object],
-      [Object], [Object],
-      [Object], [Object],
-      [Object], [Object]
-    ],
-    meta: {
-      total: 104,
-      perPage: 10,
-      currentPage: 1,
-      lastPage: 11,
-      firstPage: 1,
-      firstPageUrl: '/?page=1',
-      lastPageUrl: '/?page=11',
-      nextPageUrl: '/?page=2',
-      previousPageUrl: null
-    }
-  }
-} top specialist data
-Error in get /vitals: Error: Dynamic server usage: Route /user/profile/vitals couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
-    at m (.next/server/chunks/986.js:12:14676)
-    at f (.next/server/chunks/5208.js:1:17774)
-    at c (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:335)
-    at m (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:743)
-    at l (.next/server/app/(main)/user/profile/vitals/page.js:1:3677)
-    at stringify (<anonymous>) {
-  description: "Route /user/profile/vitals couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
-  digest: 'DYNAMIC_SERVER_USAGE'
-}
+https://whale-uncommon-sheep.ngrok-free.app/v1 true
 Error in get /emergency: Error: Dynamic server usage: Route /user/profile/emergency-contact couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
     at m (.next/server/chunks/986.js:12:14676)
     at f (.next/server/chunks/5208.js:1:17774)
-    at c (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:335)
+    at p (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:335)
     at u (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:1094)
-    at l (.next/server/app/(main)/user/profile/emergency-contact/page.js:1:9125)
+    at l (.next/server/app/(main)/user/profile/emergency-contact/page.js:1:6886)
     at stringify (<anonymous>) {
   description: "Route /user/profile/emergency-contact couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
   digest: 'DYNAMIC_SERVER_USAGE'
 }
+{
+  status: 'success',
+  data: {
+    data: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    meta: {
+      total: 105,
+      perPage: 10,
+      currentPage: 1,
+      lastPage: 11,
+      firstPage: 1,
+      firstPageUrl: '/?page=1',
+      lastPageUrl: '/?page=11',
+      nextPageUrl: '/?page=2',
+      previousPageUrl: null
+    }
+  }
+} top specialist data
+{
+  status: 'success',
+  data: {
+    data: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    meta: {
+      total: 105,
+      perPage: 10,
+      currentPage: 1,
+      lastPage: 11,
+      firstPage: 1,
+      firstPageUrl: '/?page=1',
+      lastPageUrl: '/?page=11',
+      nextPageUrl: '/?page=2',
+      previousPageUrl: null
+    }
+  }
+} top specialist data
+Error in get /appointments: Error: Dynamic server usage: Route /user/dashboard/appointments couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at m (.next/server/chunks/986.js:12:14676)
+    at f (.next/server/chunks/5208.js:1:17774)
+    at d (.next/server/chunks/2393.js:2:2984)
+    at f (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/appointments/page.js:1:10273)
+    at stringify (<anonymous>) {
+  description: "Route /user/dashboard/appointments couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Error in get /appointments: Error: Dynamic server usage: Route /user/dashboard/appointments couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at m (.next/server/chunks/986.js:12:14676)
+    at f (.next/server/chunks/5208.js:1:17774)
+    at d (.next/server/chunks/2393.js:2:2984)
+    at m (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/appointments/page.js:1:9660)
+    at stringify (<anonymous>) {
+  description: "Route /user/dashboard/appointments couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Error in get /vitals: Error: Dynamic server usage: Route /user/profile/vitals couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at m (.next/server/chunks/986.js:12:14676)
+    at f (.next/server/chunks/5208.js:1:17774)
+    at p (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:335)
+    at m (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:743)
+    at l (.next/server/app/(main)/user/profile/vitals/page.js:1:3882)
+    at stringify (<anonymous>) {
+  description: "Route /user/profile/vitals couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
 [?25h [32m[1m✓[22m[39m Generating static pages (30/30)
-[?25l [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[?25l [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting build traces     [32m[1m✓[22m[39m Collecting build traces 
+[?25l [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[?25l [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G[?25h [37m[1m [22m[39m Collecting build traces     [32m[1m✓[22m[39m Collecting build traces 
 [2K[1G[?25h [37m[1m [22m[39m Finalizing page optimization     [32m[1m✓[22m[39m Finalizing page optimization 
 
 [4mRoute (app)[24m                                       [4mSize[24m  [4mFirst Load JS[24m  [4m[24m  [4m[24m
-┌ ƒ /                                            663 B         [37m[1m443 kB[22m[39m
+┌ ƒ /                                            663 B         [37m[1m444 kB[22m[39m
 ├ ○ /_not-found                                  160 B         [37m[1m103 kB[22m[39m
 ├ ƒ /api/zoom/generateSignature                  160 B         [37m[1m103 kB[22m[39m
-├ ƒ /appointment/details/[slug]                2.74 kB         [37m[1m251 kB[22m[39m
+├ ƒ /appointment/details/[slug]                2.76 kB         [37m[1m252 kB[22m[39m
 ├ ƒ /appointment/meeting/[...slug]             1.42 kB         [37m[1m185 kB[22m[39m
-├ ƒ /auth/callback/[provider]                   2.3 kB         [37m[1m168 kB[22m[39m
-├ ƒ /doctor/[slug]                             6.05 kB         [37m[1m431 kB[22m[39m
-├ ƒ /doctor/payment                            49.8 kB         [37m[1m448 kB[22m[39m
-├ ƒ /home                                        532 B         [37m[1m443 kB[22m[39m
+├ ƒ /auth/callback/[provider]                  2.38 kB         [37m[1m168 kB[22m[39m
+├ ƒ /doctor/[slug]                             6.04 kB         [37m[1m431 kB[22m[39m
+├ ƒ /doctor/payment                            49.9 kB         [37m[1m449 kB[22m[39m
+├ ƒ /home                                        534 B         [37m[1m444 kB[22m[39m
 ├ ƒ /hospital/[slug]                           6.03 kB         [37m[1m418 kB[22m[39m
 ├ ƒ /hospital/[slug]/labs                      3.66 kB         [37m[1m407 kB[22m[39m
 ├ ƒ /hospital/[slug]/labs/hematology             160 B         [37m[1m103 kB[22m[39m
-├ ƒ /hospital/[slug]/labs/hematology/[testId]  2.97 kB         [37m[1m325 kB[22m[39m
+├ ƒ /hospital/[slug]/labs/hematology/[testId]  2.98 kB         [37m[1m326 kB[22m[39m
 ├ ƒ /hospital/[slug]/labs/testPayment           1.7 kB         [37m[1m322 kB[22m[39m
-├ ƒ /hospital/[slug]/pharmacy                  1.58 kB         [37m[1m426 kB[22m[39m
+├ ƒ /hospital/[slug]/pharmacy                  1.61 kB         [37m[1m427 kB[22m[39m
 ├ ƒ /onboarding/logout/api                       160 B         [37m[1m103 kB[22m[39m
-├ ○ /onboarding/password-change                1.14 kB         [37m[1m354 kB[22m[39m
-├ ○ /onboarding/password-reset                 2.09 kB         [37m[1m355 kB[22m[39m
-├ ○ /onboarding/signin                            2 kB         [37m[1m355 kB[22m[39m
+├ ○ /onboarding/password-change                1.14 kB         [37m[1m355 kB[22m[39m
+├ ○ /onboarding/password-reset                 2.09 kB         [37m[1m356 kB[22m[39m
+├ ○ /onboarding/signin                            2 kB         [37m[1m356 kB[22m[39m
 ├ ƒ /onboarding/signin/api                       160 B         [37m[1m103 kB[22m[39m
-├ ○ /onboarding/signup                          2.6 kB         [37m[1m356 kB[22m[39m
+├ ○ /onboarding/signup                         2.59 kB         [37m[1m356 kB[22m[39m
 ├ ○ /onboarding/verify-email                    1.2 kB         [37m[1m342 kB[22m[39m
-├ ƒ /pharmacy/[slug]                           6.31 kB         [37m[1m439 kB[22m[39m
-├ ƒ /pharmacy/drugdetails/[...drug]              903 B         [37m[1m398 kB[22m[39m
-├ ƒ /pharmacy/drugsearch/[slug]                2.28 kB         [37m[1m251 kB[22m[39m
-├ ○ /product/cart                              3.37 kB         [37m[1m252 kB[22m[39m
-├ ○ /product/cart/checkout                     4.03 kB         [37m[1m264 kB[22m[39m
-├ ○ /search                                    9.47 kB         [37m[1m428 kB[22m[39m
-├ ƒ /user/dashboard                            1.38 kB         [37m[1m321 kB[22m[39m
+├ ƒ /pharmacy/[slug]                           6.31 kB         [37m[1m440 kB[22m[39m
+├ ƒ /pharmacy/drugdetails/[...drug]              901 B         [37m[1m399 kB[22m[39m
+├ ƒ /pharmacy/drugsearch/[slug]                 2.3 kB         [37m[1m251 kB[22m[39m
+├ ○ /product/cart                               3.4 kB         [37m[1m253 kB[22m[39m
+├ ○ /product/cart/checkout                     4.05 kB         [37m[1m264 kB[22m[39m
+├ ○ /search                                     9.5 kB         [37m[1m429 kB[22m[39m
+├ ƒ /user/dashboard                            1.38 kB         [37m[1m322 kB[22m[39m
 ├ ƒ /user/dashboard/appointments               2.94 kB         [37m[1m252 kB[22m[39m
-├ ○ /user/dashboard/healthbenefits             1.34 kB         [37m[1m250 kB[22m[39m
-├ ○ /user/dashboard/prescription               1.77 kB         [37m[1m250 kB[22m[39m
-├ ƒ /user/dashboard/prescription/[slug]        1.97 kB         [37m[1m251 kB[22m[39m
-├ ○ /user/dashboard/supports                   3.65 kB         [37m[1m335 kB[22m[39m
+├ ○ /user/dashboard/healthbenefits             1.34 kB         [37m[1m251 kB[22m[39m
+├ ○ /user/dashboard/prescription               1.77 kB         [37m[1m251 kB[22m[39m
+├ ƒ /user/dashboard/prescription/[slug]        1.99 kB         [37m[1m251 kB[22m[39m
+├ ○ /user/dashboard/supports                   3.66 kB         [37m[1m335 kB[22m[39m
 ├ ƒ /user/dashboard/supports/[slug]             1.6 kB         [37m[1m333 kB[22m[39m
 ├ ○ /user/profile                              2.41 kB         [37m[1m343 kB[22m[39m
-├ ○ /user/profile/change-password              3.77 kB         [37m[1m353 kB[22m[39m
-├ ƒ /user/profile/emergency-contact            3.57 kB         [37m[1m352 kB[22m[39m
+├ ○ /user/profile/change-password              3.84 kB         [37m[1m353 kB[22m[39m
+├ ƒ /user/profile/emergency-contact            3.65 kB         [37m[1m353 kB[22m[39m
 ├ ○ /user/profile/feedback                       160 B         [37m[1m103 kB[22m[39m
-├ ○ /user/profile/hmo-provider                   784 B         [37m[1m260 kB[22m[39m
-├ ○ /user/profile/settings                       450 B         [37m[1m213 kB[22m[39m
-└ ƒ /user/profile/vitals                       3.87 kB         [37m[1m353 kB[22m[39m
+├ ○ /user/profile/hmo-provider                   784 B         [37m[1m261 kB[22m[39m
+├ ○ /user/profile/settings                       449 B         [37m[1m214 kB[22m[39m
+└ ƒ /user/profile/vitals                       3.95 kB         [37m[1m353 kB[22m[39m
 + First Load JS shared by all                   [37m[1m103 kB[22m[39m
   ├ chunks/8315-24af6374db49d768.js              46 kB
   ├ chunks/87c73c54-64b52c7d0d45dc3f.js        53.3 kB
-  └ other shared chunks (total)                3.91 kB
+  └ other shared chunks (total)                3.92 kB
 
 
-ƒ Middleware                                   [37m[1m32.4 kB[22m[39m
+ƒ Middleware                                   [37m[1m32.5 kB[22m[39m
 
 ○  (Static)   prerendered as static content
 ƒ  (Dynamic)  server-rendered on demand
 
-[?25h[2K[1G✨  Done in 22.64s.
+[?25h[2K[1G✨  Done in 83.84s.
