@@ -1,11 +1,11 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from "next"
 
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: '**', // Allows images from any domain
+        protocol: "https",
+        hostname: "**", // Allows images from any domain
       },
     ],
   },
@@ -14,6 +14,7 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   typescript: { ignoreBuildErrors: true },
-};
+  output: "standalone",
+}
 
-export default nextConfig;
+export default nextConfig
