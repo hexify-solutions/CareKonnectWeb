@@ -25,7 +25,7 @@ export default function RootLayout({
             <QueryProvider>
               <AuthProvider>
                 <CartProvider>
-                <main>{children} </main>
+                  <main>{children} </main>
                 </CartProvider>
               </AuthProvider>
               <ToastProvider />

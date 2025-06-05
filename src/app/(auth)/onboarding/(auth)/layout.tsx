@@ -1,11 +1,11 @@
-import styles from "./layout.module.css";
-import { CustomTheme } from "@hexify/atoms";
-import Nav from "../_component/nav";
+import styles from "./layout.module.css"
+import { CustomTheme } from "@hexify/atoms"
+import Nav from "../_component/nav"
 
 export default function AuthLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <CustomTheme>
@@ -16,6 +16,5 @@ export default function AuthLayout({
         <div className={styles.childrenWrapper}>{children}</div>
       </div>
     </CustomTheme>
-  );
+  )
 }
-
