@@ -13,13 +13,12 @@ const routes = {
   pharmacy: (id: string) => "/pharmacy/" + id,
   findAPharmacy: (id: string) => "/pharmacy/drugsearch/" + id,
 
-  // checkout 
+  // checkout
   checkout: "/product/cart/checkout",
-
 
   // doctors
   doctor: (id: string) => "/doctor/" + id,
-  doctorPayment: (queryString: string) =>  "/doctor/payment" + queryString,
+  doctorPayment: (queryString: string) => "/doctor/payment" + queryString,
 
   // search
   search: (queryString: string) => `/search?${queryString}`,
@@ -34,7 +33,8 @@ const routes = {
   userDashboardAppointments: "/user/dashboard/appointments",
   userDashboardServices: "/user/dashboard/services",
   userDashboardPrescription: "/user/dashboard/prescription",
-  userDashboardPrescriptionDetails: (slug: string) => "/user/dashboard/prescription/" + slug,
+  userDashboardPrescriptionDetails: (slug: string) =>
+    "/user/dashboard/prescription/" + slug,
   userDashboardHealthRecords: "/user/dashboard/records",
   userDashboardSupports: "/user/dashboard/supports",
   userDashboardHealthBenefits: "/user/dashboard/healthbenefits",
@@ -42,8 +42,8 @@ const routes = {
   // appointment routes
   appointmentDetails: (slug: string) => "/appointment/details/" + slug,
   appointmentById: (id: string) => `/appointments/${id}`,
-  appointmentMeeting: (meeting: Record<string, string>) => `${process.env.NEXT_PUBLIC_COMMUNICATIONS_URL}/a-${meeting?.appointmentId}/z-${meeting?.meetingId}/p-${meeting.password}`
+  appointmentMeeting: (meeting: Record<string, string>) =>
+    `${process.env.NEXT_PUBLIC_COMMUNICATIONS_URL}/${meeting?.appointmentRef || meeting?.appointmentId}/?appointmentId=${meeting?.appointmentId}`,
+}
 
-};
-
-export default routes;
+export default routes

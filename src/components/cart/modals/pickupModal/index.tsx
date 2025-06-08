@@ -3,8 +3,16 @@
 import { useState } from "react"
 import styles from "./pickUp.module.css"
 import ModalTemplate from "../modalTemplate"
-import { Button, Info, LargeCapsule, ChevronLeft, Star, LocationPin } from "@hexify/atoms"
+import {
+  Button,
+  Info,
+  LargeCapsule,
+  ChevronLeft,
+  Star,
+  LocationPin,
+} from "@hexify/atoms"
 import Image from "next/image"
+import getBranding from "@hexify/atoms/src/theme/getBranding"
 
 enum ActiveView {
   INFO = "info",
@@ -14,9 +22,15 @@ enum ActiveView {
 
 const PickupInfoModal = ({ open, cancelHandler }) => {
   const [activeView, setActiveView] = useState(ActiveView.INFO)
+  const brand = getBranding()?.content
 
   return (
-    <ModalTemplate showHeader={activeView !== ActiveView.PRESCRIPTION_SUMMARY_INFO} showFooter={activeView === ActiveView.INFO} open={open} cancelHandler={cancelHandler}>
+    <ModalTemplate
+      showHeader={activeView !== ActiveView.PRESCRIPTION_SUMMARY_INFO}
+      showFooter={activeView === ActiveView.INFO}
+      open={open}
+      cancelHandler={cancelHandler}
+    >
       {activeView === ActiveView.INFO && (
         <div>
           <aside className={styles.header}>
@@ -41,7 +55,7 @@ const PickupInfoModal = ({ open, cancelHandler }) => {
             <div className={styles.footer}>
               <div className={styles.footerText}>
                 <span>Best regards</span>
-                <span> CareKonnect Team</span>
+                <span> {brand?.companyName || "Business"} Team</span>
               </div>
               <Button
                 color="primary"
@@ -58,20 +72,23 @@ const PickupInfoModal = ({ open, cancelHandler }) => {
         </div>
       )}
 
-      {activeView === ActiveView.SELECTION_SUMMARY && <ConfirmSelection setActiveView={setActiveView} />}
-      {activeView === ActiveView.PRESCRIPTION_SUMMARY_INFO && <SubmitSelection />}
+      {activeView === ActiveView.SELECTION_SUMMARY && (
+        <ConfirmSelection setActiveView={setActiveView} />
+      )}
+      {activeView === ActiveView.PRESCRIPTION_SUMMARY_INFO && (
+        <SubmitSelection />
+      )}
     </ModalTemplate>
   )
 }
 
-const ConfirmSelection = ( { setActiveView }) => {
+const ConfirmSelection = ({ setActiveView }) => {
   return (
     <div className={styles.summaryWrapper}>
       <h5 className={styles.confirmSelectionHeading}>Confirm Selection</h5>
       <div className={styles.confirmSelectionInfo}>
         <span>
-
-        <Info />
+          <Info />
         </span>
         <span>
           Prescription is normally ready for pick up within 3-5 business hours
@@ -81,7 +98,10 @@ const ConfirmSelection = ( { setActiveView }) => {
       </div>
       <div>
         <div className={styles.checkoutLabel}>
-          <button><ChevronLeft />  </button><span>Selected Pharmacy and Product</span>
+          <button>
+            <ChevronLeft />{" "}
+          </button>
+          <span>Selected Pharmacy and Product</span>
         </div>
         <ul className={styles.list}>
           {Array.from({ length: 3 }).map((_, index) => (
@@ -100,7 +120,7 @@ const ConfirmSelection = ( { setActiveView }) => {
                 </div>
                 <div className={styles.pharmacy}>MedTrust Pharmacy Ltd.</div>
                 <div className={styles.extraInfo}>
-                  <span  className={styles.extraInfoItem}>
+                  <span className={styles.extraInfoItem}>
                     <Star /> 4.5
                   </span>{" "}
                   <span className={styles.extraInfoItem}>
@@ -113,10 +133,23 @@ const ConfirmSelection = ( { setActiveView }) => {
           ))}
         </ul>
         <div className={styles.buttonWrapper}>
-          <Button href="/" variant="outlined" size="large" rounded className={styles.btn}>
+          <Button
+            href="/"
+            variant="outlined"
+            size="large"
+            rounded
+            className={styles.btn}
+          >
             Go back
           </Button>
-          <Button onClick={() => setActiveView(ActiveView.PRESCRIPTION_SUMMARY_INFO)} color="primary" variant="contained" size="large" rounded className={styles.btn}>
+          <Button
+            onClick={() => setActiveView(ActiveView.PRESCRIPTION_SUMMARY_INFO)}
+            color="primary"
+            variant="contained"
+            size="large"
+            rounded
+            className={styles.btn}
+          >
             Proceed
           </Button>
         </div>
@@ -126,19 +159,33 @@ const ConfirmSelection = ( { setActiveView }) => {
 }
 
 const SubmitSelection = () => {
-  return <div className={styles.submitSelectionWrapper}>
-    <div className={styles.submitSelectionHeading}>
-    Prescription Pick up Submitted 
+  return (
+    <div className={styles.submitSelectionWrapper}>
+      <div className={styles.submitSelectionHeading}>
+        Prescription Pick up Submitted
+      </div>
+      <div className={styles.submitSelectionDescription}>
+        Once you check out, you will receive a prescription code in the app
+        within the next 3-5 business hours confirming that our medication is
+        ready for pickup.
+      </div>
+      <div className={styles.submitSelectionInfo}>
+        Please wait for this code before heading to the pharmacy.
+      </div>
+      <div className={styles.submitSelectionEmp}>
+        Show the code at the pharmacy to get your medications
+      </div>
+      <Button
+        size="large"
+        color="primary"
+        variant="contained"
+        rounded
+        fullWidth
+      >
+        Check out
+      </Button>
     </div>
-    <div className={styles.submitSelectionDescription}>
-    Once you check out, you will receive a prescription code in the app within the next 3-5 business hours confirming that our medication is ready for pickup.
-    </div>
-    <div className={styles.submitSelectionInfo}>
-    Please wait for this code before heading to the pharmacy.
-    </div>
-    <div className={styles.submitSelectionEmp}>Show the code at the pharmacy to get your medications</div>
-    <Button size="large" color="primary" variant="contained" rounded fullWidth>Check out</Button>
-  </div>
+  )
 }
 
 export default PickupInfoModal

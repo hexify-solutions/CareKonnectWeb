@@ -1,16 +1,17 @@
-import { CancelIcon, Logo, Modal, Button } from "@hexify/atoms";
-import styles from "./paymentReceiptModal.module.css";
+import { CancelIcon, Logo, Modal, Button } from "@hexify/atoms"
+import styles from "./paymentReceiptModal.module.css"
 import {
   ReceiptsIcon,
   FacebookIcon,
   Instagram,
   Twitter,
   Linkedin,
-} from "@hexify/atoms";
-import formatAppointmentDate from "@/lib/utils/formatAppointmentDate";
+} from "@hexify/atoms"
+import formatAppointmentDate from "@/lib/utils/formatAppointmentDate"
+import getBranding from "@hexify/atoms/src/theme/getBranding"
 
 const PaymentReceiptModal = ({ open, cancelHandler, receipt }) => {
-
+  const brand = getBranding()?.content
   const date = formatAppointmentDate(receipt?.transaction?.verifiedAt || "")
 
   return (
@@ -31,7 +32,12 @@ const PaymentReceiptModal = ({ open, cancelHandler, receipt }) => {
             </aside>
             <div className={styles.heading}>Payment Receipt!</div>
             <div className={styles.info}>
-              <span>Hey {receipt?.appointment?.user?.firstName || receipt?.appointment?.user?.lastName},</span>
+              <span>
+                Hey{" "}
+                {receipt?.appointment?.user?.firstName ||
+                  receipt?.appointment?.user?.lastName}
+                ,
+              </span>
               <span>
                 We have successfully processed your payment for a booking
               </span>
@@ -44,12 +50,16 @@ const PaymentReceiptModal = ({ open, cancelHandler, receipt }) => {
               <div className={styles.summarySection}>
                 <div className={styles.summaryInfo}>
                   <span>Payment Method</span>
-                  <span className={styles.summaryValue}>{receipt?.transaction?.provider}</span>
+                  <span className={styles.summaryValue}>
+                    {receipt?.transaction?.provider}
+                  </span>
                 </div>
                 <div className={styles.summaryInfo}>
                   <span>Received by</span>
                   <span className={styles.summaryValue}>
-                    {receipt?.transaction?.receiver || "LEX Medicals Limited"}
+                    {receipt?.transaction?.receiver ||
+                      brand?.companyName ||
+                      "Medical Team"}
                   </span>
                 </div>
                 <div className={styles.summaryInfo}>
@@ -98,14 +108,16 @@ const PaymentReceiptModal = ({ open, cancelHandler, receipt }) => {
                 </div>
                 <div className={styles.summaryInfo}>
                   <span>Amount</span>
-                  <span className={styles.summaryValue}>NGN {receipt?.appointment?.fee?.toLocaleString()}</span>
+                  <span className={styles.summaryValue}>
+                    NGN {receipt?.appointment?.fee?.toLocaleString()}
+                  </span>
                 </div>
               </div>
             </div>
             <div className={styles.downloadWrapper}>
               <div className={styles.downloadInfo}>
                 <span>Best regards,</span>
-                <span>CareKonnect Team</span>
+                <span>{brand?.companyName || "Business"} Team</span>
               </div>
               <Button variant="contained" rounded size="large">
                 <span>Download</span>
@@ -147,7 +159,7 @@ const PaymentReceiptModal = ({ open, cancelHandler, receipt }) => {
         </div>
       </div>
     </Modal>
-  );
-};
+  )
+}
 
-export default PaymentReceiptModal;
+export default PaymentReceiptModal
