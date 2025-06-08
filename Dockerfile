@@ -17,6 +17,7 @@ COPY ../../package.json ./package.json
 COPY ../../yarn.lock ./yarn.lock
 COPY ../../node_modules ./node_modules
 COPY next.config.ts ./next.config.ts
+COPY .env ./.env
 
 EXPOSE 9000
 
