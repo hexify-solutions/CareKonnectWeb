@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect } from "react";
+import { useState, useLayoutEffect, useEffect } from "react"
 import {
   useRegisterMutation,
   useLoginMutation,
@@ -7,7 +7,7 @@ import {
   useResendVerifyMutation,
   usePasswordChangeMutation,
   useLogoutMutation,
-} from "@/http/auth/mutation";
+} from "@/http/auth/mutation"
 import {
   RegistrationType,
   LoginType,
@@ -15,45 +15,49 @@ import {
   VerifyType,
   ProfileType,
   TriggerPasswordResetType,
-  PasswordChangeType
-} from "@/types";
-import { toast } from "react-toastify";
-import routes from "@/lib/constants/routes";
-import lsKeys from "@/lib/constants/lsKeys";
-import { useSecureStorage } from "@/context/storage";
-import { useRouter } from "next/navigation";
-import api from "@/http/api";
+  PasswordChangeType,
+} from "@/types"
+import { toast } from "react-toastify"
+import routes from "@/lib/constants/routes"
+import lsKeys from "@/lib/constants/lsKeys"
+import { useSecureStorage } from "@/context/storage"
+import { useRouter } from "next/navigation"
+import api from "@/http/api"
 
 const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
   const [authState, setAuthState] = useState<{
-    isAuth: boolean;
-    profile: ProfileType;
+    isAuth: boolean
+    profile: ProfileType
   }>(
     defaultState || {
       isAuth: false,
       profile: {} as ProfileType,
     }
-  );
+  )
 
+  useEffect(() => {
+    setAuthState(defaultState)
+  }, [defaultState])
   useLayoutEffect(() => {
-    setAuthState(defaultState);
-  }, [defaultState]);
+    const hasProfile = !!authState.profile?.email
+    console.log({ hasProfile, authState })
+    setAuthState({ ...authState, isAuth: hasProfile })
+  }, [authState.profile])
 
-  const router = useRouter();
-  const registerMutation = useRegisterMutation<RegistrationType>();
-  const triggerPasswordResetMutation = useTriggerPasswordReset<
-    TriggerPasswordResetType
-  >();
-  const loginMutation = useLoginMutation<LoginType>();
-  const logoutMutation = useLogoutMutation<{}>();
-  const verifyMutation = useVerifyMutation<VerifyType>();
+  const router = useRouter()
+  const registerMutation = useRegisterMutation<RegistrationType>()
+  const triggerPasswordResetMutation =
+    useTriggerPasswordReset<TriggerPasswordResetType>()
+  const loginMutation = useLoginMutation<LoginType>()
+  const logoutMutation = useLogoutMutation<{}>()
+  const verifyMutation = useVerifyMutation<VerifyType>()
   const resendVerifyEmailMutation = useResendVerifyMutation<{
-    email: string;
-  }>();
+    email: string
+  }>()
 
-  const passwordChangeMutation = usePasswordChangeMutation();
+  const passwordChangeMutation = usePasswordChangeMutation()
 
-  const { setItem, removeItem } = useSecureStorage();
+  const { setItem, removeItem } = useSecureStorage()
 
   const onTriggerPasswordChange = (params: TriggerPasswordResetType) => {
     triggerPasswordResetMutation.mutate(params, {
@@ -96,29 +100,27 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
         )
       },
     })
-  } 
-
-
+  }
 
   const onVerify = (params: VerifyType, cb?: (params: VerifyType) => void) => {
     verifyMutation?.mutate(params, {
       onSettled: (response, err: Error | null, variables: VerifyType) => {
         if (err) {
-          return toast.error(err?.message || "Verification Failed!");
+          return toast.error(err?.message || "Verification Failed!")
         }
 
         toast.success(response?.message || "Verification Successful", {
           onOpen: () => {
             if (cb) {
-              cb?.(variables);
+              cb?.(variables)
             } else {
-              router.push(routes.login);
+              router.push(routes.login)
             }
           },
-        });
+        })
       },
-    });
-  };
+    })
+  }
 
   const resendVerifyEmailHandler = (params: { email: string }) => {
     resendVerifyEmailMutation?.mutate(params, {
@@ -126,57 +128,60 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
         if (err) {
           return toast.error(
             err?.message || "Could not resend Verification code!"
-          );
+          )
         }
-        toast.success(response?.message || "Verification code sent");
+        toast.success(response?.message || "Verification code sent")
       },
-    });
-  };
+    })
+  }
 
   const onRegister = (params: RegistrationType) => {
     registerMutation.mutate(params, {
       onSettled: (response?: RegistrationResponseType, err?: Error | null) => {
         if (err) {
-          return toast.error(err?.message || "Registration Failed!");
+          return toast.error(err?.message || "Registration Failed!")
         }
         if (response) {
-          setItem(lsKeys.verifyUserEmail, response?.data?.email);
+          setItem(lsKeys.verifyUserEmail, response?.data?.email)
           setAuthState((prev) => ({
             ...prev,
             profile: {
               email: response.data.email,
               id: response.data.id,
             },
-          }));
+          }))
         }
         toast.success(response?.message, {
           onOpen: () => {
-            
-            router.push(routes.verifyEmail);
+            router.push(routes.verifyEmail)
           },
-        });
+        })
       },
-    });
-  };
+    })
+  }
 
   const onLogOut = () => {
-    logoutMutation?.mutate({}, {
-      onSettled: () =>  {
-        router.push(routes.home)
+    logoutMutation?.mutate(
+      {},
+      {
+        onSettled: () => {
+          router.push(routes.home)
+        },
       }
-    });
-    removeItem(lsKeys.profile);
-    removeItem(lsKeys.token);
-    removeItem(lsKeys.tokenExpiration);
+    )
+    removeItem(lsKeys.profile)
+    removeItem(lsKeys.token)
+    removeItem(lsKeys.tokenExpiration)
     setAuthState((prev) => ({
       ...prev,
       isAuth: false,
       profile: {
         email: "",
         id: "",
+        action: "logout",
       },
-    }));
-  };
+    }))
+  }
   const onLogin = async (params: LoginType) => {
     loginMutation.mutate(params, {
       onSettled: async (response, err) => {
@@ -190,57 +195,56 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
                 id: prev?.profile?.id,
                 email: params?.email,
               },
-            }));
-            router.push(routes.verifyEmail);
+            }))
+            router.push(routes.verifyEmail)
           }
-          return toast.error(err?.message || "Login Failed!");
+          return toast.error(err?.message || "Login Failed!")
         }
         if (response) {
-          const { token, ...rest } = response?.data?.data;
-          api.setAuth(token?.token);
-          setItem(lsKeys.profile, rest);
-          setItem(lsKeys.token, token?.token);
-          setItem(lsKeys.tokenExpiration, token?.expiresAt);
-            
+          const { token, ...rest } = response?.data?.data
+          api.setAuth(token?.token)
+          setItem(lsKeys.profile, rest)
+          setItem(lsKeys.token, token?.token)
+          setItem(lsKeys.tokenExpiration, token?.expiresAt)
+
           setAuthState((prev) => {
             return {
               ...prev,
               isAuth: true,
               profile: rest,
               token: token,
-            };
-          });
+            }
+          })
 
           toast.success(response?.message, {
             onOpen: () => {
               // TODO: conditionally redirect user to the last page they visited before auth, if not home
               // otherwise redirect to user dashboard
-              router.push(routes.userDashboard);
+              router.push(routes.userDashboard)
             },
-          });
+          })
         }
       },
-    });
-  };
+    })
+  }
 
+  onPasswordChange.isLoading = passwordChangeMutation.isPending
+  onPasswordChange.error = passwordChangeMutation.error
 
-  onPasswordChange.isLoading  = passwordChangeMutation.isPending;
-  onPasswordChange.error = passwordChangeMutation.error;
+  onRegister.isLoading = registerMutation.isPending
+  onRegister.error = registerMutation.error
 
-  onRegister.isLoading = registerMutation.isPending;
-  onRegister.error = registerMutation.error;
+  onLogin.isLoading = loginMutation.isPending
+  onLogin.error = loginMutation.error
 
-  onLogin.isLoading = loginMutation.isPending;
-  onLogin.error = loginMutation.error;
+  onVerify.isLoading = verifyMutation.isPending
+  onVerify.error = verifyMutation.error
 
-  onVerify.isLoading = verifyMutation.isPending;
-  onVerify.error = verifyMutation.error;
+  onTriggerPasswordChange.isLoading = triggerPasswordResetMutation.isPending
+  onTriggerPasswordChange.error = triggerPasswordResetMutation.error
 
-  onTriggerPasswordChange.isLoading = triggerPasswordResetMutation.isPending;
-  onTriggerPasswordChange.error = triggerPasswordResetMutation.error;
-
-  resendVerifyEmailHandler.isLoading = resendVerifyEmailMutation.isPending;
-  resendVerifyEmailHandler.error = resendVerifyEmailMutation.error;
+  resendVerifyEmailHandler.isLoading = resendVerifyEmailMutation.isPending
+  resendVerifyEmailHandler.error = resendVerifyEmailMutation.error
 
   return {
     setAuthState,
@@ -252,7 +256,7 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
     onLogOut,
     onPasswordChange,
     ...authState,
-  };
-};
+  }
+}
 
-export default useAuth;
+export default useAuth

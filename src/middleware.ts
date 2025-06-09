@@ -6,7 +6,6 @@ export function middleware(request: NextRequest) {
   const isLoggedIn = Boolean(request.cookies.get("auth_token")?.value)
 
   const { pathname } = request.nextUrl
-
   // Redirect logged-in users from homepage to dashboard
   if (pathname === "/" && isLoggedIn) {
     return NextResponse.redirect(new URL("/user/dashboard", request.url))

@@ -8,31 +8,12 @@ import styles from "./page.module.css"
 import clsx from "clsx"
 import { Suspense } from "react"
 import SpecialistListLoader from "@/components/specialistList/specialistLoader"
+import HomePage from "@/app/(main)/home/page"
 
 export default function Home() {
   return (
     <>
-      <div className={styles.heroWrapper}>
-        <Hero />
-      </div>
-      <div className={styles.bannerWrapper}>
-        <ScrollableBanner />
-      </div>
-      <div>
-        <Categories />
-      </div>
-      <div className={clsx("inner-wrapper", styles.specialistWrapper)}>
-        <h3 className={styles.heading} arial-label="Top Specialist">
-          Top Specialists
-        </h3>
-        <Suspense fallback={<SpecialistListLoader />}>
-          <SpecialistList />
-        </Suspense>
-        <div className={styles.innovationBannerWrapper}>
-          <InnovationBanner />
-        </div>
-      </div>
-      <SignupBanner />
+      <HomePage />
     </>
   )
 }

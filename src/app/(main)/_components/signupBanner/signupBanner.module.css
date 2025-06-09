@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   gap: 4.25rem;
+    flex-wrap: wrap
 }
 
 .lead {
@@ -24,7 +25,7 @@ width: 26.6875rem
     display: flex;
     align-items: center;
     gap: .75rem;
-
+    flex-wrap: wrap
 }
 
 .appButtons {
@@ -37,4 +38,28 @@ width: 26.6875rem
 
 .signupButton {
    width: 12.375rem;
+}
+.appButtonsWrapper{
+    display: flex;
+    gap: .75rem;
+}
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 1rem 2rem;
+    }
+    .signupButton{
+        width: 100%;
+    }
+    .appButtons {
+        flex: 1;
+    }
+}
+@media (max-width: 458px) {
+    .appButtonsWrapper{
+        gap: 0rem;
+        margin-left: -10px;
+    }
+    .appButtons, .signupButton {
+        transform: scale(0.9);
+    }
 }

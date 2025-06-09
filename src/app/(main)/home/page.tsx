@@ -8,7 +8,7 @@ import styles from "./page.module.css"
 import clsx from "clsx"
 import { Suspense } from "react"
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <div className={styles.heroWrapper}>

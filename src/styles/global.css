@@ -13,6 +13,13 @@ html,
 padding: 2rem;
 }
 
+@media (max-width: 1025px) {
+  html,
+  :root {
+    --component-max-width: 90%;
+  }
+}
+
 @media (max-width: 768px) {
   .outer-container {
     padding: 1rem;
