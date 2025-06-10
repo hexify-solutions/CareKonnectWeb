@@ -8,6 +8,7 @@
   }
   .bannerWrapper {
     margin-bottom: 4rem;
+    overflow: hidden;
   }
   
   .heading {

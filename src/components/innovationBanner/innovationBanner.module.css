@@ -139,6 +139,7 @@
 
 .plugPlay {
   background-color: var(--mui-palette-design_light-errorContainer);
+  max-width: 100%;
 }
 
 .plugPlay .showCaseImageWrapper {
@@ -149,6 +150,7 @@
 
 .service {
   background-color: var(--mui-palette-design_light-primaryContainer);
+  max-width: 100%;
 }
 
 .service .showCaseImageWrapper {
@@ -156,4 +158,10 @@
   height: 141px;
   max-width: 390px;
   margin-top: 2.8125rem;
+}
+
+@media (max-width: 768px) {
+  .service .showCaseImageWrapper{
+    display: none;
+  }
 }

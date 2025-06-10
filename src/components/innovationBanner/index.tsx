@@ -62,20 +62,22 @@ const InnovationBanner = () => {
             </aside>
           </div>
         </div>
-        <div className={styles.showCaseSectionBottom}>
+        <div className={clsx(styles.showCaseSectionBottom, "max-sm:hidden")}>
           <div className={clsx(styles.showSectionBottomItem, styles.plugPlay)}>
-          <div className={styles.lead}>Plug & Play</div>
+            <div className={styles.lead}>Plug & Play</div>
             <span className={styles.subLead}>
-            Technology that is easily integrated into existing workflows or infrastructures without extensive setup or configuration
+              Technology that is easily integrated into existing workflows or
+              infrastructures without extensive setup or configuration
             </span>
             <aside className={styles.showCaseImageWrapper}>
               <Image src={CHARGING_STATION} alt="innovation one" fill />
             </aside>
           </div>
           <div className={clsx(styles.showSectionBottomItem, styles.service)}>
-          <div className={styles.lead}>Full Service Healthcare</div>
+            <div className={styles.lead}>Full Service Healthcare</div>
             <span className={styles.subLead}>
-            comprehensive approach that offers a wide range of medical services under one umbrella.
+              comprehensive approach that offers a wide range of medical
+              services under one umbrella.
             </span>
             <aside className={styles.showCaseImageWrapper}>
               <Image src={SERVICE} alt="service" fill />

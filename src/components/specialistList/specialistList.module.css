@@ -23,3 +23,15 @@
     display: inline-block;
     width: 100%
 }
+
+@media (max-width: 768px) {
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .listItem {
+        /*width: 320px;*/
+        width: 100%;
+        max-width: 350px;
+    }
+}

@@ -3,7 +3,7 @@ import styles from "./signupBanner.module.css"
 import GOOGLE_PLAY from "./assets/google_play.png"
 import APP_STORE from "./assets/app_store.png"
 import Image from "next/image"
-import { Button } from "@hexify/atoms"
+import { AppleStore, Button, GooglePlay } from "@hexify/atoms"
 import getBranding from "@hexify/atoms/src/theme/getBranding"
 import { isFeatureEnabled } from "@hexify/atoms/src/theme/feature"
 
@@ -26,24 +26,27 @@ const SignupBanner = () => {
             Register here
           </Button>
           {isFeatureEnabled("app") && (
-            <div className={styles.appButtonsWrapper}>
-              <button className={styles.appButtons}>
-                <Image
-                  src={GOOGLE_PLAY}
-                  width={185}
-                  height={61}
-                  alt="google play button"
-                />
+            <>
+              {/*<div className={styles.appButtonsWrapper}>*/}
+
+              <button className={styles["store-button"]}>
+                <GooglePlay />
+                <span className={styles["store-text"]}>
+                  <span className={styles["store-subtitle"]}>GET IT ON</span>
+                  <span className={styles["store-title"]}>Google Play</span>
+                </span>
               </button>
-              <button className={styles.appButtons}>
-                <Image
-                  src={APP_STORE}
-                  width={185}
-                  height={61}
-                  alt="apple store button"
-                />
+
+              <button className={styles["store-button"]}>
+                <AppleStore />
+                <span className={styles["store-text"]}>
+                  <span className={styles["store-subtitle"]}>
+                    Download on the
+                  </span>
+                  <span className={styles["store-title"]}>App Store</span>
+                </span>
               </button>
-            </div>
+            </>
           )}
         </div>
       </div>

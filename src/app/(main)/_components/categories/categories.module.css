@@ -29,3 +29,12 @@
     flex-shrink: 0;
     height: 15rem;
 }
+
+@media (max-width: 768px) {
+    .categoryList {
+        flex-wrap: wrap;
+    }
+    .categoryListItem {
+        min-width: 150px;
+    }
+}

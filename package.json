@@ -17,8 +17,8 @@
     "@types/crypto-js": "^4.2.2",
     "@zoom/meetingsdk": "^3.13.0",
     "axios": "^1.7.9",
-    "firebase": "^11.6.0",
     "dayjs": "^1.11.13",
+    "firebase": "^11.6.0",
     "formik": "^2.4.6",
     "jsonwebtoken": "^9.0.2",
     "motion": "^11.14.4",
@@ -26,6 +26,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-toastify": "^11.0.2",
+    "usehooks-ts": "^3.1.1",
     "yup": "^1.4.0"
   },
   "devDependencies": {

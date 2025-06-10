@@ -26,7 +26,8 @@
 
 .inputField {
     margin-top: 2rem;
-    width: 49.25rem;
+    max-width: 49.25rem;
+    width: 100%;
     min-height: 72px;
 }
 
@@ -43,7 +44,7 @@
   font-weight: 700;
   line-height: 3.375rem;
   text-align: center;
-  width: 32.875rem;
+  max-width: 32.875rem;
   margin: 0 0 1.5rem;
   font-family: var(--primary-font);
   color: var(--mui-palette-common-white);
@@ -54,7 +55,9 @@
   font-weight: 600;
   line-height: 1.625rem;
   text-align: center;
-  width: 34.75rem;
+  max-width: 34.75rem;
   color: var(--mui-palette-common-white);
   font-family: var(--primary-font);
+}
+@media (max-width: 768px) {
 }

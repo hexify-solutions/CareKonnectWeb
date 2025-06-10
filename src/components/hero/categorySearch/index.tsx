@@ -17,19 +17,30 @@ import useQueryParams from "@/hooks/useQueryParams"
 import styles from "./categorySearch.module.css"
 import routes from "@/lib/constants/routes"
 import React from "react"
-import { withSuspense } from "@/hoc" 
+import { withSuspense } from "@/hoc"
+import { useMediaQuery } from "usehooks-ts"
+import clsx from "clsx"
 
 const CategoryDropdown = ({ onChangeHandler, selectedCategory }) => {
   const { isOpen, toggle, dropdownRef } = useDropdown()
+  const isMobile = useMediaQuery("(max-width: 768px)")
 
   return (
     <div ref={dropdownRef} className={styles.dropdown}>
-      <button type="button" onClick={toggle} className={styles.dropdownToggle}>
+      <button
+        type="button"
+        onClick={toggle}
+        className={clsx(styles.dropdownToggle)}
+      >
         <FilterIcon />
-        <span>Categories</span>
-        <span className={styles.icon}>
-          <ChevronDown />
-        </span>
+        {isMobile ? null : (
+          <>
+            <span>Categories</span>
+            <span className={styles.icon}>
+              <ChevronDown />
+            </span>
+          </>
+        )}
       </button>
       {isOpen && (
         <div className={styles.dropdownWrapper}>
@@ -96,6 +107,7 @@ const CategorySearch = () => {
   const router = useRouter()
   const [selectedCategory, setSelectedCategory] = useState([])
   const [searchQuery, setSearchQuery] = useState("")
+  const isMobile = useMediaQuery("(max-width: 768px)")
 
   const onChangeHandler = (e: any) => {
     const { value, checked } = e?.target
@@ -110,7 +122,7 @@ const CategorySearch = () => {
 
   const { buildQueryString } = useQueryParams()
   const queryString = buildQueryString({
-    category: selectedCategory?.join(','),
+    category: selectedCategory?.join(","),
     search: searchQuery,
   })
 
@@ -132,8 +144,10 @@ const CategorySearch = () => {
         type="text"
         suffix={suffix}
         fullWidth
-        prefix={CategoryDropdown}
-        prefixProps={{ onChangeHandler, selectedCategory }}
+        prefix={isMobile ? undefined : CategoryDropdown}
+        prefixProps={
+          isMobile ? undefined : { onChangeHandler, selectedCategory }
+        }
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
         placeholder="Search medical expert and resources"

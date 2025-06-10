@@ -43,9 +43,54 @@ width: 26.6875rem
     display: flex;
     gap: .75rem;
 }
+.store-button {
+    background-color: var(--mui-color-white);
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.25rem;
+    border-radius: 5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border: none;
+}
+.store-button svg {
+    width: 2rem;
+}
+.store-button:hover {
+    background-color: var(--mui-color-white);
+}
+
+.store-button:focus {
+    outline: none;
+}
+
+.store-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.store-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 1rem;
+    line-height: 1;
+}
+
+.store-subtitle {
+    font-size: 0.75rem;
+    color: #4b5563; /* Tailwind gray-600 */
+    margin-bottom: 0.25rem;
+}
+
+.store-title {
+    font-weight: 500;
+    font-family: inherit;
+}
+
 @media (max-width: 768px) {
     .wrapper {
-        padding: 1rem 2rem;
+        /*padding: 1rem 2rem;*/
     }
     .signupButton{
         width: 100%;
@@ -60,6 +105,6 @@ width: 26.6875rem
         margin-left: -10px;
     }
     .appButtons, .signupButton {
-        transform: scale(0.9);
+        /*transform: scale(0.9);*/
     }
 }
