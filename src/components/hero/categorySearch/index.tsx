@@ -144,10 +144,8 @@ const CategorySearch = () => {
         type="text"
         suffix={suffix}
         fullWidth
-        prefix={isMobile ? undefined : CategoryDropdown}
-        prefixProps={
-          isMobile ? undefined : { onChangeHandler, selectedCategory }
-        }
+        prefix={CategoryDropdown}
+        prefixProps={{ onChangeHandler, selectedCategory }}
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
         placeholder="Search medical expert and resources"
