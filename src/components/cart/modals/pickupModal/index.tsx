@@ -13,6 +13,7 @@ import {
 } from "@hexify/atoms"
 import Image from "next/image"
 import getBranding from "@hexify/atoms/src/theme/getBranding"
+import routes from "@/lib/constants/routes"
 
 enum ActiveView {
   INFO = "info",

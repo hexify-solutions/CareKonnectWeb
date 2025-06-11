@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useMemo, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import {
@@ -16,7 +16,6 @@ import clsx from "clsx"
 import Details from "./detailsComponent"
 import { useGetPharmacyDrugById } from "@/http/pharmacy/query"
 import routes from "@/lib/constants/routes"
-import { useMemo } from "react"
 import { useCart } from "@/context/cart"
 
 interface ProductDetailProps {
@@ -119,7 +118,13 @@ const ProductDetail = ({
   const { addToCart, cartItems } = useCart();
 
 
-  console.log(cartItems, "these are the items here")
+const quantityInCart = useMemo(() => {
+  return cartItems?.[selectedDose?.id]?.quantity || 0
+}, [selectedDose, cartItems])
+
+useEffect(() => {
+  setQuantity(quantityInCart)
+}, [quantityInCart])
 
 
 
@@ -144,7 +149,7 @@ const ProductDetail = ({
 
   const handleQuantityChange = (value: number) => {
     const newQuantity = quantity + value
-    if (newQuantity >= 1) {
+    if (newQuantity >= 0) {
       setQuantity(newQuantity)
     }
   }
@@ -173,9 +178,13 @@ const ProductDetail = ({
 
 
   const addToCartHandler = () => {
+    if(!selectedDose?.id) return;
     addToCart(selectedDose?.id, {
       name: displayedData?.name,
       form: selectedDose?.form,
+      price: selectedDose?.price,
+      inventoryId: selectedDose?.inventoryId,
+      inventoryDoseId: selectedDose?.id,
       quantity,
 
     })
@@ -313,10 +322,10 @@ const ProductDetail = ({
 
           {/* Quantity and Add to Cart */}
           <div className={styles.purchaseOptions}>
-            <label htmlFor="quantity" className={styles.sizeSelector}>
+            <label htmlFor="dose" className={styles.sizeSelector}>
               <select
                 onChange={handleDoseSelection}
-                id="quantity"
+                id="dose"
                 className={styles.select}
               >
                 {displayedData?.doses?.map((dose) => {
@@ -342,6 +351,7 @@ const ProductDetail = ({
               <input
                 type="text"
                 value={quantity}
+                defaultValue={10}
                 readOnly
                 className={styles.quantityInput}
               />
@@ -360,12 +370,12 @@ const ProductDetail = ({
              onClick={addToCartHandler}
             >
               {" "}
-              <ShoppingCart size={18} /> Add to cart
+              <ShoppingCart size={18} /> {!!quantityInCart ? "Update cart" : "Add to cart"}
             </Button>
           </div>
 
           {/* Wishlist and Guarantee */}
-          <div className={styles.additionalOptions}>
+{ false &&         <div className={styles.additionalOptions}>
             <button className={styles.wishlistButton}>
               <Heart size={24} />
               Add to wishlist
@@ -376,7 +386,7 @@ const ProductDetail = ({
               </span>
               <span>30 days money back guarantee</span>
             </div>
-          </div>
+          </div>}
 
           {/* Tabs */}
           <div className={styles.tabsContainer}>

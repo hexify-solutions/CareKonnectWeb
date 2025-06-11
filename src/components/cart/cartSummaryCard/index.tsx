@@ -2,6 +2,7 @@
 
 import { Button } from "@hexify/atoms"
 import styles from "./cartSummaryCard.module.css"
+import routes from "@/lib/constants/routes"
 
 const CartSummaryCard = ({ onCheckout }: any) => {
   return (

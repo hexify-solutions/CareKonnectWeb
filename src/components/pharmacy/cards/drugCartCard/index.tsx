@@ -23,7 +23,7 @@ const DrugCartCard = ({ drug }: any) => {
     <div className={styles.card}>
       <div className={styles.rightSection}>
         <aside className={styles.image}>
-          <Image alt="drug" fill src={displayedData?.thumbnail} />
+          <Image alt={displayedData?.name} fill src={displayedData?.thumbnail} />
         </aside>
         <div className={styles.drugDetails}>
           <h6 className={styles.drugName}>{displayedData?.name}</h6>

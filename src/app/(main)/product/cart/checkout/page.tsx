@@ -8,6 +8,7 @@ import {
   iconLoaderMap,
 } from "@hexify/atoms"
 import { useState } from "react"
+import { useRouter } from 'next/navigation'
 import clsx from "clsx"
 import Link from "next/link"
 import routes from "@/lib/constants/routes"
@@ -25,6 +26,8 @@ const Checkout = () => {
   const [activeDeliveryMethod, setActiveDeliveryMethod] = useState(
     DeliveryMethod.HOME
   )
+
+  const router = useRouter()
 
   const closePickUpInfoModal = () =>
     setActiveDeliveryMethod(DeliveryMethod.HOME)
@@ -132,7 +135,7 @@ const Checkout = () => {
             </Formik>
           </div>
           <div className={styles.summaryWrapper}>
-            <CartSummaryCard />
+            <CartSummaryCard onCheckout={() => router.push(routes.checkoutPayment)} />
           </div>
         </div>
       </div>
