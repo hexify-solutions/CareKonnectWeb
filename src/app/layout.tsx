@@ -6,17 +6,20 @@ import SecureStorageProvider from "@/context/storage"
 import ToastProvider from "@/context/toastProvider"
 import UserLocationProvider from "@/context/location"
 import CartProvider from "@/context/cart"
+import { createBranding } from "@hexify/atoms/src/theme/getBranding"
 
 export const metadata: Metadata = {
   title: "Care Konnect",
   description: "All in one health care system",
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  await createBranding()
+
   return (
     <html lang="en">
       <body style={{ backgroundColor: "#F8FAF0" }}>
