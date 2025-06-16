@@ -96,8 +96,8 @@ class Api {
         ...options,
       },
       transform,
-      this.errCb,
-    );
+      this.errCb
+    )
   }
 
   put<T, R = T>(
@@ -131,6 +131,19 @@ class Api {
         data: body,
         ...options,
       },
+      transform,
+      this.errCb
+    )
+  }
+
+  feGet<T, R = T>(
+    path: string,
+    options?: Record<never, never>,
+    transform?: Transformer<T, R>
+  ) {
+    return this.request<T, R>(
+      `${process.env.NEXT_PUBLIC_FE_URL}/${path}`,
+      { method: "GET", ...options },
       transform,
       this.errCb
     )

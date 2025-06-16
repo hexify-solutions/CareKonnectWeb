@@ -3,7 +3,6 @@ import Link from "next/link"
 import { HospitalCard, DoctorCard } from "@hexify/components"
 import routes from "@/lib/constants/routes"
 import { getTopSpecialists } from "@/http/globals/serverActions"
-import Pharmacy from "@/app/(main)/hospital/[slug]/pharmacy/page"
 import { getStoredUserLocation } from "@/lib/utils/getStoredUserLocation"
 import { calculatePatientDistance } from "@hexify/providers/src/lib/utils"
 

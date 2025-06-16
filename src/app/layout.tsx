@@ -7,7 +7,8 @@ import ToastProvider from "@/context/toastProvider"
 import UserLocationProvider from "@/context/location"
 import CartProvider from "@/context/cart"
 import { createBranding } from "@hexify/atoms/src/theme/getBranding"
-
+import { CustomTheme } from "@hexify/atoms"
+import MaintenancePage from "@hexify/providers/src/components/MaintainanceMode"
 export const metadata: Metadata = {
   title: "Care Konnect",
   description: "All in one health care system",
@@ -18,23 +19,29 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
-  await createBranding()
+  const data = await createBranding()
 
   return (
     <html lang="en">
       <body style={{ backgroundColor: "#F8FAF0" }}>
-        <UserLocationProvider>
-          <SecureStorageProvider>
-            <QueryProvider>
-              <AuthProvider>
-                <CartProvider>
-                  <main>{children} </main>
-                </CartProvider>
-              </AuthProvider>
-              <ToastProvider />
-            </QueryProvider>
-          </SecureStorageProvider>
-        </UserLocationProvider>
+        <CustomTheme branding={data}>
+          {data?.features?.maintenanceMode ? (
+            <MaintenancePage />
+          ) : (
+            <UserLocationProvider>
+              <SecureStorageProvider>
+                <QueryProvider>
+                  <AuthProvider>
+                    <CartProvider>
+                      <main>{children} </main>
+                    </CartProvider>
+                  </AuthProvider>
+                  <ToastProvider />
+                </QueryProvider>
+              </SecureStorageProvider>
+            </UserLocationProvider>
+          )}
+        </CustomTheme>
       </body>
     </html>
   )

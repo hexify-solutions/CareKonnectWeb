@@ -48,9 +48,10 @@ export default async function customRequest<T, R = T>(
 
     errCb?.(err)
     if (err.response) {
-      console.log(err)
       throw new ResponseError(
-        err.response.data.errors?.[0]?.message || err.response.data.message,
+        err.response.data.errors?.[0]?.message ||
+          err.response.data.message ||
+          err.response.data,
         err.response.status
       )
     }

@@ -1,5 +1,4 @@
 import NavigationComponent from "@/components/navigation"
-import { CustomTheme } from "@hexify/atoms"
 import { Footer } from "@hexify/components"
 import footerMap from "../../data/footerMap"
 import styles from "./layout.module.css"
@@ -11,7 +10,7 @@ function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <CustomTheme>
+    <>
       {/* <NotificationProvider> */}
       <main className={styles.main}>
         <header>
@@ -28,7 +27,7 @@ function RootLayout({
         </div>
       </main>
       {/* </NotificationProvider> */}
-    </CustomTheme>
+    </>
   )
 }
 
