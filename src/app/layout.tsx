@@ -24,7 +24,8 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body style={{ backgroundColor: "#F8FAF0" }}>
-        <CustomTheme branding={data}>
+        {JSON.stringify(data?.e || { location: "0o0po" })}
+        <CustomTheme branding={data?.e ? undefined : data}>
           {data?.features?.maintenanceMode ? (
             <MaintenancePage />
           ) : (
