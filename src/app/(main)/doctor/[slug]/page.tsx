@@ -19,16 +19,10 @@ const Doctor = async ({ params, searchParams }) => {
 
   doctor = await getDoctor(params?.slug)
 
-
   doctorsAvailability = await fetchData({
     url: `${process.env.PUBLIC_URL}/availabilities/${pageSearchParams?.availability || pageParams?.slug || doctor?.data?.doctorDetails?.id}`,
     errorMessage: "Error fetching doctor availabilities:",
   })
-
-  console.log(doctorsAvailability, ">>>>>>>>>>>>>> doctor availabity")
-
-
-
 
   return (
     <div>

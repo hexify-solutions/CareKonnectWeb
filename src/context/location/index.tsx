@@ -54,10 +54,8 @@ export const UserLocationProvider: React.FC<{ children: React.ReactNode }> = ({
     }
     const fallbackLocation = () => {
       const fallbackPosition = getLocationFromStore()
-      console.log(fallbackPosition, "cookie")
       if (fallbackPosition) {
         store(fallbackPosition)
-        console.log(fallbackPosition, "innn")
         setLocation(fallbackPosition)
         return
       }

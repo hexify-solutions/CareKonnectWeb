@@ -1,18 +1,13 @@
-"use client";
+"use client"
 
-import { Checkbox, Button, Telephone } from "@hexify/atoms";
-import { Formik, Form } from "formik";
+import { Checkbox, Button, Telephone } from "@hexify/atoms"
+import { Formik, Form } from "formik"
 
-import styles from "./hospitalBookingCard.module.css";
+import styles from "./hospitalBookingCard.module.css"
 
 const BookingCard = () => {
   return (
-    <Formik
-      initialValues={{}}
-      onSubmit={() => {
-        console.log("submittin");
-      }}
-    >
+    <Formik initialValues={{}} onSubmit={() => {}}>
       {() => {
         return (
           <Form>
@@ -55,10 +50,10 @@ const BookingCard = () => {
               </div>
             </div>
           </Form>
-        );
+        )
       }}
     </Formik>
-  );
-};
+  )
+}
 
-export default BookingCard;
+export default BookingCard

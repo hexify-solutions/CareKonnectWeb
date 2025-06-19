@@ -21,7 +21,6 @@ export const withZoom = (WrappedComponent) => {
       })
 
       if (!response?.ok) {
-        console.log("error generating zoom signature")
         return
       }
 
@@ -36,15 +35,13 @@ export const withZoom = (WrappedComponent) => {
     }, [])
 
     useEffect(() => {
+      if (!zoomSignature && !zoomElementRef?.current) return
 
-        if (!zoomSignature && !zoomElementRef?.current) return;
-(async () => {
-    console.log(zoomSignature, ">>>>>>>>>>>")
+      ;(async () => {
         const ZoomEmbed = await (
           await import("@zoom/meetingsdk/embedded")
         ).default
         const client = ZoomEmbed?.createClient()
-        console.log(client, zoomElementRef, '>>>>>>>>>>>>>>>>')
         if (zoomElementRef.current && client) {
           await client.init({
             language: "en-US", // Or your desired language

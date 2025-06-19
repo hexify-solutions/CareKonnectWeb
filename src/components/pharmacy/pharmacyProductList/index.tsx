@@ -2,13 +2,13 @@
 
 "use client"
 
-import { Chip, Spinner } from "@hexify/atoms";
-import Link from "next/link";
-import styles from "./pharmacyProductList.module.css";
-import DrugCartCard from "../cards/drugCartCard";
-import FilterButton from "@/components/filterButton";
-import { useGetPharmacyDrugs } from "@/http/pharmacy/query";
-import { useState } from "react";
+import { Chip, Spinner } from "@hexify/atoms"
+import Link from "next/link"
+import styles from "./pharmacyProductList.module.css"
+import DrugCartCard from "../cards/drugCartCard"
+import FilterButton from "@/components/filterButton"
+import { useGetPharmacyDrugs } from "@/http/pharmacy/query"
+import { useState } from "react"
 
 const PharmacyProductList = ({ pharmacy }: any) => {
   const [activeCategory, setActiveCategory] = useState("All")
@@ -16,8 +16,6 @@ const PharmacyProductList = ({ pharmacy }: any) => {
   const { data, isLoading } = useGetPharmacyDrugs({
     id: pharmacy?.id,
   })
-
-  console.log(data, isLoading, "this isthe loading state", pharmacy)
 
   return (
     <div>

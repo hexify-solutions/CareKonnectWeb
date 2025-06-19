@@ -36,8 +36,8 @@ interface ProductDetailProps {
     }>
     usage: string
   }
-  pharmacyId: string;
-  drugId: string;
+  pharmacyId: string
+  drugId: string
 }
 
 const productD = {
@@ -80,21 +80,20 @@ const productD = {
     "Using vitamin C supplements effectively involves understanding the appropriate dosage, the form that best suits your needs, and the timing of intake. Here are some guidelines.",
 }
 
-const ProductDetail = ({ product = productD, pharmacyId, drugId,  }: ProductDetailProps) => {
-
-
-
-  const {data, isLoading, error  } = useGetPharmacyDrugById({
+const ProductDetail = ({
+  product = productD,
+  pharmacyId,
+  drugId,
+}: ProductDetailProps) => {
+  const { data, isLoading, error } = useGetPharmacyDrugById({
     pharmacyId,
     drugId,
   })
 
-  console.log(data, isLoading, error, "this is from the drug card")
-
   const displayedData = {
     images: data?.data?.images || [],
-    name: data?.data?.name, 
-    description: data?.data?.description
+    name: data?.data?.name,
+    description: data?.data?.description,
   }
 
   const [selectedImage, setSelectedImage] = useState(0)
@@ -119,7 +118,6 @@ const ProductDetail = ({ product = productD, pharmacyId, drugId,  }: ProductDeta
       setQuantity(newQuantity)
     }
   }
-
 
   const tabs = [
     {
@@ -220,10 +218,12 @@ const ProductDetail = ({ product = productD, pharmacyId, drugId,  }: ProductDeta
           </div>
 
           {/* Description */}
-         {displayedData?.description && <p className={styles.description}>
-            {displayedData?.description}{" "}
-            <button className={styles.readMore}>Read more...</button>
-          </p>}
+          {displayedData?.description && (
+            <p className={styles.description}>
+              {displayedData?.description}{" "}
+              <button className={styles.readMore}>Read more...</button>
+            </p>
+          )}
 
           {/* Flavor Selection */}
           <div className={styles.flavorSection}>

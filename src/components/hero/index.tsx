@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import CategorySearch from "./categorySearch"
 import styles from "./hero.module.css"
 import clsx from "clsx"
+import SpecializationCarousel from "@/app/(main)/_components/specializationCarousel"
 
 const backgrounds = [
   "https://images.pexels.com/photos/5452290/pexels-photo-5452290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -41,9 +42,7 @@ const Hero = () => {
             Everyone deserves access to quality care and wellness resources, to
             live their best life.
           </span>
-          <div className={styles.inputField}>
-            <CategorySearch />
-          </div>
+          <CategorySearch className={styles.inputField} />
         </div>
       </div>
     </div>

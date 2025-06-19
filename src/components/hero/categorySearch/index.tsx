@@ -11,7 +11,7 @@ import {
 } from "@hexify/atoms"
 import { useRouter } from "next/navigation"
 import useDropdown from "@/hooks/useDropdown"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Checkbox } from "@hexify/atoms"
 import useQueryParams from "@/hooks/useQueryParams"
 import styles from "./categorySearch.module.css"
@@ -20,6 +20,7 @@ import React from "react"
 import { withSuspense } from "@/hoc"
 import { useMediaQuery } from "usehooks-ts"
 import clsx from "clsx"
+import SpecializationCarousel from "@/app/(main)/_components/specializationCarousel"
 
 const CategoryDropdown = ({ onChangeHandler, selectedCategory }) => {
   const { isOpen, toggle, dropdownRef } = useDropdown()
@@ -103,10 +104,11 @@ const CategoryDropdown = ({ onChangeHandler, selectedCategory }) => {
   )
 }
 
-const CategorySearch = () => {
+const CategorySearch = (props: { className?: string }) => {
   const router = useRouter()
   const [selectedCategory, setSelectedCategory] = useState([])
   const [searchQuery, setSearchQuery] = useState("")
+  const [specialization, setSpecialization] = useState("")
   const isMobile = useMediaQuery("(max-width: 768px)")
 
   const onChangeHandler = (e: any) => {
@@ -124,8 +126,11 @@ const CategorySearch = () => {
   const queryString = buildQueryString({
     category: selectedCategory?.join(","),
     search: searchQuery,
+    specialization,
   })
-
+  useEffect(() => {
+    router.prefetch(routes?.search(queryString))
+  }, [queryString])
   const searchHandler = (e) => {
     e?.preventDefault()
     e?.stopPropagation()
@@ -139,20 +144,30 @@ const CategorySearch = () => {
   )
 
   return (
-    <form method="post" className={styles.form} onSubmit={searchHandler}>
-      <InputField
-        type="text"
-        suffix={suffix}
-        fullWidth
-        prefix={CategoryDropdown}
-        prefixProps={{ onChangeHandler, selectedCategory }}
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-        placeholder="Search medical expert and resources"
-        style={{ borderRadius: "24px" }}
-        data-variant="design_primary"
+    <>
+      <div className={props.className}>
+        <form method="post" className={styles.form} onSubmit={searchHandler}>
+          <InputField
+            type="text"
+            suffix={suffix}
+            fullWidth
+            prefix={CategoryDropdown}
+            prefixProps={{ onChangeHandler, selectedCategory }}
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search medical expert and resources"
+            style={{ borderRadius: "24px" }}
+            data-variant="design_primary"
+          />
+        </form>
+      </div>
+      <SpecializationCarousel
+        onSelect={(txt) => {
+          setSpecialization(txt)
+          router?.push(routes?.search(`specialization=${txt}`))
+        }}
       />
-    </form>
+    </>
   )
 }
 

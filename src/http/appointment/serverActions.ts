@@ -3,8 +3,7 @@ import { cookies } from "next/headers"
 import cookieKeys from "@/lib/constants/cookieKeys"
 import endPoints from "../endpoints"
 import { fetchData } from ".."
-import { buildQueryString } from '../../lib/utils/buildQueryStrings';
-
+import { buildQueryString } from "../../lib/utils/buildQueryStrings"
 
 export const getAppointmentById = async (id: string) => {
   try {
@@ -24,8 +23,6 @@ export const getAppointmentById = async (id: string) => {
       },
     })
 
-    console.log(appointment, "appointment data")
-
     return appointment?.data
   } catch (error) {
     console.error("Error in get appointment by id:", error)
@@ -35,7 +32,7 @@ export const getAppointmentById = async (id: string) => {
 
 export const getUsersAppointments = async (params = {}) => {
   try {
-    const queryString =  buildQueryString(params)
+    const queryString = buildQueryString(params)
     const cookieStore = await cookies()
     const token = cookieStore.get(cookieKeys.token)?.value
 

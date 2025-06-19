@@ -11,6 +11,7 @@
   "dependencies": {
     "@hexify/atoms": "*",
     "@hexify/components": "*",
+    "@nanostores/react": "^1.0.0",
     "@paystack/inline-js": "^2.22.3",
     "@tanstack/react-query": "^5.62.11",
     "@tanstack/react-query-devtools": "^5.62.11",
@@ -22,6 +23,7 @@
     "formik": "^2.4.6",
     "jsonwebtoken": "^9.0.2",
     "motion": "^11.14.4",
+    "nanostores": "^1.0.1",
     "next": "^15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

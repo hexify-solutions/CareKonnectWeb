@@ -75,7 +75,6 @@ const Prescriptions = () => {
 }
 
 export const AppointmentGeneralInfoCardTabComponent = ({ appointment }) => {
-  console.log(appointment, ">>>>>>>>>>>>> this should be used")
   const tabs = [
     {
       label: "General Overview",

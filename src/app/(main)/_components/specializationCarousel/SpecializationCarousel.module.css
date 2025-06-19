@@ -1,0 +1,56 @@
+.carouselContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 1rem;
+    overflow: hidden;
+    width: 600px;
+    max-width: 99%;
+}
+
+.pillContainer {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    gap: 10px;
+    flex-grow: 1;
+    padding-bottom: 1rem;
+}
+.pill {
+    padding: 1rem 1.2rem;
+    border: none;
+    border-radius: 999px;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+
+.pill:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.selected {
+    background-color: var(--mui-color-primary) !important;
+    color: var(--mui-color-background) !important;
+    transform: scale(1.1);
+    font-weight: bold;
+}
+
+.navButton {
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+    .navButton{
+        display: none;
+    }
+}

@@ -40,7 +40,6 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
   }, [defaultState])
   useLayoutEffect(() => {
     const hasProfile = !!authState.profile?.email
-    console.log({ hasProfile, authState })
     setAuthState({ ...authState, isAuth: hasProfile })
   }, [authState.profile])
 

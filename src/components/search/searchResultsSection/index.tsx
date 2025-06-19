@@ -15,16 +15,14 @@ const SearchResultSection = ({ label, list }) => {
       <h4 className={styles.sectionHeading}>{pluralize(label)}</h4>
       <div className={styles.list}>
         {list?.map((item) => {
-          if (item?.userType === "doctor") {
+          if (item?.userType === "doctor" || item?.userType === "pharmacy") {
             const distance = calculatePatientDistance(item, patientCoords)
             const tags =
-              item?.doctorDetails?.specializations?.length > 0
-                ? item?.doctorDetails?.specializations
-                    .slice(0, 3)
-                    ?.map((spec) => spec?.name)
+              item?.specializations?.length > 0
+                ? item?.specializations?.slice(0, 3)?.map((spec) => spec?.name)
                 : []
-            if (item?.doctorDetails?.specializations.length > 3) {
-              tags.push(`+${item?.doctorDetails?.specializations.length - 3}`)
+            if (item?.specializations?.length > 3) {
+              tags.push(`+${item?.specializations?.length - 3}`)
             }
 
             return (
@@ -36,10 +34,11 @@ const SearchResultSection = ({ label, list }) => {
                 <DoctorCard
                   image={
                     item?.doctorDetails?.avatarUrl ||
+                    item?.avatarUrl ||
                     "https://images.pexels.com/photos/12311410/pexels-photo-12311410.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   }
                   info={{
-                    label: item?.firstName + " " + item?.lastName,
+                    label: item?.name || item?.firstName + " " + item?.lastName,
                     tags,
                     rating: item?.doctorDetails?.rating || 5,
                     distance: distance,

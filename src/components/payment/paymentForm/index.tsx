@@ -13,7 +13,10 @@ import styles from "./paymentForm.module.css"
 import { useState } from "react"
 import { Form, Formik } from "formik"
 import PaymentSuccessModal from "../paymentSuccessModal"
-import { useMakePaymentForAppointment, useVerifyPaymentForAppointment } from "@/http/appointment/mutation"
+import {
+  useMakePaymentForAppointment,
+  useVerifyPaymentForAppointment,
+} from "@/http/appointment/mutation"
 import PaymentReceiptModal from "../paymentReceiptModal"
 import Paystack from "@paystack/inline-js"
 
@@ -42,18 +45,20 @@ const PaymentForm = ({ appointmentId }: { appointmentId: string }) => {
         onSuccess: (data: { data: { access_code: string } }) => {
           payStackPopup?.resumeTransaction(data?.data?.access_code, {
             onSuccess: (response) => {
-              verifyPaymentMutation?.mutate({
-                provider: "paystack",
-                reference: response?.reference
-              }, {
-                onSuccess: (response: { data: Record<string, any>}) => {
-                  console.log(data, ">>>>>>>>>>>> receipt")
-                  setPaymentReceiptData(response?.data)
-                  setPaymentSuccessState(true)
-                  setShowPaymentSuccessModal(true)
+              verifyPaymentMutation?.mutate(
+                {
+                  provider: "paystack",
+                  reference: response?.reference,
+                },
+                {
+                  onSuccess: (response: { data: Record<string, any> }) => {
+                    setPaymentReceiptData(response?.data)
+                    setPaymentSuccessState(true)
+                    setShowPaymentSuccessModal(true)
+                  },
                 }
-              })
-            }
+              )
+            },
           })
         },
       }
@@ -62,7 +67,7 @@ const PaymentForm = ({ appointmentId }: { appointmentId: string }) => {
 
   const nextHandler = () => {
     if (paymentOption === "paystack" && appointmentId) {
-      handlePayStackPayment?.();
+      handlePayStackPayment?.()
     }
     return
     setStep((prev) => prev + 1)
@@ -115,19 +120,30 @@ const PaymentForm = ({ appointmentId }: { appointmentId: string }) => {
                   </label>
                 )
               })}
-{   !paymentSuccessState &&           <div className={styles.btnWrapper}>
-                <Button
-                  disabled={!paymentOption || paymentMutation?.isPending || verifyPaymentMutation?.isPending}
-                  type="button"
-                  onClick={nextHandler}
-                  variant="contained"
-                  fullWidth
-                  rounded
-                  size="large"
-                >
-                  {(verifyPaymentMutation?.isPending || paymentMutation?.isPending) ? <Spinner /> : "Next"}
-                </Button>
-              </div>}
+              {!paymentSuccessState && (
+                <div className={styles.btnWrapper}>
+                  <Button
+                    disabled={
+                      !paymentOption ||
+                      paymentMutation?.isPending ||
+                      verifyPaymentMutation?.isPending
+                    }
+                    type="button"
+                    onClick={nextHandler}
+                    variant="contained"
+                    fullWidth
+                    rounded
+                    size="large"
+                  >
+                    {verifyPaymentMutation?.isPending ||
+                    paymentMutation?.isPending ? (
+                      <Spinner />
+                    ) : (
+                      "Next"
+                    )}
+                  </Button>
+                </div>
+              )}
             </div>
           </>
         )}

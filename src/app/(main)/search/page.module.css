@@ -10,3 +10,7 @@
     flex-direction: column;
     padding: 2rem;
 }
+.notFound {
+    width: 400px;
+    max-width: 90% !important;
+}

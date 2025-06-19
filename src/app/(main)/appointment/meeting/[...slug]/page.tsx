@@ -1,12 +1,10 @@
 "use client"
 import MeetingComponent from "@/components/appointment/meeting"
 import { useParams } from "next/navigation"
-import { withSuspense } from '@/hoc';
+import { withSuspense } from "@/hoc"
 
 const AppointmentMeeting = ({ params }) => {
   const paramsData = useParams()
-
-  console.log(paramsData)
 
   function parseKeyValueArray(arr: string[]) {
     const result = {
@@ -22,8 +20,6 @@ const AppointmentMeeting = ({ params }) => {
   }
   const parsedParams = parseKeyValueArray(paramsData?.slug as string[])
 
-  console.log(parsedParams, "parsed params")
-
   if (!parsedParams?.z) {
     return <div>Invalid meeting id</div>
   }
@@ -35,4 +31,4 @@ const AppointmentMeeting = ({ params }) => {
   )
 }
 
-export default  withSuspense(AppointmentMeeting)
+export default withSuspense(AppointmentMeeting)
