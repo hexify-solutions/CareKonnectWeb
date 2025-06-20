@@ -25,10 +25,16 @@ const SearchResultSection = ({ label, list }) => {
               tags.push(`+${item?.specializations?.length - 3}`)
             }
 
+            const id =
+              item?.doctorDetails?.id || item?.pharmacyDetails?.id || item.id
+            const url =
+              item?.userType === "doctor"
+                ? routes?.doctor(id)
+                : routes.pharmacy(id)
             return (
               <Link
                 key={item?.doctorDetails?.id}
-                href={routes?.doctor(item?.doctorDetails?.id)}
+                href={url}
                 // href={`${routes.doctor(item.doctorDetails?.id)}?availability=${item?.doctorDetails?.id}`}
               >
                 <DoctorCard
