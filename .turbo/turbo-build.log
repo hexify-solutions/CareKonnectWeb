@@ -22,17 +22,320 @@ Import trace for requested module:
  [32m[1m✓[22m[39m Compiled successfully
  [37m[1m [22m[39m Skipping validation of types
  [37m[1m [22m[39m Skipping linting
-[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m┌──────────────┬──────────────────────────────────────────────────┐
+[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m┌──────────────┬──────────────────────────────────────────────────┐
 │ (index)      │ Values                                           │
 ├──────────────┼──────────────────────────────────────────────────┤
-│ URL          │ 'https://api.carekonnect.hexifysolutions.com/v1' │
+│ URL          │ 'https://whale-uncommon-sheep.ngrok-free.app/v1' │
 │ isProduction │ true                                             │
 └──────────────┴──────────────────────────────────────────────────┘
-[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
-[?25l [37m[1m [22m[39m Generating static pages (0/31)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/31)  [36m[=   ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/31)  [36m[==  ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/31)  [36m[=== ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/31)  [36m[ ===][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/31)  [36m[  ==][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/31)  [36m[   =][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/31)  [36m[    ][39m[2K[1G[?25hError in get /appointments: Error: Dynamic server usage: Route /user/dashboard/appointments couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
+[?25l [37m[1m [22m[39m Generating static pages (0/31)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/31)  [36m[=   ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/31)  [36m[==  ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/31)  [36m[=== ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/31)  [36m[ ===][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/31)  [36m[  ==][39m[2K[1G[?25hnull serverrrrr undefined
+null serverrrrr undefined
+Error in get dashboard/stats: Error: Dynamic server usage: Route /user/dashboard couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
     at m (.next/server/chunks/986.js:12:14676)
     at f (.next/server/chunks/5208.js:1:17774)
-    at u (.next/server/chunks/5845.js:2:3117)
+    at h (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:411)
+    at D (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:27684)
+    at stringify (<anonymous>) {
+  description: "Route /user/dashboard couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+null serverrrrr undefined
+null serverrrrr undefined
+null serverrrrr undefined
+null serverrrrr undefined
+null serverrrrr undefined
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+┌──────────────┬──────────────────────────────────────────────────┐
+│ (index)      │ Values                                           │
+├──────────────┼──────────────────────────────────────────────────┤
+│ URL          │ 'https://whale-uncommon-sheep.ngrok-free.app/v1' │
+│ isProduction │ true                                             │
+└──────────────┴──────────────────────────────────────────────────┘
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+null serverrrrr undefined
+null serverrrrr undefined
+Error in get /emergency: Error: Dynamic server usage: Route /user/profile/emergency-contact couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at m (.next/server/chunks/986.js:12:14676)
+    at f (.next/server/chunks/5208.js:1:17774)
+    at c (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:335)
+    at u (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:1094)
+    at l (.next/server/app/(main)/user/profile/emergency-contact/page.js:1:8137)
+    at stringify (<anonymous>) {
+  description: "Route /user/profile/emergency-contact couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+null serverrrrr undefined
+null serverrrrr undefined
+null serverrrrr undefined
+null serverrrrr undefined
+null serverrrrr undefined
+null serverrrrr undefined
+┌──────────────┬──────────────────────────────────────────────────┐
+│ (index)      │ Values                                           │
+├──────────────┼──────────────────────────────────────────────────┤
+│ URL          │ 'https://whale-uncommon-sheep.ngrok-free.app/v1' │
+│ isProduction │ true                                             │
+└──────────────┴──────────────────────────────────────────────────┘
+null serverrrrr undefined
+null serverrrrr undefined
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+null serverrrrr undefined
+null serverrrrr undefined
+null serverrrrr undefined
+null serverrrrr undefined
+null serverrrrr undefined
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+Error in get /vitals: Error: Dynamic server usage: Route /user/profile/vitals couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at m (.next/server/chunks/986.js:12:14676)
+    at f (.next/server/chunks/5208.js:1:17774)
+    at c (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:335)
+    at m (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:743)
+    at l (.next/server/app/(main)/user/profile/vitals/page.js:1:4588)
+    at stringify (<anonymous>) {
+  description: "Route /user/profile/vitals couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Error in get /appointments: Error: Dynamic server usage: Route /user/dashboard/appointments couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at m (.next/server/chunks/986.js:12:14676)
+    at f (.next/server/chunks/5208.js:1:17774)
+    at d (.next/server/chunks/5845.js:2:3171)
     at f (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/appointments/page.js:1:13217)
     at stringify (<anonymous>) {
   description: "Route /user/dashboard/appointments couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
@@ -41,1652 +344,196 @@ Import trace for requested module:
 Error in get /appointments: Error: Dynamic server usage: Route /user/dashboard/appointments couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
     at m (.next/server/chunks/986.js:12:14676)
     at f (.next/server/chunks/5208.js:1:17774)
-    at u (.next/server/chunks/5845.js:2:3117)
+    at d (.next/server/chunks/5845.js:2:3171)
     at m (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/appointments/page.js:1:12604)
     at stringify (<anonymous>) {
   description: "Route /user/dashboard/appointments couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
   digest: 'DYNAMIC_SERVER_USAGE'
 }
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
+}
 ┌──────────────┬──────────────────────────────────────────────────┐
 │ (index)      │ Values                                           │
 ├──────────────┼──────────────────────────────────────────────────┤
-│ URL          │ 'https://api.carekonnect.hexifysolutions.com/v1' │
+│ URL          │ 'https://whale-uncommon-sheep.ngrok-free.app/v1' │
 │ isProduction │ true                                             │
 └──────────────┴──────────────────────────────────────────────────┘
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-┌──────────────┬──────────────────────────────────────────────────┐
-│ (index)      │ Values                                           │
-├──────────────┼──────────────────────────────────────────────────┤
-│ URL          │ 'https://api.carekonnect.hexifysolutions.com/v1' │
-│ isProduction │ true                                             │
-└──────────────┴──────────────────────────────────────────────────┘
-┌──────────────┬──────────────────────────────────────────────────┐
-│ (index)      │ Values                                           │
-├──────────────┼──────────────────────────────────────────────────┤
-│ URL          │ 'https://api.carekonnect.hexifysolutions.com/v1' │
-│ isProduction │ true                                             │
-└──────────────┴──────────────────────────────────────────────────┘
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-Error in get /vitals: Error: Dynamic server usage: Route /user/profile/vitals couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
-    at m (.next/server/chunks/986.js:12:14676)
-    at f (.next/server/chunks/5208.js:1:17774)
-    at u (.next/server/app/(main)/user/profile/vitals/page.js:1:335)
-    at h (.next/server/app/(main)/user/profile/vitals/page.js:1:743)
-    at l (.next/server/app/(main)/user/profile/vitals/page.js:1:4588)
-    at stringify (<anonymous>) {
-  description: "Route /user/profile/vitals couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
-  digest: 'DYNAMIC_SERVER_USAGE'
+null serverrrrr undefined
+null serverrrrr undefined
+Error [AggregateError]: 
+    at H.from (.next/server/chunks/2156.js:1:308144)
+    at y.<anonymous> (.next/server/chunks/2156.js:3:9597)
+    at m.<computed> (.next/server/chunks/2156.js:1:231843)
+    at aP.request (.next/server/chunks/2156.js:3:21243)
+    at async i (.next/server/chunks/5067.js:3:40869)
+    at async u (.next/server/chunks/5067.js:1:12334) {
+  code: 'ECONNREFUSED',
+  errors: [Array],
+  config: [Object],
+  request: [Writable],
+  constructor: [Function],
+  toJSON: [Function: toJSON],
+  [cause]: [AggregateError: ] { code: 'ECONNREFUSED' }
 }
-Error in get dashboard/stats: Error: Dynamic server usage: Route /user/dashboard couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
-    at m (.next/server/chunks/986.js:12:14676)
-    at f (.next/server/chunks/5208.js:1:17774)
-    at c (.next/server/app/(main)/user/profile/vitals/page.js:1:411)
-    at D (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:27630)
-    at stringify (<anonymous>) {
-  description: "Route /user/dashboard couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
-  digest: 'DYNAMIC_SERVER_USAGE'
-}
-Error in get /emergency: Error: Dynamic server usage: Route /user/profile/emergency-contact couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
-    at m (.next/server/chunks/986.js:12:14676)
-    at f (.next/server/chunks/5208.js:1:17774)
-    at u (.next/server/app/(main)/user/profile/vitals/page.js:1:335)
-    at m (.next/server/app/(main)/user/profile/vitals/page.js:1:1094)
-    at l (.next/server/app/(main)/user/profile/emergency-contact/page.js:1:8137)
-    at stringify (<anonymous>) {
-  description: "Route /user/profile/emergency-contact couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
-  digest: 'DYNAMIC_SERVER_USAGE'
-}
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
 [?25h [32m[1m✓[22m[39m Generating static pages (31/31)
-{
-  id: 'f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4',
-  brandId: '96204119-ca27-458f-aa66-e45c56d7ef2f',
-  colors: {
-    primary: '#92940a',
-    secondary: '#007bff',
-    accentPrimary: '#f1ede9',
-    accentSecondary: '#561515'
-  },
-  fonts: {
-    bodyFontFamily: 'Open Sans',
-    titleFontFamily: 'Merriweather',
-    primaryFontFamily: 'Montserrat'
-  },
-  images: {
-    logo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093797003/1750093797003.png',
-    appIcon: 'twitter-x-seeklogo-2.svg',
-    logoIcon: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750093843542/1750093843542.png',
-    whiteLogo: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749844505611/1749844505611.png',
-    logoIconWhite: 'https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg',
-    loginBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png',
-    signupBackground: 'https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png',
-    splashScreenImage: 'https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1749892326473/1749892326474.png'
-  },
-  content: {
-    footerText: 'Product of Lex Medical',
-    companyName: 'CareKonnect',
-    hidePoweredBy: 'false',
-    loginPageText: 'Login to access world class medical',
-    poweredByText: 'CareKonnect',
-    socialLoginEnabled: true,
-    passwordResetEnabled: true,
-    pushNotificationBrandingText: 'CareKonnect'
-  },
-  urls: {
-    twitter: 'http://x.com/sponsor',
-    youtube: 'http://youtube.com/sponsor',
-    facebook: 'http://linkedin.com/in/sponsor',
-    supportUrl: 'https://carekonnectdev.blob.core.windows.net',
-    supportEmail: 'support@example.com',
-    helpCenterUrl: 'helpCenter@example.com',
-    helpCenterEmail: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyUrl: 'https://carekonnectdev.blob.core.windows.net',
-    termsOfServiceUrl: 'https://carekonnectdev.blob.core.windows.net',
-    privacyPolicyEmail: 'privacyPolicy@example.com',
-    termsOfServiceEmail: 'termsOfService@example.com'
-  },
-  features: {
-    permissions: [
-      'all',           'doctor',
-      'hospital',      'patient',
-      'lab',           'pharmacy',
-      'god',           'laboratory',
-      'ai',            'hmo',
-      'branding',      'lex',
-      'wallet',        'chat',
-      'announcements', 'app',
-      'help_center'
-    ]
-  },
-  createdAt: '2025-06-11T19:00:52.874+00:00',
-  updatedAt: '2025-06-17T12:42:58.363+00:00',
-  deletedAt: null
-} spsps
-[?25l [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[?25l [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G[?25h [37m[1m [22m[39m Collecting build traces     [32m[1m✓[22m[39m Collecting build traces 
-[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G[?25h [37m[1m [22m[39m Finalizing page optimization     [32m[1m✓[22m[39m Finalizing page optimization 
+[?25l [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[?25l [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G[?25h [37m[1m [22m[39m Collecting build traces     [32m[1m✓[22m[39m Collecting build traces 
+[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Finalizing page optimization     [32m[1m✓[22m[39m Finalizing page optimization 
 
 [4mRoute (app)[24m                                       [4mSize[24m  [4mFirst Load JS[24m  [4m[24m  [4m[24m
-┌ ƒ /                                            195 B         [37m[1m453 kB[22m[39m
+┌ ƒ /                                            192 B         [37m[1m461 kB[22m[39m
 ├ ƒ /_not-found                                  163 B         [37m[1m104 kB[22m[39m
 ├ ƒ /api/branding                                163 B         [37m[1m104 kB[22m[39m
 ├ ƒ /api/zoom/generateSignature                  163 B         [37m[1m104 kB[22m[39m
-├ ƒ /appointment/details/[slug]                2.69 kB         [37m[1m303 kB[22m[39m
-├ ƒ /appointment/meeting/[...slug]             2.59 kB         [37m[1m185 kB[22m[39m
-├ ƒ /auth/callback/[provider]                  2.82 kB         [37m[1m168 kB[22m[39m
-├ ƒ /doctor/[slug]                             4.04 kB         [37m[1m439 kB[22m[39m
-├ ƒ /doctor/payment                            49.2 kB         [37m[1m456 kB[22m[39m
-├ ƒ /home                                        195 B         [37m[1m453 kB[22m[39m
-├ ƒ /hospital/[slug]                           3.98 kB         [37m[1m426 kB[22m[39m
-├ ƒ /hospital/[slug]/labs                      3.67 kB         [37m[1m415 kB[22m[39m
+├ ƒ /appointment/details/[slug]                2.68 kB         [37m[1m325 kB[22m[39m
+├ ƒ /appointment/meeting/[...slug]             3.03 kB         [37m[1m187 kB[22m[39m
+├ ƒ /auth/callback/[provider]                  3.25 kB         [37m[1m170 kB[22m[39m
+├ ƒ /doctor/[slug]                              4.1 kB         [37m[1m441 kB[22m[39m
+├ ƒ /doctor/payment                            49.3 kB         [37m[1m459 kB[22m[39m
+├ ƒ /home                                        192 B         [37m[1m461 kB[22m[39m
+├ ƒ /hospital/[slug]                           3.98 kB         [37m[1m428 kB[22m[39m
+├ ƒ /hospital/[slug]/labs                      3.66 kB         [37m[1m417 kB[22m[39m
 ├ ƒ /hospital/[slug]/labs/hematology             163 B         [37m[1m104 kB[22m[39m
-├ ƒ /hospital/[slug]/labs/hematology/[testId]  2.99 kB         [37m[1m377 kB[22m[39m
-├ ƒ /hospital/[slug]/labs/testPayment           1.3 kB         [37m[1m373 kB[22m[39m
-├ ƒ /hospital/[slug]/pharmacy                  1.21 kB         [37m[1m434 kB[22m[39m
+├ ƒ /hospital/[slug]/labs/hematology/[testId]  2.98 kB         [37m[1m399 kB[22m[39m
+├ ƒ /hospital/[slug]/labs/testPayment           1.3 kB         [37m[1m395 kB[22m[39m
+├ ƒ /hospital/[slug]/pharmacy                   1.2 kB         [37m[1m436 kB[22m[39m
 ├ ƒ /onboarding/logout/api                       163 B         [37m[1m104 kB[22m[39m
-├ ○ /onboarding/password-change                1.15 kB         [37m[1m363 kB[22m[39m
-├ ƒ /onboarding/password-reset                 2.11 kB         [37m[1m364 kB[22m[39m
-├ ƒ /onboarding/signin                            2 kB         [37m[1m363 kB[22m[39m
+├ ƒ /onboarding/password-change                1.14 kB         [37m[1m365 kB[22m[39m
+├ ƒ /onboarding/password-reset                  2.1 kB         [37m[1m366 kB[22m[39m
+├ ƒ /onboarding/signin                         1.99 kB         [37m[1m365 kB[22m[39m
 ├ ƒ /onboarding/signin/api                       163 B         [37m[1m104 kB[22m[39m
-├ ƒ /onboarding/signup                          2.6 kB         [37m[1m364 kB[22m[39m
-├ ƒ /onboarding/verify-email                   1.21 kB         [37m[1m350 kB[22m[39m
-├ ƒ /pharmacy/[slug]                           6.21 kB         [37m[1m448 kB[22m[39m
-├ ƒ /pharmacy/drugdetails/[...drug]            1.07 kB         [37m[1m406 kB[22m[39m
-├ ƒ /pharmacy/drugsearch/[slug]                 2.3 kB         [37m[1m303 kB[22m[39m
-├ ƒ /product/cart                               3.4 kB         [37m[1m304 kB[22m[39m
-├ ○ /product/cart/checkout                      4.1 kB         [37m[1m316 kB[22m[39m
-├ ○ /search                                    9.47 kB         [37m[1m437 kB[22m[39m
-├ ƒ /user/dashboard                            1.39 kB         [37m[1m373 kB[22m[39m
-├ ƒ /user/dashboard/appointments               2.95 kB         [37m[1m303 kB[22m[39m
-├ ○ /user/dashboard/healthbenefits             1.35 kB         [37m[1m302 kB[22m[39m
-├ ○ /user/dashboard/prescription               1.79 kB         [37m[1m302 kB[22m[39m
-├ ƒ /user/dashboard/prescription/[slug]           2 kB         [37m[1m302 kB[22m[39m
-├ ○ /user/dashboard/supports                    3.7 kB         [37m[1m387 kB[22m[39m
-├ ƒ /user/dashboard/supports/[slug]            1.61 kB         [37m[1m385 kB[22m[39m
-├ ƒ /user/profile                              2.42 kB         [37m[1m351 kB[22m[39m
-├ ○ /user/profile/change-password              3.12 kB         [37m[1m361 kB[22m[39m
-├ ƒ /user/profile/emergency-contact            2.93 kB         [37m[1m361 kB[22m[39m
+├ ƒ /onboarding/signup                         2.59 kB         [37m[1m366 kB[22m[39m
+├ ƒ /onboarding/verify-email                    1.2 kB         [37m[1m352 kB[22m[39m
+├ ƒ /pharmacy/[slug]                            6.2 kB         [37m[1m450 kB[22m[39m
+├ ƒ /pharmacy/drugdetails/[...drug]            1.06 kB         [37m[1m408 kB[22m[39m
+├ ƒ /pharmacy/drugsearch/[slug]                2.29 kB         [37m[1m325 kB[22m[39m
+├ ƒ /product/cart                              3.39 kB         [37m[1m326 kB[22m[39m
+├ ƒ /product/cart/checkout                      4.1 kB         [37m[1m338 kB[22m[39m
+├ ƒ /search                                    9.95 kB         [37m[1m439 kB[22m[39m
+├ ƒ /user/dashboard                            1.38 kB         [37m[1m395 kB[22m[39m
+├ ƒ /user/dashboard/appointments               2.94 kB         [37m[1m325 kB[22m[39m
+├ ƒ /user/dashboard/healthbenefits             1.35 kB         [37m[1m324 kB[22m[39m
+├ ƒ /user/dashboard/prescription               1.78 kB         [37m[1m324 kB[22m[39m
+├ ƒ /user/dashboard/prescription/[slug]           2 kB         [37m[1m324 kB[22m[39m
+├ ƒ /user/dashboard/supports                   3.69 kB         [37m[1m409 kB[22m[39m
+├ ƒ /user/dashboard/supports/[slug]             1.6 kB         [37m[1m407 kB[22m[39m
+├ ƒ /user/profile                              2.42 kB         [37m[1m353 kB[22m[39m
+├ ƒ /user/profile/change-password              3.14 kB         [37m[1m363 kB[22m[39m
+├ ƒ /user/profile/emergency-contact            2.95 kB         [37m[1m363 kB[22m[39m
 ├ ƒ /user/profile/feedback                       163 B         [37m[1m104 kB[22m[39m
-├ ƒ /user/profile/hmo-provider                   796 B         [37m[1m312 kB[22m[39m
-├ ƒ /user/profile/settings                       449 B         [37m[1m215 kB[22m[39m
-└ ƒ /user/profile/vitals                       3.22 kB         [37m[1m361 kB[22m[39m
+├ ƒ /user/profile/hmo-provider                   791 B         [37m[1m334 kB[22m[39m
+├ ƒ /user/profile/settings                       452 B         [37m[1m281 kB[22m[39m
+└ ƒ /user/profile/vitals                       3.24 kB         [37m[1m363 kB[22m[39m
 + First Load JS shared by all                   [37m[1m103 kB[22m[39m
   ├ chunks/8315-24af6374db49d768.js              46 kB
   ├ chunks/87c73c54-64b52c7d0d45dc3f.js        53.3 kB
-  └ other shared chunks (total)                4.25 kB
+  └ other shared chunks (total)                4.21 kB
 
 
 ƒ Middleware                                   [37m[1m32.5 kB[22m[39m
 
-○  (Static)   prerendered as static content
 ƒ  (Dynamic)  server-rendered on demand
 
-[?25h[2K[1G✨  Done in 89.37s.
+[?25h[2K[1G✨  Done in 84.90s.
