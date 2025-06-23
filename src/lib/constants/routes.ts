@@ -15,6 +15,7 @@ const routes = {
 
   // checkout
   checkout: "/product/cart/checkout",
+  checkoutPayment: "/product/cart/checkout/payment",
 
   // doctors
   doctor: (id: string) => "/doctor/" + id,

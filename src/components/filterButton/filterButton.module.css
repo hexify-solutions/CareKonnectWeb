@@ -2,6 +2,7 @@
   position: relative;
   z-index: 10;
   cursor: pointer;
+  width: max-content;
 }
 
 .dropdown {
@@ -18,7 +19,9 @@
 
 .dropdown[data-dir="right"] {
   right: 0;
-  
+}
+.dropdown[data-dir="left"] {
+  right: 0;
 }
 
 .dropdownHeading {
@@ -42,4 +45,5 @@
   line-height: 1.625rem;
   cursor: pointer;
   background-color: transparent;
+  max-width: auto;
 }

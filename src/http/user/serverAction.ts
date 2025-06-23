@@ -4,13 +4,25 @@ import cookieKeys from "@/lib/constants/cookieKeys"
 import endPoints from "../endpoints"
 import tags from "../tags"
 import { fetchData } from ".."
+import { transformRecentServicesData } from "./transformFuncs"
 
+const baseUrl = process.env.PUBLIC_URL
 
 const getToken = async () => {
-    const cookieStore = await cookies()
-    const token = cookieStore.get(cookieKeys.token)?.value
-    
-    return token
+  const cookieStore = await cookies()
+  const token = cookieStore.get(cookieKeys.token)?.value
+
+  return token
+}
+
+export const getUserRecentServices = async () => {
+  try {
+    const token = await getToken
+    return transformRecentServicesData({})
+  } catch (error) {
+    console.log("Error in get dashboard/services")
+    throw error
+  }
 }
 
 export const getUserStats = async () => {
@@ -18,7 +30,7 @@ export const getUserStats = async () => {
     const cookieStore = await cookies()
     const token = cookieStore.get(cookieKeys.token)?.value
 
-    const url = `${process.env.PUBLIC_URL}${endPoints?.stats}`
+    const url = `${baseUrl}${endPoints?.stats}`
 
     const stats = await fetchData({
       url,
@@ -38,10 +50,8 @@ export const getUserStats = async () => {
   }
 }
 
-
 export const getUserVitals = async () => {
   try {
-   
     const token = await getToken()
     const url = `${process.env.PUBLIC_URL}${endPoints?.getUserVitals}`
 
@@ -55,13 +65,12 @@ export const getUserVitals = async () => {
         },
         next: {
           revalidate: 3600,
-          tags: [tags.userVitals]
-        }
+          tags: [tags.userVitals],
+        },
       },
     })
 
     return vitals?.data
-
   } catch (error) {
     console.error("Error in get /vitals:", error)
     throw error
@@ -70,7 +79,6 @@ export const getUserVitals = async () => {
 
 export const getEmergencyContact = async () => {
   try {
-   
     const token = await getToken()
     const url = `${process.env.PUBLIC_URL}/${endPoints?.getEmergencyContact}`
 
@@ -84,7 +92,7 @@ export const getEmergencyContact = async () => {
         },
         next: {
           revalidate: 3600,
-          tags: [tags.emergencyContact]
+          tags: [tags.emergencyContact],
         },
       },
     })
@@ -95,8 +103,7 @@ export const getEmergencyContact = async () => {
   }
 }
 
-
-import { revalidateTag } from 'next/cache'
+import { revalidateTag } from "next/cache"
 
 export async function revalidate(tag: string) {
   revalidateTag(tag)

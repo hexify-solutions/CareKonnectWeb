@@ -14,7 +14,7 @@ import {
 const ModalTemplate = ({ cancelHandler, showHeader  = true, children, open, showFooter = true }: any) =>  {
 
     return (
-        <Modal open={open}>
+        <Modal  open={open}>
         <div className={styles.container}>
           <div className={styles.wrapper}>
          {showHeader &&   <header className={styles.header}>

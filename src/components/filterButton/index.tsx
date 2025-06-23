@@ -1,12 +1,22 @@
-"use client";
+"use client"
 
-import useDropdown from "@/hooks/useDropdown";
-import styles from "./filterButton.module.css";
-import { FilterIcon } from "@hexify/atoms";
-import clsx from 'clsx';
+import useDropdown from "@/hooks/useDropdown"
+import styles from "./filterButton.module.css"
+import { FilterIcon } from "@hexify/atoms"
+import clsx from "clsx"
 
-const FilterButton = ({ label = "Filter", className, dir = "right" }: { label?:string; className?: string, dir?: string}) => {
-  const { isOpen, toggle, dropdownRef } = useDropdown();
+const FilterButton = ({
+  label = "Filter",
+  className,
+  dir = "right",
+  children,
+  dropdownHeading,
+}: {
+  label?: string
+  className?: string
+  dir?: string
+} & any) => {
+  const { isOpen, toggle, dropdownRef } = useDropdown()
 
   return (
     <div ref={dropdownRef} className={styles.wrapper}>
@@ -16,11 +26,14 @@ const FilterButton = ({ label = "Filter", className, dir = "right" }: { label?:s
       </button>
       {isOpen && (
         <div className={styles.dropdown} data-dir={dir}>
-          <span className={styles.dropdownHeading}></span>
+          {!!dropdownHeading && (
+            <span className={styles.dropdownHeading}>{dropdownHeading}</span>
+          )}
+          {children}
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default FilterButton;
+export default FilterButton
