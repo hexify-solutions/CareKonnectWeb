@@ -13,24 +13,28 @@ const useQueryParams = () => {
    * @param params - Key-value pairs of query parameters to add or update.
    * @returns A complete query string.
    */
-  const buildQueryString = (params: Record<string, string | null>): string => {
-    const queryParams = new URLSearchParams(currentSearchQuery);
+  const buildQueryString = (params: Record<string, string | null | string[]>): string => {
+    const queryParams = new URLSearchParams(currentSearchQuery)
     Object.entries(params).forEach(([key, value]) => {
       if (value) {
-        queryParams.set(key, value);
+        // if (Array.isArray(value)) {
+        //   value.forEach((val) => queryParams.append(key, val))
+        // } else {
+          queryParams.set(key, value)
+        // }
       } else {
-        queryParams.delete(key);
+        queryParams.delete(key)
       }
-    });
+    })
 
-    return queryParams.toString();
-  };
+    return queryParams.toString()
+  }
 
   /**
    * Updates the URL by appending or modifying query parameters.
    * @param params - Key-value pairs of query parameters to add or update.
    */
-  const updateQueryParams = (params: Record<string, string | null>): void => {
+  const updateQueryParams = (params: Record<string, string | null | string[]>): void => {
     const queryString = buildQueryString(params);
     router.push(`${pathname}?${queryString}`);
   };
@@ -40,12 +44,12 @@ const useQueryParams = () => {
    * @returns An object containing all query parameters.
    */
   const getAllQueryParams = (): Record<string, string> => {
-    const queryParams: Record<string, string> = {};
+    const queryParams: Record<string, string> = {}
     searchParams.forEach((value, key) => {
-      queryParams[key] = value;
-    });
-    return queryParams;
-  };
+      queryParams[key] = value
+    })
+    return queryParams
+  }
 
   /**
    * Removes specified keys from the URL's query parameters.
@@ -80,7 +84,9 @@ const useQueryParams = () => {
     buildQueryString,
     removeQueryParams,
     hasAnyQueryParams,
+    currentSearchQuery,
     pathname,
+    searchParams
   };
 };
 

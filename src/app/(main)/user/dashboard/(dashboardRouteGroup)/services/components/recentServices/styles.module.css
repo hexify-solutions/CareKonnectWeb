@@ -1,0 +1,21 @@
+.heading {
+    font-family: var(--primary-font);
+font-weight: 600;
+font-size: 1.875rem;
+line-height: 130%;
+margin-bottom: 1rem;
+padding-top: 1.25rem;
+color: var(--mui-palette-primary-main);
+}
+
+.serviceList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.listItem {
+    background-color: var(--mui-palette-common-white);
+      overflow: hidden;
+  border-radius: 1rem;
+}

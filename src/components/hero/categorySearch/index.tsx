@@ -22,7 +22,7 @@ import { useMediaQuery } from "usehooks-ts"
 import clsx from "clsx"
 import SpecializationCarousel from "@/app/(main)/_components/specializationCarousel"
 
-const CategoryDropdown = ({ onChangeHandler, selectedCategory }) => {
+export const CategoryDropdown = ({ onChangeHandler, selectedCategory }) => {
   const { isOpen, toggle, dropdownRef } = useDropdown()
   const isMobile = useMediaQuery("(max-width: 768px)")
 
