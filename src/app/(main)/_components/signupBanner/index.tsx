@@ -1,13 +1,10 @@
 import clsx from "clsx"
 import styles from "./signupBanner.module.css"
-import GOOGLE_PLAY from "./assets/google_play.png"
-import APP_STORE from "./assets/app_store.png"
-import Image from "next/image"
 import { AppleStore, Button, GooglePlay } from "@hexify/atoms"
-import getBranding from "@hexify/atoms/src/theme/getBranding"
-import { isFeatureEnabled } from "@hexify/atoms/src/theme/feature"
+import { isFeatureEnabledAsync } from "@hexify/atoms/src/theme/feature"
 
-const SignupBanner = () => {
+const SignupBanner = async () => {
+  const isFeatureEnabled = await isFeatureEnabledAsync()
   return (
     <div className={styles.wrapper}>
       <div className={clsx("inner-wrapper", styles.innerWrapper)}>

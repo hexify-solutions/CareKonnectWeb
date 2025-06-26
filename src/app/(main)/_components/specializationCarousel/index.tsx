@@ -16,7 +16,6 @@ export default function SpecializationCarousel(
   const [selected, setSelected] = useState(null)
   const [colorsMap, setColorsMap] = useState({})
 
-  console.log({ specializations })
   useEffect(() => {
     if (isLoading || !specializations) return
     const newMap = {}

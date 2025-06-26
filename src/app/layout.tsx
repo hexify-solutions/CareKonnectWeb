@@ -9,6 +9,7 @@ import CartProvider from "@/context/cart"
 import { createBranding } from "@hexify/atoms/src/theme/getBranding"
 import { CustomTheme } from "@hexify/atoms"
 import MaintenancePage from "@hexify/providers/src/components/MaintainanceMode"
+
 export const metadata: Metadata = {
   title: "Care Konnect",
   description: "All in one health care system",
@@ -25,7 +26,7 @@ export default async function RootLayout({
     <html lang="en">
       <body style={{ backgroundColor: "#F8FAF0" }}>
         <CustomTheme branding={data?.e || !data ? undefined : data}>
-          {data?.features?.maintenanceMode ? (
+          {data?.features?.appDisabled ? (
             <MaintenancePage />
           ) : (
             <UserLocationProvider>

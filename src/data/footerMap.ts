@@ -5,6 +5,7 @@ export default function () {
   const help = isFeatureEnabled("help_center")
   const content = getBranding()?.content
   const urls = getBranding()?.urls
+
   return {
     logo: "/",
     linkGroup: [
@@ -102,6 +103,6 @@ export default function () {
       },
     ],
     copyright: `© ${content?.poweredByText}, ${new Date().getFullYear()}. All Right Reserved.`,
-    terms: "Terms & Conditions,  Privacy Policy, Cookies Policy, Sitemap.",
+    terms: "Terms & Conditions,  Privacy Policy, Cookies Policy",
   }
 }

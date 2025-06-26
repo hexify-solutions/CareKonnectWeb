@@ -6,10 +6,8 @@ import { useCart } from "."
 const CartSync = () => {
   const { recentlyUpdated, recentlyAdded, cartItems } = useCart()
 
-  console.log(recentlyAdded, recentlyUpdated, ">>>>>>>>>>>>>>>>>>>>>>>")
-
   useEffect(() => {
-    if(!recentlyAdded || recentlyUpdated) return;
+    if (!recentlyAdded || recentlyUpdated) return
     const addCart = debounce(async (data, url = "cart/add") => {
       try {
         await api.post(url, data)

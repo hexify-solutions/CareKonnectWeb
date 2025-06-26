@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server"
 import api from "@/http/api"
 import { brandId } from "@hexify/atoms/src/theme/getBranding"
+import { cookies } from "next/headers"
 
 let cachedData: any = null
 let cachedETag: string | null = null
@@ -27,13 +28,15 @@ export async function GET(req: NextRequest) {
       lastFetchTime = now
       cachedETag = `"${lastFetchTime}"` // ✅ Fast ETag
     }
-
+    const cookieStore = await cookies()
+    cookieStore.set("branding", JSON.stringify(cachedData), { maxAge: 10000 })
     // Return fresh/cached data with ETag
     return new Response(
       JSON.stringify({
         status: "update_started",
         data: cachedData,
         success: true,
+        cachedETag,
       }),
       {
         status: 200,
