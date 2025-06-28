@@ -1,0 +1,10 @@
+{
+  "styles": {
+    "primary": "#3366CC",
+    "secondary": "#FFFFFF",
+    "font": "Arial"
+  },
+  "content": {
+    "companyName": "Default Brand"
+  }
+}
