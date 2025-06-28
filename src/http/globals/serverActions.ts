@@ -4,7 +4,7 @@ import { fetchData } from ".."
 
 export const getTopSpecialists = async () => {
   try {
-    const url = `${process.env.PUBLIC_URL}/${endPoints?.getTopSpecialists}`
+    const url = `${process.env.NEXT_PUBLIC_URL}/${endPoints?.getTopSpecialists}`
 
     const topSpecialist = await fetchData({
       url,

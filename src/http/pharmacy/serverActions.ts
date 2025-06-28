@@ -4,7 +4,7 @@ import { fetchData } from ".."
 
 export const getPharmacyById = async (id: string) => {
   try {
-    const url = `${process.env.PUBLIC_URL}/${endPoints?.getPharmacy(id)}`
+    const url = `${process.env.NEXT_PUBLIC_URL}/${endPoints?.getPharmacy(id)}`
 
     const pharmacies = await fetchData({
       url,

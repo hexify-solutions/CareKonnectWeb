@@ -1,10 +1,14 @@
+"use server"
 import clsx from "clsx"
 import styles from "./signupBanner.module.css"
 import { AppleStore, Button, GooglePlay } from "@hexify/atoms"
-import { isFeatureEnabledAsync } from "@hexify/atoms/src/theme/feature"
+import {
+  isFeatureEnabled,
+  isFeatureEnabledAsync,
+} from "@hexify/atoms/src/theme/feature"
 
-const SignupBanner = async () => {
-  const isFeatureEnabled = await isFeatureEnabledAsync()
+const SignupBanner = () => {
+  // const isFeatureEnabled = isFeatureEnabled()
   return (
     <div className={styles.wrapper}>
       <div className={clsx("inner-wrapper", styles.innerWrapper)}>

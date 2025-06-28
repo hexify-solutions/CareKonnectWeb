@@ -31,6 +31,8 @@ export async function GET(req: NextRequest) {
     const cookieStore = await cookies()
     cookieStore.set("branding", JSON.stringify(cachedData), { maxAge: 10000 })
     // Return fresh/cached data with ETag
+    const reqHeaders = req.headers.get("access-control-request-headers") ?? ""
+
     return new Response(
       JSON.stringify({
         status: "update_started",
@@ -44,6 +46,9 @@ export async function GET(req: NextRequest) {
           "Cache-Control": "s-maxage=360, stale-while-revalidate",
           ETag: cachedETag,
           "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
+          "Access-Control-Allow-Headers": reqHeaders,
         },
       }
     )
@@ -55,3 +60,20 @@ export async function GET(req: NextRequest) {
     )
   }
 }
+
+// export async function OPTIONS(req: NextRequest) {
+//   const origin = req.headers.get("origin") ?? "*"
+//   const reqHeaders = req.headers.get("access-control-request-headers") ?? ""
+//
+//   return new NextResponse(null, {
+//     status: 200,
+//     headers: {
+//       "Access-Control-Allow-Origin": origin,
+//       "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
+//       "Access-Control-Allow-Headers": reqHeaders,
+//       "Access-Control-Allow-Credentials": "true", // add only if you need cookies
+//     },
+//   })
+// }
+
+/* GET / POST handlers … add the same three headers to every response */

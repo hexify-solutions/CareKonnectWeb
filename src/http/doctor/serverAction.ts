@@ -4,7 +4,7 @@ import { fetchData } from ".."
 
 export const getDoctor = async (id: string) => {
   try {
-    const url = `${process.env.PUBLIC_URL}/${endPoints?.getDoctor(id)}`
+    const url = `${process.env.NEXT_PUBLIC_URL}/${endPoints?.getDoctor(id)}`
 
     const doctor = await fetchData({
       url,

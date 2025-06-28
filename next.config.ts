@@ -9,11 +9,18 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-
+  experimental: {
+    authInterrupts: true,
+    externalMiddlewareRewritesResolve: true,
+    scrollRestoration: true,
+    // ppr: "incremental",
+    useLightningcss: true,
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: { ignoreBuildErrors: true },
+  poweredByHeader: false,
   output: "standalone",
 }
 

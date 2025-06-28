@@ -10,7 +10,7 @@ export const getAppointmentById = async (id: string) => {
     const cookieStore = await cookies()
     const token = cookieStore.get(cookieKeys.token)?.value
 
-    const url = `${process.env.PUBLIC_URL}${endPoints?.getAppointment(id)}`
+    const url = `${process.env.NEXT_PUBLIC_URL}${endPoints?.getAppointment(id)}`
 
     const appointment = await fetchData({
       url,
@@ -36,7 +36,7 @@ export const getUsersAppointments = async (params = {}) => {
     const cookieStore = await cookies()
     const token = cookieStore.get(cookieKeys.token)?.value
 
-    const url = `${process.env.PUBLIC_URL}/${endPoints?.getUsersAppointments}${queryString ? `?${queryString}` : ""}`
+    const url = `${process.env.NEXT_PUBLIC_URL}/${endPoints?.getUsersAppointments}${queryString ? `?${queryString}` : ""}`
     const appointments = await fetchData({
       url,
       errorMessage: "Error fetching appointments:",

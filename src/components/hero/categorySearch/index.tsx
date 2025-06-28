@@ -8,6 +8,7 @@ import {
   StethoscopeIcon,
   MedicinalBowl,
   SearchIcon,
+  Lab,
 } from "@hexify/atoms"
 import { useRouter } from "next/navigation"
 import useDropdown from "@/hooks/useDropdown"
@@ -21,10 +22,47 @@ import { withSuspense } from "@/hoc"
 import { useMediaQuery } from "usehooks-ts"
 import clsx from "clsx"
 import SpecializationCarousel from "@/app/(main)/_components/specializationCarousel"
+import { isFeatureEnabled } from "@hexify/atoms/src/theme/feature"
 
-export const CategoryDropdown = ({ onChangeHandler, selectedCategory }) => {
+/**
+ * Dropdown for selecting provider categories.
+ * The list is generated from an array so it’s easy to add/remove categories.
+ */
+export const CategoryDropdown = ({
+  onChangeHandler,
+  selectedCategory = [],
+}) => {
   const { isOpen, toggle, dropdownRef } = useDropdown()
   const isMobile = useMediaQuery("(max-width: 768px)")
+  const feature = ({ permissions }) => isFeatureEnabled(permissions)
+
+  // 📝 centralised list – add/remove categories here only
+  const categories = [
+    {
+      label: "Doctors",
+      value: "doctors",
+      icon: <StethoscopeIcon />,
+      permissions: ["doctor"],
+    },
+    {
+      label: "Hospitals",
+      value: "hospitals",
+      icon: <MedicinalBowl />,
+      permissions: ["hospital"],
+    },
+    {
+      label: "Pharmacies",
+      value: "pharmacies",
+      icon: <Pharmacy />,
+      permissions: ["pharmacy"],
+    },
+    {
+      label: "Laboratories",
+      value: "laboratories",
+      icon: <Lab />,
+      permissions: ["lab"],
+    },
+  ].filter(feature)
 
   return (
     <div ref={dropdownRef} className={styles.dropdown}>
@@ -43,60 +81,27 @@ export const CategoryDropdown = ({ onChangeHandler, selectedCategory }) => {
           </>
         )}
       </button>
+
       {isOpen && (
         <div className={styles.dropdownWrapper}>
           <div className={styles.heading}>Select Category</div>
+
           <ul>
-            <li className={styles.categoryItem}>
-              <div className={styles.label}>
-                <StethoscopeIcon />
-                <span>Doctors</span>
-              </div>
-              <Checkbox
-                checked={selectedCategory?.includes("doctors")}
-                value="doctors"
-                name="category"
-                onChange={onChangeHandler}
-              />
-            </li>
-            <li className={styles.categoryItem}>
-              <div className={styles.label}>
-                <MedicinalBowl />
-                <span>Hospitals</span>
-              </div>
-              <Checkbox
-                checked={selectedCategory?.includes("hospitals")}
-                value="hospitals"
-                name="category"
-                onChange={onChangeHandler}
-              />
-            </li>
-            <li className={styles.categoryItem}>
-              <div className={styles.label}>
-                <aside>
-                  <Pharmacy />
-                </aside>
-                <span>Pharmacies</span>
-              </div>
-              <Checkbox
-                checked={selectedCategory?.includes("pharmacies")}
-                value="pharmacies"
-                name="category"
-                onChange={onChangeHandler}
-              />
-            </li>
-            <li className={styles.categoryItem}>
-              <div className={styles.label}>
-                <aside>icon</aside>
-                <span>Laboratories</span>
-              </div>
-              <Checkbox
-                checked={selectedCategory?.includes("laboratory")}
-                value="laboratories"
-                name="category"
-                onChange={onChangeHandler}
-              />
-            </li>
+            {categories.map(({ label, value, icon }) => (
+              <li key={value} className={styles.categoryItem}>
+                <div className={styles.label}>
+                  {icon}
+                  <span>{label}</span>
+                </div>
+
+                <Checkbox
+                  checked={selectedCategory.includes(value)}
+                  value={value}
+                  name="category"
+                  onChange={onChangeHandler}
+                />
+              </li>
+            ))}
           </ul>
         </div>
       )}
@@ -155,7 +160,7 @@ const CategorySearch = (props: { className?: string }) => {
             prefixProps={{ onChangeHandler, selectedCategory }}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search medical expert and resources"
+            placeholder="Search for medical expert and resources"
             style={{ borderRadius: "24px" }}
             data-variant="design_primary"
           />

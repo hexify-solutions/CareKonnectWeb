@@ -9,7 +9,7 @@ const AppointmentDetails = async ({ id }) => {
   const token = cookieStore.get(cookieKeys.token)?.value
 
   const appointment = await fetchData({
-    url: `${process.env.PUBLIC_URL}${routes?.appointmentById(id)}`,
+    url: `${process.env.NEXT_PUBLIC_URL}${routes?.appointmentById(id)}`,
     errorMessage: "Error fetching doctor details:",
     options: {
       headers: {
@@ -18,7 +18,6 @@ const AppointmentDetails = async ({ id }) => {
       },
     },
   })
-
 
   return <AppointmentDetailCard appointment={appointment?.data} />
 }

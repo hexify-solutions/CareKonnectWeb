@@ -6,7 +6,7 @@ import tags from "../tags"
 import { fetchData } from ".."
 import { transformRecentServicesData } from "./transformFuncs"
 
-const baseUrl = process.env.PUBLIC_URL
+const baseUrl = process.env.NEXT_PUBLIC_URL
 
 const getToken = async () => {
   const cookieStore = await cookies()
@@ -53,7 +53,7 @@ export const getUserStats = async () => {
 export const getUserVitals = async () => {
   try {
     const token = await getToken()
-    const url = `${process.env.PUBLIC_URL}${endPoints?.getUserVitals}`
+    const url = `${process.env.NEXT_PUBLIC_URL}${endPoints?.getUserVitals}`
 
     const vitals = await fetchData({
       url,
@@ -80,7 +80,7 @@ export const getUserVitals = async () => {
 export const getEmergencyContact = async () => {
   try {
     const token = await getToken()
-    const url = `${process.env.PUBLIC_URL}/${endPoints?.getEmergencyContact}`
+    const url = `${process.env.NEXT_PUBLIC_URL}/${endPoints?.getEmergencyContact}`
 
     const contact = await fetchData({
       url,

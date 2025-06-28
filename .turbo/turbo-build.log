@@ -3,108 +3,38 @@
 [2K[1G[2m$ next build[22m
    [1m[38;2;173;127;168m▲ Next.js 15.2.4[39m[22m
    - Environments: .env.local, .env.production
+   - Experiments (use with caution):
+     [1m✓[22m authInterrupts
+     [1m✓[22m scrollRestoration
 
  [37m[1m [22m[39m Creating an optimized production build ...
-<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|javascript/auto|/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/next-flight-css-loader.js??ruleSet[1].rules[13].oneOf[5].use[0]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[1]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/src/app/(main)/product/cart/checkout/payment/checkoutPayment.module.css|rsc': No serializer registered for Warning
-<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> Array { 1 items } -> webpack/lib/ModuleWarning -> Warning
-<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|javascript/auto|/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/next-flight-css-loader.js??ruleSet[1].rules[13].oneOf[5].use[0]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[1]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/src/app/(main)/user/dashboard/(dashboardRouteGroup)/services/components/serviceHistory/style.module.css|rsc': No serializer registered for Warning
-<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> Array { 1 items } -> webpack/lib/ModuleWarning -> Warning
-<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|javascript/auto|/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/next-flight-css-loader.js??ruleSet[1].rules[13].oneOf[5].use[0]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[1]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/src/app/(main)/user/dashboard/(dashboardRouteGroup)/services/components/serviceHistory/style.module.css|ssr': No serializer registered for Warning
-<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> Array { 1 items } -> webpack/lib/ModuleWarning -> Warning
-<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|javascript/auto|/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/next-flight-css-loader.js??ruleSet[1].rules[13].oneOf[5].use[0]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[1]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css|ssr': No serializer registered for Warning
-<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> Array { 1 items } -> webpack/lib/ModuleWarning -> Warning
- ⚠ Compiled with warnings
-
-./src/app/(main)/product/cart/checkout/payment/checkoutPayment.module.css
-Warning
-
-(48:3) autoprefixer: start value has mixed support, consider using flex-start instead
-
-Import trace for requested module:
-./src/app/(main)/product/cart/checkout/payment/checkoutPayment.module.css
-./src/app/(main)/product/cart/checkout/payment/page.tsx
-
-./src/app/(main)/user/dashboard/(dashboardRouteGroup)/services/components/serviceHistory/style.module.css
-Warning
-
-(55:5) autoprefixer: end value has mixed support, consider using flex-end instead
-
-Import trace for requested module:
-./src/app/(main)/user/dashboard/(dashboardRouteGroup)/services/components/serviceHistory/style.module.css
-./src/app/(main)/user/dashboard/(dashboardRouteGroup)/services/components/serviceHistory/index.tsx
-./src/app/(main)/user/dashboard/(dashboardRouteGroup)/services/page.tsx
-
-./src/app/(main)/user/dashboard/(dashboardRouteGroup)/services/components/serviceHistory/style.module.css
-Warning
-
-(55:5) autoprefixer: end value has mixed support, consider using flex-end instead
-
-Import trace for requested module:
-./src/app/(main)/user/dashboard/(dashboardRouteGroup)/services/components/serviceHistory/style.module.css
-./src/app/(main)/user/dashboard/(dashboardRouteGroup)/services/components/serviceHistory/filter.tsx
-
-./src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css
-Warning
-
-(21:3) autoprefixer: start value has mixed support, consider using flex-start instead
-
-Import trace for requested module:
-./src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css
-./src/components/payment/paymentSuccessModal/index.tsx
-./src/components/payment/paymentForm/index.tsx
-
-<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/src/app/(main)/product/cart/checkout/payment/checkoutPayment.module.css': No serializer registered for Warning
-<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> Array { 1 items } -> webpack/lib/ModuleWarning -> Warning
-<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/src/app/(main)/user/dashboard/(dashboardRouteGroup)/services/components/serviceHistory/style.module.css': No serializer registered for Warning
-<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> Array { 1 items } -> webpack/lib/ModuleWarning -> Warning
-<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!/Users/emmsdan/Repo/hexify/carekonnect-web-monorepo/apps/patients/src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css': No serializer registered for Warning
-<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/NormalModule -> Array { 1 items } -> webpack/lib/ModuleWarning -> Warning
- ⚠ Compiled with warnings
-
-./src/app/(main)/product/cart/checkout/payment/checkoutPayment.module.css.webpack[javascript/auto]!=!../../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!../../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/(main)/product/cart/checkout/payment/checkoutPayment.module.css
-Warning
-
-(48:3) autoprefixer: start value has mixed support, consider using flex-start instead
-
-Import trace for requested module:
-./src/app/(main)/product/cart/checkout/payment/checkoutPayment.module.css.webpack[javascript/auto]!=!../../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!../../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/(main)/product/cart/checkout/payment/checkoutPayment.module.css
-./src/app/(main)/product/cart/checkout/payment/checkoutPayment.module.css
-
-./src/app/(main)/user/dashboard/(dashboardRouteGroup)/services/components/serviceHistory/style.module.css.webpack[javascript/auto]!=!../../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!../../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/(main)/user/dashboard/(dashboardRouteGroup)/services/components/serviceHistory/style.module.css
-Warning
-
-(55:5) autoprefixer: end value has mixed support, consider using flex-end instead
-
-Import trace for requested module:
-./src/app/(main)/user/dashboard/(dashboardRouteGroup)/services/components/serviceHistory/style.module.css.webpack[javascript/auto]!=!../../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!../../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/(main)/user/dashboard/(dashboardRouteGroup)/services/components/serviceHistory/style.module.css
-./src/app/(main)/user/dashboard/(dashboardRouteGroup)/services/components/serviceHistory/style.module.css
-
-./src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css.webpack[javascript/auto]!=!../../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!../../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css
-Warning
-
-(21:3) autoprefixer: start value has mixed support, consider using flex-start instead
-
-Import trace for requested module:
-./src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css.webpack[javascript/auto]!=!../../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!../../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css
-./src/components/payment/paymentSuccessModal/paymentSuccessModal.module.css
-./src/components/payment/paymentSuccessModal/index.tsx
-./src/components/payment/paymentForm/index.tsx
-
  [32m[1m✓[22m[39m Compiled successfully
  [37m[1m [22m[39m Skipping validation of types
  [37m[1m [22m[39m Skipping linting
-[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m┌──────────────┬──────────────────────────────────────────────────┐
+[?25l [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m┌──────────────┬──────────────────────────────────────────────────┐
 │ (index)      │ Values                                           │
 ├──────────────┼──────────────────────────────────────────────────┤
-│ URL          │ 'https://api.carekonnect.hexifysolutions.com/v1' │
+│ URL          │ 'https://whale-uncommon-sheep.ngrok-free.app/v1' │
 │ isProduction │ true                                             │
 └──────────────┴──────────────────────────────────────────────────┘
-[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
-[?25l [37m[1m [22m[39m Generating static pages (0/33)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/33)  [36m[=   ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/33)  [36m[==  ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/33)  [36m[=== ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/33)  [36m[ ===][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/33)  [36m[  ==][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/33)  [36m[   =][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/33)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/33)  [36m[   =][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/33)  [36m[  ==][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/33)  [36m[ ===][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/33)  [36m[====][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/33)  [36m[=== ][39m[2K[1G[?25hError in get /appointments: Error: Dynamic server usage: Route /user/dashboard/appointments couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+[2K[1G [37m[1m [22m[39m Collecting page data  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting page data  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting page data     [32m[1m✓[22m[39m Collecting page data 
+[?25l [37m[1m [22m[39m Generating static pages (0/33)  [36m[    ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/33)  [36m[=   ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/33)  [36m[==  ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/33)  [36m[=== ][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/33)  [36m[ ===][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/33)  [36m[  ==][39m[2K[1G [37m[1m [22m[39m Generating static pages (0/33)  [36m[   =][39m[2K[1G[?25h┌──────────────┬──────────────────────────────────────────────────┐
+│ (index)      │ Values                                           │
+├──────────────┼──────────────────────────────────────────────────┤
+│ URL          │ 'https://whale-uncommon-sheep.ngrok-free.app/v1' │
+│ isProduction │ true                                             │
+└──────────────┴──────────────────────────────────────────────────┘
+┌──────────────┬──────────────────────────────────────────────────┐
+│ (index)      │ Values                                           │
+├──────────────┼──────────────────────────────────────────────────┤
+│ URL          │ 'https://whale-uncommon-sheep.ngrok-free.app/v1' │
+│ isProduction │ true                                             │
+└──────────────┴──────────────────────────────────────────────────┘
+Error in get /appointments: Error: Dynamic server usage: Route /user/dashboard/appointments couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
     at m (.next/server/chunks/986.js:12:14676)
     at f (.next/server/chunks/5208.js:1:17774)
-    at d (.next/server/chunks/5845.js:2:3171)
-    at f (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/appointments/page.js:1:13266)
+    at u (.next/server/chunks/2867.js:2:4109)
+    at f (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/appointments/page.js:1:12792)
     at stringify (<anonymous>) {
   description: "Route /user/dashboard/appointments couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
   digest: 'DYNAMIC_SERVER_USAGE'
@@ -112,8 +42,8 @@ Import trace for requested module:
 Error in get /appointments: Error: Dynamic server usage: Route /user/dashboard/appointments couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
     at m (.next/server/chunks/986.js:12:14676)
     at f (.next/server/chunks/5208.js:1:17774)
-    at d (.next/server/chunks/5845.js:2:3171)
-    at m (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/appointments/page.js:1:12653)
+    at u (.next/server/chunks/2867.js:2:4109)
+    at c (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/appointments/page.js:1:12179)
     at stringify (<anonymous>) {
   description: "Route /user/dashboard/appointments couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
   digest: 'DYNAMIC_SERVER_USAGE'
@@ -121,109 +51,105 @@ Error in get /appointments: Error: Dynamic server usage: Route /user/dashboard/a
 ┌──────────────┬──────────────────────────────────────────────────┐
 │ (index)      │ Values                                           │
 ├──────────────┼──────────────────────────────────────────────────┤
-│ URL          │ 'https://api.carekonnect.hexifysolutions.com/v1' │
+│ URL          │ 'https://whale-uncommon-sheep.ngrok-free.app/v1' │
 │ isProduction │ true                                             │
 └──────────────┴──────────────────────────────────────────────────┘
-┌──────────────┬──────────────────────────────────────────────────┐
-│ (index)      │ Values                                           │
-├──────────────┼──────────────────────────────────────────────────┤
-│ URL          │ 'https://api.carekonnect.hexifysolutions.com/v1' │
-│ isProduction │ true                                             │
-└──────────────┴──────────────────────────────────────────────────┘
-Error in get /vitals: Error: Dynamic server usage: Route /user/profile/vitals couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
-    at m (.next/server/chunks/986.js:12:14676)
-    at f (.next/server/chunks/5208.js:1:17774)
-    at h (.next/server/app/(main)/user/profile/vitals/page.js:1:13463)
-    at f (.next/server/app/(main)/user/profile/vitals/page.js:1:13953)
-    at l (.next/server/app/(main)/user/profile/vitals/page.js:1:2948)
-    at stringify (<anonymous>) {
-  description: "Route /user/profile/vitals couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
-  digest: 'DYNAMIC_SERVER_USAGE'
-}
 Error in get /emergency: Error: Dynamic server usage: Route /user/profile/emergency-contact couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
     at m (.next/server/chunks/986.js:12:14676)
     at f (.next/server/chunks/5208.js:1:17774)
-    at h (.next/server/app/(main)/user/profile/vitals/page.js:1:13463)
-    at x (.next/server/app/(main)/user/profile/vitals/page.js:1:14304)
-    at l (.next/server/app/(main)/user/profile/emergency-contact/page.js:1:9284)
+    at h (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/services/page.js:1:18758)
+    at f (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/services/page.js:1:19662)
+    at l (.next/server/app/(main)/user/profile/emergency-contact/page.js:1:9012)
     at stringify (<anonymous>) {
   description: "Route /user/profile/emergency-contact couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
+  digest: 'DYNAMIC_SERVER_USAGE'
+}
+Error in get /vitals: Error: Dynamic server usage: Route /user/profile/vitals couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
+    at m (.next/server/chunks/986.js:12:14676)
+    at f (.next/server/chunks/5208.js:1:17774)
+    at h (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/services/page.js:1:18758)
+    at b (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/services/page.js:1:19290)
+    at l (.next/server/app/(main)/user/profile/vitals/page.js:1:2617)
+    at stringify (<anonymous>) {
+  description: "Route /user/profile/vitals couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
   digest: 'DYNAMIC_SERVER_USAGE'
 }
 Error in get dashboard/stats: Error: Dynamic server usage: Route /user/dashboard couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error
     at m (.next/server/chunks/986.js:12:14676)
     at f (.next/server/chunks/5208.js:1:17774)
-    at g (.next/server/app/(main)/user/profile/vitals/page.js:1:13642)
-    at k (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:28880)
+    at m (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/services/page.js:1:18937)
+    at A (.next/server/app/(main)/user/dashboard/(dashboardRouteGroup)/page.js:1:28639)
     at stringify (<anonymous>) {
   description: "Route /user/dashboard couldn't be rendered statically because it used `cookies`. See more info here: https://nextjs.org/docs/messages/dynamic-server-error",
   digest: 'DYNAMIC_SERVER_USAGE'
 }
-┌──────────────┬──────────────────────────────────────────────────┐
-│ (index)      │ Values                                           │
-├──────────────┼──────────────────────────────────────────────────┤
-│ URL          │ 'https://api.carekonnect.hexifysolutions.com/v1' │
-│ isProduction │ true                                             │
-└──────────────┴──────────────────────────────────────────────────┘
+Error fetching  top specialist: Error: Error fetching  top specialist:
+    at r (.next/server/app/(main)/doctor/payment/page.js:1:140216)
+    at async i (.next/server/chunks/7376.js:1:7910)
+    at async b (.next/server/chunks/7376.js:1:4916)
+Error fetching  top specialist: Error: Error fetching  top specialist:
+    at a (.next/server/chunks/2867.js:2:4868)
+    at async i (.next/server/chunks/7376.js:1:7910)
+    at async b (.next/server/chunks/7376.js:1:4916)
 [?25h [32m[1m✓[22m[39m Generating static pages (33/33)
-[?25l [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[?25l [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Collecting build traces     [32m[1m✓[22m[39m Collecting build traces 
-[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G[?25h [37m[1m [22m[39m Finalizing page optimization     [32m[1m✓[22m[39m Finalizing page optimization 
+[?25l [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[?25l [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Collecting build traces  [36m.[39m[2K[1G[?25h [37m[1m [22m[39m Collecting build traces     [32m[1m✓[22m[39m Collecting build traces 
+[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m.[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m..[39m[2K[1G [37m[1m [22m[39m Finalizing page optimization  [36m...[39m[2K[1G[?25h [37m[1m [22m[39m Finalizing page optimization     [32m[1m✓[22m[39m Finalizing page optimization 
 
 [4mRoute (app)[24m                                       [4mSize[24m  [4mFirst Load JS[24m  [4m[24m  [4m[24m
-┌ ƒ /                                            196 B         [37m[1m550 kB[22m[39m
-├ ƒ /_not-found                                  163 B         [37m[1m104 kB[22m[39m
+┌ ƒ /                                            194 B         [37m[1m550 kB[22m[39m
+├ ○ /_not-found                                  163 B         [37m[1m104 kB[22m[39m
 ├ ƒ /api/branding                                163 B         [37m[1m104 kB[22m[39m
 ├ ƒ /api/zoom/generateSignature                  163 B         [37m[1m104 kB[22m[39m
-├ ƒ /appointment/details/[slug]                 2.7 kB         [37m[1m414 kB[22m[39m
-├ ƒ /appointment/meeting/[...slug]             1.28 kB         [37m[1m277 kB[22m[39m
-├ ƒ /auth/callback/[provider]                  1.55 kB         [37m[1m260 kB[22m[39m
-├ ƒ /doctor/[slug]                             4.12 kB         [37m[1m530 kB[22m[39m
-├ ƒ /doctor/payment                            49.3 kB         [37m[1m547 kB[22m[39m
-├ ƒ /home                                        195 B         [37m[1m550 kB[22m[39m
-├ ƒ /hospital/[slug]                           3.98 kB         [37m[1m517 kB[22m[39m
-├ ƒ /hospital/[slug]/labs                      3.67 kB         [37m[1m506 kB[22m[39m
+├ ƒ /appointment/details/[slug]                2.52 kB         [37m[1m401 kB[22m[39m
+├ ƒ /appointment/meeting/[...slug]             1.28 kB         [37m[1m278 kB[22m[39m
+├ ƒ /auth/callback/[provider]                  1.56 kB         [37m[1m261 kB[22m[39m
+├ ƒ /doctor/[slug]                                4 kB         [37m[1m530 kB[22m[39m
+├ ƒ /doctor/payment                              49 kB         [37m[1m547 kB[22m[39m
+├ ƒ /home                                        194 B         [37m[1m550 kB[22m[39m
+├ ƒ /hospital/[slug]                           3.82 kB         [37m[1m517 kB[22m[39m
+├ ƒ /hospital/[slug]/labs                      2.99 kB         [37m[1m505 kB[22m[39m
 ├ ƒ /hospital/[slug]/labs/hematology             163 B         [37m[1m104 kB[22m[39m
-├ ƒ /hospital/[slug]/labs/hematology/[testId]  2.99 kB         [37m[1m488 kB[22m[39m
-├ ƒ /hospital/[slug]/labs/testPayment           1.3 kB         [37m[1m484 kB[22m[39m
-├ ƒ /hospital/[slug]/pharmacy                    731 B         [37m[1m526 kB[22m[39m
+├ ƒ /hospital/[slug]/labs/hematology/[testId]  2.31 kB         [37m[1m474 kB[22m[39m
+├ ƒ /hospital/[slug]/labs/testPayment          1.14 kB         [37m[1m471 kB[22m[39m
+├ ƒ /hospital/[slug]/pharmacy                    655 B         [37m[1m526 kB[22m[39m
 ├ ƒ /onboarding/logout/api                       163 B         [37m[1m104 kB[22m[39m
-├ ○ /onboarding/password-change                1.15 kB         [37m[1m453 kB[22m[39m
-├ ƒ /onboarding/password-reset                  2.1 kB         [37m[1m454 kB[22m[39m
-├ ƒ /onboarding/signin                            2 kB         [37m[1m454 kB[22m[39m
+├ ○ /onboarding/password-change                1.13 kB         [37m[1m454 kB[22m[39m
+├ ○ /onboarding/password-reset                 2.05 kB         [37m[1m454 kB[22m[39m
+├ ○ /onboarding/signin                         1.96 kB         [37m[1m454 kB[22m[39m
 ├ ƒ /onboarding/signin/api                       163 B         [37m[1m104 kB[22m[39m
-├ ƒ /onboarding/signup                          2.6 kB         [37m[1m455 kB[22m[39m
-├ ƒ /onboarding/verify-email                   1.21 kB         [37m[1m441 kB[22m[39m
-├ ƒ /pharmacy/[slug]                           6.35 kB         [37m[1m538 kB[22m[39m
-├ ƒ /pharmacy/drugdetails/[...drug]              908 B         [37m[1m500 kB[22m[39m
-├ ƒ /pharmacy/drugsearch/[slug]                2.31 kB         [37m[1m414 kB[22m[39m
-├ ƒ /product/cart                              3.41 kB         [37m[1m415 kB[22m[39m
-├ ƒ /product/cart/checkout                     4.15 kB         [37m[1m426 kB[22m[39m
-├ ƒ /product/cart/checkout/payment               530 B         [37m[1m370 kB[22m[39m
-├ ƒ /search                                    9.97 kB         [37m[1m528 kB[22m[39m
-├ ƒ /user/dashboard                            1.39 kB         [37m[1m484 kB[22m[39m
-├ ƒ /user/dashboard/appointments               2.97 kB         [37m[1m414 kB[22m[39m
-├ ƒ /user/dashboard/healthbenefits             1.36 kB         [37m[1m413 kB[22m[39m
-├ ƒ /user/dashboard/prescription               1.81 kB         [37m[1m413 kB[22m[39m
-├ ƒ /user/dashboard/prescription/[slug]        2.01 kB         [37m[1m413 kB[22m[39m
-├ ƒ /user/dashboard/services                   2.54 kB         [37m[1m485 kB[22m[39m
-├ ƒ /user/dashboard/supports                   3.72 kB         [37m[1m497 kB[22m[39m
-├ ƒ /user/dashboard/supports/[slug]            1.61 kB         [37m[1m495 kB[22m[39m
-├ ƒ /user/profile                              2.42 kB         [37m[1m442 kB[22m[39m
-├ ƒ /user/profile/change-password              3.15 kB         [37m[1m452 kB[22m[39m
-├ ƒ /user/profile/emergency-contact            2.95 kB         [37m[1m451 kB[22m[39m
-├ ƒ /user/profile/feedback                       163 B         [37m[1m104 kB[22m[39m
-├ ƒ /user/profile/hmo-provider                   799 B         [37m[1m423 kB[22m[39m
-├ ƒ /user/profile/settings                       458 B         [37m[1m370 kB[22m[39m
-└ ƒ /user/profile/vitals                       3.24 kB         [37m[1m452 kB[22m[39m
+├ ○ /onboarding/signup                         2.54 kB         [37m[1m455 kB[22m[39m
+├ ○ /onboarding/verify-email                   1.18 kB         [37m[1m441 kB[22m[39m
+├ ƒ /pharmacy/[slug]                           6.09 kB         [37m[1m538 kB[22m[39m
+├ ƒ /pharmacy/drugdetails/[...drug]              901 B         [37m[1m499 kB[22m[39m
+├ ƒ /pharmacy/drugsearch/[slug]                2.15 kB         [37m[1m400 kB[22m[39m
+├ ○ /product/cart                              3.22 kB         [37m[1m401 kB[22m[39m
+├ ○ /product/cart/checkout                     3.86 kB         [37m[1m413 kB[22m[39m
+├ ○ /product/cart/checkout/payment               473 B         [37m[1m356 kB[22m[39m
+├ ○ /search                                    11.2 kB         [37m[1m527 kB[22m[39m
+├ ƒ /user/dashboard                            1.23 kB         [37m[1m471 kB[22m[39m
+├ ƒ /user/dashboard/appointments               2.77 kB         [37m[1m401 kB[22m[39m
+├ ○ /user/dashboard/healthbenefits             1.32 kB         [37m[1m399 kB[22m[39m
+├ ○ /user/dashboard/prescription               1.72 kB         [37m[1m400 kB[22m[39m
+├ ƒ /user/dashboard/prescription/[slug]        1.86 kB         [37m[1m400 kB[22m[39m
+├ ○ /user/dashboard/services                   2.47 kB         [37m[1m472 kB[22m[39m
+├ ○ /user/dashboard/supports                   3.56 kB         [37m[1m484 kB[22m[39m
+├ ƒ /user/dashboard/supports/[slug]            1.49 kB         [37m[1m482 kB[22m[39m
+├ ○ /user/profile                              2.38 kB         [37m[1m442 kB[22m[39m
+├ ○ /user/profile/change-password              3.12 kB         [37m[1m452 kB[22m[39m
+├ ƒ /user/profile/emergency-contact            2.94 kB         [37m[1m452 kB[22m[39m
+├ ○ /user/profile/feedback                       163 B         [37m[1m104 kB[22m[39m
+├ ○ /user/profile/hmo-provider                   777 B         [37m[1m410 kB[22m[39m
+├ ○ /user/profile/settings                       429 B         [37m[1m356 kB[22m[39m
+└ ƒ /user/profile/vitals                       3.22 kB         [37m[1m452 kB[22m[39m
 + First Load JS shared by all                   [37m[1m103 kB[22m[39m
-  ├ chunks/8315-24af6374db49d768.js              46 kB
+  ├ chunks/8315-41f2eedfd2b34e37.js            45.9 kB
   ├ chunks/87c73c54-64b52c7d0d45dc3f.js        53.3 kB
-  └ other shared chunks (total)                4.22 kB
+  └ other shared chunks (total)                4.26 kB
 
 
-ƒ Middleware                                   [37m[1m32.5 kB[22m[39m
+ƒ Middleware                                   [37m[1m32.6 kB[22m[39m
 
 ○  (Static)   prerendered as static content
 ƒ  (Dynamic)  server-rendered on demand
 
-[?25h[2K[1G✨  Done in 187.48s.
+[?25h[2K[1G✨  Done in 69.23s.

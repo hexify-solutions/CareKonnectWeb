@@ -6,7 +6,7 @@ export async function POST(req: Request) {
     const { email, password } = await req.json()
     const cookieStore = await cookies()
 
-    const apiUrl = process.env.PUBLIC_URL ?? "http://localhost:9000"
+    const apiUrl = process.env.NEXT_PUBLIC_URL ?? "http://localhost:9000"
     const response = await fetch(`${apiUrl}/auth/login`, {
       method: "POST",
       headers: {
@@ -53,7 +53,7 @@ export async function POST(req: Request) {
 export async function GET(request: Request) {
   const cookieStore = await cookies()
   const token = cookieStore.get("auth_token")?.value
-  const apiUrl = process.env.NEXT_PUBLIC_URL_PROD ?? "http://localhost:9000"
+  const apiUrl = process.env.NEXT_PUBLIC_URL ?? "http://localhost:9000"
 
   if (!token) {
     return NextResponse.json({ authenticated: false }, { status: 401 })

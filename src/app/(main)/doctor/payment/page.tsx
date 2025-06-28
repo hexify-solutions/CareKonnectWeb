@@ -10,7 +10,7 @@ const DoctorAppointmentPayment = async ({ params, searchParams }) => {
   const pageSearchParams = await searchParams
 
   doctor = await fetchData({
-    url: `${process.env.PUBLIC_URL}/doctors/${pageSearchParams?.doctor}`,
+    url: `${process.env.NEXT_PUBLIC_URL}/doctors/${pageSearchParams?.doctor}`,
     errorMessage: "Error fetching doctor details:",
   })
 

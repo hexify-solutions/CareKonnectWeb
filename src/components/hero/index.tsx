@@ -6,6 +6,7 @@ import CategorySearch from "./categorySearch"
 import styles from "./hero.module.css"
 import clsx from "clsx"
 import SpecializationCarousel from "@/app/(main)/_components/specializationCarousel"
+import textData from "../../../test-data.json"
 
 const backgrounds = [
   "https://images.pexels.com/photos/5452290/pexels-photo-5452290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -27,6 +28,7 @@ const Hero = () => {
 
   return (
     <div className={styles.wrapper}>
+      {JSON.stringify(textData)}
       <motion.div
         key={currentIndex}
         className={styles.reel}
