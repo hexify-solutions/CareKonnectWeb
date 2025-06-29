@@ -8,7 +8,7 @@ import {
   Linkedin,
 } from "@hexify/atoms"
 import formatAppointmentDate from "@/lib/utils/formatAppointmentDate"
-import getBranding from "@hexify/atoms/src/theme/getBranding"
+import getBranding from "@hexify/engine/brand/getBranding"
 
 const PaymentReceiptModal = ({ open, cancelHandler, receipt }) => {
   const brand = getBranding()?.content

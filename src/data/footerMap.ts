@@ -1,5 +1,5 @@
-import { isFeatureEnabled } from "@hexify/atoms/src/theme/feature"
-import getBranding from "@hexify/atoms/src/theme/getBranding"
+import { isFeatureEnabled } from "../../../../packages/engine/brand/feature"
+import getBranding from "../../../../packages/engine/brand/getBranding"
 
 export default function () {
   const help = isFeatureEnabled("help_center")

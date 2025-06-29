@@ -5,7 +5,7 @@ import { AppleStore, Button, GooglePlay } from "@hexify/atoms"
 import {
   isFeatureEnabled,
   isFeatureEnabledAsync,
-} from "@hexify/atoms/src/theme/feature"
+} from "../../../../../../../packages/engine/brand/feature"
 
 const SignupBanner = () => {
   // const isFeatureEnabled = isFeatureEnabled()

@@ -7,7 +7,7 @@ import CHARGING_STATION from "./assets/charging-station 1.png"
 import SERVICE from "./assets/grid.png"
 import Image from "next/image"
 import clsx from "clsx"
-import { isFeatureEnabledAsync } from "@hexify/atoms/src/theme/feature"
+import { isFeatureEnabledAsync } from "../../../../../packages/engine/brand/feature"
 
 const InnovationBanner = async () => {
   const isFeatureEnabled = await isFeatureEnabledAsync()

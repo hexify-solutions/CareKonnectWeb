@@ -22,7 +22,7 @@ import { withSuspense } from "@/hoc"
 import { useMediaQuery } from "usehooks-ts"
 import clsx from "clsx"
 import SpecializationCarousel from "@/app/(main)/_components/specializationCarousel"
-import { isFeatureEnabled } from "@hexify/atoms/src/theme/feature"
+import { isFeatureEnabled } from "@hexify/engine/brand/feature"
 
 /**
  * Dropdown for selecting provider categories.

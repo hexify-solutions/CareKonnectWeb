@@ -1,4 +1,4 @@
-import "@hexify/atoms/src/theme/initialize.server"
+import "@hexify/engine/brand/initialize.server"
 import type { Metadata } from "next"
 import QueryProvider from "@/context/reactQueryProvider"
 import "../styles/global.css"
@@ -23,20 +23,18 @@ export default function RootLayout({
     <html lang="en">
       <body style={{ backgroundColor: "#F8FAF0" }}>
         <CustomTheme>
-          {
-            <UserLocationProvider>
-              <SecureStorageProvider>
-                <QueryProvider>
-                  <AuthProvider>
-                    <CartProvider>
-                      <main>{children} </main>
-                    </CartProvider>
-                  </AuthProvider>
-                  <ToastProvider />
-                </QueryProvider>
-              </SecureStorageProvider>
-            </UserLocationProvider>
-          }
+          <UserLocationProvider>
+            <SecureStorageProvider>
+              <QueryProvider>
+                <AuthProvider>
+                  <CartProvider>
+                    <main>{children} </main>
+                  </CartProvider>
+                </AuthProvider>
+                <ToastProvider />
+              </QueryProvider>
+            </SecureStorageProvider>
+          </UserLocationProvider>
         </CustomTheme>
       </body>
     </html>

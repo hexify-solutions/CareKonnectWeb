@@ -5,7 +5,7 @@ import { ArrowCurvedRight } from "@hexify/atoms"
 import Link from "next/link"
 import styles from "./categories.module.css"
 import routes from "@/lib/constants/routes"
-import { isFeatureEnabled } from "@hexify/atoms/src/theme/feature"
+import { isFeatureEnabled } from "../../../../../../../packages/engine/brand/feature"
 
 const Categories = () => {
   const feature = ({ permissions }) => isFeatureEnabled(permissions)

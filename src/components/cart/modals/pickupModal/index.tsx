@@ -12,7 +12,7 @@ import {
   LocationPin,
 } from "@hexify/atoms"
 import Image from "next/image"
-import getBranding from "@hexify/atoms/src/theme/getBranding"
+import getBranding from "../../../../../../../packages/engine/brand/getBranding"
 import routes from "@/lib/constants/routes"
 
 enum ActiveView {
