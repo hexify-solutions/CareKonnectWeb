@@ -1,3 +1,4 @@
+"use client"
 import { CancelIcon, Logo, Modal, Button } from "@hexify/atoms"
 import styles from "./paymentReceiptModal.module.css"
 import {
@@ -9,14 +10,51 @@ import {
 } from "@hexify/atoms"
 import formatAppointmentDate from "@/lib/utils/formatAppointmentDate"
 import getBranding from "@hexify/engine/brand/getBranding"
+import { useRef, useState } from "react"
+
+import jsPDF from "jspdf"
+import html2canvas from "html2canvas"
+import { toast } from "react-toastify"
 
 const PaymentReceiptModal = ({ open, cancelHandler, receipt }) => {
   const brand = getBranding()?.content
   const date = formatAppointmentDate(receipt?.transaction?.verifiedAt || "")
+  const contentRef = useRef<HTMLDivElement>(null)
+  // const [closeModal, setCloseModal] = useState<boolean>(open)
+  const [showDownload, setShowDownload] = useState<boolean>(true)
+  const handleDownloadPdf = async () => {
+    if (contentRef.current) {
+      toast.info("Generating receipt, please wait.")
+      setShowDownload(false)
+      const canvas = await html2canvas(contentRef.current)
+      const imgData = canvas.toDataURL("image/png")
+      const pdf = new jsPDF({
+        orientation: "landscape",
+        unit: "px",
+        format: [canvas.width, canvas.height],
+      })
 
+      pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height)
+      pdf.save(
+        `Payment for ${receipt?.appointment?.consultationType || "Consultation"} ${receipt?.appointment?.appointmentRef || ""}.pdf`
+      )
+
+      toast.success("Receipt downloaded successfully.")
+      setShowDownload(true)
+    } else {
+      toast.error("Unable to download receipt.")
+    }
+  }
+  const handleClose = () => {
+    // setCloseModal(false)
+    if (cancelHandler) {
+      cancelHandler()
+      return
+    }
+  }
   return (
-    <Modal open={open} onClose={cancelHandler}>
-      <div className={styles.container}>
+    <Modal open={open} onClose={handleClose}>
+      <div className={styles.container} ref={contentRef}>
         <div className={styles.wrapper}>
           <header className={styles.header}>
             <aside className={styles.logoWrapper}>
@@ -62,12 +100,14 @@ const PaymentReceiptModal = ({ open, cancelHandler, receipt }) => {
                       "Medical Team"}
                   </span>
                 </div>
-                <div className={styles.summaryInfo}>
-                  <span>Ref Number</span>
-                  <span className={styles.summaryValue}>
-                    {receipt?.transaction?.reference}
-                  </span>
-                </div>
+                {receipt?.transaction?.reference && (
+                  <div className={styles.summaryInfo}>
+                    <span>Ref Number</span>
+                    <span className={styles.summaryValue}>
+                      {receipt?.transaction?.reference}
+                    </span>
+                  </div>
+                )}
                 {/* <div className={styles.summaryInfo}>
                   <span>Account Name</span>
                   <span className={styles.summaryValue}>
@@ -80,6 +120,14 @@ const PaymentReceiptModal = ({ open, cancelHandler, receipt }) => {
                     Ending with ....1234
                   </span>
                 </div> */}
+                {receipt?.appointment?.consultationType && (
+                  <div className={styles.summaryInfo}>
+                    <span>Consultation Type</span>
+                    <span className={styles.summaryValue}>
+                      {receipt?.appointment?.consultationType}
+                    </span>
+                  </div>
+                )}
               </div>
               <div className={styles.summarySection}>
                 <div className={styles.summaryInfo}>
@@ -88,12 +136,14 @@ const PaymentReceiptModal = ({ open, cancelHandler, receipt }) => {
                     {date?.fullLongDate} {date.formattedTime}
                   </span>
                 </div>
-                <div className={styles.summaryInfo}>
-                  <span>Description</span>
-                  <span className={styles.summaryValue}>
-                    {receipt?.transaction?.narration}
-                  </span>
-                </div>
+                {receipt?.transaction?.narration && (
+                  <div className={styles.summaryInfo}>
+                    <span>Description</span>
+                    <span className={styles.summaryValue}>
+                      {receipt?.transaction?.narration}
+                    </span>
+                  </div>
+                )}
                 {/* <div className={styles.summaryInfo}>
                   <span>Billing Address</span>
                   <span className={styles.summaryValue}>
@@ -101,9 +151,9 @@ const PaymentReceiptModal = ({ open, cancelHandler, receipt }) => {
                   </span>
                 </div> */}
                 <div className={styles.summaryInfo}>
-                  <span>Payment for</span>
+                  <span>Consultation with</span>
                   <span className={styles.summaryValue}>
-                    Booking Dr. {receipt?.appointment?.doctor?.users?.fullName}
+                    {receipt?.appointment?.doctor?.users?.fullName}
                   </span>
                 </div>
                 <div className={styles.summaryInfo}>
@@ -119,9 +169,16 @@ const PaymentReceiptModal = ({ open, cancelHandler, receipt }) => {
                 <span>Best regards,</span>
                 <span>{brand?.companyName || "Business"} Team</span>
               </div>
-              <Button variant="contained" rounded size="large">
-                <span>Download</span>
-              </Button>
+              {showDownload && (
+                <Button
+                  onClick={handleDownloadPdf}
+                  variant="contained"
+                  rounded
+                  size="large"
+                >
+                  <span>Download</span>
+                </Button>
+              )}
             </div>
             <footer className={styles.footer}>
               <div>

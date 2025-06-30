@@ -25,6 +25,12 @@ const AppointmentDetailCard = ({ appointment }) => {
           <span>Time: Booking Time: {formattedTime}</span>
         </span>
       </div>
+      {!!appointment?.consultationType && (
+        <div className={styles.descriptionWrapper}>
+          <div className={styles.heading}>Consultation Type: </div>
+          <div> {appointment?.consultationType}</div>
+        </div>
+      )}
       {!!appointment?.notes && (
         <div className={styles.descriptionWrapper}>
           <div className={styles.heading}>Description: </div>

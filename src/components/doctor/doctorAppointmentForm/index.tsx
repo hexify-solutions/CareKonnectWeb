@@ -14,11 +14,13 @@ import { toast } from "react-toastify"
 import { useCreateAppointment } from "@/http/appointment/mutation"
 import dayjs from "dayjs"
 import { withSuspense } from "@/hoc"
+import patientVisitType from "@/data/patientVisitTypes.json"
 
 const validationSchema = Yup.object().shape({
   date: Yup.date().required("Date is required"),
   time: Yup.string().required("Time is required"),
-  note: Yup.string().nullable(),
+  note: Yup.string().required("Enter reasons for seeing the doctor."),
+  consultationType: Yup.string().required("Select consultation type."),
 })
 
 const DoctorAppointmentForm = ({ isAuth, triggerAuth, appointmentSlots }) => {
@@ -40,6 +42,7 @@ const DoctorAppointmentForm = ({ isAuth, triggerAuth, appointmentSlots }) => {
       notes: params?.note,
       selectedTime: params?.time,
       timeAvailabilityId: timeId,
+      consultationType: params?.consultationType,
     }
 
     appointmentMutation?.mutate(data, {
@@ -61,9 +64,19 @@ const DoctorAppointmentForm = ({ isAuth, triggerAuth, appointmentSlots }) => {
     return Object.keys(appointmentSlots || {}).map((date) => dayjs(date))
   }, [appointmentSlots])
 
+  const consultationType = useMemo(
+    () =>
+      patientVisitType.map((types) => ({
+        ...types,
+        label: types.visit_type,
+        value: types.visit_type,
+      })),
+    []
+  )
+
   return (
     <Formik
-      initialValues={{ date: "", time: "", note: "" }}
+      initialValues={{ date: "", time: "", note: "", consultationType: "" }}
       validationSchema={validationSchema}
       onSubmit={onSubmitHandler}
       enableReinitialize
@@ -91,7 +104,7 @@ const DoctorAppointmentForm = ({ isAuth, triggerAuth, appointmentSlots }) => {
                 // helperText={touched.date && errors.date}
               />
             </div>
-            {timeOptions && timeOptions.length && (
+            {timeOptions && timeOptions?.length > 0 && (
               <div className={styles.formInputWrapper}>
                 <SelectField
                   className={styles.selectField}
@@ -106,13 +119,29 @@ const DoctorAppointmentForm = ({ isAuth, triggerAuth, appointmentSlots }) => {
               </div>
             )}
             <div className={styles.formInputWrapper}>
+              <SelectField
+                className={styles.selectField}
+                onChange={(e) =>
+                  setFieldValue("consultationType", e?.target?.value)
+                }
+                label="Consultation Type"
+                value={values.consultationType}
+                options={consultationType}
+                name="consultationType"
+                error={
+                  touched.consultationType && Boolean(errors.consultationType)
+                }
+                // helperText={touched.time && errors.time}
+              />
+            </div>
+            <div className={styles.formInputWrapper}>
               <InputField
                 fullWidth
                 multiline
                 minRows={4}
                 type="text"
                 showLabel
-                label="Description"
+                label="Consultation Reasons/Note."
                 data-variant="design_secondary"
                 onChange={handleChange}
                 name="note"

@@ -1,34 +1,40 @@
-"use client";
+"use client"
 
-import { Button, InputField, iconLoaderMap, Spinner, CalendarIcon  } from "@hexify/atoms";
-import * as Yup from "yup";
-import { Formik, Form } from "formik";
-import SignInOptions from "@/app/(auth)/onboarding/_component/signInOptions";
-import Link from "next/link";
-import styles from "./signupForm.module.css";
-import routes from "../../../../../../../lib/constants/routes";
-import componentData from "../../../../../../../data/signupForm.json";
-import { SelectField } from "@hexify/atoms";
-import { useAuthContext } from "@/context/auth";
+import {
+  Button,
+  InputField,
+  iconLoaderMap,
+  Spinner,
+  CalendarIcon,
+} from "@hexify/atoms"
+import * as Yup from "yup"
+import { Formik, Form } from "formik"
+import SignInOptions from "@/app/(auth)/onboarding/_component/signInOptions"
+import Link from "next/link"
+import styles from "./signupForm.module.css"
+import routes from "../../../../../../../lib/constants/routes"
+import componentData from "../../../../../../../data/signupForm.json"
+import { SelectField } from "@hexify/atoms"
+import { useAuthContext } from "@/context/auth"
 
 type SignupFormType = {
-  firstName: string;
-  lastName: string;
-  gender?: string;
-  dob: string;
-  email: string;
-  password: string;
-};
+  firstName: string
+  lastName: string
+  gender?: string
+  dob: string
+  email: string
+  password: string
+}
 
 const SignupForm = () => {
-  const { onRegister } = useAuthContext();
+  const { onRegister } = useAuthContext()
 
   const onSubmitHandler = (params: SignupFormType) => {
     onRegister({
       ...params,
       userType: "patient",
-    });
-  };
+    })
+  }
 
   return (
     <Formik
@@ -110,7 +116,7 @@ const SignupForm = () => {
                 name="gender"
                 prefix={iconLoaderMap.profile}
                 options={genderOptions}
-                onChange={(e)=>handleChange("gender")(e.target.value)}
+                onChange={(e) => handleChange("gender")(e.target.value)}
                 value={values.gender}
                 error={!!errors.gender}
                 helperText={errors.gender}
@@ -188,26 +194,24 @@ const SignupForm = () => {
                   variant="contained"
                   rounded
                 >
-                  {onRegister.isLoading ? <Spinner />: componentData.signUpCTA}
+                  {onRegister.isLoading ? <Spinner /> : componentData.signUpCTA}
                 </Button>
               </div>
             </div>
           </Form>
-        );
+        )
       }}
     </Formik>
-  );
-};
-
+  )
+}
 
 const genderOptions = [
-  { "value": "male", "label": "Male" },
-  { "value": "female", "label": "Female" },
-  { "value": "other", "label": "Other" },
-  { "value": "prefer-not-to-say", "label": "Prefer not to Say" },
-  { "value": "unknown", "label": "Not Specified" }
+  { value: "male", label: "Male" },
+  { value: "female", label: "Female" },
+  { value: "other", label: "Other" },
+  { value: "prefer-not-to-say", label: "Prefer not to Say" },
+  { value: "unknown", label: "Not Specified" },
 ]
-
 
 const initialValues = () => {
   return {
@@ -216,9 +220,9 @@ const initialValues = () => {
     email: "",
     password: "",
     dob: "",
-    gender: ""
-  };
-};
+    gender: "",
+  }
+}
 
 const validationSchema = Yup.object({
   email: Yup.string()
@@ -237,12 +241,12 @@ const validationSchema = Yup.object({
 
   password: Yup.string()
     .min(8, "Password must be at least 8 characters")
-    .max(20, "Password cannot exceed 20 characters")
+    .max(200, "Password cannot exceed 200 characters")
     .matches(
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])/,
       "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character"
     )
     .required("Password is required"),
-});
+})
 
-export default SignupForm;
+export default SignupForm

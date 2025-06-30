@@ -5,9 +5,6 @@ import { motion } from "framer-motion"
 import CategorySearch from "./categorySearch"
 import styles from "./hero.module.css"
 import clsx from "clsx"
-import SpecializationCarousel from "@/app/(main)/_components/specializationCarousel"
-import textData from "../../../test-data.json"
-
 const backgrounds = [
   "https://images.pexels.com/photos/5452290/pexels-photo-5452290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   "https://images.pexels.com/photos/25568827/pexels-photo-25568827/free-photo-of-smiling-couple-with-vintage-album.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load",
@@ -28,7 +25,6 @@ const Hero = () => {
 
   return (
     <div className={styles.wrapper}>
-      {JSON.stringify(textData)}
       <motion.div
         key={currentIndex}
         className={styles.reel}

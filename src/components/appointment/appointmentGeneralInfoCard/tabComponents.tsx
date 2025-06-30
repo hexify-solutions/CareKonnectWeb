@@ -4,6 +4,8 @@ import styles from "./tabComponent.module.css"
 import clsx from "clsx"
 import Link from "next/link"
 import routes from "@/lib/constants/routes"
+import { toast } from "react-toastify"
+import { CopyConsultation } from "@/components/appointment/appointmentGeneralInfoCard/DownloadReceipt"
 
 const GeneralOverview = ({ appointment }) => {
   return (
@@ -17,9 +19,9 @@ const GeneralOverview = ({ appointment }) => {
         </div>
       )}
       <div className={styles.generalOverviewInfoItem}>
-        <span>Appointment Type</span>
+        <span>Consultation Type</span>
         <span className={styles.generalOverviewInfoItemValue}>
-          Virtual Consultation
+          {appointment?.consultationType || "Virtual Consultation"}
         </span>
       </div>
       <div className={styles.generalOverviewInfoItem}>
@@ -90,24 +92,21 @@ export const AppointmentGeneralInfoCardTabComponent = ({ appointment }) => {
     },
   ]
 
+  const meetingLink = routes.appointmentMeeting({
+    appointmentId: appointment?.meetings?.appointmentId,
+    meetingId: appointment?.appointmentRef,
+    appointmentRef: appointment?.appointmentRef,
+  })
   return (
     <div className={styles.tabWrapper}>
       <Tabs tabs={tabs} />
       <div className={styles.btnWrapper}>
-        <Link
-          href={routes.appointmentMeeting({
-            appointmentId: appointment?.meetings?.appointmentId,
-            meetingId: appointment?.appointmentRef,
-            appointmentRef: appointment?.appointmentRef,
-          })}
-        >
+        <Link href={meetingLink}>
           <Button rounded variant="contained" size="large" fullWidth>
             Join session
           </Button>
         </Link>
-        <Button size="large" data-variant="text" fullWidth>
-          Copy Consultation Link
-        </Button>
+        <CopyConsultation meetingLink={meetingLink} />
       </div>
     </div>
   )

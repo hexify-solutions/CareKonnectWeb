@@ -1,16 +1,15 @@
-import { Breadcrumb } from "@hexify/atoms";
-import styles from "./page.module.css";
-import clsx from "clsx";
-import AppointmentDetailCard from "@/components/userDashboard/appointmentDetailCard";
-import AppointmentGeneralInfoCard from "@/components/appointment/appointmentGeneralInfoCard/index";
-import { getAppointmentById } from "@/http/appointment/serverActions";
+import { Breadcrumb } from "@hexify/atoms"
+import styles from "./page.module.css"
+import clsx from "clsx"
+import AppointmentDetailCard from "@/components/userDashboard/appointmentDetailCard"
+import AppointmentGeneralInfoCard from "@/components/appointment/appointmentGeneralInfoCard/index"
+import { getAppointmentById } from "@/http/appointment/serverActions"
 
-
-const AppointmentDetails = async ({ params}) => {
-
-  const pageParams = await params;
-  const appointment =  await getAppointmentById(pageParams?.slug)
-
+const AppointmentDetails = async ({ params }) => {
+  const pageParams = await params
+  const appointment = await getAppointmentById(
+    pageParams?.slug + "?withTransaction=true"
+  )
 
   return (
     <div>
@@ -30,7 +29,7 @@ const AppointmentDetails = async ({ params}) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AppointmentDetails;
+export default AppointmentDetails

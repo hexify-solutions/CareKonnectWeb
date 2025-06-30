@@ -32,14 +32,16 @@ const PaymentSuccessModal = ({
             once an update is made on your bookings.
           </div>
           <div className={styles.actionBtnWrapper}>
-            <Button
-              type="button"
-              onClick={viewReceiptHandler}
-              variant="contained"
-              rounded
-            >
-              View receipt
-            </Button>
+            {!receipt?.hideReceipt && (
+              <Button
+                type="button"
+                onClick={viewReceiptHandler}
+                variant="contained"
+                rounded
+              >
+                View receipt
+              </Button>
+            )}
             <Link href={`/appointment/details/${receipt?.appointment?.id}`}>
               <Button
                 variant="contained"

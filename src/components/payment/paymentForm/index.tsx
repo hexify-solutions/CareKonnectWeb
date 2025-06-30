@@ -10,7 +10,7 @@ import {
   Spinner,
 } from "@hexify/atoms"
 import styles from "./paymentForm.module.css"
-import { useState } from "react"
+import React, { useState } from "react"
 import { Form, Formik } from "formik"
 import PaymentSuccessModal from "../paymentSuccessModal"
 import {
@@ -19,6 +19,7 @@ import {
 } from "@/http/appointment/mutation"
 import PaymentReceiptModal from "../paymentReceiptModal"
 import Paystack from "@paystack/inline-js"
+import { isFeatureEnabled } from "../../../../../../packages/engine/brand/feature"
 
 const PaymentForm = ({ appointmentId }: { appointmentId: string }) => {
   const [paymentOption, setPaymentOption] = useState()
@@ -61,6 +62,14 @@ const PaymentForm = ({ appointmentId }: { appointmentId: string }) => {
             },
           })
         },
+        onError: (error) => {
+          console.log({ error })
+          setShowPaymentSuccessModal(true)
+          setPaymentReceiptData({
+            hideReceipt: true,
+            appointment: { id: appointmentId },
+          })
+        },
       }
     )
   }
@@ -87,6 +96,14 @@ const PaymentForm = ({ appointmentId }: { appointmentId: string }) => {
     setShowPaymentReceiptModal(true)
   }
 
+  const paymentOptionList = React.useMemo(() => {
+    return paymentOptions.filter((pay) => {
+      // no permission set so available to all
+      if (!pay.permissions) return true
+      return isFeatureEnabled(pay.permissions)
+    })
+  }, [])
+
   return (
     <>
       <div>
@@ -94,7 +111,7 @@ const PaymentForm = ({ appointmentId }: { appointmentId: string }) => {
           <>
             <h4 className={styles.heading}>Payment Method</h4>
             <div className={styles.paymentOptionsWrapper}>
-              {paymentOptions?.map((payment) => {
+              {paymentOptionList?.map((payment) => {
                 return (
                   <label className={styles.paymentOption}>
                     {payment?.iconType === "bank" ? (
@@ -270,12 +287,15 @@ const paymentOptions = [
     description: "Reliance HMO",
     subDescription: "Red Beryl Lite Individual",
     iconType: "card",
+    permissions: ["hmo"],
   },
   // {
   //   label: "Internet Banking",
   //   value: "internet",
   //   description: "Pay directly from your bank account",
   //   iconType: "bank",
+  // permissions: ['wallet']
+  //
   // },
   {
     label: "Paystack",

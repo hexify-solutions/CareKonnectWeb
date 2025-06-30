@@ -1,6 +1,13 @@
-import { Button, ChevronLeft, ChevronRight, ProviderIcon, Time } from "@hexify/atoms";
-import styles from "./appointmentGeneralInfoCard.module.css";
-import { AppointmentGeneralInfoCardTabComponent } from "./tabComponents";
+import {
+  Button,
+  ChevronLeft,
+  ChevronRight,
+  ProviderIcon,
+  Time,
+} from "@hexify/atoms"
+import styles from "./appointmentGeneralInfoCard.module.css"
+import { AppointmentGeneralInfoCardTabComponent } from "./tabComponents"
+import { DownloadReceipt } from "@/components/appointment/appointmentGeneralInfoCard/DownloadReceipt"
 
 const AppointmentGeneralInfoCard = ({ appointment }) => {
   return (
@@ -9,13 +16,7 @@ const AppointmentGeneralInfoCard = ({ appointment }) => {
         <AppointmentGeneralInfoCardTabComponent appointment={appointment} />
       </div>
       <div className={styles.paymentSection}>
-        <div className={styles.heading}>Payment Receipt</div>
-        <div className={styles.receipt}>
-          <span>Booking payment receipt pdf</span>
-          <Button variant="contained" rounded>
-            Download
-          </Button>
-        </div>
+        <DownloadReceipt appointment={appointment} />
         <div>
           <div className={styles.otherAppointmentHeader}>
             <div className={styles.heading}>Other Appointments</div>
@@ -25,18 +26,19 @@ const AppointmentGeneralInfoCard = ({ appointment }) => {
           </div>
           <OtherAppointmentCard />
           <div className={styles.filterBtnWrapper}>
-          <button className={styles.filterBtn}>
-             <ChevronLeft /> <span >Previous </span>
+            <button className={styles.filterBtn}>
+              <ChevronLeft /> <span>Previous </span>
             </button>
             <button className={styles.filterBtn}>
-              <span>Next</span><ChevronRight />
+              <span>Next</span>
+              <ChevronRight />
             </button>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 const OtherAppointmentCard = () => {
   return (
@@ -70,7 +72,7 @@ const OtherAppointmentCard = () => {
         </Button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AppointmentGeneralInfoCard;
+export default AppointmentGeneralInfoCard

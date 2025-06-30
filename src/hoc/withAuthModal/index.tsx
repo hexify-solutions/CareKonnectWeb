@@ -26,7 +26,7 @@ export const withAuthModal = (WrappedComponent) => {
             <button onClick={onCloseHandler} className={styles.closeBtn}>
               <CancelIcon />
             </button>
-            <SignInForm />
+            <SignInForm onClose={onCloseHandler} />
           </div>
         </Modal>
         <WrappedComponent

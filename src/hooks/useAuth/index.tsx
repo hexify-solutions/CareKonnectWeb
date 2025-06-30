@@ -23,6 +23,7 @@ import lsKeys from "@/lib/constants/lsKeys"
 import { useSecureStorage } from "@/context/storage"
 import { useRouter } from "next/navigation"
 import api from "@/http/api"
+import { useLastVisitedPage } from "@/hooks/useLastVisitedPage"
 
 const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
   const [authState, setAuthState] = useState<{
@@ -55,6 +56,7 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
   }>()
 
   const passwordChangeMutation = usePasswordChangeMutation()
+  const { redirectToLastPage } = useLastVisitedPage()
 
   const { setItem, removeItem } = useSecureStorage()
 
@@ -142,19 +144,16 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
         }
         if (response) {
           setItem(lsKeys.verifyUserEmail, response?.data?.email)
-          setAuthState((prev) => ({
-            ...prev,
-            profile: {
-              email: response.data.email,
-              id: response.data.id,
-            },
-          }))
+          // setAuthState((prev) => ({
+          //   ...prev,
+          //   profile: {
+          //     email: response.data.email,
+          //     id: response.data.id,
+          //   },
+          // }))
         }
-        toast.success(response?.message, {
-          onOpen: () => {
-            router.push(routes.verifyEmail)
-          },
-        })
+        toast.success(response?.message)
+        router.push(routes.verifyEmail)
       },
     })
   }
@@ -181,7 +180,7 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
       },
     }))
   }
-  const onLogin = async (params: LoginType) => {
+  const onLogin = async (params: LoginType, cb?: () => void) => {
     loginMutation.mutate(params, {
       onSettled: async (response, err) => {
         if (err) {
@@ -200,6 +199,7 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
           return toast.error(err?.message || "Login Failed!")
         }
         if (response) {
+          cb?.()
           const { token, ...rest } = response?.data?.data
           api.setAuth(token?.token)
           setItem(lsKeys.profile, rest)
@@ -216,12 +216,11 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
           })
 
           toast.success(response?.message, {
-            onOpen: () => {
-              // TODO: conditionally redirect user to the last page they visited before auth, if not home
-              // otherwise redirect to user dashboard
-              router.push(routes.userDashboard)
-            },
+            onOpen: () => {},
           })
+          // TODO: conditionally redirect user to the last page they visited before auth, if not home
+          // otherwise redirect to user dashboard
+          redirectToLastPage(routes.userDashboard)
         }
       },
     })

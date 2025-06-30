@@ -1,0 +1,102 @@
+[
+  {
+    "visit_type": "Initial Consultation (non-urgent)",
+    "cpt_codes": ["99202", "99203"],
+    "notes": "New patient E/M via telehealth"
+  },
+  {
+    "visit_type": "Follow-up Visit",
+    "cpt_codes": ["99212", "99213"],
+    "notes": "Established patient E/M via telehealth"
+  },
+  {
+    "visit_type": "Chronic Condition Management",
+    "cpt_codes": ["99490", "99439"],
+    "notes": "For chronic care management services; use E/M codes as well"
+  },
+  {
+    "visit_type": "Medication Refill / Management",
+    "cpt_codes": ["99212", "99213"],
+    "notes": "Brief medication check-in for established patients"
+  },
+  {
+    "visit_type": "Behavioral Health Therapy",
+    "cpt_codes": ["90832", "90834", "90837"],
+    "notes": "Psychotherapy sessions (30/45/60 minutes)"
+  },
+  {
+    "visit_type": "Psychiatric Evaluation",
+    "cpt_codes": ["90791"],
+    "notes": "Initial psychiatric diagnostic evaluation"
+  },
+  {
+    "visit_type": "Dermatology Review",
+    "cpt_codes": ["99212", "99421", "99422", "99423"],
+    "notes": "E/M codes for telehealth; include store-and-forward for image review"
+  },
+  {
+    "visit_type": "Post-Surgical Follow-up",
+    "cpt_codes": ["99024"],
+    "notes": "No charge if within global surgical period"
+  },
+  {
+    "visit_type": "Nutritional Counseling",
+    "cpt_codes": ["97802", "97803"],
+    "notes": "Medical nutrition therapy; usually 15-minute sessions"
+  },
+  {
+    "visit_type": "Smoking Cessation",
+    "cpt_codes": ["99406", "99407"],
+    "notes": "Counseling for 3–10 min and over 10 min"
+  },
+  {
+    "visit_type": "Sleep Disorder Consult",
+    "cpt_codes": ["99213", "99441", "99442", "99443"],
+    "notes": "Use E/M or phone visit codes depending on interaction"
+  },
+  {
+    "visit_type": "Birth Control Counseling",
+    "cpt_codes": ["99401", "99213"],
+    "notes": "Preventive counseling or general telehealth E/M"
+  },
+  {
+    "visit_type": "Men’s Health Check-in",
+    "cpt_codes": ["99213"],
+    "notes": "General telehealth visit for men's health concerns"
+  },
+  {
+    "visit_type": "Women’s Health Follow-up",
+    "cpt_codes": ["99213", "99401"],
+    "notes": "Telehealth E/M or preventive counseling"
+  },
+  {
+    "visit_type": "Pediatric Sick Visit (non-urgent)",
+    "cpt_codes": ["99213", "99214"],
+    "notes": "For minor illness, with guardian participation"
+  },
+  {
+    "visit_type": "COVID-19 / Flu Triage",
+    "cpt_codes": ["99213", "99441", "99442", "99443"],
+    "notes": "Teletriage for flu or COVID symptoms"
+  },
+  {
+    "visit_type": "Allergy Management",
+    "cpt_codes": ["99213", "99214"],
+    "notes": "Review symptoms, adjust meds, provide follow-up"
+  },
+  {
+    "visit_type": "Pain Management Follow-up",
+    "cpt_codes": ["99213", "99417"],
+    "notes": "Established patient follow-up; may include prolonged services"
+  },
+  {
+    "visit_type": "Infectious Disease Follow-up",
+    "cpt_codes": ["99213", "99441"],
+    "notes": "For HIV, hepatitis, and similar conditions"
+  },
+  {
+    "visit_type": "Pre-Travel Consult / Vaccine Planning",
+    "cpt_codes": ["99401", "99402"],
+    "notes": "Preventive medicine counseling and risk discussion"
+  }
+]
