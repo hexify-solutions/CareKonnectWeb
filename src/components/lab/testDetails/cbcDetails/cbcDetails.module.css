@@ -3,7 +3,7 @@
     height: 11.5rem;
     border-radius: 0.75rem;
     padding: 2rem;
-    background: var(--Schemes-Primary-Container, #C4EFAC);
+    background: var(--mui-color-basiliskLizard);
     font-family: var(--primary-font);
 }
 

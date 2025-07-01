@@ -2,8 +2,8 @@ export type RegistrationType = {
   email: string
   firstName: string
   lastName: string
-  gender?: string;
-  dob: string;
+  gender?: string
+  dob: string
   userType: "patient" | "doctor"
   password: string
 }
@@ -12,14 +12,16 @@ export type ProfileType = {
   email: string
   id: string
   firstName?: string
-  fullName?: string;
-  profile?: {avatarUrl?: string};
+  fullName?: string
+  profile?: { avatarUrl?: string }
   lastName?: string
-  dob?: string;
+  dob?: string
   avatarUrl?: string
-  gender?: string;
-  phoneNumber?: string;
-  address?: string;
+  gender?: string
+  phoneNumber?: string
+  address?: string
+  userType?: "doctor" | "lab" | "pharmacy" | "hmo" | "admin" | "god" | "lex"
+  permissions?: string[]
 }
 
 export type LoginResponseType = {
@@ -42,9 +44,9 @@ export type TriggerPasswordResetType = {
 }
 
 export type PasswordChangeType = {
-  email: string;
-  otp: string;
-  newPassword: string;
+  email: string
+  otp: string
+  newPassword: string
 }
 
 export type VerifyType = {
