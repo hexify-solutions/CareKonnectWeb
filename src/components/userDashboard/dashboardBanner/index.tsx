@@ -7,13 +7,14 @@ import { ImageBackgroundBanner } from "@hexify/components"
 import { useAuthContext } from "@/context/auth"
 import { useRouter } from "next/navigation"
 import routes from "@/lib/constants/routes"
+import { isFeatureEnabled } from "../../../../../../packages/engine/brand/feature"
 
 const DashboardBanner = () => {
   const { profile } = useAuthContext()
 
   const router = useRouter()
 
-  const displayedData = { 
+  const displayedData = {
     name: profile?.fullName,
     empId: "RHM/20022/B",
     plan: "Red Beryl Lite Individual",
@@ -39,23 +40,25 @@ const DashboardBanner = () => {
               )}
             </div>
           </div>
-          <div className={styles.otherDetails}>
-            <div>
-              <div>Reliance HMO</div>
-              <div className={styles.emp}>{displayedData?.empId}</div>
-              <div className={styles.emp2}>{displayedData?.plan}</div>
+          {isFeatureEnabled(["hmo"]) && (
+            <div className={styles.otherDetails}>
+              <div>
+                <div>Reliance HMO</div>
+                <div className={styles.emp}>{displayedData?.empId}</div>
+                <div className={styles.emp2}>{displayedData?.plan}</div>
+              </div>
+              <Button
+                className={styles.btn}
+                variant="contained"
+                rounded
+                color="primary"
+                size="medium"
+                onClick={() => router.push(routes.userDashboardHealthBenefits)}
+              >
+                View benefit list
+              </Button>
             </div>
-            <Button
-              className={styles.btn}
-              variant="contained"
-              rounded
-              color="primary"
-              size="medium"
-              onClick={() => router.push(routes.userDashboardHealthBenefits)}
-            >
-              View benefit list
-            </Button>
-          </div>
+          )}
         </div>
       </ImageBackgroundBanner>
     </div>

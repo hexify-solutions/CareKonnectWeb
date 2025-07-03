@@ -26,6 +26,7 @@ import api from "@/http/api"
 import { useLastVisitedPage } from "@/hooks/useLastVisitedPage"
 
 const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
+  const { setItem, removeItem, getItem } = useSecureStorage()
   const [authState, setAuthState] = useState<{
     isAuth: boolean
     profile: ProfileType
@@ -37,8 +38,22 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
   )
 
   useEffect(() => {
-    setAuthState(defaultState)
+    const profile = getItem(lsKeys.profile)
+    const token = getItem(lsKeys.token)
+    if (!profile || !token) {
+      setAuthState(defaultState)
+      return
+    }
+    setAuthState((prev) => {
+      return {
+        ...prev,
+        isAuth: true,
+        profile: profile,
+        token: token,
+      }
+    })
   }, [defaultState])
+
   useLayoutEffect(() => {
     const hasProfile = !!authState.profile?.email
     setAuthState({ ...authState, isAuth: hasProfile })
@@ -57,8 +72,6 @@ const useAuth = (defaultState: { isAuth: boolean; profile: ProfileType }) => {
 
   const passwordChangeMutation = usePasswordChangeMutation()
   const { redirectToLastPage } = useLastVisitedPage()
-
-  const { setItem, removeItem } = useSecureStorage()
 
   const onTriggerPasswordChange = (params: TriggerPasswordResetType) => {
     triggerPasswordResetMutation.mutate(params, {
