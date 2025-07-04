@@ -8,11 +8,9 @@ import UserProfileDropdown from "../profile/userProfileDropdown"
 import { useCartContext } from "@/context/cart"
 
 const NavigationComponent = () => {
-  const { isAuth, ...popopo } = useAuthContext()
+  const { isAuth } = useAuthContext()
 
   const { totalItems } = useCartContext()
-
-  console.log({ isAuth, popopo })
   return (
     <Navigation
       UserProfileDropdown={UserProfileDropdown}

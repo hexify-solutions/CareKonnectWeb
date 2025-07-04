@@ -56,7 +56,9 @@ const SearchFormAndFilter = ({
                 label={option?.label}
                 className={styles.filter}
                 onClick={() =>
-                  onSelectFilterHandler(option?.label?.toLowerCase())
+                  onSelectFilterHandler(
+                    (option?.value || option?.label)?.toLowerCase()
+                  )
                 }
                 rounded
               />
@@ -82,22 +84,22 @@ const filterOptions = [
   },
   {
     label: "Doctors",
-    value: "Doctors",
+    value: "doctor",
     permissions: permissionsMap.doctor,
   },
   {
     label: "Hospitals",
-    value: "Hospitals",
+    value: "hospital",
     permissions: permissionsMap.hospital,
   },
   {
     label: "Pharmacies",
-    value: "Pharmacies",
+    value: "pharmacy",
     permissions: permissionsMap.pharmacy,
   },
   {
     label: "Laboratories",
-    value: "Laboratories",
+    value: "lab",
     permissions: permissionsMap.lab,
   },
 ]

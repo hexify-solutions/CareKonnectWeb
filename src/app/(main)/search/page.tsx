@@ -22,6 +22,7 @@ const Search = () => {
   const { data, isLoading, isPending, refetch } = useSearch({
     search,
     specialization,
+    userType: category,
   })
 
   const onFilterClickedHandler = (value) => {

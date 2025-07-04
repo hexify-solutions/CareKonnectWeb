@@ -1,0 +1,67 @@
+
+[2K[1G[1myarn run v1.22.22[22m
+[2K[1G[2m$ yarn dev[22m
+[2K[1G[2m$ next dev --turbopack -p 9000[22m
+   [1m[38;2;173;127;168m▲ Next.js 15.2.4[39m[22m (Turbopack)
+   - Local:        http://localhost:9000
+   - Network:      http://192.168.100.189:9000
+   - Environments: .env.local
+   - Experiments (use with caution):
+     [1m✓[22m authInterrupts
+     [1m✓[22m scrollRestoration
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Compiled in 935ms
+ [32m[1m✓[22m[39m Ready in 3s
+ [37m[1m○[22m[39m Compiling /search ...
+
+warn - The `content` option in your Tailwind CSS configuration is missing or empty.
+warn - Configure your content sources or your generated CSS will be missing styles.
+warn - https://tailwindcss.com/docs/content-configuration
+ [32m[1m✓[22m[39m Compiled /search in 20.3s
+┌──────────────┬──────────────────────────────────────────────────┐
+│ (index)      │ Values                                           │
+├──────────────┼──────────────────────────────────────────────────┤
+│ URL          │ [32m'https://whale-uncommon-sheep.ngrok-free.app/v1'[39m │
+│ isProduction │ [33mfalse[39m                                            │
+└──────────────┴──────────────────────────────────────────────────┘
+Received `true` for a non-boolean attribute `rounded`.
+
+If you want to write it to the DOM, pass a string instead: rounded="true" or rounded={value.toString()}.
+ GET /search?category=pharmacies [32m200[39m in 24990ms
+ [37m[1m○[22m[39m Compiling /_not-found/page ...
+ GET /search [32m200[39m in 2778ms
+ [32m[1m✓[22m[39m Compiled in 19.7s
+ GET /favicon.ico?favicon.45db1c09.ico [32m200[39m in 11296ms
+ GET /favicon.ico?favicon.45db1c09.ico [32m200[39m in 7173ms
+ [32m[1m✓[22m[39m Compiled /_not-found/page in 21.1s
+┌──────────────┬──────────────────────────────────────────────────┐
+│ (index)      │ Values                                           │
+├──────────────┼──────────────────────────────────────────────────┤
+│ URL          │ [32m'https://whale-uncommon-sheep.ngrok-free.app/v1'[39m │
+│ isProduction │ [33mfalse[39m                                            │
+└──────────────┴──────────────────────────────────────────────────┘
+ GET /.well-known/appspecific/com.chrome.devtools.json [33m404[39m in 22179ms
+ GET /favicon.ico?favicon.45db1c09.ico [32m200[39m in 1995ms
+ GET /search?category=pharmacies [32m200[39m in 1383ms
+ GET /onboarding/signin/api [32m200[39m in 13453ms
+ GET /search?category=pharmacies%2Claboratories [32m200[39m in 951ms
+ [32m[1m✓[22m[39m Compiled in 1ms
+ GET /search?category=pharmacies%2Claboratories%2Chospital [32m200[39m in 1515ms
+ GET /search?category=pharmacies%2Claboratories%2Chospital%2Cpharmacy [32m200[39m in 838ms
+┌──────────────┬──────────────────────────────────────────────────┐
+│ (index)      │ Values                                           │
+├──────────────┼──────────────────────────────────────────────────┤
+│ URL          │ [32m'https://whale-uncommon-sheep.ngrok-free.app/v1'[39m │
+│ isProduction │ [33mfalse[39m                                            │
+└──────────────┴──────────────────────────────────────────────────┘
+Received `true` for a non-boolean attribute `rounded`.
+
+If you want to write it to the DOM, pass a string instead: rounded="true" or rounded={value.toString()}.
+ GET /search?category=pharmacies%2Claboratories%2Chospital%2Cpharmacy [32m200[39m in 2337ms
+ GET /.well-known/appspecific/com.chrome.devtools.json [33m404[39m in 4334ms
+ GET /favicon.ico?favicon.45db1c09.ico [32m200[39m in 96ms
+ GET /search [32m200[39m in 1860ms
+ GET /.well-known/appspecific/com.chrome.devtools.json [33m404[39m in 3328ms
+ GET /onboarding/signin/api [32m200[39m in 4973ms
+ GET /search?category=pharmacy [32m200[39m in 884ms
