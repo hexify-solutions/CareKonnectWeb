@@ -5,7 +5,7 @@ import type { NextRequest } from "next/server"
 export function middleware(request: NextRequest) {
   const isLoggedIn = Boolean(request.cookies.get("auth_token")?.value)
 
-  console.log(request.cookies.toString())
+  // console.log(request.cookies.toString())
   const { pathname } = request.nextUrl
   // Redirect logged-in users from homepage to dashboard
   if (pathname === "/" && isLoggedIn) {
