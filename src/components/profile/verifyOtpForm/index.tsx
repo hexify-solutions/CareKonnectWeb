@@ -6,6 +6,7 @@ import { OTPInput } from "@hexify/atoms"
 import { Formik, Form } from "formik"
 import { useSecureStorage } from "@/context/storage"
 import lsKeys from "@/lib/constants/lsKeys"
+import { GLOBAL_CONFIG } from "../../../../../../packages/engine"
 
 const VerifyOtp = ({
   componentData,
@@ -20,7 +21,7 @@ const VerifyOtp = ({
 
   const validateHandler = (params: { otp: string[] }) => {
     const { otp } = params
-    if (otp?.every((v) => v !== "")) {
+    if (otp?.every(Boolean) && otp.length === GLOBAL_CONFIG.OTP_LENGTH) {
       const code = otp?.join("")
       onVerify(
         {
@@ -89,6 +90,6 @@ const VerifyOtp = ({
 }
 
 const initialValues = {
-  otp: ["", "", "", ""],
+  otp: Array.from({ length: GLOBAL_CONFIG.OTP_LENGTH }),
 }
 export default VerifyOtp
