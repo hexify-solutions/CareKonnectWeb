@@ -1,7 +1,5 @@
 import { AxiosRequestConfig } from "axios"
 import customRequest, { Transformer } from "./customRequest"
-import { aes } from "@hexify/shared"
-import cookieKeys from "@/lib/constants/cookieKeys"
 import {
   getCurrentUserDomain,
   getStoredUserLocation,

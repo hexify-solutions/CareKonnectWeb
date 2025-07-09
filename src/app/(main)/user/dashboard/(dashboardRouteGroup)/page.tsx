@@ -1,43 +1,42 @@
-import DashboardSummaryCard from "@/components/userDashboard/dashboardSummaryCard";
-import { cookies } from "next/headers";
-import Link from "next/link";
-import styles from "./styles/page.module.css";
-import VitalCard from "@/components/userDashboard/vitalCard";
-import PrescriptionCard from "@/components/prescription/prescriptionCard";
-import { DoctorCard, HospitalCard } from "@hexify/components";
-import { BookIcon, EmailIcon } from "@hexify/atoms";
-import DoctorInfoCard from "@/components/doctor/doctorInfoCard";
-import mockSpecialistData from "@/data/mockSpecialist.json";
-import cookieKeys from "@/lib/constants/cookieKeys";
-import routes from "@/lib/constants/routes";
-import { HospitalWithCrossIcon, DashboardCalendarIcon, MedicinalBowl} from "@hexify/atoms";
-import RecentAppointment from "./components/recentAppointments";
-import { Suspense } from "react";
-import { getUserStats } from "@/http/user/serverAction";
-import { getUserAgeInfo } from "@/lib/utils/getUserAgeInfo";
+import DashboardSummaryCard from "@/components/userDashboard/dashboardSummaryCard"
+import { cookies } from "next/headers"
+import Link from "next/link"
+import styles from "./styles/page.module.css"
+import VitalCard from "@/components/userDashboard/vitalCard"
+import PrescriptionCard from "@/components/prescription/prescriptionCard"
+import { DoctorCard, HospitalCard } from "@hexify/components"
+import { BookIcon, EmailIcon } from "@hexify/atoms"
+import DoctorInfoCard from "@/components/doctor/doctorInfoCard"
+import mockSpecialistData from "@/data/mockSpecialist.json"
+import routes from "@/lib/constants/routes"
+import {
+  HospitalWithCrossIcon,
+  DashboardCalendarIcon,
+  MedicinalBowl,
+} from "@hexify/atoms"
+import RecentAppointment from "./components/recentAppointments"
+import { Suspense } from "react"
+import { getUserStats } from "@/http/user/serverAction"
+import { getUserAgeInfo } from "@/lib/utils/getUserAgeInfo"
 
 const generateSummaryData = (data: Record<string, string>) => {
   return Object.entries(data || {}).reduce((acc, [key, value]) => {
-    if (key === "total") return acc;  // Skip the "total" key
+    if (key === "total") return acc // Skip the "total" key
     acc.push({
       label: key,
       value,
-    });
-    return acc;
-  }, []);
-};
+    })
+    return acc
+  }, [])
+}
 
 const Dashboard = async () => {
-
-  const stats = await getUserStats();
-
+  const stats = await getUserStats()
 
   const appointmentData = generateSummaryData(stats?.appointment)
   const serviceData = generateSummaryData(stats?.service)
-  const prescriptionData = generateSummaryData(stats?.prescriptions);
+  const prescriptionData = generateSummaryData(stats?.prescriptions)
   const userAgeInfo = getUserAgeInfo(stats?.user?.dob)
-
-
 
   return (
     <div>
@@ -92,7 +91,9 @@ const Dashboard = async () => {
       <ul className={styles.vitalInfoWrapper}>
         {stats?.vitals && (
           <li className={styles.vitalInfoItem}>
-            <VitalCard vitals={{...(stats?.vitals || {}), age: userAgeInfo?.age}} />
+            <VitalCard
+              vitals={{ ...(stats?.vitals || {}), age: userAgeInfo?.age }}
+            />
           </li>
         )}
         <li className={styles.vitalInfoItem}>
