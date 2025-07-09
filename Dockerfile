@@ -19,6 +19,9 @@ COPY ../../node_modules ./node_modules
 COPY next.config.ts ./next.config.ts
 COPY .env ./.env
 
+# Volume declarations for persistent data
+VOLUME /app/standalone/apps/patients/data
+
 EXPOSE 9000
 
 #RUN #ls -la && ls -la docker-context
