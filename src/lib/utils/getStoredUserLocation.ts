@@ -22,3 +22,18 @@ export const getStoredUserLocation = async () => {
     return null
   }
 }
+
+export const getCurrentUserDomain = async () => {
+  try {
+    if (typeof window === "undefined") {
+      const headers = await await import("next/headers")
+      const headersList = await headers.headers()
+      const fHost = await headersList.get("x-forwarded-host")
+      const host = await headersList.get("host")
+      return host || fHost
+    }
+    return window.location.host
+  } catch (e) {
+    return null
+  }
+}

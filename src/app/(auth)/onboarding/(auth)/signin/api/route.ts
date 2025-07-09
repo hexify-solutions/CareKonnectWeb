@@ -1,15 +1,21 @@
 import { cookies } from "next/headers"
 import { NextResponse } from "next/server"
+import Api from "@/http/api/api"
 
 export async function POST(req: Request) {
   try {
     const { email, password } = await req.json()
     const cookieStore = await cookies()
+    const host = req.headers.get("host")
+    const domain = (host || process.env.NEXT_PUBLIC_FE_URL || req.nextUrl.host)
+      ?.replace("https://", "")
+      ?.replace("http://", "")
 
     const apiUrl = process.env.NEXT_PUBLIC_URL ?? "http://localhost:9000"
     const response = await fetch(`${apiUrl}/auth/login`, {
       method: "POST",
       headers: {
+        "X-Tenant-Domain": domain,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ email, password }),

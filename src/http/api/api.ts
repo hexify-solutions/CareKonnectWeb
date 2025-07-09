@@ -2,7 +2,10 @@ import { AxiosRequestConfig } from "axios"
 import customRequest, { Transformer } from "./customRequest"
 import { aes } from "@hexify/shared"
 import cookieKeys from "@/lib/constants/cookieKeys"
-import { getStoredUserLocation } from "@/lib/utils/getStoredUserLocation"
+import {
+  getCurrentUserDomain,
+  getStoredUserLocation,
+} from "@/lib/utils/getStoredUserLocation"
 
 class Api {
   url: string
@@ -31,10 +34,12 @@ class Api {
   static async generateHeader() {
     try {
       const location = await getStoredUserLocation()
+
       return {
         "X-User-Latitude": location.latitude + "",
         "X-User-Longitude": location.longitude + "",
         "X-User-Altitude": location.altitude + "",
+        "X-Tenant-Domain": await getCurrentUserDomain(),
       }
     } catch (e) {
       return {}
