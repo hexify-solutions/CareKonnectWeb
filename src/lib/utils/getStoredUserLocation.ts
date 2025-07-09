@@ -1,4 +1,4 @@
-import cookieKeys from "@/lib/constants/cookieKeys"
+import cookieKeys from "../constants/cookieKeys"
 import { aes } from "@hexify/shared"
 
 export const getStoredUserLocation = async () => {
