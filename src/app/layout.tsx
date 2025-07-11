@@ -21,22 +21,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body style={{ backgroundColor: "#F8FAF0" }}>
-        <CustomTheme>
-          <UserLocationProvider>
-            <SecureStorageProvider>
-              <QueryProvider>
-                <AuthProvider>
-                  <CartProvider>
-                    <main>{children} </main>
-                  </CartProvider>
-                </AuthProvider>
-                <ToastProvider />
-              </QueryProvider>
-            </SecureStorageProvider>
-          </UserLocationProvider>
-        </CustomTheme>
-      </body>
+      <CustomTheme>
+        <UserLocationProvider>
+          <SecureStorageProvider>
+            <QueryProvider>
+              <AuthProvider>
+                <CartProvider>
+                  <main>{children} </main>
+                </CartProvider>
+              </AuthProvider>
+              <ToastProvider />
+            </QueryProvider>
+          </SecureStorageProvider>
+        </UserLocationProvider>
+      </CustomTheme>
     </html>
   )
 }
