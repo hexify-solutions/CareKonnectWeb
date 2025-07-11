@@ -8,7 +8,7 @@ const CartLoader = () => {
   useEffect(() => {
     const fetchCart = async () => {
       try {
-        const res = await fetch("/api/get-cart")
+        const res = await fetchData("/api/get-cart")
         const data = await res.json()
         setCart(data.cartItems || {})
       } catch (err) {
