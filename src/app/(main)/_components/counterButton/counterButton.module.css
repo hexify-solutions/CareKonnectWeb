@@ -23,7 +23,7 @@
 }
 
 .count {
-    font-family: var(--font-primary);
+    font-family: var(--wx-fonts-primaryFontFamily);
     font-weight: 500;
     font-size: 1.125rem;
     line-height: 1.75rem;

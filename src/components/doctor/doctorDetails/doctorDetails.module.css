@@ -4,7 +4,7 @@
 }
 
 .about {
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-size: 1rem;
   font-weight: 400;
   line-height: 26px;
@@ -15,7 +15,7 @@
 }
 
 .sectionHeading {
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.95rem;

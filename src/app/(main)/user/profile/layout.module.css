@@ -15,7 +15,7 @@
 }
 
 .linkItem {
-  font-family: var(--font-family);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.25rem;
@@ -43,7 +43,7 @@
 }
 
 .heading {
-font-family: var(--font-primary);
+font-family: var(--wx-fonts-primaryFontFamily);
 color: var(--mui-palette-design_light-onSurfaceVariant);
 display: inline-block;
 padding: 16px 18px;

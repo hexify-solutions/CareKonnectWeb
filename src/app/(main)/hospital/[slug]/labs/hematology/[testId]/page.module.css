@@ -16,7 +16,7 @@
 }
 
 .title {
-    font-family: var(--primary-font);
+    font-family: var(--wx-fonts-primaryFontFamily);
     font-weight: 600;
     font-size: 1.25rem;
     line-height: 130%;
@@ -36,7 +36,7 @@
 }
 
 .toggle {
-    font-family: var(--primary-font);
+    font-family: var(--wx-fonts-primaryFontFamily);
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 130%;
@@ -47,7 +47,7 @@
 }
 
 .comment {
-    font-family: var(--primary-font);
+    font-family: var(--wx-fonts-primaryFontFamily);
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 130%;

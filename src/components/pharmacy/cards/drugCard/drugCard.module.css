@@ -134,7 +134,7 @@
 }
 
 .productTitle {
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-weight: 700;
   font-size: 1.875rem;
   line-height: 130%;
@@ -165,7 +165,7 @@
 .reviewCount,
 .size {
   color: var(--mui-palette-design_light-onPrimaryContainer);
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.625rem;
@@ -226,7 +226,7 @@
 .sectionTitle {
   font-size: 24px;
   line-height: 28px;
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-weight: 500;
   color: var(--mui-palette-design_light-onPrimaryContainer);
   margin-bottom: 10px;
@@ -289,7 +289,7 @@
   border: 1px solid transparent;
   border-radius: 6px;
   background-color: transparent;
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.625rem;
@@ -382,7 +382,7 @@ line-height: 1.625rem;
   align-items: center;
   gap: 8px;
   color: var(--mui-palette-design_light-onPrimaryContainer);
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
 font-weight: 500;
 font-size: 16px;
 line-height: 26px;
@@ -451,7 +451,7 @@ letter-spacing: -2%;
   text-align: left;
   cursor: pointer;
 color: var(--mui-palette-design_light-onPrimaryContainer);
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
 font-weight: 500;
 font-size: 1.125rem;
 line-height: 1.75rem;

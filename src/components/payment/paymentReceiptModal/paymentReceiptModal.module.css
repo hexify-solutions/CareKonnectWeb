@@ -9,7 +9,7 @@
   width: 100%;
   max-width: 51.625rem;
   background-color: var(--mui-palette-common-white);
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
 }
 
 .header {

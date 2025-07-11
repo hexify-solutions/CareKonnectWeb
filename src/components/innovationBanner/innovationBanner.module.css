@@ -5,7 +5,7 @@
   justify-content: flex-end;
 
   gap: 6px;
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-weight: 400;
   font-size: 33px;
 
@@ -65,7 +65,7 @@
 }
 
 .lead {
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-weight: 500;
   font-size: 1.875rem;
   color: var(--mui-palette-primary-main);

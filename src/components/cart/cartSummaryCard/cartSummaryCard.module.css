@@ -8,7 +8,7 @@
 }
 
 .lead {
-   font-family: var(--primary-font);
+   font-family: var(--wx-fonts-primaryFontFamily);
 font-weight: 600;
 font-size: 16px;
 line-height: 26px;

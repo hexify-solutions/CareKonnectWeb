@@ -3,7 +3,7 @@
   align-items: flex-start;
   gap: 1.5rem;
   justify-content: space-between;
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
 }
 
 .tabWrapper {
@@ -69,7 +69,7 @@
   margin-top: 16px;
 }
 .appointmentCardDetailsSection {
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   display: flex;
   flex-direction: column;
 font-weight: 500;

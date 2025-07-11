@@ -15,7 +15,7 @@
   justify-content: center;
   padding-left: 3.5625rem;
   height: 100%;
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-weight: 600;
   font-size: 1.875rem;
   line-height: 130%;

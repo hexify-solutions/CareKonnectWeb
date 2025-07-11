@@ -1,7 +1,7 @@
 .cbcContainer {
     display: flex;
     gap: 3.75rem;
-    font-family: var(--font-primary);
+    font-family: var(--wx-fonts-primaryFontFamily);
     width: 57.625rem;
     height: 25.4375rem;
     margin-left: 3.4375rem;

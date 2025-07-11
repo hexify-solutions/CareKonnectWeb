@@ -3,7 +3,7 @@
   align-items: center;
   flex-shrink: 0;
   gap: 0.5rem;
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-size: 1.125rem;
   font-weight: 500;
   color: var(--mui-palette-common-white);

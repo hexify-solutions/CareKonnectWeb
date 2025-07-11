@@ -35,7 +35,7 @@
   
 
 
-    font-family: var(--primary-font);
+    font-family: var(--wx-fonts-primaryFontFamily);
     color: var(--mui-palette-design_light-onSecondaryContainer);
 font-weight: 600;
 font-size: 16px;
@@ -58,7 +58,7 @@ margin-bottom: 2px;
     display: flex;
     align-items: center;
     margin-bottom: 16px;
-    font-family: var(--primary-font);
+    font-family: var(--wx-fonts-primaryFontFamily);
 font-weight: 400;
 font-size: 10px;
 line-height: 18px;

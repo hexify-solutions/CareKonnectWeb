@@ -14,7 +14,7 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   color: var(--mui-palette-primary-main);
   font-size: 1.25rem;
   font-weight: 600;
@@ -34,7 +34,7 @@
 }
 
 .detailValue {
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   color: var(--mui-palette-design_secondary-field500);
   font-size: 1rem;
   font-weight: 400;
@@ -43,7 +43,7 @@
 }
 
 .detailHeading {
-    font-family: var(--primary-font);
+    font-family: var(--wx-fonts-primaryFontFamily);
     font-size: .875rem;
     font-weight: 700;
     line-height: 1.0256rem;

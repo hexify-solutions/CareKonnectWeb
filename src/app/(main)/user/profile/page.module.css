@@ -1,6 +1,6 @@
 
 .header {
-    font-family: var(--font-primary);
+    font-family: var(--wx-fonts-primaryFontFamily);
     display: flex;
     align-items: center;
     justify-content: center;

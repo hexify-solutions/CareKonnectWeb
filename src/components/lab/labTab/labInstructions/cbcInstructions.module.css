@@ -1,7 +1,7 @@
 .container {
     width: 29.625rem;
     height: 49.9375rem;
-    font-family: var(--primary-font);
+    font-family: var(--wx-fonts-primaryFontFamily);
 }
 
 .heading {

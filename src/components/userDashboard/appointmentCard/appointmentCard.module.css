@@ -19,7 +19,7 @@
 
 
 .headerSectionSub {
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-weight: 500;
   font-size: 0.75rem;
   line-height: 1.25rem;
@@ -27,7 +27,7 @@
 }
 
 .headerSectionLead {
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
 font-weight: 600;
 font-size: 1rem;
 line-height: 26px;
@@ -41,7 +41,7 @@ div.headerChip {
   background-color: var(--mui-palette-design_light-tertiaryContainer);
   color: var(--mui-palette-design_secondary-field500);
   font-size: .625rem;
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   padding: 2px 0;
 }
 
@@ -52,7 +52,7 @@ div.headerChip {
   display: flex;
   align-items: center;
   gap: 32px;
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;

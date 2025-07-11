@@ -8,7 +8,7 @@
     display: flex;
     align-items: flex-start;
     gap: 14px;
-    font-family: var(--primary-font);
+    font-family: var(--wx-fonts-primaryFontFamily);
   }
   
   .header {
@@ -30,7 +30,7 @@
   
   .prescriptionId {
     color: var(--mui-palette-primary-main);
-    font-family: var(--primary-font);
+    font-family: var(--wx-fonts-primaryFontFamily);
     font-size: 20px;
     font-weight: 600;
     margin: 0 0 8px 0;

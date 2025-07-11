@@ -2,7 +2,7 @@
     border: 1px solid var(--mui-palette-design_light-outlineVariant);
     background-color: var(--mui-palette-design_light-background);
     display: flex;
-    font-family: var(--primary-font);
+    font-family: var(--wx-fonts-primaryFontFamily);
     border-radius: 0.75rem;
     justify-content: center;
     height: 6.4375rem;

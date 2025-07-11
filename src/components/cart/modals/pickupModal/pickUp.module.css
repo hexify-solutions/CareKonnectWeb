@@ -1,6 +1,6 @@
 .header {
   color: var(--mui-palette-primary-main);
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-weight: 700;
   font-size: 1.25rem;
   line-height: 130%;
@@ -11,7 +11,7 @@
 }
 
 .content {
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.625rem;
@@ -90,7 +90,7 @@
 }
 
 .productName {
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.625rem;
@@ -113,7 +113,7 @@
 }
 
 .pharmacy {
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -137,7 +137,7 @@
 }
 
 .cardPrice {
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 28px;
@@ -157,7 +157,7 @@
 }
 
 .confirmSelectionHeading {
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-weight: 700;
   font-size: 24px;
   line-height: 130%;
@@ -222,7 +222,7 @@
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;

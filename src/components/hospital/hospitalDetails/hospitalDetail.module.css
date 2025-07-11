@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: space-between;
     color: var(--mui-palette-secondary-main);
-    font-family: var(--primary-font);
+    font-family: var(--wx-fonts-primaryFontFamily);
     margin-bottom: 1.5rem;
 }
 

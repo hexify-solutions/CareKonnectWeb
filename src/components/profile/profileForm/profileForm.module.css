@@ -7,7 +7,7 @@
 
 .profileForm {
   background-color: var(--mui-palette-common-white);
-  font-family: var(--font-primary);
+  font-family: var(--wx-fonts-primaryFontFamily);
   width: 100%;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .header {
-  font-family: var(--font-primary);
+  font-family: var(--wx-fonts-primaryFontFamily);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,7 +73,7 @@
   background-color: var(--mui-palette-design_light-primaryContainer);
   color: #3f6d2a;
   font-size: 0.75rem;
-  font-family: var(--font-primary);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-weight: 600;
 }
 

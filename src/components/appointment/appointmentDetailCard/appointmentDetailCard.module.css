@@ -1,11 +1,11 @@
 .wrapper {
   padding: 1.3125rem 2.3125rem 3.8125rem 3.375rem;
   background-color: var(--mui-palette-design_light-surfaceVariant);
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
 }
 
 .heading {
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   color: var(--mui-palette-design_light-onSecondaryContainer);
   font-weight: 700;
   font-size: 18px;

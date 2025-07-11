@@ -24,7 +24,7 @@
 }
 
 .leadWrapper {
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   color: var(--mui-palette-design_secondary-field500);
   font-size: 1.25rem;
   font-weight: 500;
@@ -44,7 +44,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 20px;

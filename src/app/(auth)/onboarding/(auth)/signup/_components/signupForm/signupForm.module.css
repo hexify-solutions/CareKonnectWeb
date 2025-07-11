@@ -12,7 +12,7 @@
 }
 
 .heading {
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   color: var(--mui-palette-primary-main);
   font-size: 1.5rem;
   font-weight: 600;
@@ -21,7 +21,7 @@
 }
 
 .subHeading {
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   color: var(--mui-palette-secondary-dark);
   font-size: 14px;
   line-height: 20px;
@@ -34,7 +34,7 @@
 
 
 .signInPrompt {
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   color: var(--mui-palette-secondary-dark);
   font-weight: 500;
   line-height: 1.25rem;
@@ -48,7 +48,7 @@
 }
 
 .policyText {
-font-family: var(--primary-font);
+font-family: var(--wx-fonts-primaryFontFamily);
 font-size: .75rem;
 font-weight: 400;
 line-height: 1.25rem;

@@ -24,7 +24,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    font-family: var(--primary-font);
+    font-family: var(--wx-fonts-primaryFontFamily);
 font-weight: 600;
 font-size: 1rem;
 line-height: 26px;

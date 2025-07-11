@@ -46,7 +46,7 @@
   text-align: center;
   max-width: 32.875rem;
   margin: 0 0 1.5rem;
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
   color: var(--mui-palette-common-white);
 }
 
@@ -57,7 +57,7 @@
   text-align: center;
   max-width: 34.75rem;
   color: var(--mui-palette-common-white);
-  font-family: var(--primary-font);
+  font-family: var(--wx-fonts-primaryFontFamily);
 }
 @media (max-width: 768px) {
 }
