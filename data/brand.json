@@ -1,528 +1,4 @@
 {
-  "localhost:8000": {
-    "id": "4b577436-3308-4128-960a-22a30819b10c",
-    "brandId": "e536e0f3-de71-4e12-a45c-76b0ce8d64d3",
-    "colors": {
-      "primary": "#446832",
-      "customJs": null,
-      "customCss": null,
-      "secondary": "#c4efac",
-      "accentPrimary": "#d8e7cb",
-      "accentSecondary": "#446832e5"
-    },
-    "fonts": {
-      "bodyFontFamily": "Roboto, sans-serif",
-      "titleFontFamily": "Roboto, sans-serif",
-      "primaryFontFamily": "Roboto, sans-serif"
-    },
-    "images": {
-      "logo": "https://sesamecare.com/assets/sesame-logo.png",
-      "appIcon": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg",
-      "logoIcon": "https://sesamecare.com/assets/sesame-favicon.png",
-      "whiteLogo": "https://carekonnectdev.blob.core.windows.net/app-assets/test-white-logo.svg",
-      "logoIconWhite": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg",
-      "loginBackground": "https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png",
-      "signupBackground": "https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png",
-      "splashScreenImage": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg"
-    },
-    "content": {
-      "footerText": "Product of Lex Medical",
-      "companyName": "CareKonnect",
-      "hidePoweredBy": "false",
-      "poweredByText": "CareKonnect",
-      "pushNotificationBrandingText": "CareKonnect"
-    },
-    "urls": {
-      "supportUrl": "https://carekonnectdev.blob.core.windows.net",
-      "supportEmail": "support@example.com",
-      "helpCenterUrl": "helpCenter@example.com",
-      "helpCenterEmail": "https://carekonnectdev.blob.core.windows.net",
-      "privacyPolicyUrl": "https://carekonnectdev.blob.core.windows.net",
-      "termsOfServiceUrl": "https://carekonnectdev.blob.core.windows.net",
-      "privacyPolicyEmail": "privacyPolicy@example.com",
-      "termsOfServiceEmail": "termsOfService@example.com"
-    },
-    "features": {},
-    "meta": {},
-    "createdAt": "2025-07-09T16:29:20.873+00:00",
-    "updatedAt": "2025-07-10T08:13:27.963+00:00",
-    "deletedAt": null,
-    "featuredDataHost": {
-      "appDisabled": false,
-      "permissions": [
-        "doctor",
-        "hospital",
-        "patient",
-        "pharmacy",
-        "ai",
-        "hmo",
-        "branding",
-        "wallet",
-        "chat",
-        "announcements",
-        "app",
-        "help_center"
-      ]
-    },
-    "client": {
-      "id": "e536e0f3-de71-4e12-a45c-76b0ce8d64d3",
-      "companyName": "EmmsDan Industries",
-      "platform": "all",
-      "domain": "localhost:8000,localhost:8003",
-      "isActive": true,
-      "status": "active",
-      "meta": {
-        "deployment": {
-          "domain": "",
-          "azureServiceDomain_Patients": "localhost:8000",
-          "azureServiceDomain_Providers": "localhost:8003"
-        }
-      },
-      "createdAt": "2025-07-09T16:29:20.562+00:00",
-      "updatedAt": "2025-07-10T08:13:28.031+00:00",
-      "deletedAt": null,
-      "tenantDomain1": "localhost:8000",
-      "tenantDomain2": "localhost:8003"
-    }
-  },
-  "localhost:8003": {
-    "id": "4b577436-3308-4128-960a-22a30819b10c",
-    "brandId": "e536e0f3-de71-4e12-a45c-76b0ce8d64d3",
-    "colors": {
-      "primary": "#446832",
-      "customJs": null,
-      "customCss": null,
-      "secondary": "#c4efac",
-      "accentPrimary": "#d8e7cb",
-      "accentSecondary": "#446832e5"
-    },
-    "fonts": {
-      "bodyFontFamily": "Roboto, sans-serif",
-      "titleFontFamily": "Roboto, sans-serif",
-      "primaryFontFamily": "Roboto, sans-serif"
-    },
-    "images": {
-      "logo": "https://sesamecare.com/assets/sesame-logo.png",
-      "appIcon": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg",
-      "logoIcon": "https://sesamecare.com/assets/sesame-favicon.png",
-      "whiteLogo": "https://carekonnectdev.blob.core.windows.net/app-assets/test-white-logo.svg",
-      "logoIconWhite": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg",
-      "loginBackground": "https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png",
-      "signupBackground": "https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png",
-      "splashScreenImage": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg"
-    },
-    "content": {
-      "footerText": "Product of Lex Medical",
-      "companyName": "CareKonnect",
-      "hidePoweredBy": "false",
-      "poweredByText": "CareKonnect",
-      "pushNotificationBrandingText": "CareKonnect"
-    },
-    "urls": {
-      "supportUrl": "https://carekonnectdev.blob.core.windows.net",
-      "supportEmail": "support@example.com",
-      "helpCenterUrl": "helpCenter@example.com",
-      "helpCenterEmail": "https://carekonnectdev.blob.core.windows.net",
-      "privacyPolicyUrl": "https://carekonnectdev.blob.core.windows.net",
-      "termsOfServiceUrl": "https://carekonnectdev.blob.core.windows.net",
-      "privacyPolicyEmail": "privacyPolicy@example.com",
-      "termsOfServiceEmail": "termsOfService@example.com"
-    },
-    "features": {},
-    "meta": {},
-    "createdAt": "2025-07-09T16:29:20.873+00:00",
-    "updatedAt": "2025-07-10T08:13:27.963+00:00",
-    "deletedAt": null,
-    "featuredDataHost": {
-      "appDisabled": false,
-      "permissions": [
-        "doctor",
-        "hospital",
-        "patient",
-        "pharmacy",
-        "ai",
-        "hmo",
-        "branding",
-        "wallet",
-        "chat",
-        "announcements",
-        "app",
-        "help_center"
-      ]
-    },
-    "client": {
-      "id": "e536e0f3-de71-4e12-a45c-76b0ce8d64d3",
-      "companyName": "EmmsDan Industries",
-      "platform": "all",
-      "domain": "localhost:8000,localhost:8003",
-      "isActive": true,
-      "status": "active",
-      "meta": {
-        "deployment": {
-          "domain": "",
-          "azureServiceDomain_Patients": "localhost:8000",
-          "azureServiceDomain_Providers": "localhost:8003"
-        }
-      },
-      "createdAt": "2025-07-09T16:29:20.562+00:00",
-      "updatedAt": "2025-07-10T08:13:28.031+00:00",
-      "deletedAt": null,
-      "tenantDomain1": "localhost:8000",
-      "tenantDomain2": "localhost:8003"
-    }
-  },
-  "care-patients.azurewebsites.net": {
-    "id": "f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4",
-    "brandId": "96204119-ca27-458f-aa66-e45c56d7ef2f",
-    "colors": {
-      "primary": "#07cf4d",
-      "secondary": "#6016bb",
-      "accentPrimary": "#f4e6f1",
-      "accentSecondary": "#9a324c"
-    },
-    "fonts": {
-      "bodyFontFamily": "Montserrat",
-      "titleFontFamily": "Roboto",
-      "primaryFontFamily": "Nunito"
-    },
-    "images": {
-      "logo": "https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1751711809922/1751711809922.JPG",
-      "appIcon": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg",
-      "logoIcon": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg",
-      "whiteLogo": "https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1751711810415/1751711810415.png",
-      "logoIconWhite": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg",
-      "loginBackground": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrGqAfN1xf-s1eFqyjXFEoaMT0NAFLzjBxDngPi9e14PasYkkjAreDqAk&s",
-      "signupBackground": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkFGQSbhk1whAl46hWMQWS5dwJ9qqPTDQApc9eGXFMt33oLXqxOoEwTXs&s",
-      "splashScreenImage": "https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750707740511/1750707740511.png"
-    },
-    "content": {
-      "footerText": "Product of Lex Medical",
-      "companyName": "CareKonnect",
-      "productName": "CareKonnect",
-      "hidePoweredBy": "false",
-      "loginPageText": null,
-      "poweredByText": "CareKonnect",
-      "socialLoginEnabled": true,
-      "passwordResetEnabled": true,
-      "pushNotificationBrandingText": "CareKonnect"
-    },
-    "urls": {
-      "twitter": "https://x.com/@",
-      "youtube": "https://www.youtube.com/",
-      "facebook": "https://www.facebook.com/",
-      "linkedin": "https://www.linkedin.com/",
-      "supportUrl": "https://carekonnectdev.blob.core.windows.net",
-      "supportEmail": "support@example.com",
-      "supportPhone": "+91-80-65652545",
-      "helpCenterUrl": "https://carekonnectdev.blob.core.windows.net",
-      "helpCenterEmail": "helpCenter@example.com",
-      "helpCenterPhone": "+91-80-65652545",
-      "privacyPolicyUrl": "https://carekonnectdev.blob.core.windows.net",
-      "termsOfServiceUrl": "https://carekonnectdev.blob.core.windows.net",
-      "privacyPolicyEmail": "privacyPolicy@example.com",
-      "termsOfServiceEmail": "termsOfService@example.com"
-    },
-    "features": {},
-    "meta": {},
-    "createdAt": "2025-06-11T19:00:52.874+00:00",
-    "updatedAt": "2025-07-10T15:19:22.955+00:00",
-    "deletedAt": null,
-    "featuredDataHost": {
-      "permissions": [
-        "all",
-        "doctor",
-        "patient",
-        "god",
-        "ai",
-        "branding",
-        "lex",
-        "wallet",
-        "chat",
-        "announcements"
-      ]
-    },
-    "client": {
-      "id": "96204119-ca27-458f-aa66-e45c56d7ef2f",
-      "companyName": "CareKonnect (Staging)",
-      "platform": "all",
-      "domain": "care-patients.azurewebsites.net,care-providers.azurewebsites.net",
-      "isActive": true,
-      "status": "active",
-      "meta": {
-        "deployment": {
-          "domain": ""
-        }
-      },
-      "createdAt": "2025-06-11T19:00:52.102+00:00",
-      "updatedAt": "2025-07-10T15:19:23.017+00:00",
-      "deletedAt": null,
-      "tenantDomain1": "care-patients.azurewebsites.net",
-      "tenantDomain2": "care-providers.azurewebsites.net"
-    }
-  },
-  "care-providers.azurewebsites.net": {
-    "id": "f8d3f6b9-1c2e-4c0a-b3df-99e650b0e3e4",
-    "brandId": "96204119-ca27-458f-aa66-e45c56d7ef2f",
-    "colors": {
-      "primary": "#07cf4d",
-      "secondary": "#6016bb",
-      "accentPrimary": "#f4e6f1",
-      "accentSecondary": "#9a324c"
-    },
-    "fonts": {
-      "bodyFontFamily": "Montserrat",
-      "titleFontFamily": "Roboto",
-      "primaryFontFamily": "Nunito"
-    },
-    "images": {
-      "logo": "https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1751711809922/1751711809922.JPG",
-      "appIcon": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg",
-      "logoIcon": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg",
-      "whiteLogo": "https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1751711810415/1751711810415.png",
-      "logoIconWhite": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg",
-      "loginBackground": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrGqAfN1xf-s1eFqyjXFEoaMT0NAFLzjBxDngPi9e14PasYkkjAreDqAk&s",
-      "signupBackground": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkFGQSbhk1whAl46hWMQWS5dwJ9qqPTDQApc9eGXFMt33oLXqxOoEwTXs&s",
-      "splashScreenImage": "https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750707740511/1750707740511.png"
-    },
-    "content": {
-      "footerText": "Product of Lex Medical",
-      "companyName": "CareKonnect",
-      "productName": "CareKonnect",
-      "hidePoweredBy": "false",
-      "loginPageText": null,
-      "poweredByText": "CareKonnect",
-      "socialLoginEnabled": true,
-      "passwordResetEnabled": true,
-      "pushNotificationBrandingText": "CareKonnect"
-    },
-    "urls": {
-      "twitter": "https://x.com/@",
-      "youtube": "https://www.youtube.com/",
-      "facebook": "https://www.facebook.com/",
-      "linkedin": "https://www.linkedin.com/",
-      "supportUrl": "https://carekonnectdev.blob.core.windows.net",
-      "supportEmail": "support@example.com",
-      "supportPhone": "+91-80-65652545",
-      "helpCenterUrl": "https://carekonnectdev.blob.core.windows.net",
-      "helpCenterEmail": "helpCenter@example.com",
-      "helpCenterPhone": "+91-80-65652545",
-      "privacyPolicyUrl": "https://carekonnectdev.blob.core.windows.net",
-      "termsOfServiceUrl": "https://carekonnectdev.blob.core.windows.net",
-      "privacyPolicyEmail": "privacyPolicy@example.com",
-      "termsOfServiceEmail": "termsOfService@example.com"
-    },
-    "features": {},
-    "meta": {},
-    "createdAt": "2025-06-11T19:00:52.874+00:00",
-    "updatedAt": "2025-07-10T15:19:22.955+00:00",
-    "deletedAt": null,
-    "featuredDataHost": {
-      "permissions": [
-        "all",
-        "doctor",
-        "patient",
-        "god",
-        "ai",
-        "branding",
-        "lex",
-        "wallet",
-        "chat",
-        "announcements"
-      ]
-    },
-    "client": {
-      "id": "96204119-ca27-458f-aa66-e45c56d7ef2f",
-      "companyName": "CareKonnect (Staging)",
-      "platform": "all",
-      "domain": "care-patients.azurewebsites.net,care-providers.azurewebsites.net",
-      "isActive": true,
-      "status": "active",
-      "meta": {
-        "deployment": {
-          "domain": ""
-        }
-      },
-      "createdAt": "2025-06-11T19:00:52.102+00:00",
-      "updatedAt": "2025-07-10T15:19:23.017+00:00",
-      "deletedAt": null,
-      "tenantDomain1": "care-patients.azurewebsites.net",
-      "tenantDomain2": "care-providers.azurewebsites.net"
-    }
-  },
-  "care-patients.emmsdan.com": {
-    "id": "d005bc9c-7a48-4cc1-924f-854dc17215f9",
-    "brandId": "001fdd84-7784-4d9c-b437-4944b01da062",
-    "colors": {
-      "primary": "#446832",
-      "customJs": null,
-      "customCss": null,
-      "secondary": "#c4efac",
-      "accentPrimary": "#d8e7cb",
-      "accentSecondary": "#446832e5"
-    },
-    "fonts": {
-      "bodyFontFamily": "Roboto, sans-serif",
-      "titleFontFamily": "Roboto, sans-serif",
-      "primaryFontFamily": "Roboto, sans-serif"
-    },
-    "images": {
-      "logo": "https://sesamecare.com/assets/sesame-logo.png",
-      "appIcon": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg",
-      "logoIcon": "https://sesamecare.com/assets/sesame-favicon.png",
-      "whiteLogo": "https://carekonnectdev.blob.core.windows.net/app-assets/test-white-logo.svg",
-      "logoIconWhite": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg",
-      "loginBackground": "https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png",
-      "signupBackground": "https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png",
-      "splashScreenImage": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg"
-    },
-    "content": {
-      "footerText": "Product of Lex Medical",
-      "companyName": "CareKonnect",
-      "hidePoweredBy": "false",
-      "poweredByText": "CareKonnect",
-      "pushNotificationBrandingText": "CareKonnect"
-    },
-    "urls": {
-      "supportUrl": "https://carekonnectdev.blob.core.windows.net",
-      "supportEmail": "support@example.com",
-      "helpCenterUrl": "helpCenter@example.com",
-      "helpCenterEmail": "https://carekonnectdev.blob.core.windows.net",
-      "privacyPolicyUrl": "https://carekonnectdev.blob.core.windows.net",
-      "termsOfServiceUrl": "https://carekonnectdev.blob.core.windows.net",
-      "privacyPolicyEmail": "privacyPolicy@example.com",
-      "termsOfServiceEmail": "termsOfService@example.com"
-    },
-    "features": {},
-    "meta": {},
-    "createdAt": "2025-07-10T15:55:18.803+00:00",
-    "updatedAt": "2025-07-10T15:58:10.414+00:00",
-    "deletedAt": null,
-    "featuredDataHost": {
-      "permissions": [
-        "doctor",
-        "hospital",
-        "patient",
-        "lab",
-        "pharmacy",
-        "laboratory",
-        "ai",
-        "hmo",
-        "branding",
-        "wallet",
-        "chat",
-        "announcements",
-        "app",
-        "help_center"
-      ]
-    },
-    "client": {
-      "id": "001fdd84-7784-4d9c-b437-4944b01da062",
-      "companyName": "EmmsDan Care",
-      "platform": "all",
-      "domain": "care-patients.emmsdan.com,care-provider.emmsdan.com",
-      "isActive": true,
-      "status": "active",
-      "meta": {
-        "deployment": {
-          "domain": "",
-          "azureServiceDomain_Patients": "care-patients.emmsdan.com",
-          "azureServiceDomain_Providers": "care-provider.emmsdan.com"
-        }
-      },
-      "createdAt": "2025-07-10T15:55:18.776+00:00",
-      "updatedAt": "2025-07-10T15:58:10.476+00:00",
-      "deletedAt": null,
-      "tenantDomain1": "care-patients.emmsdan.com",
-      "tenantDomain2": "care-provider.emmsdan.com"
-    }
-  },
-  "care-provider.emmsdan.com": {
-    "id": "d005bc9c-7a48-4cc1-924f-854dc17215f9",
-    "brandId": "001fdd84-7784-4d9c-b437-4944b01da062",
-    "colors": {
-      "primary": "#446832",
-      "customJs": null,
-      "customCss": null,
-      "secondary": "#c4efac",
-      "accentPrimary": "#d8e7cb",
-      "accentSecondary": "#446832e5"
-    },
-    "fonts": {
-      "bodyFontFamily": "Roboto, sans-serif",
-      "titleFontFamily": "Roboto, sans-serif",
-      "primaryFontFamily": "Roboto, sans-serif"
-    },
-    "images": {
-      "logo": "https://sesamecare.com/assets/sesame-logo.png",
-      "appIcon": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg",
-      "logoIcon": "https://sesamecare.com/assets/sesame-favicon.png",
-      "whiteLogo": "https://carekonnectdev.blob.core.windows.net/app-assets/test-white-logo.svg",
-      "logoIconWhite": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg",
-      "loginBackground": "https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png",
-      "signupBackground": "https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png",
-      "splashScreenImage": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg"
-    },
-    "content": {
-      "footerText": "Product of Lex Medical",
-      "companyName": "CareKonnect",
-      "hidePoweredBy": "false",
-      "poweredByText": "CareKonnect",
-      "pushNotificationBrandingText": "CareKonnect"
-    },
-    "urls": {
-      "supportUrl": "https://carekonnectdev.blob.core.windows.net",
-      "supportEmail": "support@example.com",
-      "helpCenterUrl": "helpCenter@example.com",
-      "helpCenterEmail": "https://carekonnectdev.blob.core.windows.net",
-      "privacyPolicyUrl": "https://carekonnectdev.blob.core.windows.net",
-      "termsOfServiceUrl": "https://carekonnectdev.blob.core.windows.net",
-      "privacyPolicyEmail": "privacyPolicy@example.com",
-      "termsOfServiceEmail": "termsOfService@example.com"
-    },
-    "features": {},
-    "meta": {},
-    "createdAt": "2025-07-10T15:55:18.803+00:00",
-    "updatedAt": "2025-07-10T15:58:10.414+00:00",
-    "deletedAt": null,
-    "featuredDataHost": {
-      "permissions": [
-        "doctor",
-        "hospital",
-        "patient",
-        "lab",
-        "pharmacy",
-        "laboratory",
-        "ai",
-        "hmo",
-        "branding",
-        "wallet",
-        "chat",
-        "announcements",
-        "app",
-        "help_center"
-      ]
-    },
-    "client": {
-      "id": "001fdd84-7784-4d9c-b437-4944b01da062",
-      "companyName": "EmmsDan Care",
-      "platform": "all",
-      "domain": "care-patients.emmsdan.com,care-provider.emmsdan.com",
-      "isActive": true,
-      "status": "active",
-      "meta": {
-        "deployment": {
-          "domain": "",
-          "azureServiceDomain_Patients": "care-patients.emmsdan.com",
-          "azureServiceDomain_Providers": "care-provider.emmsdan.com"
-        }
-      },
-      "createdAt": "2025-07-10T15:55:18.776+00:00",
-      "updatedAt": "2025-07-10T15:58:10.476+00:00",
-      "deletedAt": null,
-      "tenantDomain1": "care-patients.emmsdan.com",
-      "tenantDomain2": "care-provider.emmsdan.com"
-    }
-  },
   "localhost:9000": {
     "id": "f7ca3385-3304-469a-a806-5ee5a0330719",
     "brandId": "2f1c3272-1c8a-4e94-a9e6-d84109a33f35",
@@ -535,40 +11,30 @@
     "fonts": {
       "bodyFontFamily": "Roboto, sans-serif",
       "titleFontFamily": "Roboto, sans-serif",
-      "primaryFontFamily": "Montserrat"
+      "primaryFontFamily": "Roboto"
     },
     "images": {
-      "logo": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-with-text.svg",
+      "logo": "https://sesamecare.com/assets/sesame-logo.png",
       "appIcon": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg",
-      "logoIcon": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg",
-      "whiteLogo": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-white-with-text.svg",
+      "logoIcon": "https://sesamecare.com/assets/sesame-favicon.png",
+      "whiteLogo": "https://carekonnectdev.blob.core.windows.net/app-assets/test-white-logo.svg",
       "logoIconWhite": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg",
       "loginBackground": "https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png",
       "signupBackground": "https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png",
-      "splashScreenImage": "https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750707740511/1750707740511.png"
+      "splashScreenImage": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg"
     },
     "content": {
       "footerText": "Product of Lex Medical",
-      "companyName": "CareKonnect (Local Developer)",
-      "productName": "CareKonnect",
+      "companyName": "CareKonnect",
       "hidePoweredBy": "false",
-      "loginPageText": null,
       "poweredByText": "CareKonnect",
-      "socialLoginEnabled": true,
-      "passwordResetEnabled": true,
       "pushNotificationBrandingText": "CareKonnect"
     },
     "urls": {
-      "twitter": "https://x.com/@",
-      "youtube": "https://www.youtube.com/",
-      "facebook": "https://www.facebook.com/",
-      "linkedin": "https://www.linkedin.com/",
       "supportUrl": "https://carekonnectdev.blob.core.windows.net",
       "supportEmail": "support@example.com",
-      "supportPhone": "+91-80-65652545",
-      "helpCenterUrl": "https://carekonnectdev.blob.core.windows.net",
-      "helpCenterEmail": "helpCenter@example.com",
-      "helpCenterPhone": "+91-80-65652545",
+      "helpCenterUrl": "helpCenter@example.com",
+      "helpCenterEmail": "https://carekonnectdev.blob.core.windows.net",
       "privacyPolicyUrl": "https://carekonnectdev.blob.core.windows.net",
       "termsOfServiceUrl": "https://carekonnectdev.blob.core.windows.net",
       "privacyPolicyEmail": "privacyPolicy@example.com",
@@ -576,29 +42,32 @@
     },
     "features": {},
     "meta": {},
-    "createdAt": "2025-06-30T07:42:25.103+00:00",
-    "updatedAt": "2025-07-10T23:22:06.556+00:00",
+    "createdAt": "2025-07-11T09:42:36.819+00:00",
+    "updatedAt": "2025-07-11T12:44:04.030+00:00",
     "deletedAt": null,
     "featuredDataHost": {
       "permissions": [
-        "all",
         "doctor",
         "hospital",
         "patient",
-        "god",
+        "lab",
+        "pharmacy",
+        "laboratory",
+        "ai",
+        "hmo",
         "branding",
-        "lex",
         "wallet",
         "chat",
         "announcements",
+        "app",
         "help_center"
       ]
     },
     "client": {
       "id": "2f1c3272-1c8a-4e94-a9e6-d84109a33f35",
-      "companyName": "CareKonnect (Local Developer)",
+      "companyName": "Local Development Server",
       "platform": "all",
-      "domain": "localhost:9000,localhost:9003",
+      "domain": "carekonnect.com",
       "isActive": true,
       "status": "active",
       "meta": {
@@ -606,8 +75,8 @@
           "domain": ""
         }
       },
-      "createdAt": "2025-06-30T07:26:47.002+00:00",
-      "updatedAt": "2025-07-10T23:22:07.121+00:00",
+      "createdAt": "2025-07-11T09:42:36.091+00:00",
+      "updatedAt": "2025-07-11T12:44:04.575+00:00",
       "deletedAt": null,
       "tenantDomain1": "localhost:9000",
       "tenantDomain2": "localhost:9003"
@@ -625,40 +94,30 @@
     "fonts": {
       "bodyFontFamily": "Roboto, sans-serif",
       "titleFontFamily": "Roboto, sans-serif",
-      "primaryFontFamily": "Montserrat"
+      "primaryFontFamily": "Roboto"
     },
     "images": {
-      "logo": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-with-text.svg",
+      "logo": "https://sesamecare.com/assets/sesame-logo.png",
       "appIcon": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg",
-      "logoIcon": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg",
-      "whiteLogo": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-white-with-text.svg",
+      "logoIcon": "https://sesamecare.com/assets/sesame-favicon.png",
+      "whiteLogo": "https://carekonnectdev.blob.core.windows.net/app-assets/test-white-logo.svg",
       "logoIconWhite": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg",
       "loginBackground": "https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png",
       "signupBackground": "https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png",
-      "splashScreenImage": "https://carekonnectdev.blob.core.windows.net/carekonnect-dev/general-assets/1750707740511/1750707740511.png"
+      "splashScreenImage": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg"
     },
     "content": {
       "footerText": "Product of Lex Medical",
-      "companyName": "CareKonnect (Local Developer)",
-      "productName": "CareKonnect",
+      "companyName": "CareKonnect",
       "hidePoweredBy": "false",
-      "loginPageText": null,
       "poweredByText": "CareKonnect",
-      "socialLoginEnabled": true,
-      "passwordResetEnabled": true,
       "pushNotificationBrandingText": "CareKonnect"
     },
     "urls": {
-      "twitter": "https://x.com/@",
-      "youtube": "https://www.youtube.com/",
-      "facebook": "https://www.facebook.com/",
-      "linkedin": "https://www.linkedin.com/",
       "supportUrl": "https://carekonnectdev.blob.core.windows.net",
       "supportEmail": "support@example.com",
-      "supportPhone": "+91-80-65652545",
-      "helpCenterUrl": "https://carekonnectdev.blob.core.windows.net",
-      "helpCenterEmail": "helpCenter@example.com",
-      "helpCenterPhone": "+91-80-65652545",
+      "helpCenterUrl": "helpCenter@example.com",
+      "helpCenterEmail": "https://carekonnectdev.blob.core.windows.net",
       "privacyPolicyUrl": "https://carekonnectdev.blob.core.windows.net",
       "termsOfServiceUrl": "https://carekonnectdev.blob.core.windows.net",
       "privacyPolicyEmail": "privacyPolicy@example.com",
@@ -666,29 +125,32 @@
     },
     "features": {},
     "meta": {},
-    "createdAt": "2025-06-30T07:42:25.103+00:00",
-    "updatedAt": "2025-07-10T23:22:06.556+00:00",
+    "createdAt": "2025-07-11T09:42:36.819+00:00",
+    "updatedAt": "2025-07-11T12:44:04.030+00:00",
     "deletedAt": null,
     "featuredDataHost": {
       "permissions": [
-        "all",
         "doctor",
         "hospital",
         "patient",
-        "god",
+        "lab",
+        "pharmacy",
+        "laboratory",
+        "ai",
+        "hmo",
         "branding",
-        "lex",
         "wallet",
         "chat",
         "announcements",
+        "app",
         "help_center"
       ]
     },
     "client": {
       "id": "2f1c3272-1c8a-4e94-a9e6-d84109a33f35",
-      "companyName": "CareKonnect (Local Developer)",
+      "companyName": "Local Development Server",
       "platform": "all",
-      "domain": "localhost:9000,localhost:9003",
+      "domain": "carekonnect.com",
       "isActive": true,
       "status": "active",
       "meta": {
@@ -696,8 +158,8 @@
           "domain": ""
         }
       },
-      "createdAt": "2025-06-30T07:26:47.002+00:00",
-      "updatedAt": "2025-07-10T23:22:07.121+00:00",
+      "createdAt": "2025-07-11T09:42:36.091+00:00",
+      "updatedAt": "2025-07-11T12:44:04.575+00:00",
       "deletedAt": null,
       "tenantDomain1": "localhost:9000",
       "tenantDomain2": "localhost:9003"
