@@ -17,7 +17,7 @@ const Doctor = async ({ params, searchParams }) => {
   const pageParams = await params
   const pageSearchParams = await searchParams
 
-  doctor = await getDoctor(params?.slug)
+  doctor = await getDoctor(pageParams?.slug)
 
   doctorsAvailability = await fetchData({
     url: `${process.env.NEXT_PUBLIC_URL}/availabilities/${pageSearchParams?.availability || pageParams?.slug || doctor?.data?.doctorDetails?.id}`,

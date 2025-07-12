@@ -11,14 +11,14 @@ export const fetchData = async ({
 }) => {
   try {
     const headers = await Api.generateHeader()
-    console.log({ headers })
     const response = await fetch(url, {
       method: "GET",
+      ...(options || {}),
       headers: {
         "Content-Type": "application/json",
         ...headers,
+        ...(options?.headers || {}),
       },
-      ...(options || {}),
     })
 
     if (!response.ok) {
