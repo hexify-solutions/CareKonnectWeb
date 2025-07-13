@@ -7,7 +7,7 @@ export async function POST(req: Request) {
     const { email, password } = await req.json()
     const cookieStore = await cookies()
     const host = req.headers.get("host")
-    const domain = (host || process.env.NEXT_PUBLIC_FE_URL || req.nextUrl.host)
+    const domain = (host || req.nextUrl.host)
       ?.replace("https://", "")
       ?.replace("http://", "")
 

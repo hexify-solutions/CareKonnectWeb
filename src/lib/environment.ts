@@ -1,5 +1,4 @@
 export const environment = {
-  NEXT_PUBLIC_URL_PROD: process.env.NEXT_PUBLIC_FE_URL,
   NEXT_PUBLIC_URL: process.env.NEXT_PUBLIC_URL,
   PUBLIC_URL: process.env.NEXT_PUBLIC_URL,
   NEXT_PUBLIC_LOCALSTORAGE_SECRET_KEY:
