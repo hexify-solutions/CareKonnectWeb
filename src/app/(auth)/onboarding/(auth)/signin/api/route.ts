@@ -11,6 +11,7 @@ export async function POST(req: Request) {
       ?.replace("https://", "")
       ?.replace("http://", "")
 
+    console.log({ domain })
     const apiUrl = process.env.NEXT_PUBLIC_URL ?? "http://localhost:9000"
     const response = await fetch(`${apiUrl}/auth/login`, {
       method: "POST",
