@@ -104,3 +104,7 @@ button.cancelBtn {
   color: var(--mui-palette-error-main);
   padding: 16px !important;
 }
+
+.doctorButton {
+  cursor: pointer;
+}

@@ -15,6 +15,7 @@ import { useCreateAppointment } from "@/http/appointment/mutation"
 import dayjs from "dayjs"
 import { withSuspense } from "@/hoc"
 import patientVisitType from "@/data/patientVisitTypes.json"
+import { DateTime } from "luxon"
 
 const validationSchema = Yup.object().shape({
   date: Yup.date().required("Date is required"),
@@ -82,14 +83,19 @@ const DoctorAppointmentForm = ({ isAuth, triggerAuth, appointmentSlots }) => {
       enableReinitialize
     >
       {({ setFieldValue, values, errors, touched, handleChange }) => {
+        const now = DateTime.now()
         const timeOptions =
-          appointmentSlots?.[values?.date?.format?.("YYYY-MM-DD")]?.map(
-            (option) => ({
+          appointmentSlots?.[values?.date?.format?.("YYYY-MM-DD")]
+            ?.filter((slot) => {
+              const slotTime = DateTime.fromISO(slot.time24)
+              return slotTime >= now // Only keep future slots
+            })
+            ?.map((option) => ({
               label: `${option.time} - ${option?.duration} minutes`,
               value: option?.time24,
-            })
-          ) || []
+            })) || []
 
+        console.log(appointmentSlots, "appointmentSlots")
         return (
           <Form>
             <div className={styles.formInputWrapper}>

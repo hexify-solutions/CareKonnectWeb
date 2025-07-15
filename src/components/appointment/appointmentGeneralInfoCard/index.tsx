@@ -1,3 +1,4 @@
+"use client"
 import {
   Button,
   ChevronLeft,
@@ -8,8 +9,31 @@ import {
 import styles from "./appointmentGeneralInfoCard.module.css"
 import { AppointmentGeneralInfoCardTabComponent } from "./tabComponents"
 import { DownloadReceipt } from "@/components/appointment/appointmentGeneralInfoCard/DownloadReceipt"
+import React from "react"
+import { DateTime } from "luxon"
 
 const AppointmentGeneralInfoCard = ({ appointment }) => {
+  // const [appointments, setSelectedAppointments] = React.useState<[]>(appointment?.appointments || [])
+  const [currentIndex, setCurrentIndex] = React.useState(
+    Math.floor(((appointment?.appointments || []).length - 1) / 2)
+  )
+  const next = () => {
+    if (currentIndex < appointment?.appointments.length - 1) {
+      setCurrentIndex(currentIndex + 1)
+    } else {
+      setCurrentIndex(0)
+    }
+  }
+  const prev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1)
+    } else {
+      setCurrentIndex(appointment?.appointments.length - 1)
+    }
+  }
+  const selectedAppointment = (appointment?.appointments || [])?.at(
+    currentIndex
+  )
   return (
     <div className={styles.infoCard}>
       <div className={styles.tabWrapper}>
@@ -24,52 +48,63 @@ const AppointmentGeneralInfoCard = ({ appointment }) => {
               In 7 days <ChevronLeft />
             </button> */}
           </div>
-          <OtherAppointmentCard />
-          <div className={styles.filterBtnWrapper}>
-            <button className={styles.filterBtn}>
-              <ChevronLeft /> <span>Previous </span>
-            </button>
-            <button className={styles.filterBtn}>
-              <span>Next</span>
-              <ChevronRight />
-            </button>
-          </div>
+          {selectedAppointment && (
+            <>
+              <OtherAppointmentCard {...(selectedAppointment || {})} />
+              <div className={styles.filterBtnWrapper}>
+                <button className={styles.filterBtn} onClick={prev}>
+                  <ChevronLeft /> <span>Previous </span>
+                </button>
+                <button className={styles.filterBtn} onClick={next}>
+                  <span>Next</span>
+                  <ChevronRight />
+                </button>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>
   )
 }
 
-const OtherAppointmentCard = () => {
+const OtherAppointmentCard = (props) => {
+  console.log(props)
   return (
     <div className={styles.otherAppointmentCardWrapper}>
       <div className={styles.appointmentCardDetailsSection}>
         <span className={styles.cardDetailsInfo}>
-          <ProviderIcon /> <span>Provider</span>
+          <ProviderIcon /> <span>{props.title || props.consultationType}</span>
         </span>
-        <span className={styles.cardDetailsInfo}>
-          Dr. Sarah Thompson, General Practitioner
-        </span>
+        <span className={styles.cardDetailsInfo}>{props.note}</span>
       </div>
       <div className={styles.appointmentCardDetailsSection}>
         <span className={styles.cardDetailsInfo}>
           <Time type="outline" /> <span>Time</span>
         </span>
         <span className={styles.cardDetailsInfo}>
-          Wednesday, Sep 2, 2024 . 4:00 PM (PST) In 2 hours 15 minutes
+          {DateTime.fromISO(props.appointmentStartAt).toLocaleString(
+            DateTime.DATETIME_MED
+          )}
         </span>
       </div>
 
       <div className={styles.scheduleWrapper}>
-        <Button disabled data-action="join_session" variant="contained" rounded>
-          Join session{" "}
+        {/*<Button disabled data-action="join_session" variant="contained" rounded>*/}
+        {/*  Join session{" "}*/}
+        {/*</Button>*/}
+        <Button
+          href={`./${props.id}`}
+          data-action="reschedule"
+          variant="contained"
+          rounded
+        >
+          View Appointment
+          {/*Reschedule{" "}*/}
         </Button>
-        <Button data-action="reschedule" variant="contained" rounded>
-          Reschedule{" "}
-        </Button>
-        <Button data-action="cancel" variant="contained" rounded>
-          Cancel{" "}
-        </Button>
+        {/*<Button data-action="cancel" variant="contained" rounded>*/}
+        {/*  Cancel{" "}*/}
+        {/*</Button>*/}
       </div>
     </div>
   )

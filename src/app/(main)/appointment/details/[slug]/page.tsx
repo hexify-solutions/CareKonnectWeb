@@ -8,7 +8,7 @@ import { getAppointmentById } from "@/http/appointment/serverActions"
 const AppointmentDetails = async ({ params }) => {
   const pageParams = await params
   const appointment = await getAppointmentById(
-    pageParams?.slug + "?withTransaction=true"
+    pageParams?.slug + "?withTransaction=true&withUserOthers=true"
   )
 
   return (

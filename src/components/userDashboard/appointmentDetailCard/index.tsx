@@ -11,9 +11,9 @@ import {
 } from "@hexify/atoms"
 import styles from "./appointmentDetailCard.module.css"
 import formatAppointmentDate from "@/lib/utils/formatAppointmentDate"
+import Link from "next/link"
 
 const AppointmentDetailCard = ({ appointment }) => {
-
   const { doctor, appointmentStartAt } = appointment || {}
   const {
     status: dateStatus,
@@ -22,30 +22,33 @@ const AppointmentDetailCard = ({ appointment }) => {
     timeZoneAbbreviation,
   } = formatAppointmentDate(appointmentStartAt) || {}
 
+  const doctorFirstName =
+    doctor?.users?.firstName || appointment?.firstName || ""
+  const doctorLastName = doctor?.users?.lastName || appointment?.lastName || ""
 
-  const doctorFirstName = doctor?.users?.firstName || appointment?.firstName || "";
-const doctorLastName = doctor?.users?.lastName || appointment?.lastName || "";
-
+  const doctorName = `Dr ${doctorFirstName || ""} ${doctorLastName || ""}`
+  const url = `/doctor/${doctor?.users?.id}`
   return (
     <div className={styles.wrapper}>
       <div className={styles.infoWrapper}>
         <div className={styles.doctorInfo}>
-          <Avatar
-            src={doctor?.avatarUrl || appointment?.avatarUrl}
-            displayText="Innocent edsa"
-          />
+          <Link href={url}>
+            <Avatar
+              src={doctor?.avatarUrl || appointment?.avatarUrl}
+              displayText={doctorName}
+              className={styles.doctorButton}
+            />
+          </Link>
           <div>
             <div className={styles.doctorDetails}>
-              <div>
+              <Link href={url} className={styles.doctorButton}>
                 <h6 className={styles.doctorsName}>
-                  {doctorFirstName || doctorLastName
-                    ? `Dr ${doctorFirstName} ${doctorLastName}`
-                    : ""}
+                  {doctorFirstName || doctorLastName ? doctorName : ""}
                 </h6>
                 <span className={styles.doctorSpecialty}>
                   Specialty: Cardiologist
                 </span>
-              </div>
+              </Link>
               <Chip
                 variant="outlined"
                 designVariant="ghost"
@@ -74,9 +77,11 @@ const doctorLastName = doctor?.users?.lastName || appointment?.lastName || "";
         <div className={styles.hospitalInfoWrapper}>
           <h6 className={styles.hospitalName}>{doctor?.clinicName}</h6>
           <div className={styles.hospitalDetails}>
-           {doctor?.locations && <div>
-              <LocationPin /> <span>{doctor?.locations}</span>
-            </div>}
+            {doctor?.locations && (
+              <div>
+                <LocationPin /> <span>{doctor?.locations}</span>
+              </div>
+            )}
             {doctor?.users?.email && (
               <div>
                 <DirectIcon /> <span>{doctor?.users?.email}</span>
@@ -90,19 +95,19 @@ const doctorLastName = doctor?.users?.lastName || appointment?.lastName || "";
           </div>
         </div>
       </div>
-      <div className={styles.btnWrapper}>
-        <Button variant="contained" size="large" rounded>
-          <CalendarIcon type="two" /> <span>Reschedule</span>
-        </Button>
-        <Button
-          className={styles.cancelBtn}
-          variant="contained"
-          size="large"
-          rounded
-        >
-          <CancelIcon type="two" /> <span>Cancel</span>
-        </Button>
-      </div>
+      {/*<div className={styles.btnWrapper}>*/}
+      {/*  <Button variant="contained" size="large" rounded>*/}
+      {/*    <CalendarIcon type="two" /> <span>Reschedule</span>*/}
+      {/*  </Button>*/}
+      {/*  <Button*/}
+      {/*    className={styles.cancelBtn}*/}
+      {/*    variant="contained"*/}
+      {/*    size="large"*/}
+      {/*    rounded*/}
+      {/*  >*/}
+      {/*    <CancelIcon type="two" /> <span>Cancel</span>*/}
+      {/*  </Button>*/}
+      {/*</div>*/}
     </div>
   )
 }

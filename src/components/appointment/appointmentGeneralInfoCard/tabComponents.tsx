@@ -46,15 +46,15 @@ const GeneralOverview = ({ appointment }) => {
   )
 }
 
-const DoctorComment = () => {
+const DoctorComment = ({ comments }) => {
   return (
     <div className={clsx(styles.sectionWrapper, styles.doctorCommentInfo)}>
-      Patient presented with symptoms of mild fever and persistent cough. Based
-      on the examination, it appears to be a viral infection. Advised rest,
-      increased fluid intake, and prescribed Paracetamol for fever management.
-      If symptoms persist beyond 5 days or worsen, consider follow-up for
-      further evaluation. No immediate concerns but recommend monitoring
-      temperature daily
+      {comments?.map((comment, index) => (
+        <p style={{ padding: 10 }} key={index}>
+          {comment}
+        </p>
+      ))}
+      {!comments?.length && <h2>No doctor notes.</h2>}
     </div>
   )
 }
@@ -63,14 +63,20 @@ const Prescriptions = () => {
   return (
     <div className={styles.prescription}>
       <ul>
-        {Array.from({ length: 2 })?.map(() => {
-          return (
-            <li className={styles.prescriptionItem}>
-              <span>View drug prescriptions</span>
-              <ChevronRight />
-            </li>
-          )
-        })}
+        <li
+          onClick={() => alert("coming soon")}
+          className={styles.prescriptionItem}
+        >
+          <span>View drug prescriptions</span>
+          <ChevronRight />
+        </li>
+        <li
+          onClick={() => alert("coming soon")}
+          className={styles.prescriptionItem}
+        >
+          <span>View Lab test</span>
+          <ChevronRight />
+        </li>
       </ul>
     </div>
   )
@@ -84,13 +90,15 @@ export const AppointmentGeneralInfoCardTabComponent = ({ appointment }) => {
     },
     {
       label: "Doctor's Comments",
-      Component: DoctorComment,
+      Component: () => <DoctorComment comments={appointment?.doctorNotes} />,
     },
     {
       label: "Prescriptions",
       Component: Prescriptions,
     },
   ]
+
+  console.log(appointment, "appointment")
 
   const meetingLink = routes.appointmentMeeting({
     appointmentId: appointment?.meetings?.appointmentId,

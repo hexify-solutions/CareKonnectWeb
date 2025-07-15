@@ -20,7 +20,7 @@ const Doctor = async ({ params, searchParams }) => {
   doctor = await getDoctor(pageParams?.slug)
 
   doctorsAvailability = await fetchData({
-    url: `${process.env.NEXT_PUBLIC_URL}/availabilities/${pageSearchParams?.availability || pageParams?.slug || doctor?.data?.doctorDetails?.id}`,
+    url: `${process.env.NEXT_PUBLIC_URL}/availabilities/${pageSearchParams?.availability || doctor?.data?.doctorDetails?.id || pageParams?.slug}`,
     errorMessage: "Error fetching doctor availabilities:",
   })
 
