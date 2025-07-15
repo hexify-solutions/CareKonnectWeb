@@ -4,6 +4,8 @@ import {
   getCurrentUserDomain,
   getStoredUserLocation,
 } from "@/lib/utils/getStoredUserLocation"
+import { secureStorage as secureLocalStorage } from "../../../../../packages/shared"
+import lsKeys from "@/lib/constants/lsKeys"
 
 class Api {
   url: string
@@ -32,8 +34,9 @@ class Api {
   static async generateHeader() {
     try {
       const location = await getStoredUserLocation()
-
+      const accessToken = secureLocalStorage.getItem(lsKeys.token)
       return {
+        ...(accessToken ? { Authorization: `Bearer ${accessToken}` } : {}),
         "X-User-Latitude": location.latitude + "",
         "X-User-Longitude": location.longitude + "",
         "X-User-Altitude": location.altitude + "",

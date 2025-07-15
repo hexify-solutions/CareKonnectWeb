@@ -44,7 +44,7 @@ const routes = {
   appointmentDetails: (slug: string) => "/appointment/details/" + slug,
   appointmentById: (id: string) => `/appointments/${id}`,
   appointmentMeeting: (meeting: Record<string, string>) =>
-    `${process.env.NEXT_PUBLIC_COMMUNICATIONS_URL}/${meeting?.appointmentRef || meeting?.appointmentId}/?appointmentId=${meeting?.appointmentId}`,
+    `/call/${meeting?.appointmentRef || meeting?.appointmentId}/?appointmentId=${meeting?.appointmentId}`,
 }
 
 export default routes
