@@ -21,18 +21,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <CustomTheme>
-        <UserLocationProvider>
-          <SecureStorageProvider>
-            <QueryProvider>
-              <AuthProvider>
-                <CartProvider>{children}</CartProvider>
-              </AuthProvider>
-              <ToastProvider />
-            </QueryProvider>
-          </SecureStorageProvider>
-        </UserLocationProvider>
-      </CustomTheme>
+      <body style={{}}>
+        <CustomTheme>
+          <UserLocationProvider>
+            <SecureStorageProvider>
+              <QueryProvider>
+                <AuthProvider>
+                  <CartProvider>{children}</CartProvider>
+                </AuthProvider>
+                <ToastProvider />
+              </QueryProvider>
+            </SecureStorageProvider>
+          </UserLocationProvider>
+        </CustomTheme>
+      </body>
     </html>
   )
 }
