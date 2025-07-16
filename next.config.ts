@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
     externalMiddlewareRewritesResolve: true,
     scrollRestoration: true,
     // ppr: "incremental",
-    useLightningcss: true,
+    // useLightningcss: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
