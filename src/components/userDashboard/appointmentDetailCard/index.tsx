@@ -6,8 +6,6 @@ import {
   LocationPin,
   DirectIcon,
   Telephone,
-  Button,
-  CancelIcon,
 } from "@hexify/atoms"
 import styles from "./appointmentDetailCard.module.css"
 import formatAppointmentDate from "@/lib/utils/formatAppointmentDate"
