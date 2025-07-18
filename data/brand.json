@@ -164,5 +164,341 @@
       "tenantDomain1": "localhost:9000",
       "tenantDomain2": "localhost:9003"
     }
+  },
+  "localhost:9006": {
+    "id": "1dabf856-8462-4300-86ba-eab0b5b09472",
+    "brandId": "1344c7c3-33f9-4fe5-a23b-305651d7aef4",
+    "colors": {
+      "primary": "#446832",
+      "customJs": null,
+      "customCss": null,
+      "secondary": "#c4efac",
+      "accentPrimary": "#d8e7cb",
+      "accentSecondary": "#446832e5"
+    },
+    "fonts": {
+      "bodyFontFamily": "Roboto",
+      "titleFontFamily": "Roboto",
+      "primaryFontFamily": "Roboto"
+    },
+    "images": {
+      "logo": "https://img1.wsimg.com/isteam/ip/4de887bc-6095-4895-b1c9-21819518c217/LexLogo_v2.jpg/:/rs=w:400,h:400,cg:true,m/cr=w:400,h:400/qt=q:95",
+      "appIcon": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg",
+      "logoIcon": "https://img1.wsimg.com/isteam/ip/4de887bc-6095-4895-b1c9-21819518c217/LexLogo_v2.jpg/:/rs=w:400,h:400,cg:true,m/cr=w:400,h:400/qt=q:95",
+      "whiteLogo": "https://carekonnectdev.blob.core.windows.net/app-assets/test-white-logo.svg",
+      "logoIconWhite": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg",
+      "loginBackground": "https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png",
+      "signupBackground": "https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png",
+      "splashScreenImage": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg"
+    },
+    "content": {
+      "footerText": "Product of Lex Medical",
+      "companyName": "CareKonnect",
+      "hidePoweredBy": "false",
+      "poweredByText": "CareKonnect",
+      "pushNotificationBrandingText": "CareKonnect"
+    },
+    "urls": {
+      "supportUrl": "https://carekonnectdev.blob.core.windows.net",
+      "supportEmail": "support@example.com",
+      "helpCenterUrl": "helpCenter@example.com",
+      "helpCenterEmail": "https://carekonnectdev.blob.core.windows.net",
+      "privacyPolicyUrl": "https://carekonnectdev.blob.core.windows.net",
+      "termsOfServiceUrl": "https://carekonnectdev.blob.core.windows.net",
+      "privacyPolicyEmail": "privacyPolicy@example.com",
+      "termsOfServiceEmail": "termsOfService@example.com"
+    },
+    "features": {},
+    "meta": {},
+    "createdAt": "2025-07-18T06:34:29.825+00:00",
+    "updatedAt": "2025-07-18T06:44:07.510+00:00",
+    "deletedAt": null,
+    "featuredDataHost": {
+      "permissions": [
+        "doctor",
+        "hospital",
+        "patient",
+        "lab",
+        "pharmacy",
+        "laboratory",
+        "announcements",
+        "help_center"
+      ]
+    },
+    "client": {
+      "id": "1344c7c3-33f9-4fe5-a23b-305651d7aef4",
+      "companyName": "RateMe medicals",
+      "platform": "all",
+      "domain": "localhost:9006,localhost:9005",
+      "isActive": true,
+      "status": "active",
+      "meta": {
+        "deployment": {
+          "domain": "",
+          "azureServiceDomain_Patients": "localhost:9006",
+          "azureServiceDomain_Providers": "localhost:9005"
+        }
+      },
+      "createdAt": "2025-07-18T06:34:29.707+00:00",
+      "updatedAt": "2025-07-18T06:44:07.567+00:00",
+      "deletedAt": null,
+      "tenantDomain1": "localhost:9006",
+      "tenantDomain2": "localhost:9005"
+    }
+  },
+  "localhost:9005": {
+    "id": "1dabf856-8462-4300-86ba-eab0b5b09472",
+    "brandId": "1344c7c3-33f9-4fe5-a23b-305651d7aef4",
+    "colors": {
+      "primary": "#446832",
+      "customJs": null,
+      "customCss": null,
+      "secondary": "#c4efac",
+      "accentPrimary": "#d8e7cb",
+      "accentSecondary": "#446832e5"
+    },
+    "fonts": {
+      "bodyFontFamily": "Roboto",
+      "titleFontFamily": "Roboto",
+      "primaryFontFamily": "Roboto"
+    },
+    "images": {
+      "logo": "https://img1.wsimg.com/isteam/ip/4de887bc-6095-4895-b1c9-21819518c217/LexLogo_v2.jpg/:/rs=w:400,h:400,cg:true,m/cr=w:400,h:400/qt=q:95",
+      "appIcon": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg",
+      "logoIcon": "https://img1.wsimg.com/isteam/ip/4de887bc-6095-4895-b1c9-21819518c217/LexLogo_v2.jpg/:/rs=w:400,h:400,cg:true,m/cr=w:400,h:400/qt=q:95",
+      "whiteLogo": "https://carekonnectdev.blob.core.windows.net/app-assets/test-white-logo.svg",
+      "logoIconWhite": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg",
+      "loginBackground": "https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-2.png",
+      "signupBackground": "https://carekonnectdev.blob.core.windows.net/app-assets/onboarding-image-3.png",
+      "splashScreenImage": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg"
+    },
+    "content": {
+      "footerText": "Product of Lex Medical",
+      "companyName": "CareKonnect",
+      "hidePoweredBy": "false",
+      "poweredByText": "CareKonnect",
+      "pushNotificationBrandingText": "CareKonnect"
+    },
+    "urls": {
+      "supportUrl": "https://carekonnectdev.blob.core.windows.net",
+      "supportEmail": "support@example.com",
+      "helpCenterUrl": "helpCenter@example.com",
+      "helpCenterEmail": "https://carekonnectdev.blob.core.windows.net",
+      "privacyPolicyUrl": "https://carekonnectdev.blob.core.windows.net",
+      "termsOfServiceUrl": "https://carekonnectdev.blob.core.windows.net",
+      "privacyPolicyEmail": "privacyPolicy@example.com",
+      "termsOfServiceEmail": "termsOfService@example.com"
+    },
+    "features": {},
+    "meta": {},
+    "createdAt": "2025-07-18T06:34:29.825+00:00",
+    "updatedAt": "2025-07-18T06:44:07.510+00:00",
+    "deletedAt": null,
+    "featuredDataHost": {
+      "permissions": [
+        "doctor",
+        "hospital",
+        "patient",
+        "lab",
+        "pharmacy",
+        "laboratory",
+        "announcements",
+        "help_center"
+      ]
+    },
+    "client": {
+      "id": "1344c7c3-33f9-4fe5-a23b-305651d7aef4",
+      "companyName": "RateMe medicals",
+      "platform": "all",
+      "domain": "localhost:9006,localhost:9005",
+      "isActive": true,
+      "status": "active",
+      "meta": {
+        "deployment": {
+          "domain": "",
+          "azureServiceDomain_Patients": "localhost:9006",
+          "azureServiceDomain_Providers": "localhost:9005"
+        }
+      },
+      "createdAt": "2025-07-18T06:34:29.707+00:00",
+      "updatedAt": "2025-07-18T06:44:07.567+00:00",
+      "deletedAt": null,
+      "tenantDomain1": "localhost:9006",
+      "tenantDomain2": "localhost:9005"
+    }
+  },
+  "care-patients.azurewebsites.net": {
+    "id": "da59fd3b-cc5d-4d09-a3e7-a2e45d166b15",
+    "brandId": "23fb4386-bced-4bc9-9f0b-c8a8367ba5a1",
+    "colors": {
+      "primary": "#183267",
+      "secondary": "#e9aeef",
+      "accentPrimary": "#a3cbe7",
+      "accentSecondary": "#373232"
+    },
+    "fonts": {
+      "bodyFontFamily": "Roboto",
+      "titleFontFamily": "Roboto",
+      "primaryFontFamily": "Nunito"
+    },
+    "images": {
+      "logo": "https://sesamecare.com/assets/sesame-logo.png",
+      "appIcon": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg",
+      "logoIcon": "https://sesamecare.com/assets/sesame-favicon.png",
+      "whiteLogo": "https://carekonnectdev.blob.core.windows.net/app-assets/test-white-logo.svg",
+      "logoIconWhite": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg",
+      "loginBackground": "https://media.istockphoto.com/id/185288528/photo/smiling-african-american-male-doctor-isolated.jpg?s=612x612&w=0&k=20&c=JCCdlizGVIVlbv0yOA99T_lc9hg3Ms9LXC2WIjOiZzw=",
+      "signupBackground": "https://media.istockphoto.com/id/187552507/photo/confident-african-american-female-healthcare-worker-isolated.jpg?s=1024x1024&w=is&k=20&c=vSdRRAa77QoGIcCiaKWTqo7klBjhAQxvonJ1Fr77cdw=",
+      "splashScreenImage": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg"
+    },
+    "content": {
+      "footerText": "Product of Lex Medical",
+      "companyName": "CareKonnect",
+      "hidePoweredBy": "false",
+      "loginPageText": "This is Sesame seed Hospital",
+      "poweredByText": "CareKonnect",
+      "pushNotificationBrandingText": "CareKonnect"
+    },
+    "urls": {
+      "youtube": "https://www.youtube.com/results?search_query=lexington+medical+center",
+      "supportUrl": "https://carekonnectdev.blob.core.windows.net",
+      "supportEmail": "support@sessame.com",
+      "helpCenterUrl": "helpCenter@example.com",
+      "helpCenterEmail": "sessamehelp@sessame.com",
+      "privacyPolicyUrl": "https://carekonnectdev.blob.core.windows.net",
+      "termsOfServiceUrl": "https://carekonnectdev.blob.core.windows.net",
+      "privacyPolicyEmail": "privacyPolicy@sessame.com",
+      "termsOfServiceEmail": "termsOfService@sessame.com"
+    },
+    "features": {},
+    "meta": {},
+    "createdAt": "2025-07-14T14:30:30.449+00:00",
+    "updatedAt": "2025-07-15T22:54:18.431+00:00",
+    "deletedAt": null,
+    "featuredDataHost": {
+      "permissions": [
+        "doctor",
+        "hospital",
+        "patient",
+        "lab",
+        "pharmacy",
+        "laboratory",
+        "ai",
+        "hmo",
+        "branding",
+        "wallet",
+        "chat",
+        "announcements",
+        "app",
+        "help_center",
+        "lex",
+        "display_features"
+      ]
+    },
+    "client": {
+      "id": "23fb4386-bced-4bc9-9f0b-c8a8367ba5a1",
+      "companyName": "care-patients.azurewebsites.net",
+      "platform": "all",
+      "domain": "care-patients.azurewebsites.net,care-providers.azurewebsites.net",
+      "isActive": true,
+      "status": "active",
+      "meta": {
+        "deployment": {
+          "domain": ""
+        }
+      },
+      "createdAt": "2025-07-14T14:30:30.419+00:00",
+      "updatedAt": "2025-07-15T22:54:18.491+00:00",
+      "deletedAt": null,
+      "tenantDomain1": "care-patients.azurewebsites.net",
+      "tenantDomain2": "care-providers.azurewebsites.net"
+    }
+  },
+  "care-providers.azurewebsites.net": {
+    "id": "da59fd3b-cc5d-4d09-a3e7-a2e45d166b15",
+    "brandId": "23fb4386-bced-4bc9-9f0b-c8a8367ba5a1",
+    "colors": {
+      "primary": "#183267",
+      "secondary": "#e9aeef",
+      "accentPrimary": "#a3cbe7",
+      "accentSecondary": "#373232"
+    },
+    "fonts": {
+      "bodyFontFamily": "Roboto",
+      "titleFontFamily": "Roboto",
+      "primaryFontFamily": "Nunito"
+    },
+    "images": {
+      "logo": "https://sesamecare.com/assets/sesame-logo.png",
+      "appIcon": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg",
+      "logoIcon": "https://sesamecare.com/assets/sesame-favicon.png",
+      "whiteLogo": "https://carekonnectdev.blob.core.windows.net/app-assets/test-white-logo.svg",
+      "logoIconWhite": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon-white.svg",
+      "loginBackground": "https://media.istockphoto.com/id/185288528/photo/smiling-african-american-male-doctor-isolated.jpg?s=612x612&w=0&k=20&c=JCCdlizGVIVlbv0yOA99T_lc9hg3Ms9LXC2WIjOiZzw=",
+      "signupBackground": "https://media.istockphoto.com/id/187552507/photo/confident-african-american-female-healthcare-worker-isolated.jpg?s=1024x1024&w=is&k=20&c=vSdRRAa77QoGIcCiaKWTqo7klBjhAQxvonJ1Fr77cdw=",
+      "splashScreenImage": "https://carekonnectdev.blob.core.windows.net/app-assets/logo-icon.svg"
+    },
+    "content": {
+      "footerText": "Product of Lex Medical",
+      "companyName": "CareKonnect",
+      "hidePoweredBy": "false",
+      "loginPageText": "This is Sesame seed Hospital",
+      "poweredByText": "CareKonnect",
+      "pushNotificationBrandingText": "CareKonnect"
+    },
+    "urls": {
+      "youtube": "https://www.youtube.com/results?search_query=lexington+medical+center",
+      "supportUrl": "https://carekonnectdev.blob.core.windows.net",
+      "supportEmail": "support@sessame.com",
+      "helpCenterUrl": "helpCenter@example.com",
+      "helpCenterEmail": "sessamehelp@sessame.com",
+      "privacyPolicyUrl": "https://carekonnectdev.blob.core.windows.net",
+      "termsOfServiceUrl": "https://carekonnectdev.blob.core.windows.net",
+      "privacyPolicyEmail": "privacyPolicy@sessame.com",
+      "termsOfServiceEmail": "termsOfService@sessame.com"
+    },
+    "features": {},
+    "meta": {},
+    "createdAt": "2025-07-14T14:30:30.449+00:00",
+    "updatedAt": "2025-07-15T22:54:18.431+00:00",
+    "deletedAt": null,
+    "featuredDataHost": {
+      "permissions": [
+        "doctor",
+        "hospital",
+        "patient",
+        "lab",
+        "pharmacy",
+        "laboratory",
+        "ai",
+        "hmo",
+        "branding",
+        "wallet",
+        "chat",
+        "announcements",
+        "app",
+        "help_center",
+        "lex",
+        "display_features"
+      ]
+    },
+    "client": {
+      "id": "23fb4386-bced-4bc9-9f0b-c8a8367ba5a1",
+      "companyName": "care-patients.azurewebsites.net",
+      "platform": "all",
+      "domain": "care-patients.azurewebsites.net,care-providers.azurewebsites.net",
+      "isActive": true,
+      "status": "active",
+      "meta": {
+        "deployment": {
+          "domain": ""
+        }
+      },
+      "createdAt": "2025-07-14T14:30:30.419+00:00",
+      "updatedAt": "2025-07-15T22:54:18.491+00:00",
+      "deletedAt": null,
+      "tenantDomain1": "care-patients.azurewebsites.net",
+      "tenantDomain2": "care-providers.azurewebsites.net"
+    }
   }
 }
